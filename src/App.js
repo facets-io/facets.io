@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+import IframeWrapper from './IframeWrapper';
 
 function App() {
   const [inputURL, setInputURL] = useState('https://stripe.com/');
@@ -20,15 +21,12 @@ function App() {
           offlabel='Live'
           offstyle='success'
           size='sm'
-          onChange={(checked) => {
+          onChange={() => {
             setEditMode(!editMode);
           }}
         />
       </StyledDiv>
-      <StyledDiv>
-        
-      </StyledDiv>
-      <iframe title="website-loader" width="820rem" height="820rem" src={inputURL}></iframe>
+      <IframeWrapper inputURL={inputURL}/>
     </div>
   );
 }
