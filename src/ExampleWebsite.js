@@ -7,7 +7,6 @@ export default function () {
 
     const StyledDiv = styled.div`
         width: 50%;
-        margin-left: 25%;
         border: thin solid black;
     `;
 

@@ -4,6 +4,18 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import FixedContainer from './FixedContainer';
+import ToolBox from './ToolBox';
+
+const LeftDiv = styled.div`
+  float: left;
+  width: 70rem;
+  margin-right: 8px;
+  margin: 14px
+`;
+
+const RightDiv = styled.div`
+    margin-left: 108px;
+`;
 
 function App() {
   const [inputURL, setInputURL] = useState('https://stripe.com/');
@@ -33,7 +45,12 @@ function App() {
       />
 
       <StyledDiv1>
-        <FixedContainer />
+        <LeftDiv>
+          <FixedContainer />
+        </LeftDiv>
+        <RightDiv>
+          <ToolBox />
+        </RightDiv>
       </StyledDiv1>
     </StyledDiv>
   );
