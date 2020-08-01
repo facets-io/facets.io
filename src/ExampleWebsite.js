@@ -17,17 +17,9 @@ export default function () {
 
     return <StyledDiv>
         <ExtraMarginDiv>
-            <div class="topline">
-            </div>
-
-            <div class="navbar navbar-inverse navbar-fixed-top">
+            <div>
                 <div class="navbar-inner">
                     <div class="container">
-                        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </a>
                         <div class="nav-collapse collapse">
 
                             <ul class="nav leftmenu">
@@ -125,7 +117,6 @@ export default function () {
                             </div>
 
                             <div class="item active">
-                                <img src="img/slider/2.jpg" alt="" />
                                 <div class="carousel-caption">
                                     <h4>Second Thumbnail label</h4>
                                     <p>
@@ -135,7 +126,6 @@ export default function () {
                             </div>
 
                             <div class="item">
-                                <img src="img/slider/3.jpg" alt="" />
                                 <div class="carousel-caption">
                                     <h4>Third Thumbnail label</h4>
                                     <p>

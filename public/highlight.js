@@ -18,7 +18,7 @@
 //     };
 // }
 
-$('*').hover(
+$('#fixed-container *').hover(
     function (e) {
         console.log('mpika man');
         $(this).css('border', '1px solid black');

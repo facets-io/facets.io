@@ -3,7 +3,7 @@ import ExampleWebsite from './ExampleWebsite';
 import styled from 'styled-components';
 
 export default function () {
-    return <div>
+    return <div id="fixed-container">
         <StyledDiv>
             <ExampleWebsite />
         </StyledDiv>
