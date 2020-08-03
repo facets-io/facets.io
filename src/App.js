@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import FixedContainer from './FixedContainer';
 import ToolBox from './ToolBox';
+import { Button } from 'react-bootstrap';
 
 const LeftDiv = styled.div`
   float: left;
@@ -39,7 +40,8 @@ function App() {
         offlabel='Live'
         offstyle='success'
         size='sm'
-        onChange={() => {
+        onChange={(e) => {
+          window.isEditMode = !editMode;
           setEditMode(!editMode);
         }}
       />
@@ -52,6 +54,7 @@ function App() {
           <ToolBox />
         </RightDiv>
       </StyledDiv1>
+      <Button size='lg' className='btn-block'>🚀 D E P L O Y 🚀</Button>
     </StyledDiv>
   );
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
+import $ from 'jquery';
 
 function ToolBox() {
     return <div>
@@ -16,6 +17,17 @@ function ToolBox() {
             onstyle='danger'
             offstyle='success'
             width={100}
+            onChange={(e)=> {
+                //background-color
+                // console.log('KEEPO',e, window.selectedDOM);
+                if(e) {
+                    $(`#${window.selectedDOM}`).css('background-color', 'red');
+                }else {
+                    $(`#${window.selectedDOM}`).css('background-color', 'lightgreen');
+                }
+               
+                
+            }}
         ></BootstrapSwitchButton></div>
     </div>
 }

@@ -14,22 +14,24 @@ export default function () {
     margin: 2rem;
     `;
 
+    const myFunc = () => { window.location = "mailto:xyz@abc.com"; };
+
     return <StyledDiv>
         <ExtraMarginDiv>
             <div>
-                <div class="navbar-inner">
-                    <div class="container">
-                        <div class="nav-collapse collapse">
+                <div id='navbar-inner' class="navbar-inner">
+                    <div id='container' class="container">
+                        <div id='nav-collapse' class="nav-collapse collapse">
 
                             <ul class="nav leftmenu">
 
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About me &amp; my work</a></li>
+                                <li id='index'><a href="index.html">Home</a></li>
+                                <li id='about'><a href="about.html">About me &amp; my work</a></li>
                             </ul>
 
-                            <ul class="nav rightmenu">
-                                <li><a href="portofolio.html">Portofolio &amp; projects</a></li>
-                                <li class="lastmenu"><a href="contact.html" class="lastmenu">Contact</a></li>
+                            <ul id='rightmenu' class="nav rightmenu">
+                                <li id='portofolio'><a href="portofolio.html">Portofolio &amp; projects</a></li>
+                                <li id='lastmenu' class="lastmenu"><a href="contact.html" class="lastmenu">Contact</a></li>
                             </ul>
 
                             <div id="myModal" class="modal hide fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -95,21 +97,21 @@ export default function () {
             </div>
             <div class="container"></div>
 
-            <div class="hero-unit">
-                <h1>Welcome to the example website John Doe's portofolio!</h1>
-                <p>
-                    This leading paragraph helps you indentify yourself. Describe in a few words who you are and <i>what your main service is</i> to your visitors, potential customers. Hero unit is for greater impact. Carousel is optional.
+            <div id='welcome' class="hero-unit">
+                <h1 id='welcome'>Welcome to the example website John Doe's portofolio!</h1>
+                <p id='landing'>
+                    This leading paragraph helps you indentify yourself. Describe in a few words who you are and <i id='landing1'>what your main service is</i> to your visitors, potential customers. Hero unit is for greater impact. Carousel is optional.
                 </p>
             </div>
 
             <div>
-                <div class="span16">
+                <div id="span16" class="span16">
                     <div id="myCarousel" class="carousel slide">
-                        <div class="carousel-inner imglist">
+                        <div id="carousel-inner" class="carousel-inner imglist">
                             <div class="item">
                                 <div class="carousel-caption">
-                                    <h4>First Thumbnail label</h4>
-                                    <p>
+                                    <h4 id='firstthumb'>First Thumbnail label</h4>
+                                    <p id='pfirstthumb'>
                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
                     </p>
                                 </div>
@@ -117,8 +119,8 @@ export default function () {
 
                             <div class="item active">
                                 <div class="carousel-caption">
-                                    <h4>Second Thumbnail label</h4>
-                                    <p>
+                                    <h4 id='secondthumb'> Second Thumbnail label</h4>
+                                    <p id='psecondthumb'>
                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
                     </p>
                                 </div>
@@ -126,8 +128,8 @@ export default function () {
 
                             <div class="item">
                                 <div class="carousel-caption">
-                                    <h4>Third Thumbnail label</h4>
-                                    <p>
+                                    <h4 id='thirdthumb'>Third Thumbnail label</h4>
+                                    <p id='pthirdthumb'>
                                         Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.
                     </p>
                                 </div>
@@ -141,18 +143,18 @@ export default function () {
             <div>
 
                 <div class="span-one-third">
-                    <h3>Professional</h3>
-                    <p>
+                    <h3 id='professional'>Professional</h3>
+                    <p id='pprofessional'>
                         Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.
     </p>
-                    <p>
-                        <a class="btn" href="about.html">More about me</a>
+                    <p id='btn1'>
+                        <a id='btn11'>More about me</a>
                     </p>
                 </div>
 
                 <div class="span-one-third">
-                    <h3>Aesthetic</h3>
-                    <p>
+                    <h3 id='Aesthetic'>Aesthetic</h3>
+                    <p id='pAesthetic'>
                         Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimen.
     </p>
                     <p>
@@ -160,8 +162,8 @@ export default function () {
                 </div>
 
                 <div class="span-one-third">
-                    <h3>Responsive</h3>
-                    <p>
+                    <h3 id="responsive">Responsive</h3>
+                    <p id="presponsive">
                         Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis.
     </p>
                 </div>
@@ -173,23 +175,7 @@ export default function () {
                 <div class="tweettext">
                     <div>
                         <div class="span-one-third">
-                            <i>Some nice words about you. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</i>
-                        </div>
-                        <div class="span-one-third">
-                            <div class="centermargin">
-                                <div class="facebook">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="twitter">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="google">
-                                    <a href="#"></a>
-                                </div>
-                                <div class="flickr">
-                                    <a href="#"></a>
-                                </div>
-                            </div>
+                            <i id="somewords">Some nice words about you. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</i>
                         </div>
                     </div>
                 </div>
@@ -199,7 +185,7 @@ export default function () {
             </div>
 
             <div id="pouch-root"></div><br />
-            <Button variant="success" onClick={() => { window.location = "mailto:xyz@abc.com"; }}>Send me an email</Button>
+            <Button id="btn" variant="success" >Send me an email</Button>
         </ExtraMarginDiv>
     </StyledDiv>
 }
