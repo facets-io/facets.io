@@ -5,9 +5,9 @@ import { Button } from 'react-bootstrap';
 
 export default function () {
     return <div>
-        <div id="fixed-container">
-            <StyledDiv>
-                <ExampleWebsite />
+        <div>
+            <StyledDiv id="fixed-container">
+                <ExampleWebsite  />
             </StyledDiv>
         </div>
     </div>

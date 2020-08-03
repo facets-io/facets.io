@@ -16,9 +16,9 @@ export default function () {
 
     const myFunc = () => { window.location = "mailto:xyz@abc.com"; };
 
-    return <StyledDiv>
-        <ExtraMarginDiv>
-            <div>
+    return <StyledDiv id='main'>
+        <ExtraMarginDiv id='main2'> 
+            <div id='main3'>
                 <div id='navbar-inner' class="navbar-inner">
                     <div id='container' class="container">
                         <div id='nav-collapse' class="nav-collapse collapse">
