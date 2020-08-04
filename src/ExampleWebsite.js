@@ -11,7 +11,7 @@ export default function () {
     `;
 
     const ExtraMarginDiv = styled.div`
-    margin: 2rem;
+    margin: 1rem;
     `;
 
     const myFunc = () => { window.location = "mailto:xyz@abc.com"; };

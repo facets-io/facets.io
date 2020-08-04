@@ -1,10 +1,15 @@
 import React from 'react';
 import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import $ from 'jquery';
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+  margin: 1rem;
+`;
 
 function ToolBox() {
-    return <div>
-        <div><b>Selected DOM Element: </b><label id="ToolBoxLabel"></label></div>
+    return <StyledDiv>
+        <h6>Selected DOM Element: <u><label id="ToolBoxLabel"></label></u></h6>
         <div><b>Audience:</b> <select name="cars" id="cars">
             <option value="volvo">Age</option>
             <option value="saab">Activity</option>
@@ -31,7 +36,7 @@ function ToolBox() {
                 }
             }}
         ></BootstrapSwitchButton></div>
-    </div>
+    </StyledDiv>
 }
 
 export default ToolBox;

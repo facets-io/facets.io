@@ -77,7 +77,7 @@ text-align: center;
 `;
 
 const StyledLabel = styled.label`
-  margin: 2rem;
+  margin: 1rem;
 `;
 
 export default App;
