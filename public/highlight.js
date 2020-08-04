@@ -28,6 +28,16 @@ function makeid(length) {
     return result;
 }
 
+window.hiddenElementsArray = [];
+
+function updateToolBoxUI(id) {
+    if(hiddenElementsArray.includes(id)) {
+
+    } else {
+        
+    }
+}
+
 $('#fixed-container *').hover(
     function (e) {
         $(this).css('border', '1px solid black');
@@ -43,7 +53,6 @@ $('#fixed-container *').hover(
     }
 ).click((e) => {
     document.getElementById("ToolBoxLabel").innerHTML = `#${e.target.id}`;
-    // console.log('EE', e);
-    // attributes
     window.selectedDOM = e.target.id;
+    updateToolBoxUI(window.selectedDOM);
 })

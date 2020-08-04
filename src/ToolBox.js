@@ -12,21 +12,23 @@ function ToolBox() {
         <div>Target Audience:</div>
         <br></br>
         <div><BootstrapSwitchButton
+            id='displayhideswitch'
             onlabel='Display'
             offlabel='Hide'
             onstyle='danger'
             offstyle='success'
             width={100}
-            onChange={(e)=> {
-                //background-color
-                // console.log('KEEPO',e, window.selectedDOM);
-                if(e) {
+            onChange={(e) => {
+                if (e) {
+                    window.hiddenElementsArray.push(window.selectedDOM);
                     $(`#${window.selectedDOM}`).css('background-color', 'red');
-                }else {
+                } else {
+                    const index = window.hiddenElementsArray.indexOf(window.selectedDOM);
+                    if (index > -1) {
+                        window.hiddenElementsArray.splice(index, 1);
+                    }
                     $(`#${window.selectedDOM}`).css('background-color', 'lightgreen');
                 }
-               
-                
             }}
         ></BootstrapSwitchButton></div>
     </div>

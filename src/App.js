@@ -18,7 +18,13 @@ const RightDiv = styled.div`
     margin-left: 108px;
 `;
 
-function App() {
+const onDeployHandler = () => {
+  console.log('HIDING IDs', window.hiddenElementsArray);
+  //TODO persist ...
+}
+
+function App(hiddenElementsArray) {
+  console.log('hiddenElementsArray',hiddenElementsArray)
   const [inputURL, setInputURL] = useState('https://stripe.com/');
   const [editMode, setEditMode] = useState(true);
 
@@ -32,7 +38,6 @@ function App() {
 
       <StyledLabel>Load Website URL:</StyledLabel>
       <StyledInput value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled />
-
       <StyledSwitch
         checked={false}
         onlabel='Edit'
@@ -54,7 +59,7 @@ function App() {
           <ToolBox />
         </RightDiv>
       </StyledDiv1>
-      <Button size='lg' className='btn-block'>🚀 D E P L O Y 🚀</Button>
+      <Button size='lg' className='btn-block' onClick={onDeployHandler}>🚀 D E P L O Y 🚀</Button>
     </StyledDiv>
   );
 }
