@@ -1,12 +1,10 @@
 
 import React from 'react';
 import styled from 'styled-components';
-import { Button } from 'react-bootstrap';
 
 export default function () {
 
     const StyledDiv = styled.div`
-        width: 50%;
         border: thin solid black;
     `;
 

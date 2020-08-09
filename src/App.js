@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import BootstrapSwitchButton from 'bootstrap-switch-button-react';
 import FixedContainer from './FixedContainer';
 import ToolBox from './ToolBox';
-import { Button } from 'react-bootstrap';
+import { Button } from '@material-ui/core';
+import logo from './facet.png';
+import PermanentDrawerLeft from './PermanentDrawerLeft';
+
+const StyledDiv = styled.div`
+text-align: center;
+`;
+
 
 const LeftDiv = styled.div`
-  float: left;
-  width: 70rem;
-  margin-right: 8px;
-  margin: 14px
+    margin-top: 1rem;
 `;
 
 const RightDiv = styled.div`
-    margin-left: 108px;
+    border-left: .2rem solid black;
 `;
 
 const onDeployHandler = () => {
@@ -23,61 +25,20 @@ const onDeployHandler = () => {
   //TODO persist ...
 }
 
-function App(hiddenElementsArray) {
-  console.log('hiddenElementsArray',hiddenElementsArray)
-  const [inputURL, setInputURL] = useState('https://stripe.com/');
-  const [editMode, setEditMode] = useState(true);
+function App() {
 
   const StyledDiv1 = styled.div`
- 
-  text-align: left;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    text-align: left;
 `;
 
   return (
     <StyledDiv className="App">
-
-      <StyledLabel>Load Website URL:</StyledLabel>
-      <StyledInput value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled />
-      <StyledSwitch
-        checked={false}
-        onlabel='Edit'
-        onstyle='danger'
-        offlabel='Live'
-        offstyle='success'
-        size='sm'
-        onChange={(e) => {
-          window.isEditMode = !editMode;
-          setEditMode(!editMode);
-        }}
-      />
-
-      <StyledDiv1>
-        <LeftDiv>
-          <FixedContainer />
-        </LeftDiv>
-        <RightDiv>
-          <ToolBox />
-        </RightDiv>
-      </StyledDiv1>
-      <Button size='lg' className='btn-block' onClick={onDeployHandler}>🚀 D E P L O Y 🚀</Button>
+      <PermanentDrawerLeft></PermanentDrawerLeft>
     </StyledDiv>
   );
 }
 
-const StyledSwitch = styled(BootstrapSwitchButton)`
-  
-`;
-
-const StyledInput = styled.input`
-  margin: 1rem;
-`;
-
-const StyledDiv = styled.div`
-text-align: center;
-`;
-
-const StyledLabel = styled.label`
-  margin: 1rem;
-`;
 
 export default App;

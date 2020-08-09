@@ -30,14 +30,6 @@ function makeid(length) {
 
 window.hiddenElementsArray = [];
 
-function updateToolBoxUI(id) {
-    if(hiddenElementsArray.includes(id)) {
-
-    } else {
-        
-    }
-}
-
 $('#fixed-container *').hover(
     function (e) {
         $(this).css('border', '1px solid black');
@@ -54,5 +46,4 @@ $('#fixed-container *').hover(
 ).click((e) => {
     document.getElementById("ToolBoxLabel").innerHTML = `#${e.target.id}`;
     window.selectedDOM = e.target.id;
-    updateToolBoxUI(window.selectedDOM);
 })

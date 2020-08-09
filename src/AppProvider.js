@@ -6,7 +6,6 @@ const AppContext = React.createContext({
 
 
 const AppProvider = ({children, hiddenElementsArray}) => {
-    console.log('HEYA',hiddenElementsArray);
     return <AppContext.Provider value={{ hiddenElementsArray }}>{children}</AppContext.Provider>
 };
 
