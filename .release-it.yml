@@ -1,0 +1,8 @@
+git:
+  requireCleanWorkingDir: false
+github:
+  tokenRef: "GITHUB_TOKEN"
+  requireBranch: "master"
+  release: true
+npm:
+  publish: false

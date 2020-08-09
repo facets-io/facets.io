@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -15,29 +15,32 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v1
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v1
 
-    # Runs a single command using the runners shell
-    - name: Use Node.js 10.14.1
-      uses: actions/setup-node@v1
-      with:
-        node-version: 10.14.1
+      # Runs a single command using the runners shell
+      - name: Use Node.js 10.14.1
+        uses: actions/setup-node@v1
+        with:
+          node-version: 10.14.1
 
-    # Runs a set of commands using the runners shell
-    - name: Installing dependencies
-      run: npm install
-      
-    - name: Building the Application
-      run: npm run build
-      
-    - name: Upload to S3
-      uses: jakejarvis/s3-sync-action@v0.5.0
-      with:
-        args: --delete
-      env:
-        AWS_S3_BUCKET: facet.ninja
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        AWS_REGION: 'us-west-2'
-        SOURCE_DIR: 'build'
+      # Runs a set of commands using the runners shell
+      - name: Installing dependencies
+        run: npm install
+
+      - name: Building the Application
+        run: npm run build
+
+      - name: Upload to S3
+        uses: jakejarvis/s3-sync-action@v0.5.0
+        with:
+          args: --delete
+        env:
+          AWS_S3_BUCKET: facet.ninja
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: "us-west-2"
+          SOURCE_DIR: "build"
+
+      - name: Release to GitHub
+        run: npm run release
