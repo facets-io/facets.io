@@ -92,7 +92,7 @@ export default function PermanentDrawerLeft() {
          <List>
           {['Facetize'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{index % 2 === 0 ? <img src={logo} width="13%" /> : <MailIcon />}</ListItemIcon>
+              <ListItemIcon>{index % 2 === 0 ? <img media="(min-width: 100px)" src={logo} width="40px" /> : <MailIcon />}</ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
           ))}
