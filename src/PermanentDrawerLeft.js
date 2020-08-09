@@ -77,7 +77,7 @@ export default function PermanentDrawerLeft() {
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap>
-            Facets Configuration
+            Facet Configuration
           </Typography>
         </Toolbar>
       </AppBar>
