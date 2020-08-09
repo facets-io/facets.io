@@ -5,4 +5,4 @@ Facets.io website.
 
 ## URLs
 
-Production: http://facet.ninja/
+Production: https://facet.ninja/
