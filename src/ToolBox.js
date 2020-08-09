@@ -3,6 +3,7 @@ import $ from 'jquery';
 import styled from 'styled-components';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import FloatingActionButtonSize from './FloatingActionButtonSize';
 
 window.hiddenElementsArray = [];
 
@@ -13,6 +14,7 @@ const StyledDiv = styled.div`
 function ToolBox() {
 
     useEffect(() => {
+        window.selectedDOM = 'main';
         $('#fixed-container *').hover(
             function (e) {
                 $(this).css('border', '1px solid black');
@@ -27,12 +29,10 @@ function ToolBox() {
                 return false;
             }
         ).click((e) => {
-            if(!e.target.id) return;
-            console.log('@CLICK',e.target.id);
-            document.getElementById("ToolBoxLabel").innerHTML = `#${e.target.id}`;
+            if (!e.target.id) return;
+            document.getElementById("ToolBoxLabel").innerHTML = `${e.target.id}`;
             window.selectedDOM = e.target.id;
             changeDisplayHide(e.target.id);
-
         })
 
         const changeDisplayHide = (id) => {
@@ -48,7 +48,7 @@ function ToolBox() {
     }, []);
 
     const [isEdit, setIsEdit] = useState(true);
-    const [shouldDisplay, setShouldDisplay] = useState(true);
+    const [shouldDisplay, setShouldDisplay] = useState(false);
 
     const handleEditLiveChange = (e, newAlignment) => {
         setIsEdit(newAlignment);
@@ -70,7 +70,7 @@ function ToolBox() {
 
     return <StyledDiv>
         <h6>URL:<input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled /></h6>
-        <h6>Mode: <ToggleButtonGroup
+        <h6>Mode:{' '}<ToggleButtonGroup
             value={isEdit}
             exclusive
             onChange={handleEditLiveChange}
@@ -90,9 +90,8 @@ function ToolBox() {
             <option>Vulnerabilities</option>
         </select> </div>
         <br></br>
-        <div>
-            <ToggleButtonGroup
-                className="btn btn-default w-100"
+        <h6>
+            Facet:{' '} <ToggleButtonGroup
                 value={shouldDisplay}
                 exclusive
                 onChange={handleDisplayHideChange}
@@ -104,7 +103,7 @@ function ToolBox() {
                     Hide
             </ToggleButton>
             </ToggleButtonGroup>
-        </div>
+        </h6>
     </StyledDiv>
 }
 

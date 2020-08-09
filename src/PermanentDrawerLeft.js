@@ -9,8 +9,6 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FixedContainer from './FixedContainer';
 import ToolBox from './ToolBox';
-import { Button } from '@material-ui/core';
-import logo from './facet.png';
 
 const StyledDiv1 = styled.div`
   display: grid;

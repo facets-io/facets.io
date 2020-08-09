@@ -1,13 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ExampleWebsite from './ExampleWebsite';
 import styled from 'styled-components';
-import { Button } from 'react-bootstrap';
 
 export default function () {
     return <div>
         <div>
             <StyledDiv id="fixed-container">
-                <ExampleWebsite  />
+                <ExampleWebsite />
             </StyledDiv>
         </div>
     </div>
