@@ -36,6 +36,7 @@ function App() {
   return (
     <StyledDiv className="App">
       <PermanentDrawerLeft></PermanentDrawerLeft>
+      <Button variant="contained" size='large' color="primary" className='btn-block' onClick={onDeployHandler}>⚔️ D E P L O Y ⚔️</Button>
     </StyledDiv>
   );
 }

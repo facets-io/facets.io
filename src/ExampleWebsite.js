@@ -15,7 +15,7 @@ export default function () {
     const myFunc = () => { window.location = "mailto:xyz@abc.com"; };
 
     return <StyledDiv id='main'>
-        <ExtraMarginDiv id='main2'> 
+        <ExtraMarginDiv id='main2'>
             <div id='main3'>
                 <div id='navbar-inner' className="navbar-inner">
                     <div id='container' className="container">
@@ -32,7 +32,7 @@ export default function () {
                                 <li id='lastmenu' className="lastmenu"><a href="contact.html" className="lastmenu">Contact</a></li>
                             </ul>
 
-                            <div id="myModal" className="modal hide fade hide" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div id="myModal" className="modal hide fade hide" tabIndex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                 <div className="modal-header">
                                     <button type="button" className="close" data-dismiss="modal" aria-hidden="true">x</button>
                                     <h3 id="myModalLabel">Send me a note</h3>
@@ -159,30 +159,21 @@ export default function () {
                     </p>
                 </div>
 
-                <div className="span-one-third">
-                    <h3 id="responsive">Responsive</h3>
-                    <p id="presponsive">
-                        Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis.
+                <h3 id="responsive">Responsive</h3>
+                <p id="presponsive">
+                    Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis.
     </p>
-                </div>
             </div>
 
-            <div className="footerli">
-            </div>
-            <div className="tweetarea">
-                <div className="tweettext">
-                    <div>
-                        <div className="span-one-third">
-                            <i id="somewords">Some nice words about you. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</i>
-                        </div>
+
+            <div id="somewords" className="tweetarea">
+                <div id="somewords1" className="tweettext">
+                    <div id="somewords11" className="span-one-third">
+                        <i id="somewords111">Some nice words about you. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</i>
                     </div>
                 </div>
             </div>
-
-            <div className="footerend">
-            </div>
-
-            <div id="pouch-root"></div><br />
+            <br />
             <button id="btn">Send me an email</button>
         </ExtraMarginDiv>
     </StyledDiv>
