@@ -17,6 +17,7 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v1
+      - uses: actions/checkout@v2-beta
 
       # Runs a single command using the runners shell
       - name: Use Node.js 10.14.1
@@ -42,5 +43,6 @@ jobs:
           AWS_REGION: "us-west-2"
           SOURCE_DIR: "build"
 
-      - name: Release to GitHub
-        run: npm run release
+      # investigate
+      # - name: Release to GitHub
+      #   run: npm run release
