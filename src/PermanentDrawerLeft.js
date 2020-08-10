@@ -12,7 +12,7 @@ import GmailTreeView from './GmailTreeView';
 
 const StyledDiv1 = styled.div`
   display: grid;
-  grid-template-columns: 10% 70% 15%;
+  grid-template-columns: 15% 70% 15%;
   text-align: left;
 `;
 
@@ -28,11 +28,6 @@ const LeftDiv = styled.div`
 const RightDiv = styled.div`
     border-left: .2rem solid black;
 `;
-
-const onDeployHandler = () => {
-  console.log('HIDING IDs', window.hiddenElementsArray);
-  //TODO persist ...
-}
 
 const drawerWidth = 0;
 

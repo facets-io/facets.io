@@ -25,7 +25,7 @@ export default function BasicTextField() {
 
     return (
         <div onKeyDown={keyPress} className={classes.root}>
-            <TextField id="filled-basic" label="Name your Facet" variant="outlined" />
+            <TextField id="standard-basic" label="Name your Facet" />
         </div>
     );
 }
