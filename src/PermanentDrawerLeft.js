@@ -1,6 +1,5 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -9,10 +8,11 @@ import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import FixedContainer from './FixedContainer';
 import ToolBox from './ToolBox';
+import GmailTreeView from './GmailTreeView';
 
 const StyledDiv1 = styled.div`
   display: grid;
-  grid-template-columns: 80% 20%;
+  grid-template-columns: 10% 70% 15%;
   text-align: left;
 `;
 
@@ -78,6 +78,7 @@ export default function PermanentDrawerLeft() {
         <div className={classes.toolbar} />
         <StyledDiv className="App">
           <StyledDiv1>
+            <GmailTreeView />
             <LeftDiv>
               <FixedContainer />
             </LeftDiv>

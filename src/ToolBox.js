@@ -3,7 +3,6 @@ import $ from 'jquery';
 import styled from 'styled-components';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import FloatingActionButtonSize from './FloatingActionButtonSize';
 
 window.hiddenElementsArray = [];
 
@@ -96,11 +95,11 @@ function ToolBox() {
                 exclusive
                 onChange={handleDisplayHideChange}
                 aria-label="text alignment">
-                <ToggleButton value={false} aria-label="left aligned">
+            <ToggleButton value={false} aria-label="left aligned">
                     Display
             </ToggleButton>
-                <ToggleButton value={true} aria-label="centered">
-                    Hide
+            <ToggleButton value={true} aria-label="centered">
+                Hide
             </ToggleButton>
             </ToggleButtonGroup>
         </h6>

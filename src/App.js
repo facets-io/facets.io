@@ -1,16 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import FixedContainer from './FixedContainer';
-import ToolBox from './ToolBox';
 import { Button } from '@material-ui/core';
-import logo from './facet.png';
 import PermanentDrawerLeft from './PermanentDrawerLeft';
+import AppProvider from './AppProvider';
 
 const StyledDiv = styled.div`
-text-align: center;
+  text-align: center;
 `;
-
 
 const LeftDiv = styled.div`
     margin-top: 1rem;
@@ -34,10 +31,12 @@ function App() {
 `;
 
   return (
-    <StyledDiv className="App">
-      <PermanentDrawerLeft></PermanentDrawerLeft>
-      <Button variant="contained" size='large' color="primary" className='btn-block' onClick={onDeployHandler}>⚔️ D E P L O Y ⚔️</Button>
-    </StyledDiv>
+    <AppProvider>
+      <StyledDiv className="App">
+        <PermanentDrawerLeft></PermanentDrawerLeft>
+        <Button variant="contained" size='large' color="primary" className='btn-block' onClick={onDeployHandler}>⚔️ D E P L O Y ⚔️</Button>
+      </StyledDiv>
+    </AppProvider>
   );
 }
 
