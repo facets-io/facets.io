@@ -64,13 +64,12 @@ const useTreeItemStyles = makeStyles((theme) => ({
 function StyledTreeItem(props) {
 
   const handleAdd = () => {
-    console.log('@on add');
     setIsAddingFacet(true);
   }
 
   const classes = useTreeItemStyles();
-  const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, ...other } = props;
-  const { isAddingFacet, setIsAddingFacet } = useContext(AppContext);
+  const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, hasPlusBtn = true, ...other } = props;
+  const { setIsAddingFacet } = useContext(AppContext);
   return (
     <TreeItem
       label={
@@ -81,7 +80,7 @@ function StyledTreeItem(props) {
           <Typography variant="caption" color="inherit">
             {labelInfo}
           </Typography>
-          <Button onClick={() => { handleAdd() }}>+</Button>
+          {hasPlusBtn ? <Button onClick={() => { handleAdd() }}>+</Button> : null}
         </div>
       }
       style={{
@@ -119,23 +118,25 @@ const useStyles = makeStyles({
 
 export default function GmailTreeView() {
   const classes = useStyles();
-  const { isAddingFacet } = useContext(AppContext);
-  console.log('isAddingFace', isAddingFacet)
-
+  const { isAddingFacet, addedFacets } = useContext(AppContext);
+  const AddedFacetsStyledTreeItems = addedFacets.map((id, facetLabel) => {
+    return <StyledTreeItem hasPlusBtn={false} nodeId={"facet" + id} labelText={id}></StyledTreeItem>
+  });
 
   const addingFacetInput = <BasicTextField></BasicTextField>;
 
+  console.log('isAddingFacet', isAddingFacet)
+
   return (
     <TreeView
+      expanded={['1']}
       className={classes.root}
-      defaultExpanded={['3']}
       defaultCollapseIcon={<ArrowDropDownIcon />}
       defaultExpandIcon={<ArrowRightIcon />}
       defaultEndIcon={<div style={{ width: 24 }} />}
     >
-      <StyledTreeItem nodeId="1" labelText="Facet1" labelIcon={MailIcon} >{isAddingFacet ? addingFacetInput : null}
-        <StyledTreeItem nodeId="11" labelText="Facet1" labelIcon={MailIcon} ></StyledTreeItem>
-
+      <StyledTreeItem nodeId="1" labelText="Facets" labelIcon={MailIcon} >{isAddingFacet ? addingFacetInput : null}
+        {AddedFacetsStyledTreeItems}
       </StyledTreeItem>
     </TreeView>
   );

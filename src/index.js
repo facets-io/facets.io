@@ -4,12 +4,25 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import AppProvider from './AppProvider';
+import { SnackbarProvider } from "notistack";
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppProvider hiddenElementsArray={window.hiddenElementsArray}>
-      <App hiddenElementsArray={window.hiddenElementsArray}/>
-    </AppProvider>
+    <SnackbarProvider maxSnack={3}
+      iconVariant={{
+        success: '⚔️',
+        error: '✖️',
+        warning: '⚠️',
+        info: 'ℹ️',
+      }}
+      anchorOrigin={{
+        vertical: 'top',
+        horizontal: 'right',
+      }}>
+      <AppProvider >
+        <App />
+      </AppProvider>
+    </SnackbarProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
