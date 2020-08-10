@@ -14,7 +14,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function BasicTextField() {
     const { onFacetAdd } = useContext(AppContext);
-    console.log('appContext', useContext(AppContext));
     const classes = useStyles();
 
     const keyPress = (e) => {
@@ -25,7 +24,7 @@ export default function BasicTextField() {
 
     return (
         <div onKeyDown={keyPress} className={classes.root}>
-            <TextField id="standard-basic" label="Name your Facet" />
+            <TextField inputRef={input => input && input.focus()} autoFocus id="standard-basic" label="Name your Facet" />
         </div>
     );
 }

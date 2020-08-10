@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import $ from 'jquery';
 import styled from 'styled-components';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import { Button } from '@material-ui/core';
+import AppContext from './AppContext';
+import { useSnackbar } from 'notistack';
 
 window.hiddenElementsArray = [];
 
@@ -11,6 +14,27 @@ const StyledDiv = styled.div`
 `;
 
 function ToolBox() {
+    const { enqueueSnackbar } = useSnackbar();
+
+    const { addedElements, setAddedElements, newlyAddedFacet } = useContext(AppContext);
+
+    const onAddElement = () => {
+
+        let oldVals = addedElements.get(newlyAddedFacet);
+        if (!oldVals || oldVals.length === 0) {
+            oldVals = [];
+        }
+        if (oldVals.includes(window.selectedDOM)) {
+            enqueueSnackbar(`Element has already been added in the ${newlyAddedFacet}.`, { variant: "error" });
+            return;
+        }
+        const newVals = [...oldVals, window.selectedDOM];
+        const newMap = new Map(addedElements);
+        newMap.set(newlyAddedFacet, newVals);
+        enqueueSnackbar(`Added Element ${window.selectedDOM} in the ${newlyAddedFacet}!`, { variant: "success" });
+        setAddedElements(newMap);
+
+    }
 
     useEffect(() => {
         window.selectedDOM = 'main';
@@ -66,6 +90,7 @@ function ToolBox() {
         }
         setShouldDisplay(val);
     }
+    console.log('HEYA', addedElements);
 
     return <StyledDiv>
         <h6>URL:<input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled /></h6>
@@ -95,14 +120,17 @@ function ToolBox() {
                 exclusive
                 onChange={handleDisplayHideChange}
                 aria-label="text alignment">
-            <ToggleButton value={false} aria-label="left aligned">
+                <ToggleButton value={false} aria-label="left aligned">
                     Display
             </ToggleButton>
-            <ToggleButton value={true} aria-label="centered">
-                Hide
+                <ToggleButton value={true} aria-label="centered">
+                    Hide
             </ToggleButton>
             </ToggleButtonGroup>
         </h6>
+        <br></br>
+        <Button variant="contained" size='large' color="primary" className='btn-block' onClick={onAddElement}>Add Element</Button>
+
     </StyledDiv>
 }
 
