@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
@@ -68,7 +68,7 @@ function StyledTreeItem(props) {
   }
 
   const classes = useTreeItemStyles();
-  const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, hasPlusBtn = true, ...other } = props;
+  const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, hasPlusBtn = false, ...other } = props;
   const { setIsAddingFacet } = useContext(AppContext);
   return (
     <TreeItem
@@ -103,7 +103,6 @@ function StyledTreeItem(props) {
 StyledTreeItem.propTypes = {
   bgColor: PropTypes.string,
   color: PropTypes.string,
-  labelIcon: PropTypes.elementType.isRequired,
   labelInfo: PropTypes.string,
   labelText: PropTypes.string.isRequired,
 };
@@ -118,25 +117,39 @@ const useStyles = makeStyles({
 
 export default function GmailTreeView() {
   const classes = useStyles();
-  const { isAddingFacet, addedFacets } = useContext(AppContext);
-  const AddedFacetsStyledTreeItems = addedFacets.map((id, facetLabel) => {
-    return <StyledTreeItem hasPlusBtn={false} nodeId={"facet" + id} labelText={id}></StyledTreeItem>
+  const { isAddingFacet, addedFacets, newlyAddedFacet, setNewlyAddedFacet, addedElements } = useContext(AppContext);
+  let arr = [];
+  const addedFacetsStyledTreeItems = addedFacets.map((facetLabel) => {
+
+    const addedElementsByFacet = addedElements.get(facetLabel);
+    console.log('addedElementsByFacet', addedElementsByFacet);
+
+    const addedElementsTreeItems = addedElementsByFacet && addedElementsByFacet.map((element) => {
+      arr.push(facetLabel + element);
+      return <StyledTreeItem key={facetLabel + element} nodeId={facetLabel + element} labelText={element} />
+    })
+
+    return <StyledTreeItem selected={[addedElementsByFacet]} expanded={addedElementsByFacet} key={facetLabel} onLabelClick={() => { setNewlyAddedFacet(facetLabel) }} nodeId={facetLabel} labelText={facetLabel}>
+      {addedElementsTreeItems}
+    </StyledTreeItem>
   });
 
-  const addingFacetInput = <BasicTextField></BasicTextField>;
-
-  console.log('isAddingFacet', isAddingFacet)
+  const addingFacetInput = <BasicTextField />;
+  const allKeys = addedElements.keys();
 
   return (
     <TreeView
-      expanded={['1']}
+      key='FacetTreeView'
+      // defaultSelected={['Facets']}
+      expanded={['Facets', ...allKeys]}
+      selected={[newlyAddedFacet]}
       className={classes.root}
       defaultCollapseIcon={<ArrowDropDownIcon />}
       defaultExpandIcon={<ArrowRightIcon />}
       defaultEndIcon={<div style={{ width: 24 }} />}
     >
-      <StyledTreeItem nodeId="1" labelText="Facets" labelIcon={MailIcon} >{isAddingFacet ? addingFacetInput : null}
-        {AddedFacetsStyledTreeItems}
+      <StyledTreeItem hasPlusBtn nodeId="Facets" labelText="Facets" labelIcon={MailIcon} >{isAddingFacet ? addingFacetInput : null}
+        {addedFacetsStyledTreeItems}
       </StyledTreeItem>
     </TreeView>
   );
