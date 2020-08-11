@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function FloatingActionButtonSize({ isAdd = true, disabled = false, onClick }) {
     const classes = useStyles();
-    console.log('disabled', disabled)
 
     return (
         <Fab onClick={onClick} disabled={disabled} color="secondary" aria-label="add" className={classes.margin}>

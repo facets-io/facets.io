@@ -3,7 +3,6 @@ import $ from 'jquery';
 import styled from 'styled-components';
 import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
-import { Button } from '@material-ui/core';
 import AppContext from './AppContext';
 import { useSnackbar } from 'notistack';
 import FloatingActionButtonSize from './FloatingActionButtonSize'
@@ -107,7 +106,7 @@ function ToolBox() {
     }
 
     return <StyledDiv>
-        <h6>
+        {/* <h6>
             Facet:{' '} <ToggleButtonGroup
                 value={shouldDisplay}
                 exclusive
@@ -120,7 +119,7 @@ function ToolBox() {
                     Hide
             </ToggleButton>
             </ToggleButtonGroup>
-        </h6>
+        </h6> */}
         <h6>Selected DOM Element: <u><label id="ToolBoxLabel"></label></u></h6>
         <div><b>Audience:</b> <select name="cars" id="cars">
             <option>Age</option>
