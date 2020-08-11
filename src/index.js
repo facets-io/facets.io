@@ -8,9 +8,9 @@ import { SnackbarProvider } from "notistack";
 
 ReactDOM.render(
   <React.StrictMode>
-    <SnackbarProvider maxSnack={3}
+    <SnackbarProvider maxSnack={4}
       disableWindowBlurListener
-      autoHideDuration={3000}
+      autoHideDuration={5000}
       iconVariant={{
         success: '⚔️',
         error: '✖️',

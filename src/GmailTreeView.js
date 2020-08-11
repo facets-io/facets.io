@@ -130,7 +130,7 @@ export default function GmailTreeView() {
       return <StyledTreeItem onLabelClick={() => { window.selectedDOM = `${element}`; setCanDeleteElement(true); setNewlyAddedFacet(facetLabel); enqueueSnackbar(`Selected "${element}"!`, { variant: "info" }); }} key={facetLabel + element} nodeId={facetLabel + element} labelText={element} />
     })
 
-    return <StyledTreeItem selected={[addedElementsByFacet]} expanded={addedElementsByFacet} key={facetLabel} onLabelClick={() => { setNewlyAddedFacet(facetLabel) }} nodeId={facetLabel} labelText={facetLabel}>
+    return <StyledTreeItem selected={[addedElementsByFacet]} expanded={addedElementsByFacet} key={facetLabel} onLabelClick={() => { setNewlyAddedFacet(facetLabel); enqueueSnackbar(`Selected "${facetLabel}"!`, { variant: "info" }); }} nodeId={facetLabel} labelText={facetLabel}>
       {addedElementsTreeItems}
     </StyledTreeItem>
   });

@@ -18,7 +18,6 @@ function ToolBox() {
 
     const { addedElements, setAddedElements, newlyAddedFacet,  canDeleteElement, setCanDeleteElement} = useContext(AppContext);
 
-    console.log("!addedFacets", addedElements);
     const onAddElement = () => {
 
         let oldVals = addedElements.get(newlyAddedFacet);
@@ -40,12 +39,11 @@ function ToolBox() {
     const onDeleteElement = () => {
         const oldVals = addedElements.get(newlyAddedFacet);
         const newVals = oldVals.filter(element => element !== window.selectedDOM);
-        console.log('newvals', newVals);
         const newMap = new Map(addedElements);
         newMap.set(newlyAddedFacet, newVals);
         setCanDeleteElement(false);
         setAddedElements(newMap);
-        enqueueSnackbar(`Deleted Element "${window.selectedDOM}" from "${newlyAddedFacet}"!`, { variant: "info" });
+        enqueueSnackbar(`Deleted Element "${window.selectedDOM}" from "${newlyAddedFacet}"!`, { variant: "success" });
     }
 
     useEffect(() => {
@@ -72,7 +70,6 @@ function ToolBox() {
 
         const changeDisplayHide = (id) => {
             const valuesArr = addedElements.get(newlyAddedFacet);
-            console.log('CHECKME', valuesArr && valuesArr.includes(id));
             if (valuesArr && valuesArr.includes(id)) {
                 setCanDeleteElement(true);
             } else {
