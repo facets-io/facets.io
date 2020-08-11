@@ -15,6 +15,14 @@ function App() {
 
   const onDeployHandler = () => {
     console.log('HIDING IDs', window.hiddenElementsArray);
+    fetch('https://drdsebmbv2.execute-api.us-west-2.amazonaws.com/live/facet/mene', {
+      method: 'post',
+      body: JSON.stringify({ "site": "mene10", "facet": [{ "name": "myfacet", "enabled": "false", "id": ["hello", "world", "test"] }] })
+    }).then(function (response) {
+      return response.json();
+    }).then(function (data) {
+      console.log('successful response', data)
+    });
     enqueueSnackbar(`Facets Deployed!`, { variant: "success" });
   }
 

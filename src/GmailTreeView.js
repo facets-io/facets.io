@@ -11,6 +11,7 @@ import Button from '@material-ui/core/Button';
 import BasicTextField from './BasicTextField';
 import AppContext from './AppContext';
 import { useSnackbar } from 'notistack';
+import VisibilityIcon from '@material-ui/icons/Visibility';
 
 const useTreeItemStyles = makeStyles((theme) => ({
   root: {
@@ -63,13 +64,14 @@ const useTreeItemStyles = makeStyles((theme) => ({
 }));
 
 function StyledTreeItem(props) {
+  const { enqueueSnackbar } = useSnackbar();
 
   const handleAdd = () => {
     setIsAddingFacet(true);
   }
 
   const classes = useTreeItemStyles();
-  const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, hasPlusBtn = false, ...other } = props;
+  const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, hasPlusBtn = false, hasViewBtn = true, hasHideBtn = true, ...other } = props;
   const { setIsAddingFacet } = useContext(AppContext);
   return (
     <TreeItem
@@ -82,6 +84,9 @@ function StyledTreeItem(props) {
             {labelInfo}
           </Typography>
           {hasPlusBtn ? <Button onClick={() => { handleAdd() }}>+</Button> : null}
+          {hasViewBtn ? <VisibilityIcon onClick={() => {
+            enqueueSnackbar(`Functionality to be added soon!`, { variant: "error" });
+          }}>+</VisibilityIcon> : null}
         </div>
       }
       style={{
