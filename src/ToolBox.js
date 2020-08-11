@@ -16,7 +16,7 @@ const StyledDiv = styled.div`
 function ToolBox() {
     const { enqueueSnackbar } = useSnackbar();
 
-    const { addedElements, setAddedElements, newlyAddedFacet } = useContext(AppContext);
+    const { addedElements, setAddedElements, newlyAddedFacet,  canDeleteElement, setCanDeleteElement} = useContext(AppContext);
 
     const onAddElement = () => {
 
@@ -31,13 +31,23 @@ function ToolBox() {
         const newVals = [...oldVals, window.selectedDOM];
         const newMap = new Map(addedElements);
         newMap.set(newlyAddedFacet, newVals);
-        enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
+        setCanDeleteElement(true);
         setAddedElements(newMap);
+        enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
+    }
 
+    const onDeleteElement = () => {
+        const oldVals = addedElements.get(newlyAddedFacet);
+        const newVals = oldVals.filter(element => element !== window.selectedDOM);
+        const newMap = new Map(addedElements);
+        newMap.set(newlyAddedFacet, newVals);
+        setCanDeleteElement(false);
+        setAddedElements(newMap);
+        enqueueSnackbar(`Deleted Element "${window.selectedDOM}" from "${newlyAddedFacet}"!`, { variant: "success" });
     }
 
     useEffect(() => {
-        window.selectedDOM = 'main';
+
         $('#fixed-container *').hover(
             function (e) {
                 $(this).css('border', '1px solid black');
@@ -59,17 +69,20 @@ function ToolBox() {
         })
 
         const changeDisplayHide = (id) => {
+            const valuesArr = addedElements.get(newlyAddedFacet);
+            if (valuesArr && valuesArr.includes(id)) {
+                setCanDeleteElement(true);
+            } else {
+                setCanDeleteElement(false);
+            }
             const index = window.hiddenElementsArray.indexOf(id);
-            console.log('hiddenElementsArray', window.hiddenElementsArray, 'vs', index);
             if (index > -1) {
-                // window.hiddenElementsArray.splice(index, 1);
                 setShouldDisplay(true);
             } else {
                 setShouldDisplay(false);
             }
-            // $(`#${window.selectedDOM}`).css('background-color', 'unset');
         }
-    }, []);
+    }, [addedElements, newlyAddedFacet, setCanDeleteElement]);
 
     const [isEdit, setIsEdit] = useState(true);
     const [shouldDisplay, setShouldDisplay] = useState(false);
@@ -130,7 +143,7 @@ function ToolBox() {
         </h6>
         <br></br>
         <Button variant="contained" size='large' color="primary" className='btn-block' onClick={onAddElement}>Add Element</Button>
-
+        <Button variant="contained" size='large' color="secondary" className='btn-block' onClick={onDeleteElement} disabled={!canDeleteElement}>Delete Element</Button>
     </StyledDiv>
 }
 
