@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -14,11 +14,11 @@ import ToggleButton from '@material-ui/lab/ToggleButton';
 import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
-
+import AppContext from './AppContext';
 
 const StyledDiv1 = styled.div`
   display: grid;
-  grid-template-columns: 15% 70% 15%;
+  grid-template-columns: 20% 80%;
   text-align: left;
   margin: 1rem;
 `;
@@ -26,7 +26,6 @@ const StyledDiv1 = styled.div`
 const StyledDiv = styled.div`
 text-align: center;
 `;
-
 
 const LeftDiv = styled.div`
     ${'' /* margin-top: 1rem; */}
@@ -49,6 +48,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PermanentDrawerLeft() {
+  const { addedElements, setAddedElements, newlyAddedFacet, canDeleteElement, setCanDeleteElement } = useContext(AppContext);
+
   const [isEdit, setIsEdit] = useState(true);
 
   const handleEditLiveChange = (e, newAlignment) => {
@@ -66,12 +67,11 @@ export default function PermanentDrawerLeft() {
               Facet Configuration
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              <h6>URL: <input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled /></h6>
+              URL: <input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled />
             </Typography>
             <h6><ToggleButtonGroup
               value={isEdit}
               exclusive
-              onChange={handleEditLiveChange}
               aria-label="text alignment">
               <ToggleButton selected value={true} aria-label="left aligned">
                 <EditIcon style={{ color: 'white' }}></EditIcon>
@@ -93,7 +93,6 @@ export default function PermanentDrawerLeft() {
               <FixedContainer />
             </LeftDiv>
             <RightDiv>
-              <ToolBox />
             </RightDiv>
           </StyledDiv1>
         </StyledDiv>

@@ -13,7 +13,6 @@ export default function () {
     `;
 
     const myFunc = () => { window.location = "mailto:xyz@abc.com"; };
-
     return <StyledDiv id='main'>
         <ExtraMarginDiv id='main2'>
             <div id='main3'>
