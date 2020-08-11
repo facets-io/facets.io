@@ -60,13 +60,14 @@ function ToolBox() {
 
         const changeDisplayHide = (id) => {
             const index = window.hiddenElementsArray.indexOf(id);
+            console.log('hiddenElementsArray', window.hiddenElementsArray, 'vs', index);
             if (index > -1) {
-                window.hiddenElementsArray.splice(index, 1);
+                // window.hiddenElementsArray.splice(index, 1);
                 setShouldDisplay(true);
             } else {
                 setShouldDisplay(false);
             }
-            $(`#${window.selectedDOM}`).css('background-color', 'unset');
+            // $(`#${window.selectedDOM}`).css('background-color', 'unset');
         }
     }, []);
 
