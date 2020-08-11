@@ -10,6 +10,7 @@ import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import Button from '@material-ui/core/Button';
 import BasicTextField from './BasicTextField';
 import AppContext from './AppContext';
+import { useSnackbar } from 'notistack';
 
 const useTreeItemStyles = makeStyles((theme) => ({
   root: {
@@ -116,17 +117,17 @@ const useStyles = makeStyles({
 });
 
 export default function GmailTreeView() {
+  const { enqueueSnackbar } = useSnackbar();
   const classes = useStyles();
-  const { isAddingFacet, addedFacets, newlyAddedFacet, setNewlyAddedFacet, addedElements } = useContext(AppContext);
+  const { isAddingFacet, addedFacets, newlyAddedFacet, setNewlyAddedFacet, addedElements, setCanDeleteElement } = useContext(AppContext);
   let arr = [];
   const addedFacetsStyledTreeItems = addedFacets.map((facetLabel) => {
 
     const addedElementsByFacet = addedElements.get(facetLabel);
-    console.log('addedElementsByFacet', addedElementsByFacet);
 
     const addedElementsTreeItems = addedElementsByFacet && addedElementsByFacet.map((element) => {
       arr.push(facetLabel + element);
-      return <StyledTreeItem key={facetLabel + element} nodeId={facetLabel + element} labelText={element} />
+      return <StyledTreeItem onLabelClick={() => { window.selectedDOM = `${element}`; setCanDeleteElement(true); setNewlyAddedFacet(facetLabel); enqueueSnackbar(`Selected "${element}"!`, { variant: "info" }); }} key={facetLabel + element} nodeId={facetLabel + element} labelText={element} />
     })
 
     return <StyledTreeItem selected={[addedElementsByFacet]} expanded={addedElementsByFacet} key={facetLabel} onLabelClick={() => { setNewlyAddedFacet(facetLabel) }} nodeId={facetLabel} labelText={facetLabel}>

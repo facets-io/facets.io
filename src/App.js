@@ -10,8 +10,6 @@ const StyledDiv = styled.div`
   text-align: center;
 `;
 
-
-
 function App() {
   const { enqueueSnackbar } = useSnackbar();
 

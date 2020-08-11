@@ -10,6 +10,7 @@ ReactDOM.render(
   <React.StrictMode>
     <SnackbarProvider maxSnack={3}
       disableWindowBlurListener
+      autoHideDuration={3000}
       iconVariant={{
         success: '⚔️',
         error: '✖️',
@@ -17,7 +18,7 @@ ReactDOM.render(
         info: 'ℹ️',
       }}
       anchorOrigin={{
-        vertical: 'top',
+        vertical: 'bottom',
         horizontal: 'right',
       }}>
       <AppProvider >

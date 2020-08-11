@@ -7,6 +7,9 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
     const { enqueueSnackbar } = useSnackbar();
     const [addedFacets, setAddedFacets] = useState(["Default-Facet"]);
     const [isAddingFacet, setIsAddingFacet] = useState(false);
+    const [canDeleteElement, setCanDeleteElement] = useState(false);
+
+    // const [shouldDisplay, setShouldDisplay] = useState(false);
     const [newlyAddedFacet, setNewlyAddedFacet] = useState("Default-Facet");
     // String "Key", Array Values
     const [addedElements, setAddedElements] = useState(new Map());
@@ -19,13 +22,15 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
         setAddedFacets([label, ...addedFacets]);
         setNewlyAddedFacet(label);
         enqueueSnackbar(`Facet "${label}" was created!`, { variant: "success" });
+        window.selectedDOM = 'main';
         setIsAddingFacet(false);
     }
 
     return <AppContext.Provider value={{
         hiddenElementsArray, onFacetAdd, addedFacets,
         isAddingFacet, setIsAddingFacet, newlyAddedFacet,
-        setNewlyAddedFacet, addedElements, setAddedElements
+        setNewlyAddedFacet, addedElements, setAddedElements,
+        canDeleteElement, setCanDeleteElement
     }}>
         {children}
     </AppContext.Provider>
