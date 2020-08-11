@@ -18,7 +18,7 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
         }
         setAddedFacets([label, ...addedFacets]);
         setNewlyAddedFacet(label);
-        enqueueSnackbar(`Facet ${label} was created!`, { variant: "success" });
+        enqueueSnackbar(`Facet "${label}" was created!`, { variant: "success" });
         setIsAddingFacet(false);
     }
 

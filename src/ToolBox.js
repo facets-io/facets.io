@@ -25,13 +25,13 @@ function ToolBox() {
             oldVals = [];
         }
         if (oldVals.includes(window.selectedDOM)) {
-            enqueueSnackbar(`Element has already been added in the ${newlyAddedFacet}.`, { variant: "error" });
+            enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
             return;
         }
         const newVals = [...oldVals, window.selectedDOM];
         const newMap = new Map(addedElements);
         newMap.set(newlyAddedFacet, newVals);
-        enqueueSnackbar(`Added Element ${window.selectedDOM} in the ${newlyAddedFacet}!`, { variant: "success" });
+        enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
         setAddedElements(newMap);
 
     }
@@ -90,7 +90,6 @@ function ToolBox() {
         }
         setShouldDisplay(val);
     }
-    console.log('HEYA', addedElements);
 
     return <StyledDiv>
         <h6>URL:<input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled /></h6>
