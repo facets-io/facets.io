@@ -32,19 +32,17 @@ function App() {
       site: 'mene-prod',
       facet
     }
-    console.log('body', body);
     return body;
   }
 
   const onDeployHandler = () => {
-    console.log('HIDING IDs', addedElements);
     fetch('https://api.facet.ninja/facet/mene-prod', {
       method: 'post',
       body: JSON.stringify(prepareJSON())
     }).then(function (response) {
       return response.json();
     }).then(function (data) {
-      console.log('successful response', data)
+      console.log('successful response', data);
     });
     enqueueSnackbar(`Facets Deployed!`, { variant: "success" });
   }
