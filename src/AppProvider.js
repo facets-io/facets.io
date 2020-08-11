@@ -8,7 +8,7 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
     const [addedFacets, setAddedFacets] = useState(["Default-Facet"]);
     const [isAddingFacet, setIsAddingFacet] = useState(false);
     const [canDeleteElement, setCanDeleteElement] = useState(false);
-    const [disabledFacets, setDisabledFacets] = useState(["Default-Facet"]);
+    const [disabledFacets, setDisabledFacets] = useState([]);
 
     // TODO add
     // const [shouldDisplay, setShouldDisplay] = useState(false);
