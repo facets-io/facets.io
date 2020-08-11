@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
+import DeleteIcon from '@material-ui/icons/Delete';
 
 const useStyles = makeStyles((theme) => ({
     margin: {
@@ -12,16 +13,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function FloatingActionButtonSize() {
+export default function FloatingActionButtonSize({ isAdd = true, disabled = false, onClick }) {
     const classes = useStyles();
+    console.log('disabled', disabled)
 
     return (
-        <div>
-            <div>
-                <Fab color="secondary" aria-label="add" className={classes.margin}>
-                    <AddIcon />
-                </Fab>
-            </div>
-        </div>
+        <Fab onClick={onClick} disabled={disabled} color="secondary" aria-label="add" className={classes.margin}>
+            {isAdd ? <AddIcon /> : <DeleteIcon />}
+        </Fab>
     );
 }

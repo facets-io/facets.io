@@ -6,6 +6,7 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import { Button } from '@material-ui/core';
 import AppContext from './AppContext';
 import { useSnackbar } from 'notistack';
+import FloatingActionButtonSize from './FloatingActionButtonSize'
 
 window.hiddenElementsArray = [];
 
@@ -16,7 +17,7 @@ const StyledDiv = styled.div`
 function ToolBox() {
     const { enqueueSnackbar } = useSnackbar();
 
-    const { addedElements, setAddedElements, newlyAddedFacet,  canDeleteElement, setCanDeleteElement} = useContext(AppContext);
+    const { addedElements, setAddedElements, newlyAddedFacet, canDeleteElement, setCanDeleteElement } = useContext(AppContext);
 
     const onAddElement = () => {
 
@@ -106,27 +107,6 @@ function ToolBox() {
     }
 
     return <StyledDiv>
-        <h6>URL:<input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled /></h6>
-        <h6>Mode:{' '}<ToggleButtonGroup
-            value={isEdit}
-            exclusive
-            onChange={handleEditLiveChange}
-            aria-label="text alignment">
-            <ToggleButton value={true} aria-label="left aligned">
-                Edit
-            </ToggleButton>
-            <ToggleButton value={false} aria-label="centered">
-                Live
-            </ToggleButton>
-        </ToggleButtonGroup></h6>
-        <h6>Selected DOM Element: <u><label id="ToolBoxLabel"></label></u></h6>
-        <div><b>Audience:</b> <select name="cars" id="cars">
-            <option>Age</option>
-            <option>Activity</option>
-            <option>Performance</option>
-            <option>Vulnerabilities</option>
-        </select> </div>
-        <br></br>
         <h6>
             Facet:{' '} <ToggleButtonGroup
                 value={shouldDisplay}
@@ -141,9 +121,16 @@ function ToolBox() {
             </ToggleButton>
             </ToggleButtonGroup>
         </h6>
+        <h6>Selected DOM Element: <u><label id="ToolBoxLabel"></label></u></h6>
+        <div><b>Audience:</b> <select name="cars" id="cars">
+            <option>Age</option>
+            <option>Activity</option>
+            <option>Performance</option>
+            <option>Vulnerabilities</option>
+        </select> </div>
         <br></br>
-        <Button variant="contained" size='large' color="primary" className='btn-block' onClick={onAddElement}>Add Element</Button>
-        <Button variant="contained" size='large' color="secondary" className='btn-block' onClick={onDeleteElement} disabled={!canDeleteElement}>Delete Element</Button>
+        <FloatingActionButtonSize variant="contained" size='large' color="primary" className='btn-block' onClick={onAddElement}>Add Element</FloatingActionButtonSize>
+        <FloatingActionButtonSize isAdd={false} variant="contained" size='large' color="secondary" className='btn-block' onClick={onDeleteElement} disabled={!canDeleteElement}>Delete Element</FloatingActionButtonSize>
     </StyledDiv>
 }
 

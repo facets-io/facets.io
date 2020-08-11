@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -9,11 +9,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import FixedContainer from './FixedContainer';
 import ToolBox from './ToolBox';
 import GmailTreeView from './GmailTreeView';
+import IconButton from '@material-ui/core/IconButton';
+import ToggleButton from '@material-ui/lab/ToggleButton';
+import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
+import EditIcon from '@material-ui/icons/Edit';
+import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
+
 
 const StyledDiv1 = styled.div`
   display: grid;
   grid-template-columns: 15% 70% 15%;
   text-align: left;
+  margin: 1rem;
 `;
 
 const StyledDiv = styled.div`
@@ -29,45 +36,53 @@ const RightDiv = styled.div`
     border-left: .2rem solid black;
 `;
 
-const drawerWidth = 0;
-
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: 'flex',
-  },
-  appBar: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    marginLeft: drawerWidth,
-  },
-  drawer: {
-    width: drawerWidth,
-    flexShrink: 0,
-  },
-  drawerPaper: {
-    width: drawerWidth,
-  },
-  // necessary for content to be below app bar
-  toolbar: theme.mixins.toolbar,
-  content: {
     flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing(3),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
   },
 }));
 
 export default function PermanentDrawerLeft() {
+  const [isEdit, setIsEdit] = useState(true);
+
+  const handleEditLiveChange = (e, newAlignment) => {
+    setIsEdit(newAlignment);
+  };
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" noWrap>
-            Facet Configuration
-          </Typography>
-        </Toolbar>
-      </AppBar>
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+              Facet Configuration
+            </IconButton>
+            <Typography variant="h6" className={classes.title}>
+              <h6>URL: <input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled /></h6>
+            </Typography>
+            <h6><ToggleButtonGroup
+              value={isEdit}
+              exclusive
+              onChange={handleEditLiveChange}
+              aria-label="text alignment">
+              <ToggleButton selected value={true} aria-label="left aligned">
+                <EditIcon style={{ color: 'white' }}></EditIcon>
+              </ToggleButton>
+              <ToggleButton value={false} aria-label="centered">
+                <VisibilityRoundedIcon style={{ color: 'white' }}></VisibilityRoundedIcon>
+              </ToggleButton>
+            </ToggleButtonGroup></h6>
+          </Toolbar>
+        </AppBar>
+      </div>
 
       <main className={classes.content}>
         <div className={classes.toolbar} />
