@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from '@material-ui/core';
 import PermanentDrawerLeft from './PermanentDrawerLeft';
 import { useSnackbar } from 'notistack';
-
+import AppContext from './AppContext';
 
 const StyledDiv = styled.div`
   text-align: center;
@@ -12,12 +12,35 @@ const StyledDiv = styled.div`
 
 function App() {
   const { enqueueSnackbar } = useSnackbar();
+  const { addedElements } = useContext(AppContext);
+
+  const prepareJSON = () => {
+
+    let facet = [];
+    for (let key of addedElements.keys()) {
+      const id = addedElements.get(key);
+      const obj = {
+        name: key,
+        //todo fix enabled
+        enabled: false,
+        id
+      }
+      facet.push(obj);
+    }
+
+    let body = {
+      site: 'mene-prod',
+      facet
+    }
+    console.log('body', body);
+    return body;
+  }
 
   const onDeployHandler = () => {
-    console.log('HIDING IDs', window.hiddenElementsArray);
-    fetch('https://drdsebmbv2.execute-api.us-west-2.amazonaws.com/live/facet/mene', {
+    console.log('HIDING IDs', addedElements);
+    fetch('https://api.facet.ninja/facet/mene-prod', {
       method: 'post',
-      body: JSON.stringify({ "site": "mene10", "facet": [{ "name": "myfacet", "enabled": "false", "id": ["hello", "world", "test"] }] })
+      body: JSON.stringify(prepareJSON())
     }).then(function (response) {
       return response.json();
     }).then(function (data) {
