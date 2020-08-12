@@ -18,7 +18,7 @@ import AppContext from './AppContext';
 import Button from '@material-ui/core/Button'
 
 const access = (e) => {
-  console.log('e',e)
+  console.log('e', e)
   var iframe = document.getElementById("fixed-container");
   var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
   console.log(innerDoc.body);
