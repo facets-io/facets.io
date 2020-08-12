@@ -17,6 +17,13 @@ import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
 import AppContext from './AppContext';
 import Button from '@material-ui/core/Button'
 
+const access = (e) => {
+  console.log('e',e)
+  var iframe = document.getElementById("fixed-container");
+  var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+  console.log(innerDoc.body);
+}
+
 const StyledDiv1 = styled.div`
   display: grid;
   grid-template-columns: 20% 80%;
@@ -69,7 +76,7 @@ export default function PermanentDrawerLeft() {
               Facet Configuration
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              URL: <input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" />
+              URL: <input value={"https://proxy.facet.ninja/?facet-ninja-proxy-origin=www.stripe.com"} type="text" name="name" />
               {'  '}<Button variant="contained" size='large' color="primary" >Load</Button>
             </Typography>
             <h6><ToggleButtonGroup
@@ -92,7 +99,7 @@ export default function PermanentDrawerLeft() {
         <StyledDiv className="App">
           <StyledDiv1>
             <GmailTreeView />
-            <StyledIframe id='fixed-container' title={'Facetizer'} src={url} />
+            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/?facet-ninja-proxy-origin=www.stripe.com'} onLoad={access} />
             <RightDiv>
             </RightDiv>
           </StyledDiv1>
