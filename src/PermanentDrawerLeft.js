@@ -15,6 +15,7 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
 import AppContext from './AppContext';
+import Button from '@material-ui/core/Button'
 
 const StyledDiv1 = styled.div`
   display: grid;
@@ -24,11 +25,7 @@ const StyledDiv1 = styled.div`
 `;
 
 const StyledDiv = styled.div`
-text-align: center;
-`;
-
-const LeftDiv = styled.div`
-    ${'' /* margin-top: 1rem; */}
+  text-align: center;
 `;
 
 const RightDiv = styled.div`
@@ -48,7 +45,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function PermanentDrawerLeft() {
-  const { addedElements, setAddedElements, newlyAddedFacet, canDeleteElement, setCanDeleteElement } = useContext(AppContext);
 
   const [isEdit, setIsEdit] = useState(true);
 
@@ -67,12 +63,13 @@ export default function PermanentDrawerLeft() {
               Facet Configuration
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              URL: <input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" disabled />
+              URL: <input value={"http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/"} type="text" name="name" />
+              {'  '}<Button variant="contained" size='large' color="primary" >Load</Button>
             </Typography>
             <h6><ToggleButtonGroup
               value={isEdit}
               exclusive
-              aria-label="text alignment">
+              aria-label="text alignment" >
               <ToggleButton selected value={true} aria-label="left aligned">
                 <EditIcon style={{ color: 'white' }}></EditIcon>
               </ToggleButton>
@@ -89,9 +86,9 @@ export default function PermanentDrawerLeft() {
         <StyledDiv className="App">
           <StyledDiv1>
             <GmailTreeView />
-            <LeftDiv>
+            <div>
               <FixedContainer />
-            </LeftDiv>
+            </div>
             <RightDiv>
             </RightDiv>
           </StyledDiv1>

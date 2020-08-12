@@ -9,10 +9,9 @@ export default function () {
     `;
 
     const ExtraMarginDiv = styled.div`
-    margin: 1rem;
+        margin: 1rem;
     `;
 
-    const myFunc = () => { window.location = "mailto:xyz@abc.com"; };
     return <StyledDiv id='main'>
         <ExtraMarginDiv id='main2'>
             <div id='main3'>
