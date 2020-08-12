@@ -72,10 +72,8 @@ export default function StyledTreeItem(props) {
     const handleDisplayHideChange = (facetLabel, shouldDisable) => {
         // const shouldDisable = disabledFacets.includes(facetLabel);
         var elements = addedElements && addedElements.get(facetLabel);
-        console.log('ELEMENTS', elements);
         elements.forEach(element => {
             if (!shouldDisable) {
-                console.log('MPENW', element)
                 $(`#${element}`).css('background-color', 'red');
             } else {
                 $(`#${element}`).css('background-color', 'unset');
@@ -90,7 +88,6 @@ export default function StyledTreeItem(props) {
     const classes = useTreeItemStyles();
     const { labelText, labelIcon: LabelIcon, labelInfo, color, bgColor, facetLabel, elementLabel, hasPlusBtn = false, hasDeleteBtn = false, hasViewBtn = false, hasHideBtn = true, ...other } = props;
     const shouldDisable = disabledFacets.includes(labelText);
-    console.log('disabledFacets', disabledFacets)
     return (
         <TreeItem
             label={
