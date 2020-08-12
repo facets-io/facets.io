@@ -44,9 +44,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const StyledIframe = styled.iframe`
+  width: 100%;
+  height: 40rem;
+`;
+
 export default function PermanentDrawerLeft() {
 
   const [isEdit, setIsEdit] = useState(true);
+  const { url, setUrl } = useContext(AppContext);
 
   const handleEditLiveChange = (e, newAlignment) => {
     setIsEdit(newAlignment);
@@ -86,9 +92,7 @@ export default function PermanentDrawerLeft() {
         <StyledDiv className="App">
           <StyledDiv1>
             <GmailTreeView />
-            <div>
-              <FixedContainer />
-            </div>
+            <StyledIframe id='fixed-container' title={'Facetizer'} src={url} />
             <RightDiv>
             </RightDiv>
           </StyledDiv1>
