@@ -9,7 +9,7 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
     const [isAddingFacet, setIsAddingFacet] = useState(false);
     const [canDeleteElement, setCanDeleteElement] = useState(false);
     const [disabledFacets, setDisabledFacets] = useState([]);
-    const [url, setUrl] = useState('http://my-website-facets.io.s3-website-us-west-2.amazonaws.com/');
+    const [url, setUrl] = useState('google.com');
 
     // const [shouldDisplay, setShouldDisplay] = useState(false);
     const [newlyAddedFacet, setNewlyAddedFacet] = useState("Default-Facet");

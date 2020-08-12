@@ -18,10 +18,10 @@ import AppContext from './AppContext';
 import Button from '@material-ui/core/Button'
 
 const access = (e) => {
-  console.log('e', e)
-  var iframe = document.getElementById("fixed-container");
-  var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-  console.log(innerDoc.body);
+  // console.log('e', e)
+  // var iframe = document.getElementById("fixed-container");
+  // var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+  // console.log(innerDoc.body);
 }
 
 const StyledDiv1 = styled.div`
@@ -76,7 +76,7 @@ export default function PermanentDrawerLeft() {
               Facet Configuration
             </IconButton>
             <Typography variant="h6" className={classes.title}>
-              URL: <input value={"https://proxy.facet.ninja/?facet-ninja-proxy-origin=www.stripe.com"} type="text" name="name" />
+              URL: <input onChange={(e) => { setUrl(e.target.value) }} value={url} type="text" name="name" />
               {'  '}<Button variant="contained" size='large' color="primary" >Load</Button>
             </Typography>
             <h6><ToggleButtonGroup
@@ -99,7 +99,7 @@ export default function PermanentDrawerLeft() {
         <StyledDiv className="App">
           <StyledDiv1>
             <GmailTreeView />
-            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/?facet-ninja-proxy-origin=www.stripe.com'} onLoad={access} />
+            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/?facet-ninja-proxy-origin=' + url} onLoad={access} />
             <RightDiv>
             </RightDiv>
           </StyledDiv1>
