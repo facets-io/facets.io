@@ -9,8 +9,8 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
     const [isAddingFacet, setIsAddingFacet] = useState(false);
     const [canDeleteElement, setCanDeleteElement] = useState(false);
     const [disabledFacets, setDisabledFacets] = useState([]);
+    const [url, setUrl] = useState('google.com');
 
-    // TODO add
     // const [shouldDisplay, setShouldDisplay] = useState(false);
     const [newlyAddedFacet, setNewlyAddedFacet] = useState("Default-Facet");
     // String "Key", Array Values
@@ -33,7 +33,7 @@ const AppProvider = ({ children, hiddenElementsArray }) => {
         isAddingFacet, setIsAddingFacet, newlyAddedFacet,
         setNewlyAddedFacet, addedElements, setAddedElements,
         canDeleteElement, setCanDeleteElement, disabledFacets,
-        setDisabledFacets
+        setDisabledFacets, url, setUrl
     }}>
         {children}
     </AppContext.Provider>

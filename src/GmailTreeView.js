@@ -1,16 +1,12 @@
 import React, { useContext, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
 import TreeView from '@material-ui/lab/TreeView';
 import MailIcon from '@material-ui/icons/Mail';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import Button from '@material-ui/core/Button';
 import BasicTextField from './BasicTextField';
 import AppContext from './AppContext';
 import { useSnackbar } from 'notistack';
-import VisibilityBtn from './VisibilityBtn';
-import DeleteOutlineIcon from '@material-ui/icons/DeleteOutline';
 import $ from 'jquery';
 import StyledTreeItem from './StyledTreeItem';
 
@@ -24,7 +20,8 @@ const useStyles = makeStyles({
 
 export default function GmailTreeView() {
   const { enqueueSnackbar } = useSnackbar();
-  const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet, addedElements, setCanDeleteElement } = useContext(AppContext);
+  const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet,
+    addedElements, setCanDeleteElement } = useContext(AppContext);
 
   useEffect(() => {
 
@@ -63,7 +60,6 @@ export default function GmailTreeView() {
       const newVals = [...oldVals, window.selectedDOM];
       const newMap = new Map(addedElements);
       newMap.set(newlyAddedFacet, newVals);
-      // setCanDeleteElement(true);
       setAddedElements(newMap);
       // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
     }
