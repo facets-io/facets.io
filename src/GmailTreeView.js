@@ -24,7 +24,7 @@ export default function GmailTreeView() {
     addedElements, setCanDeleteElement } = useContext(AppContext);
 
   useEffect(() => {
-
+    console.log('RUNNING SCRIPT')
     var iframe = document.getElementById("fixed-container");
     var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
     innerDoc.querySelectorAll('*').forEach(e => {
