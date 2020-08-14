@@ -1,6 +1,8 @@
 
-import React from 'react';
+import React, { useEffect, useContext } from 'react';
 import styled from 'styled-components';
+import $ from 'jquery';
+import AppContext from './AppContext';
 
 export default function () {
 
@@ -12,7 +14,83 @@ export default function () {
         margin: 1rem;
     `;
 
-    return <StyledDiv id='main'>
+    const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet,
+        addedElements, setCanDeleteElement } = useContext(AppContext);
+
+    useEffect(() => {
+        //   console.log('RUNNING SCRIPT')
+        //   var iframe = document.getElementById("fixed-container");
+        //   var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+        //   innerDoc.querySelectorAll('*').forEach(e => {
+        //     e.addEventListener("mouseenter", function (event) {
+        //       // highlight the mouseenter target
+        //       $(this).css('border', '1px solid black');
+        //       $(this).css('cursor', 'pointer');
+        //       event.preventDefault();
+        //       event.stopPropagation();
+
+        //       // reset the color after a short delay
+        //       setTimeout(function () {
+        //         event.target.style.color = "purple";
+        //       }, 500);
+        //     }, false);
+        //     e.addEventListener("mouseleave", function (event) {
+        //       // highlight the mouseenter target
+        //       $(this).css('border', 'none');
+        //       event.preventDefault();
+        //       event.stopPropagation();
+        //     }, false);
+        //     e.addEventListener("click", function (event) {
+        //       console.log('@CLICK', event)
+        //       if (!event.target.id) return;
+        //       window.selectedDOM = event.target.id;
+        //       console.log('selectedDOM: ', window.selectedDOM);
+        //       onAddElement();
+        //     }, false);
+        //   });
+
+        $('#fixed-container *').hover(
+            function (e) {
+                $(this).css('border', '1px solid black');
+                $(this).css('cursor', 'pointer');
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }, function (e) {
+                $(this).css('border', 'none');
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        ).click((e) => {
+            if (!e.target.id) return;
+            window.selectedDOM = e.target.id;
+
+            onAddElement();
+        })
+
+        // this triggers 4x times everytime TODO fix
+        const onAddElement = () => {
+
+            let oldVals = addedElements.get(newlyAddedFacet);
+
+            if (!oldVals || oldVals.length === 0) {
+                oldVals = [];
+            }
+            if (oldVals.includes(window.selectedDOM)) {
+                // enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
+                return false;
+            }
+            const newVals = [...oldVals, window.selectedDOM];
+            const newMap = new Map(addedElements);
+            newMap.set(newlyAddedFacet, newVals);
+            console.log('NEWMAP', newMap);
+            setAddedElements(newMap);
+            // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
+        }
+    }, [addedElements, newlyAddedFacet, setAddedElements, setCanDeleteElement]);
+
+    return <div id='fixed-container'><StyledDiv id='main'>
         <ExtraMarginDiv id='main2'>
             <div id='main3'>
                 <div id='navbar-inner' className="navbar-inner">
@@ -175,5 +253,6 @@ export default function () {
             <button id="btn">Send me an email</button>
         </ExtraMarginDiv>
     </StyledDiv>
+    </div>
 }
 

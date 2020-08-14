@@ -18,6 +18,7 @@ import AppContext from './AppContext';
 import Button from '@material-ui/core/Button';
 import Avatar from './Avatar';
 import $ from 'jquery';
+import ExampleWebsite from './ExampleWebsite';
 
 const StyledBtn = styled(Button)`
   margin-left: 1rem
@@ -82,7 +83,6 @@ export default function PermanentDrawerLeft() {
           event.stopPropagation();
         }, false);
         e.addEventListener("click", function (event) {
-          console.log('@CLICK', event)
           if (!event.target.id) return;
           window.selectedDOM = event.target.id;
           onAddElement();
@@ -107,6 +107,7 @@ export default function PermanentDrawerLeft() {
     const newVals = [...oldVals, window.selectedDOM];
     const newMap = new Map(addedElements);
     newMap.set(newlyAddedFacet, newVals);
+    console.log('mymap!', newMap);
     setAddedElements(newMap);
     // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
   }
@@ -158,6 +159,7 @@ export default function PermanentDrawerLeft() {
           <StyledDiv1>
             <GmailTreeView />
             <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/facet-ninja/proxy/?facet-ninja-proxy-origin=' + url} onLoad={access} />
+            {/* <ExampleWebsite id='fixed-container' /> */}
             <RightDiv>
             </RightDiv>
           </StyledDiv1>
