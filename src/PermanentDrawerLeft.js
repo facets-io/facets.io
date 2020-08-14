@@ -85,9 +85,6 @@ export default function PermanentDrawerLeft() {
           console.log('@CLICK', event)
           if (!event.target.id) return;
           window.selectedDOM = event.target.id;
-          console.log('selectedDOM: ', window.selectedDOM);
-          event.preventDefault();
-          event.stopPropagation();
           onAddElement();
         }, false);
       });
