@@ -62,34 +62,29 @@ export default function PermanentDrawerLeft() {
   const [isEdit, setIsEdit] = useState(true);
 
   const access = () => {
+    var onMouseEnterHandle = function (event) {
+      event.target.style.border = "purple";
+      event.target.style.cursor = "purple";;
+    };
+
+    var onMouseLeaveHandle = function (event) {
+      event.target.style.border = "none";
+    }
+
+    var onMouseClickHandle = function (event) {
+      if (!event.target.id) return;
+      window.selectedDOM = event.target.id;
+      onAddElement();
+    }
+
     try {
       console.log('RUNNING SCRIPT @LOAD')
       var iframe = document.getElementById("fixed-container");
       var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
       innerDoc.querySelectorAll('*').forEach(e => {
-        e.addEventListener("mouseenter", function (event) {
-          // highlight the mouseenter target
-          $(this).css('border', '1px solid black');
-          $(this).css('cursor', 'pointer');
-          event.preventDefault();
-          event.stopPropagation();
-
-          // reset the color after a short delay
-          setTimeout(function () {
-            // event.target.style.color = "purple";
-          }, 500);
-        }, false);
-        e.addEventListener("mouseleave", function (event) {
-          // highlight the mouseenter target
-          $(this).css('border', 'none');
-          event.preventDefault();
-          event.stopPropagation();
-        }, false);
-        e.addEventListener("click", function (event) {
-          if (!event.target.id) return;
-          window.selectedDOM = event.target.id;
-          onAddElement();
-        }, false);
+        e.addEventListener("mouseenter", onMouseEnterHandle, false);
+        e.addEventListener("mouseleave", onMouseLeaveHandle, false);
+        e.addEventListener("click", onMouseClickHandle, false);
       });
     } catch (e) {
       console.log('@CATCH', e)
