@@ -109,7 +109,9 @@ export default function PermanentDrawerLeft() {
     }
     const newVals = [...oldVals, window.selectedDOM];
     const newMap = new Map(addedElements);
+    console.log('OLD MAP', addedElements)
     newMap.set(newlyAddedFacet, newVals);
+    console.log('NEW MAP', newMap)
     setAddedElements(newMap);
     // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
   }
