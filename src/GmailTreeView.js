@@ -25,25 +25,55 @@ export default function GmailTreeView() {
 
   useEffect(() => {
 
-    $('#fixed-container *').hover(
-      function (e) {
+    var iframe = document.getElementById("fixed-container");
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    innerDoc.querySelectorAll('*').forEach(e => {
+      e.addEventListener("mouseenter", function (event) {
+        // highlight the mouseenter target
         $(this).css('border', '1px solid black');
         $(this).css('cursor', 'pointer');
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-      }, function (e) {
-        $(this).css('border', 'none');
-        e.preventDefault();
-        e.stopPropagation();
-        return false;
-      }
-    ).click((e) => {
-      if (!e.target.id) return;
-      window.selectedDOM = e.target.id;
+        event.preventDefault();
+        event.stopPropagation();
 
-      onAddElement();
-    })
+        // reset the color after a short delay
+        setTimeout(function () {
+          event.target.style.color = "purple";
+        }, 500);
+      }, false);
+      e.addEventListener("mouseleave", function (event) {
+        // highlight the mouseenter target
+        $(this).css('border', 'none');
+        event.preventDefault();
+        event.stopPropagation();
+      }, false);
+      e.addEventListener("click", function (event) {
+        console.log('@CLICK', event)
+        if (!event.target.id) return;
+        window.selectedDOM = event.target.id;
+        console.log('selectedDOM: ', window.selectedDOM);
+        onAddElement();
+      }, false);
+    });
+
+    // $('#fixed-container *').hover(
+    //   function (e) {
+    //     $(this).css('border', '1px solid black');
+    //     $(this).css('cursor', 'pointer');
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     return false;
+    //   }, function (e) {
+    //     $(this).css('border', 'none');
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //     return false;
+    //   }
+    // ).click((e) => {
+    //   if (!e.target.id) return;
+    //   window.selectedDOM = e.target.id;
+
+    //   onAddElement();
+    // })
 
     // this triggers 4x times everytime TODO fix
     const onAddElement = () => {

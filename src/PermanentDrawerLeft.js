@@ -107,7 +107,7 @@ export default function PermanentDrawerLeft() {
         <StyledDiv className="App">
           <StyledDiv1>
             <GmailTreeView />
-            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/?facet-ninja-proxy-origin=' + url} onLoad={access} />
+            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/facet-ninja/proxy/?facet-ninja-proxy-origin=' + url} onLoad={access} />
             <RightDiv>
             </RightDiv>
           </StyledDiv1>
