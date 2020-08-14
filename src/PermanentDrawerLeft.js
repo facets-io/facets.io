@@ -72,12 +72,12 @@ export default function PermanentDrawerLeft() {
     }
 
     var onMouseClickHandle = function (event) {
-      console.log('@CLICK', event.target.id);
+      console.log('@CLICK', event.target.id, addedElements);
       event.preventDefault();
       event.stopPropagation();
       if (!event.target.id) return;
       window.selectedDOM = event.target.id;
-      // onAddElement();
+      onAddElement();
     }
 
     try {
