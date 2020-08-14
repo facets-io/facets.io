@@ -15,7 +15,12 @@ import ToggleButtonGroup from '@material-ui/lab/ToggleButtonGroup';
 import EditIcon from '@material-ui/icons/Edit';
 import VisibilityRoundedIcon from '@material-ui/icons/VisibilityRounded';
 import AppContext from './AppContext';
-import Button from '@material-ui/core/Button'
+import Button from '@material-ui/core/Button';
+import Avatar from './Avatar';
+
+const StyledBtn = styled(Button)`
+  margin-left: 1rem
+`;
 
 const access = (e) => {
   // console.log('e', e)
@@ -77,19 +82,22 @@ export default function PermanentDrawerLeft() {
             </IconButton>
             <Typography variant="h6" className={classes.title}>
               URL: <input onChange={(e) => { setUrl(e.target.value) }} value={url} type="text" name="name" />
-              {'  '}<Button variant="contained" size='large' color="primary" >Load</Button>
+              <ToggleButtonGroup
+                value={isEdit}
+                exclusive
+                aria-label="text alignment" >
+                <ToggleButton style={{ marginLeft: "1rem" }} selected value={true} aria-label="left aligned">
+                  <EditIcon style={{ color: 'white' }}></EditIcon>
+                </ToggleButton>
+                <ToggleButton style={{ marginRight: "1rem" }} value={false} aria-label="centered">
+                  <VisibilityRoundedIcon style={{ color: 'white' }}></VisibilityRoundedIcon>
+                </ToggleButton>
+                <StyledBtn variant="contained" size='large' color="primary" >Load</StyledBtn>
+              </ToggleButtonGroup>
+
             </Typography>
-            <h6><ToggleButtonGroup
-              value={isEdit}
-              exclusive
-              aria-label="text alignment" >
-              <ToggleButton selected value={true} aria-label="left aligned">
-                <EditIcon style={{ color: 'white' }}></EditIcon>
-              </ToggleButton>
-              <ToggleButton value={false} aria-label="centered">
-                <VisibilityRoundedIcon style={{ color: 'white' }}></VisibilityRoundedIcon>
-              </ToggleButton>
-            </ToggleButtonGroup></h6>
+
+            <Avatar />
           </Toolbar>
         </AppBar>
       </div>
@@ -106,6 +114,6 @@ export default function PermanentDrawerLeft() {
         </StyledDiv>
 
       </main>
-    </div>
+    </div >
   );
 }
