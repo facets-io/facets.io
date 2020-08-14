@@ -23,59 +23,6 @@ const StyledBtn = styled(Button)`
   margin-left: 1rem
 `;
 
-const access = () => {
-  console.log('RUNNING SCRIPT @LOAD')
-  var iframe = document.getElementById("fixed-container");
-  var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-  innerDoc.querySelectorAll('*').forEach(e => {
-    e.addEventListener("mouseenter", function (event) {
-      // highlight the mouseenter target
-      $(this).css('border', '1px solid black');
-      $(this).css('cursor', 'pointer');
-      event.preventDefault();
-      event.stopPropagation();
-
-      // reset the color after a short delay
-      setTimeout(function () {
-        // event.target.style.color = "purple";
-      }, 500);
-    }, false);
-    e.addEventListener("mouseleave", function (event) {
-      // highlight the mouseenter target
-      $(this).css('border', 'none');
-      event.preventDefault();
-      event.stopPropagation();
-    }, false);
-    e.addEventListener("click", function (event) {
-      console.log('@CLICK', event)
-      if (!event.target.id) return;
-      window.selectedDOM = event.target.id;
-      console.log('selectedDOM: ', window.selectedDOM);
-      event.preventDefault();
-      event.stopPropagation();
-      // onAddElement();
-    }, false);
-  });
-}
-
-// const onAddElement = () => {
-
-//   let oldVals = addedElements.get(newlyAddedFacet);
-
-//   if (!oldVals || oldVals.length === 0) {
-//     oldVals = [];
-//   }
-//   if (oldVals.includes(window.selectedDOM)) {
-//     // enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
-//     return false;
-//   }
-//   const newVals = [...oldVals, window.selectedDOM];
-//   const newMap = new Map(addedElements);
-//   newMap.set(newlyAddedFacet, newVals);
-//   setAddedElements(newMap);
-//   // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
-// }
-
 const StyledDiv1 = styled.div`
   display: grid;
   grid-template-columns: 20% 80%;
@@ -109,6 +56,63 @@ const StyledIframe = styled.iframe`
 `;
 
 export default function PermanentDrawerLeft() {
+
+  const access = () => {
+    try {
+      console.log('RUNNING SCRIPT @LOAD')
+      var iframe = document.getElementById("fixed-container");
+      var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+      innerDoc.querySelectorAll('*').forEach(e => {
+        e.addEventListener("mouseenter", function (event) {
+          // highlight the mouseenter target
+          $(this).css('border', '1px solid black');
+          $(this).css('cursor', 'pointer');
+          event.preventDefault();
+          event.stopPropagation();
+
+          // reset the color after a short delay
+          setTimeout(function () {
+            // event.target.style.color = "purple";
+          }, 500);
+        }, false);
+        e.addEventListener("mouseleave", function (event) {
+          // highlight the mouseenter target
+          $(this).css('border', 'none');
+          event.preventDefault();
+          event.stopPropagation();
+        }, false);
+        e.addEventListener("click", function (event) {
+          console.log('@CLICK', event)
+          if (!event.target.id) return;
+          window.selectedDOM = event.target.id;
+          console.log('selectedDOM: ', window.selectedDOM);
+          event.preventDefault();
+          event.stopPropagation();
+          onAddElement();
+        }, false);
+      });
+    } catch (e) {
+      console.log('@CATCH', e)
+    }
+  }
+
+  const onAddElement = () => {
+
+    let oldVals = addedElements.get(newlyAddedFacet);
+
+    if (!oldVals || oldVals.length === 0) {
+      oldVals = [];
+    }
+    if (oldVals.includes(window.selectedDOM)) {
+      // enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
+      return false;
+    }
+    const newVals = [...oldVals, window.selectedDOM];
+    const newMap = new Map(addedElements);
+    newMap.set(newlyAddedFacet, newVals);
+    setAddedElements(newMap);
+    // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
+  }
 
   const [isEdit, setIsEdit] = useState(true);
   const { url, setUrl } = useContext(AppContext);
