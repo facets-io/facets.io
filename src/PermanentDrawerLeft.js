@@ -97,7 +97,7 @@ export default function PermanentDrawerLeft() {
   }
 
   const onAddElement = () => {
-
+    console.log('ELA man OLDD', addedElements);
     let oldVals = addedElements.get(newlyAddedFacet);
 
     if (!oldVals || oldVals.length === 0) {
@@ -107,9 +107,10 @@ export default function PermanentDrawerLeft() {
       // enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
       return false;
     }
+
     const newVals = [...oldVals, window.selectedDOM];
     const newMap = new Map(addedElements);
-    console.log('OLD MAP', addedElements)
+    console.log('OLD MAP', addedElements);
     newMap.set(newlyAddedFacet, newVals);
     console.log('NEW MAP', newMap)
     setAddedElements(newMap);
