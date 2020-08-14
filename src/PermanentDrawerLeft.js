@@ -37,7 +37,7 @@ const access = () => {
 
       // reset the color after a short delay
       setTimeout(function () {
-        event.target.style.color = "purple";
+        // event.target.style.color = "purple";
       }, 500);
     }, false);
     e.addEventListener("mouseleave", function (event) {
@@ -51,6 +51,8 @@ const access = () => {
       if (!event.target.id) return;
       window.selectedDOM = event.target.id;
       console.log('selectedDOM: ', window.selectedDOM);
+      event.preventDefault();
+      event.stopPropagation();
       // onAddElement();
     }, false);
   });
