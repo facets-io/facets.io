@@ -138,7 +138,7 @@ export default function GmailTreeView() {
 
   const addingFacetInput = <BasicTextField />;
   const allKeys = addedElements.keys();
-
+  console.log("@RENDER gmailtreeview:", addedElements);
   return (
     <TreeView
       key='FacetTreeView'
