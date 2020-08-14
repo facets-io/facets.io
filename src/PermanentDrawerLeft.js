@@ -57,6 +57,9 @@ const StyledIframe = styled.iframe`
 `;
 
 export default function PermanentDrawerLeft() {
+  const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet,
+    addedElements, setCanDeleteElement, url, setUrl } = useContext(AppContext);
+  const [isEdit, setIsEdit] = useState(true);
 
   const access = () => {
     try {
@@ -107,16 +110,9 @@ export default function PermanentDrawerLeft() {
     const newVals = [...oldVals, window.selectedDOM];
     const newMap = new Map(addedElements);
     newMap.set(newlyAddedFacet, newVals);
-    console.log('mymap!', newMap);
     setAddedElements(newMap);
     // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
   }
-
-  const [isEdit, setIsEdit] = useState(true);
-  const { url, setUrl } = useContext(AppContext);
-  const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet,
-    addedElements, setCanDeleteElement } = useContext(AppContext);
-
   const handleEditLiveChange = (e, newAlignment) => {
     setIsEdit(newAlignment);
   };
