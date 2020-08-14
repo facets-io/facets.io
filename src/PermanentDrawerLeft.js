@@ -63,8 +63,8 @@ export default function PermanentDrawerLeft() {
 
   const access = () => {
     var onMouseEnterHandle = function (event) {
-      event.target.style.border = "purple";
-      event.target.style.cursor = "purple";;
+      event.target.style.border = '1px solid black';
+      event.target.style.cursor = "pointer";
     };
 
     var onMouseLeaveHandle = function (event) {
@@ -72,13 +72,16 @@ export default function PermanentDrawerLeft() {
     }
 
     var onMouseClickHandle = function (event) {
+      console.log('@CLICK', event.target.id);
+      event.preventDefault();
+      event.stopPropagation();
       if (!event.target.id) return;
       window.selectedDOM = event.target.id;
-      onAddElement();
+      // onAddElement();
     }
 
     try {
-      console.log('RUNNING SCRIPT @LOAD')
+      console.log('RUNNING SCRIPT @LOAD');
       var iframe = document.getElementById("fixed-container");
       var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
       innerDoc.querySelectorAll('*').forEach(e => {
