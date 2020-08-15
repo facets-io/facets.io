@@ -81,6 +81,7 @@ export default function PermanentDrawerLeft() {
       tmp.push(event.target.id)
       var uniq = [...new Set(tmp)];
       setTmp(uniq);
+      console.log('UNIQ', uniq);
       onAddElement();
       // event.preventDefault();
       // event.stopPropagation();
