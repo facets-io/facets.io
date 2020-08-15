@@ -60,7 +60,7 @@ export default function PermanentDrawerLeft() {
   const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet,
     addedElements, setCanDeleteElement, url, setUrl } = useContext(AppContext);
   const [isEdit, setIsEdit] = useState(true);
-
+  let tmp = [];
   const access = () => {
     var onMouseEnterHandle = function (event) {
       event.target.style.border = '1px solid black';
@@ -77,6 +77,8 @@ export default function PermanentDrawerLeft() {
       if (!event.target.id) return;
       window.selectedDOM = event.target.id;
       // setTmpState([...tmpState, event.target.id]);
+      tmp.push(event.target.id)
+      console.log('@CLICK', tmp);
       onAddElement();
       // event.preventDefault();
       // event.stopPropagation();
