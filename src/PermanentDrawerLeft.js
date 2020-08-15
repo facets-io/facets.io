@@ -82,7 +82,7 @@ export default function PermanentDrawerLeft() {
       var uniq = [...new Set(arr)];
       setTmp(uniq);
       console.log('UNIQ', uniq);
-      onAddElement();
+      // onAddElemeÎnt();
       // event.preventDefault();
       // event.stopPropagation();
     }
@@ -118,7 +118,7 @@ export default function PermanentDrawerLeft() {
     console.log('OLD MAP', addedElements);
     newMap.set(newlyAddedFacet, newVals);
     console.log('NEW MAP', newMap)
-    setAddedElements(newMap);
+    // setAddedElements(newMap);
     // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
   }
   const handleEditLiveChange = (e, newAlignment) => {
