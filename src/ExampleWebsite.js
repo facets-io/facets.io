@@ -49,45 +49,45 @@ export default function () {
         //     }, false);
         //   });
 
-        $('#fixed-container *').hover(
-            function (e) {
-                $(this).css('border', '1px solid black');
-                $(this).css('cursor', 'pointer');
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }, function (e) {
-                $(this).css('border', 'none');
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        ).click((e) => {
-            if (!e.target.id) return;
-            window.selectedDOM = e.target.id;
+        // $('#fixed-container *').hover(
+        //     function (e) {
+        //         $(this).css('border', '1px solid black');
+        //         $(this).css('cursor', 'pointer');
+        //         e.preventDefault();
+        //         e.stopPropagation();
+        //         return false;
+        //     }, function (e) {
+        //         $(this).css('border', 'none');
+        //         e.preventDefault();
+        //         e.stopPropagation();
+        //         return false;
+        //     }
+        // ).click((e) => {
+        //     if (!e.target.id) return;
+        //     window.selectedDOM = e.target.id;
 
-            onAddElement();
-        })
+        //     onAddElement();
+        // })
 
-        // this triggers 4x times everytime TODO fix
-        const onAddElement = () => {
+        // // this triggers 4x times everytime TODO fix
+        // const onAddElement = () => {
 
-            let oldVals = addedElements.get(newlyAddedFacet);
+        //     let oldVals = addedElements.get(newlyAddedFacet);
 
-            if (!oldVals || oldVals.length === 0) {
-                oldVals = [];
-            }
-            if (oldVals.includes(window.selectedDOM)) {
-                // enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
-                return false;
-            }
-            const newVals = [...oldVals, window.selectedDOM];
-            const newMap = new Map(addedElements);
-            newMap.set(newlyAddedFacet, newVals);
-            console.log('NEWMAP', newMap);
-            setAddedElements(newMap);
-            // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
-        }
+        //     if (!oldVals || oldVals.length === 0) {
+        //         oldVals = [];
+        //     }
+        //     if (oldVals.includes(window.selectedDOM)) {
+        //         // enqueueSnackbar(`Element "${window.selectedDOM}" has already been added in the "${newlyAddedFacet}".`, { variant: "error" });
+        //         return false;
+        //     }
+        //     const newVals = [...oldVals, window.selectedDOM];
+        //     const newMap = new Map(addedElements);
+        //     newMap.set(newlyAddedFacet, newVals);
+        //     console.log('NEWMAP', newMap);
+        //     setAddedElements(newMap);
+        //     // enqueueSnackbar(`Added Element "${window.selectedDOM}" in the "${newlyAddedFacet}"!`, { variant: "success" });
+        // }
     }, [addedElements, newlyAddedFacet, setAddedElements, setCanDeleteElement]);
 
     return <div id='fixed-container'><StyledDiv id='main'>

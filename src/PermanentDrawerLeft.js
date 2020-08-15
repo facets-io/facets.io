@@ -60,7 +60,6 @@ export default function PermanentDrawerLeft() {
   const { isAddingFacet, addedFacets, setAddedElements, newlyAddedFacet, setNewlyAddedFacet,
     addedElements, setCanDeleteElement, url, setUrl } = useContext(AppContext);
   const [isEdit, setIsEdit] = useState(true);
-  const [tmpState, setTmpState] = useState([]);
 
   const access = () => {
     var onMouseEnterHandle = function (event) {
@@ -73,14 +72,14 @@ export default function PermanentDrawerLeft() {
     }
 
     var onMouseClickHandle = function (event) {
-      console.log('@CLICK', event.target.id, tmpState);
-      
+      // console.log('@CLICK', event.target.id, tmpState);
+
       if (!event.target.id) return;
       window.selectedDOM = event.target.id;
-      setTmpState([...tmpState, event.target.id]);
+      // setTmpState([...tmpState, event.target.id]);
       onAddElement();
-      event.preventDefault();
-      event.stopPropagation();
+      // event.preventDefault();
+      // event.stopPropagation();
     }
 
     try {
@@ -120,6 +119,7 @@ export default function PermanentDrawerLeft() {
   const handleEditLiveChange = (e, newAlignment) => {
     setIsEdit(newAlignment);
   };
+
   const classes = useStyles();
 
   return (
@@ -158,7 +158,7 @@ export default function PermanentDrawerLeft() {
         <StyledDiv className="App">
           <StyledDiv1>
             <GmailTreeView />
-            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/facet-ninja/proxy/?facet-ninja-proxy-origin=' + url} onLoad={access} />
+            <StyledIframe id='fixed-container' title={'Facetizer'} src={'https://proxy.facet.ninja/?facet-ninja-proxy-origin=' + url} onLoad={access} />
             {/* <ExampleWebsite id='fixed-container' /> */}
             <RightDiv>
             </RightDiv>
