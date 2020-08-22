@@ -4,11 +4,11 @@ import styled from 'styled-components';
 import TextField from '@material-ui/core/TextField';
 import { withStyles } from "@material-ui/core/styles";
 import { useSnackbar } from 'notistack';
+import jsonp from 'jsonp';
 
 const StyledDiv = styled.div`
     width: 35rem;
     margin-left: 2rem;
-    margin-top: .5rem;
 `;
 
 const GridDiv = styled.div`
@@ -34,23 +34,50 @@ const Subscribe = (props) => {
 
     const onSubmit = (e) => {
         e.preventDefault();
-        fetch('https://ninja.us17.list-manage.com/subscribe/post?u=8be72dd4e67ab3df3baeae4ff&amp;id=cd4710e2ed', {
-            method: 'POST', // or 'PUT'
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(emailValue),
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log('Success:', data);
-                enqueueSnackbar(`Success! Thank you for subscribing to facet.ninja`, { variant: "success" });
 
-            })
-            .catch((error) => {
-                console.error('Error:', error);
-                enqueueSnackbar(`Oops. It's not you. Something went wrong 😞 We couldn't subscribe you.`, { variant: "error" });
-            });
+        const url = `https://ninja.us17.list-manage.com/subscribe/post?u=8be72dd4e67ab3df3baeae4ff&amp&id=cd4710e2ed&EMAIL=${emailValue}`;
+
+        // const params = toQueryString(emailValue);
+        const ajaxURL = url.replace("/post?", "/post-json?");
+        const newUrl = ajaxURL;
+
+        jsonp(newUrl, { param: "c" }, (err, data) => {
+            // console.log('err', err, 'data', data);
+            if (err) {
+                enqueueSnackbar(`Apologies 😞 Something went wrong. Please try again later.`, { variant: "error" });
+
+                // console.log(err);
+            } else if (data.result !== "success") {
+                if (data.msg.includes('is already')) {
+                    enqueueSnackbar(`You have already subsribed. Thank you! 🤗`, { variant: "success" });
+                } else {
+                    enqueueSnackbar(`Apologies 😞 Something went wrong. Please try again later.`, { variant: "error" });
+                }
+
+            } else {
+                enqueueSnackbar(`Thank you for subscribing!`, { variant: "success" });
+
+            }
+        });
+
+        // fetch('https://ninja.us17.list-manage.com/subscribe/post-json?u=8be72dd4e67ab3df3baeae4ff&amp&id=cd4710e2ed&c=?', {
+        //     method: 'POST', // or 'PUT'
+        //     dataType: 'jsonp',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: emailValue,
+        // })
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         console.log('Success:', data);
+        //         enqueueSnackbar(`Success! Thank you for subscribing to facet.ninja`, { variant: "success" });
+
+        //     })
+        //     .catch((error) => {
+        //         console.error('Error:', error);
+        //         enqueueSnackbar(`Oops. It's not you. Something went wrong 😞 We couldn't subscribe you.`, { variant: "error" });
+        //     });
     }
 
 
