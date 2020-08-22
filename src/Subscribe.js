@@ -91,9 +91,8 @@ const Subscribe = (props) => {
                             <TextField
                                 className={classes.root}
                                 id="filled-secondary"
-                                label="example@domain.com"
+                                label="insert your email"
                                 variant="filled"
-                                color="secondary"
                                 value={emailValue}
                                 onChange={(e) => { setEmailValue(e.target.value) }}
                                 type="email" name="EMAIL" placeholder="example@domain.com"></TextField>
