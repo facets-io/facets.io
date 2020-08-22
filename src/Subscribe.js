@@ -51,7 +51,7 @@ const Subscribe = (props) => {
                 if (data.msg.includes('is already')) {
                     enqueueSnackbar(`You have already subsribed. Thank you! 🤗`, { variant: "success" });
                 } else {
-                    enqueueSnackbar(`Apologies 😞 Something went wrong. Please try again later.`, { variant: "error" });
+                    enqueueSnackbar(`${data.msg}`, { variant: "info" });
                 }
 
             } else {
