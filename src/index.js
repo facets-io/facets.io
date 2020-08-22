@@ -33,17 +33,17 @@ import Subscribe from './Subscribe';
 
 ReactDOM.render(
   <React.StrictMode>
-    <SnackbarProvider maxSnack={4}
+    <SnackbarProvider maxSnack={2}
       disableWindowBlurListener
       autoHideDuration={5000}
-      iconVariant={{
-        success: '⚔️',
-        error: '✖️',
-        warning: '⚠️',
-        info: 'ℹ️',
-      }}
+    //   iconVariant={{
+    //     success: '⚔️',
+    //     error: '✖️',
+    //     warning: '⚠️',
+    //     info: 'ℹ️',
+    //   }}
       anchorOrigin={{
-        vertical: 'bottom',
+        vertical: 'top',
         horizontal: 'right',
       }}>
       <AppProvider >
