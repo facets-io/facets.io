@@ -99,6 +99,18 @@ const Subscribe = (props) => {
                             {/* <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="example@domain.com" /> */}
                             <Button size='medium' variant="contained" color="secondary" type="submit" value="Subscribe" name="subscribe" >Subscribe</Button>
                         </GridDiv>
+                        <GridDiv>
+                            <TextField
+                                className={classes.root}
+                                id="filled-secondary"
+                                label="insert your email"
+                                variant="filled"
+                                value={emailValue}
+                                onChange={(e) => { setEmailValue(e.target.value) }}
+                                type="email" name="EMAIL" placeholder="example@domain.com"></TextField>
+                            {/* <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="example@domain.com" /> */}
+                           <Button size='medium' variant="contained" color="secondary" type="submit" value="Subscribe2" name="subscribe2" >Subscribe2</Button>
+                         </GridDiv>
                     </div>
                     <div id="mce-responses" class="clear">
                         <div class="response" id="mce-error-response"></div>
