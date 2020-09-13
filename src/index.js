@@ -5,6 +5,14 @@ import * as serviceWorker from './serviceWorker';
 import AppProvider from './AppProvider';
 import { SnackbarProvider } from "notistack";
 import Subscribe from './Subscribe';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Policy from './Policy';
+
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,7 +24,16 @@ ReactDOM.render(
         horizontal: 'right',
       }}>
       <AppProvider >
-        <Subscribe />
+        <Router>
+          <Switch>
+            <Route path="/privacy-policy">
+              <Policy />
+            </Route>
+            <Route path="/">
+              <Subscribe />
+            </Route>
+          </Switch>
+        </Router>
       </AppProvider>
     </SnackbarProvider>
   </React.StrictMode>,
