@@ -59,25 +59,6 @@ const Subscribe = (props) => {
 
             }
         });
-
-        // fetch('https://ninja.us17.list-manage.com/subscribe/post-json?u=8be72dd4e67ab3df3baeae4ff&amp&id=cd4710e2ed&c=?', {
-        //     method: 'POST', // or 'PUT'
-        //     dataType: 'jsonp',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: emailValue,
-        // })
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         console.log('Success:', data);
-        //         enqueueSnackbar(`Success! Thank you for subscribing to facet.ninja`, { variant: "success" });
-
-        //     })
-        //     .catch((error) => {
-        //         console.error('Error:', error);
-        //         enqueueSnackbar(`Oops. It's not you. Something went wrong 😞 We couldn't subscribe you.`, { variant: "error" });
-        //     });
     }
 
 
@@ -96,24 +77,14 @@ const Subscribe = (props) => {
                                 value={emailValue}
                                 onChange={(e) => { setEmailValue(e.target.value) }}
                                 type="email" name="EMAIL" placeholder="example@domain.com"></TextField>
-                            {/* <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="example@domain.com" /> */}
                             <Button size='medium' variant="contained" color="secondary" type="submit" value="Subscribe" name="subscribe" >Subscribe</Button>
-                            <Button size='medium' variant="contained" color="secondary" type="submit" value="Subscribe2" name="subscribe2" >Subscribe2</Button>
-                         </GridDiv>
+                        </GridDiv>
                     </div>
-                    <div id="mce-responses" class="clear">
-                        <div class="response" id="mce-error-response"></div>
-                        <div class="response" id="mce-success-response"></div>
-                    </div>
-
-                    {/* <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button" />
-                </div> */}
                 </div>
             </form>
         </StyledDiv>
         <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/ybPR_bpp2OM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Dek4lUkOGV0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        </div>
     </div>
 }
 
