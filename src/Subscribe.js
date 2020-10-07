@@ -17,6 +17,14 @@ const GridDiv = styled.div`
     grid-gap: .5rem;
 `;
 
+const StyledFrame = styled.div`
+    background-image: url('./images/vid_frame.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 40rem;
+    margin-top: 10rem;
+`
+
 const styles = {
     root: {
         background: 'white'
@@ -63,7 +71,7 @@ const Subscribe = (props) => {
 
 
     return <div>
-        <StyledDiv >
+        {/* <StyledDiv >
             <form onSubmit={onSubmit} className='validate'>
                 <div>
                     <h2 className={classes.input}>Get our newsletter</h2>
@@ -82,7 +90,7 @@ const Subscribe = (props) => {
                     </div>
                 </div>
             </form>
-        </StyledDiv>
+        </StyledDiv> */}
         <div>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/zr6Ul_1DU3I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
