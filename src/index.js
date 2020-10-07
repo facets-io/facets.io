@@ -4,14 +4,14 @@ import './index.css';
 import * as serviceWorker from './serviceWorker';
 import AppProvider from './AppProvider';
 import { SnackbarProvider } from "notistack";
-import Subscribe from './Subscribe';
+
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Policy from './Policy';
+import IframeWrapper from './IframeWrapper';
 
 
 ReactDOM.render(
@@ -30,7 +30,7 @@ ReactDOM.render(
               <Policy />
             </Route>
             <Route path="/">
-              <Subscribe />
+              <IframeWrapper />
             </Route>
           </Switch>
         </Router>
