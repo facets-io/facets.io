@@ -9,7 +9,7 @@ const StyledIframe = styled.iframe`
 
 const StyledImg = styled.img`
     margin-top: 1rem;
-    width: 20%;
+    width: 30%;
 `
 
 export default function () {
