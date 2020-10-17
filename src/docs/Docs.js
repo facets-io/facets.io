@@ -57,7 +57,7 @@ export default function () {
                 <br />
                 <CenteredDiv>
                     <video width="420" height="240" autoplay="autoplay" controls muted loop>
-                        <source src="http://video.facet.ninja/facetizer-hover.mov" />
+                        <source src="https://video.facet.ninja/facetizer-hover.mov" />
                         Your browser does not support the video tag.
                     </video>
                 </CenteredDiv>
