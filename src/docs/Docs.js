@@ -34,10 +34,18 @@ const StyledIframe = styled.iframe`
     margin-top: 1rem;
 `;
 
+
+
 export default function () {
     return <StyledDiv>
         <LRMarginDiv>
-            <h1>How to use guide:</h1>
+            <CenteredDiv>
+                <h1>Hello Hackernews! 👋</h1>
+                <h2> We are facet ninja and we are on a mission to streamline software delivery! Below you will find some information on how
+            to get started with facet-extension. Should you have any question, please feel free to either contact through <a href='https://spectrum.chat/facet'>spectrum.chat </a>
+             or open <a href='https://github.com/facets-io/facet-extension/issues'> a github issue</a>! <br /> <br /> THANK you again for checking us out 🙏 🚀 📦</h2>
+            </CenteredDiv>
+            <h2>How to use guide:</h2>
             <LRMarginDiv>
                 1. Install the plugin via <a href='https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh'>Chrome Web Store</a>.
                 <br />
@@ -61,10 +69,10 @@ export default function () {
                         Your browser does not support the video tag.
                     </video>
                 </CenteredDiv>
-                <br/>
+                <br />
                 <br />
                 After you are done with your configuration, click on the "Save" button.
-                <br/>
+                <br />
                 <br />
                 4. Copy snippet and insert it in your pages HTML. The code should look something like this:
                 <br />
@@ -86,7 +94,7 @@ export default function () {
                 <br />
 
                 <br />
-                 <br />
+                <br />
                 <iframe
                     width="560"
                     height="315"
