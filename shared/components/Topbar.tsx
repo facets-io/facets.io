@@ -1,7 +1,7 @@
 import FacetButton from './FacetButton';
 import FacetLink from './FacetLink';
 import styled from 'styled-components';
-import { color } from '../constant';
+import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
 
 const MainDiv = styled.div`
@@ -13,14 +13,22 @@ const MainDiv = styled.div`
 export default function Navbar() {
     return (
         <MainDiv>
-            <FacetLabel text="Deploy Features Faster" />
+            <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Deploy Features Faster" />
             <br />
-            <FacetLabel text="Rollout features without code and improve your team's productivity" />
+            <br />
+            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Rollout features" />
+            <i>
+                <FacetLabel color={color.facetBlue} fontSize={fontSize.medium} text=" without code " />
+            </i>
+            <FacetLabel color={color.white} fontSize={fontSize.medium} text="and improve your team's productivity" />
+            <br />
+            <br />
             <div>
             </div>
             <div>
                 <FacetButton style={{ width: '80%' }} text="Download Our Chrome Extension" onClick={() => { }} />
-                <FacetLink variant="contained" type="submit" text="Demo" onClick={() => { }} />
+                <br />
+                <FacetLink fontSize={fontSize.large} color={color.ice} variant="contained" type="submit" text="Demo" onClick={() => { }} />
             </div>
         </MainDiv>
     );

@@ -1,14 +1,14 @@
 import styled from 'styled-components';
-import { color } from '../constant';
+import { color as colorConstant } from '../constant';
 
 const StyledDiv = styled.div`
     background-color: ${props => props.color};
     padding: 2rem;
 `;
 
-export default function ContentContainer({ children }) {
+export default function ContentContainer({ color = colorConstant.facetBlack, children }) {
     return (
-        <StyledDiv color={color.facetBlack}>
+        <StyledDiv color={color}>
             {children}
         </StyledDiv>
     )

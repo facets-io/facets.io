@@ -7,6 +7,9 @@ import Democratizing from '../shared/components/Democritizing'
 import GetSocial from '../shared/components/GetSocial'
 import Footer from '../shared/components/Footer'
 import ContentContainer from '../shared/components/ContentContainer'
+import { color } from '../shared/constant'
+import PreviewFacet from '../shared/components/PreviewFacet'
+import SimpleSafeFast from '../shared/components/SimpleSafeFast'
 
 export default function Home() {
   return (
@@ -21,16 +24,24 @@ export default function Home() {
       <ContentContainer>
         <Topbar />
       </ContentContainer>
-      <ContentContainer>
+      <ContentContainer color={color.ice}>
         <Secondary />
+      </ContentContainer>
+      <ContentContainer>
+        <SimpleSafeFast />
       </ContentContainer>
       <ContentContainer>
         <Democratizing />
       </ContentContainer>
       <ContentContainer>
+        <PreviewFacet />
+      </ContentContainer>
+      <ContentContainer>
         <GetSocial />
       </ContentContainer>
-      <Footer />
+      <ContentContainer color={color.black}>
+        <Footer />
+      </ContentContainer>
     </div>
   )
 }

@@ -10,6 +10,7 @@ const color = {
     redError: '#CD0F11',
     menuDivider: '#696969',
     white: '#FFFFFF',
+    facetBlue: '#4AACFF',
     menuColor: {
         red: '#ED4D4D',
         lightGreen: '#8EB914',
