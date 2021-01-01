@@ -3,13 +3,12 @@ import { color as colorConstant } from '../constant';
 import FAQ from './FAQ';
 
 const StyledDiv = styled.div`
-    background-color: ${props => props.color};
-    padding: 2rem;
+    color: white;
 `;
 
 export default function Documentation({ color = colorConstant.facetBlack, children }) {
     return (
-        <>
+        <StyledDiv>
             <h1>Facet</h1>
             <p>The quickest way to rollout features without engaging engineering resources.
             Facet enables product teams to rollout features, without having to declare in-code logic.</p>
@@ -27,12 +26,13 @@ export default function Documentation({ color = colorConstant.facetBlack, childr
             <p>
                 Last but not least, copy the snippet of code generated from the facet-extension. This will give you the single line that you need to paste into your head HTML code.
                 The line looks like this:
-                <code>
+                <pre>
                     <script src="https://api.facet.ninja/facet.ninja.js?id={ID}"></script>
-                </code>
+                </pre>
                 The ID refers to the ID of your website. Once this line of code is integrated in your system, you should be able to see the configurations applied from the facet extension.
             </p>
             <FAQ />
-        </>
+            <br />
+        </StyledDiv>
     )
 }
