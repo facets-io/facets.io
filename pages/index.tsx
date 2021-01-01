@@ -5,8 +5,8 @@ import Topbar from '../shared/components/Topbar'
 import Secondary from '../shared/components/Secondary'
 import Democratizing from '../shared/components/Democritizing'
 import GetSocial from '../shared/components/GetSocial'
-import FacetLabel from '../shared/components/FacetLabel'
 import Footer from '../shared/components/Footer'
+import ContentContainer from '../shared/components/ContentContainer'
 
 export default function Home() {
   return (
@@ -15,11 +15,21 @@ export default function Home() {
         <title>Facet</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar />
-      <Topbar />
-      <Secondary />
-      <Democratizing />
-      <GetSocial />
+      <ContentContainer >
+        <Navbar />
+      </ContentContainer>
+      <ContentContainer>
+        <Topbar />
+      </ContentContainer>
+      <ContentContainer>
+        <Secondary />
+      </ContentContainer>
+      <ContentContainer>
+        <Democratizing />
+      </ContentContainer>
+      <ContentContainer>
+        <GetSocial />
+      </ContentContainer>
       <Footer />
     </div>
   )

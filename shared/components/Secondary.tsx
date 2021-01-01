@@ -5,8 +5,6 @@ import FacetLabel from './FacetLabel';
 const MainDiv = styled.div`
     background-color: ${color.facetBlack};
     width: 100%;
-    padding-left: 3rem;
-    padding-right: 3rem;
     text-align: center;
 `;
 
@@ -21,6 +19,8 @@ export default function Secondary() {
     return (
         <MainDiv>
             <FacetLabel fontSize={fontSize.xxLarge} text="What can facets do?" />
+            <br />
+            <br />
             <InnerDiv>
                 <div>
                     <div>

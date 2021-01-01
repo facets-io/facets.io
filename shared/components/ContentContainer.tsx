@@ -1,24 +1,15 @@
-import { color } from "../constant";
-import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
+import { color } from '../constant';
 
 const StyledDiv = styled.div`
-    background-color: ${props => props.color}
-    padding: 3rem;
+    background-color: ${props => props.color};
+    padding: 2rem;
 `;
 
-export default function ContentContainer() {
+export default function ContentContainer({ children }) {
     return (
-        <div>
-            <div style={{ textAlign: 'center', backgroundColor: color.facetBlack }}>
-                <div>
-                    <img src="/facet_typography.svg" alt="Facet logo" />
-                </div>
-                <br />
-                <FacetLabel text="Copyright Facet Technologies Inc. 2021 - All rights reserved. Terms of Service & Privacy Policy" />
-                <br />
-                <br />
-            </div>
-        </div>
+        <StyledDiv color={color.facetBlack}>
+            {children}
+        </StyledDiv>
     )
 }

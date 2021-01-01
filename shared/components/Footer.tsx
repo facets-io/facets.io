@@ -2,10 +2,6 @@ import { color } from "../constant";
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
 
-const StyledDiv = styled.div`
-    margin-bottom: 1rem;
-`;
-
 export default function Footer() {
     return (
         <div>
