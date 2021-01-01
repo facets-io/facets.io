@@ -1,15 +1,25 @@
+import FacetLabel from "./FacetLabel";
+import styled from 'styled-components';
+import { color, fontSize } from "../constant";
+
+const MainDiv = styled.div`
+    background-color: ${color.facetBlack};
+    width: 100%;
+    text-align: center;
+`;
+
 export default function Democratizing() {
     return (
-        <div>
+        <MainDiv>
             <div>
-                Democratizing feature life cycle
+                <FacetLabel fontSize={fontSize.xxLarge} text="Democratizing feature life cycle" />
             </div>
             <div>
-                Give it a spin!
+                <FacetLabel text="Give it a spin!" />
             </div>
             <div>
-                // TODO
+                // TODO preview component
             </div>
-        </div>
+        </MainDiv>
     );
 }

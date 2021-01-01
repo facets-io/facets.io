@@ -22,7 +22,6 @@ export default ({ onClick, text, disabled, ...props }) => {
         <ColorButton
             style={{ width: '100%' }}
             variant="contained"
-            color="primary"
             disabled={disabled}
             onClick={() => { onClick() }}
             size="small"

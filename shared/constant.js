@@ -17,8 +17,20 @@ const color = {
         lightPurple: '#927EE2',
         green: '#00D222'
     },
+    facetBlack: '#181D26'
+};
+
+const fontSize = {
+    xxSmall: 'xx-small',
+    xSmall: 'x-small',
+    small: 'small',
+    medium: 'medium',
+    large: 'large',
+    xLarge: 'x-large',
+    xxLarge: 'xx-large',
+    xxxLarge: 'xxx-large'
 };
 
 export {
-    color
+    color, fontSize
 };

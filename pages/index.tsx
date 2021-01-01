@@ -6,6 +6,7 @@ import Secondary from '../shared/components/Secondary'
 import Democratizing from '../shared/components/Democritizing'
 import GetSocial from '../shared/components/GetSocial'
 import FacetLabel from '../shared/components/FacetLabel'
+import Footer from '../shared/components/Footer'
 
 export default function Home() {
   return (
@@ -15,20 +16,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
-      <br />
       <Topbar />
       <Secondary />
       <Democratizing />
       <GetSocial />
-      <br />
-      <div>
-        <img src="/facet_typography.svg" alt="Facet logo" />
-      </div>
-      <br />
-      <div>
-        <FacetLabel text="Copyright Facet Technologies Inc. 2021 - All rights reserved. Terms of Service & Privacy Policy" />
-      </div>
-      <br />
+      <Footer />
     </div>
   )
 }
