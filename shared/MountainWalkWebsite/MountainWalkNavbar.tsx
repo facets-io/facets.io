@@ -30,16 +30,16 @@ export default function MountainWalkNavbar() {
                     </div>
                 </InnerDiv>
                 <div>
-                    <FacetLink text="Home" />
+                    <FacetLink color={color.black} text="Home" />
                 </div>
                 <div>
-                    <FacetLink text="About" />
+                    <FacetLink color={color.black} text="About" />
                 </div>
                 <div>
-                    <FacetLink text="Blog" />
+                    <FacetLink color={color.black} text="Blog" />
                 </div>
                 <div>
-                    <FacetLink text="Contact" />
+                    <FacetLink color={color.black} text="Contact" />
                 </div>
             </StyledGrid>
         </MainDiv>

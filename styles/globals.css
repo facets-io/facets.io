@@ -23,3 +23,7 @@ html,
 body > div {
   height: 100%;
 }
+
+.MuiIconButton-root {
+  padding: 0 !important;
+}

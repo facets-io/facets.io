@@ -18,7 +18,7 @@ export default function SimpleSafeFast() {
                 <FacetLabel text="Use Facets to save countless lines of code and resources" />
             </div>
             <div>
-                // TODO preview component
+                // TODO add Gif
             </div>
         </MainDiv>
     );
