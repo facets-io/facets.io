@@ -1,11 +1,14 @@
+import { color } from "../constant";
+import FacetLabel from "./FacetLabel";
+
 export default function FacetVsFF() {
     return (
         <div>
             <div>
-                Simple, Safe, and fast feature rollout with Facets
+                <FacetLabel text="Simple, Safe, and fast feature rollout with Facets" />
             </div>
             <div>
-                Use facets to save countless lines of code and resources
+                <FacetLabel text="Use facets to save countless lines of code and resources" />
             </div>
             <div>
                 <div>

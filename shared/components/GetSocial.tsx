@@ -21,7 +21,7 @@ export default function GetSocial() {
     return (
         <MainDiv>
             <div>
-                <FacetButton style={{ width: '25rem' }} text="Download Our Chrome Extension" />
+                <FacetButton style={{ width: '60%' }} text="Download Our Chrome Extension" />
             </div>
             <br />
             <StyledDiv>

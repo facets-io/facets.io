@@ -12,7 +12,7 @@ export default function SimpleSafeFast() {
     return (
         <MainDiv>
             <div>
-                <FacetLabel fontSize={fontSize.xxLarge} text="Simple, Safe, and fast feature rollout with Facets" />
+                <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Simple, Safe, and fast feature rollout with Facets" />
             </div>
             <div>
                 <FacetLabel text="Use Facets to save countless lines of code and resources" />

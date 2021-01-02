@@ -4,6 +4,7 @@ const color = {
     ice: '#C4DDF2',
     lightGray: '#8B8E93',
     grayA: '#4A4E59',
+    grayB: '#BABABA',
     darkGray: '#181D26',
     darkestGray: '#13171E',
     black: '#000000',
@@ -18,7 +19,8 @@ const color = {
         lightPurple: '#927EE2',
         green: '#00D222'
     },
-    facetBlack: '#181D26'
+    facetBlack: '#181D26',
+    skyBlue: '#C4DDF2'
 };
 
 const fontSize = {

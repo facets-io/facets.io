@@ -3,20 +3,26 @@ import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { color } from '../constant';
 
-const ColorButton = withStyles(() => ({
-    root: {
-        color: color.grayA,
-        backgroundColor: color.ice,
-        '&:hover': {
-            backgroundColor: color.electricB,
-        },
-    },
-}))(Button);
-
 const useStyles = makeStyles(() => ({ root: {} }));
 
-export default ({ onClick, text, disabled, ...props }) => {
+const defaultColorBtnColor = {
+    color: color.black,
+    backgroundColor: color.ice,
+    hoverBgColor: color.electricB
+};
+
+export default ({ onClick, text, disabled, colorButtonColor = defaultColorBtnColor, ...props }) => {
     const classes = useStyles();
+
+    const ColorButton = withStyles(() => ({
+        root: {
+            color: colorButtonColor.color,
+            backgroundColor: colorButtonColor.backgroundColor,
+            '&:hover': {
+                backgroundColor: colorButtonColor.backgroundColor,
+            },
+        },
+    }))(Button);
 
     return <div className={classes.root}>
         <ColorButton

@@ -30,11 +30,11 @@ export default function Home() {
       <ContentContainer>
         <SimpleSafeFast />
       </ContentContainer>
-      <ContentContainer>
-        <Democratizing />
+      <ContentContainer color={color.ice}>
+        <PreviewFacet />
       </ContentContainer>
       <ContentContainer>
-        <PreviewFacet />
+        <Democratizing />
       </ContentContainer>
       <ContentContainer>
         <GetSocial />

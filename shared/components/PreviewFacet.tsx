@@ -1,15 +1,25 @@
+import { color, fontSize } from "../constant";
+import FacetLabel from "./FacetLabel";
+import styled from 'styled-components';
+
+const StyledDiv = styled.div`
+    text-align: center;
+`;
+
 export default function PreviewFacet() {
     return (
-        <div>
+        <StyledDiv>
             <div>
-                Create facets in seconds
+                <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Create facets in seconds" />
             </div>
+            <br />
             <div>
-                Give it a spin!
+                <FacetLabel color={color.black} fontSize={fontSize.medium} text="Give it a spin!" />
             </div>
+            <br />
             <div>
                 // TODO
             </div>
-        </div>
+        </StyledDiv>
     );
 }
