@@ -5,7 +5,7 @@ import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
 
 const MainDiv = styled.div`
-    background-color: ${color.facetBlack};
+    background-color: ${color.darkGray};
     width: 100%;
     text-align: center;
 `;

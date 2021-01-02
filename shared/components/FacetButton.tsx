@@ -11,6 +11,12 @@ const defaultColorBtnColor = {
     hoverBgColor: color.electricB
 };
 
+export const electricBtnColor = {
+    color: color.white,
+    backgroundColor: color.electricA,
+    hoverBgColor: color.electricB
+}
+
 export default ({ onClick, text, disabled, colorButtonColor = defaultColorBtnColor, ...props }) => {
     const classes = useStyles();
 

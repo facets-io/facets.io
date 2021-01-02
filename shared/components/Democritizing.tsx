@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { color, fontSize } from "../constant";
 
 const MainDiv = styled.div`
-    background-color: ${color.facetBlack};
+    background-color: ${color.darkGray};
     width: 100%;
     text-align: center;
 `;
@@ -12,10 +12,7 @@ export default function Democratizing() {
     return (
         <MainDiv>
             <div>
-                <FacetLabel fontSize={fontSize.xxLarge} text="Democratizing feature life cycle" />
-            </div>
-            <div>
-                <FacetLabel text="Give it a spin!" />
+                <FacetLabel fontSize={fontSize.xxLarge} color={color.white} text="Democratizing feature life cycle" />
             </div>
             <div>
                 // TODO preview component

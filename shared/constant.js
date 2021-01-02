@@ -19,8 +19,7 @@ const color = {
         lightPurple: '#927EE2',
         green: '#00D222'
     },
-    facetBlack: '#181D26',
-    skyBlue: '#C4DDF2'
+    skyBlue: '#C4DDF2',
 };
 
 const fontSize = {

@@ -16,7 +16,7 @@ const InnerDiv = styled.div`
 `;
 
 const MainDiv = styled.div`
-    background-color: ${color.facetBlack};
+    background-color: ${color.darkGray};
     width: 100%;
     grid-template-columns: 80% 10% 10%;
 `;

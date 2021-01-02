@@ -6,7 +6,7 @@ const StyledDiv = styled.div`
     padding: ${props => props.hasPadding ? '2rem' : ''};
 `;
 
-export default function ContentContainer({ color = colorConstant.facetBlack, hasPadding = true, children }) {
+export default function ContentContainer({ color = colorConstant.darkGray, hasPadding = true, children }) {
     return (
         <StyledDiv color={color} hasPadding={hasPadding}>
             {children}

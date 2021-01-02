@@ -6,7 +6,7 @@ const StyledDiv = styled.div`
     color: white;
 `;
 
-export default function Documentation({ color = colorConstant.facetBlack, children }) {
+export default function Documentation({ color = colorConstant.darkGray, children }) {
     return (
         <StyledDiv>
             <h1>Facet</h1>
