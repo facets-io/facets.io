@@ -1,6 +1,7 @@
 import { color, fontSize } from "../constant";
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
+import MountainWalkWebsite from "./MountainWalkWebsite";
 
 const StyledDiv = styled.div`
     text-align: center;
@@ -18,7 +19,7 @@ export default function PreviewFacet() {
             </div>
             <br />
             <div>
-                // TODO
+                <MountainWalkWebsite />
             </div>
         </StyledDiv>
     );

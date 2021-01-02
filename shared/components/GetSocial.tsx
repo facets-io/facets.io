@@ -1,4 +1,4 @@
-import FacetButton from "./FacetButton";
+import FacetButton, { electricBtnColor } from "./FacetButton";
 import FacetInput from "./FacetInput";
 import styled from 'styled-components';
 import { color } from "../constant";
@@ -26,10 +26,10 @@ export default function GetSocial() {
             <br />
             <StyledDiv>
                 <div>
-                    <FacetInput placeholder="email address" />
+                    <FacetInput  placeholder="email address" />
                 </div>
                 <div>
-                    <FacetButton text="STAY UPDATED" />
+                    <FacetButton colorButtonStyle={electricBtnColor} text="STAY UPDATED" />
                 </div>
             </StyledDiv>
         </MainDiv>

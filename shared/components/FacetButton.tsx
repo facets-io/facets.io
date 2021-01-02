@@ -5,7 +5,7 @@ import { color } from '../constant';
 
 const useStyles = makeStyles(() => ({ root: {} }));
 
-const defaultColorBtnColor = {
+const defaultColorBtnStyle = {
     color: color.black,
     backgroundColor: color.ice,
     hoverBgColor: color.electricB
@@ -17,15 +17,15 @@ export const electricBtnColor = {
     hoverBgColor: color.electricB
 }
 
-export default ({ onClick, text, disabled, colorButtonColor = defaultColorBtnColor, ...props }) => {
+export default ({ onClick, text, disabled, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
     const classes = useStyles();
 
     const ColorButton = withStyles(() => ({
         root: {
-            color: colorButtonColor.color,
-            backgroundColor: colorButtonColor.backgroundColor,
+            color: colorButtonStyle.color,
+            backgroundColor: colorButtonStyle.backgroundColor,
             '&:hover': {
-                backgroundColor: colorButtonColor.backgroundColor,
+                backgroundColor: colorButtonStyle.backgroundColor,
             },
         },
     }))(Button);
@@ -35,7 +35,7 @@ export default ({ onClick, text, disabled, colorButtonColor = defaultColorBtnCol
             style={{ width: '100%' }}
             variant="contained"
             disabled={disabled}
-            onClick={() => { onClick() }}
+            onClick={() => { if (onClick) { onClick() } }}
             size="small"
             {...props}>
             {text}
