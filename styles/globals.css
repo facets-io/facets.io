@@ -27,3 +27,19 @@ body > div {
 .MuiIconButton-root {
   padding: 0 !important;
 }
+
+.mountain-website-input::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: red !important;
+  opacity: 1; /* Firefox */
+}
+
+.mountain-website-input:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: red !important;
+}
+
+.mountain-website-input::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: red !important;
+}
