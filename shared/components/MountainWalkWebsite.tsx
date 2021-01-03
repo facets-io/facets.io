@@ -1,8 +1,11 @@
-import { color, fontSize } from "../constant";
+import { useContext } from 'react';
+import { allFacets, color, fontSize } from "../constant";
 import MountainWalkNavbar from "../MountainWalkWebsite/MountainWalkNavbar";
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
 import MockSidebar from './MockSidebar';
+import AppContext from './AppContext';
+import MountainWalkSearchBar from './MountainWalkSearchbar';
 
 const StyledDiv = styled.div`
     display: grid;
@@ -20,36 +23,47 @@ const MainDiv = styled.div`
 `;
 
 export default function MountainWalkWebsite() {
+
+    const { hiddenFacets, setHiddenFacets } = useContext(AppContext);
+
     return (
         <>
             <MainDiv>
                 <div style={{ backgroundColor: color.grayA }}>
-                    <img src="/facet_typography.svg" alt="Facet logo" />
+                    <img src="/facet_dark_logo.svg" alt="Facet logo" />
                 </div>
-                <div style={{ backgroundColor: color.darkGray }}>
-                </div>
+                <div style={{ backgroundColor: color.darkGray }} />
             </MainDiv>
             <MainDiv>
                 <div>
                     <MockSidebar />
                 </div>
-                <div style={{ backgroundColor: color.white, padding: '1rem' }}>
+                <div style={{
+                    backgroundColor: color.white,
+                    padding: '1rem'
+                }}>
                     <MountainWalkNavbar />
                     <br />
-                    <FacetLabel fontSize={fontSize.xLarge} color={color.black} text="Get ready for an adventure" />
+                    {!hiddenFacets.includes(allFacets.facet3) ? <FacetLabel fontSize={fontSize.xLarge} color={color.black} text="Get ready for an adventure" /> : null}
                     <br />
                     <br />
-                    <StyledDiv>
-                        <div>
-                            <img style={{ width: '100%' }} src="/Group_48.svg" alt="Facet logo" />
-                        </div>
-                        <div>
-                            <img style={{ width: '100%' }} src="/unsplash_Josh_Earl.svg" alt="Facet logo" />
-                        </div>
-                        <div>
-                            <img style={{ width: '100%' }} src="/Aerial_Sunset_Vancouver.svg" alt="Facet logo" />
-                        </div>
-                    </StyledDiv>
+                    {!hiddenFacets.includes(allFacets.facet4) ? <MountainWalkSearchBar /> : null}
+                    <br />
+                    {!hiddenFacets.includes(allFacets.facet5) ?
+                        <>
+                            <StyledDiv>
+                                <div>
+                                    <img style={{ width: '100%' }} src="/Group_48.svg" alt="Facet logo" />
+                                </div>
+                                <div>
+                                    <img style={{ width: '100%' }} src="/unsplash_Josh_Earl.svg" alt="Facet logo" />
+                                </div>
+                                <div>
+                                    <img style={{ width: '100%' }} src="/Aerial_Sunset_Vancouver.svg" alt="Facet logo" />
+                                </div>
+                            </StyledDiv>
+                        </> : null
+                    }
                     <br />
                     <br />
                 </div>

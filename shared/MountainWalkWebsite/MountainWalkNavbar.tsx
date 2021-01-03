@@ -1,6 +1,8 @@
+import { useContext } from 'react';
 import styled from 'styled-components';
+import AppContext from '../components/AppContext';
 import FacetLink from '../components/FacetLink';
-import { color } from '../constant';
+import { allFacets, color } from '../constant';
 
 const StyledGrid = styled.div`
     display: grid;
@@ -20,26 +22,31 @@ const MainDiv = styled.div`
 `;
 
 export default function MountainWalkNavbar() {
+    const { hiddenFacets, setHiddenFacets } = useContext(AppContext);
+
     return (
         <MainDiv>
             <StyledGrid>
                 <InnerDiv>
                     <div>
-                        <img src="/mountainwalk.svg" alt="Facet logo" />
+                        {!hiddenFacets.includes(allFacets.facet1) ? <img src="/mountainwalk.svg" alt="Facet logo" /> : null}
                     </div>
                 </InnerDiv>
-                <div>
-                    <FacetLink color={color.black} text="Home" />
-                </div>
-                <div>
-                    <FacetLink color={color.black} text="About" />
-                </div>
-                <div>
-                    <FacetLink color={color.black} text="Blog" />
-                </div>
-                <div>
-                    <FacetLink color={color.black} text="Contact" />
-                </div>
+
+                {!hiddenFacets.includes(allFacets.facet2) ? <>
+                    <div>
+                        <FacetLink color={color.black} text="Home" />
+                    </div>
+                    <div>
+                        <FacetLink color={color.black} text="About" />
+                    </div>
+                    <div>
+                        <FacetLink color={color.black} text="Blog" />
+                    </div>
+                    <div>
+                        <FacetLink color={color.black} text="Contact" />
+                    </div>
+                </> : null}
             </StyledGrid>
         </MainDiv>
     );

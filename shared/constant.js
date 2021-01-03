@@ -22,6 +22,10 @@ const color = {
     skyBlue: '#C4DDF2',
 };
 
+const mountainWalkColors = {
+    gray: '#262626',
+}
+
 const fontSize = {
     xxSmall: 'xx-small',
     xSmall: 'x-small',
@@ -33,6 +37,14 @@ const fontSize = {
     xxxLarge: 'xxx-large'
 };
 
+const allFacets = {
+    facet1: 'Facet-Logo',
+    facet2: 'Facet-Menu',
+    facet3: 'Facet-Label',
+    facet4: 'Facet-Search',
+    facet5: 'Facet-Content'
+};
+
 export {
-    color, fontSize
+    color, fontSize, allFacets, mountainWalkColors
 };

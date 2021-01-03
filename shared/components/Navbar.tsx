@@ -46,7 +46,7 @@ export default function Navbar() {
                     <FacetLink text="Contact" />
                 </div>
                 <div>
-                    <FacetIconButton title="github" onClick={() => { }} name="github" size="large" />
+                    <FacetIconButton isSelected={false} title="github" onClick={() => { }} name="github" size="large" />
                 </div>
             </StyledGrid>
         </MainDiv>

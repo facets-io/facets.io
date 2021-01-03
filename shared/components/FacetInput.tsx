@@ -26,14 +26,15 @@ const CustomInput = withStyles(
     }
 )(Input);
 
-export default ({ type, name, id, ...other }) => {
-    return <div>
+export default ({ width = '100%', type, name, id, isMountainWalkWebsite = true, ...other }) => {
+
+    const innerElement = <div>
         <CustomInput
             id={id}
             type={type}
             name={name}
             style={{
-                width: '100%',
+                width,
                 backgroundColor: color.grayA,
                 color: 'white',
                 padding: '.3rem',
@@ -48,4 +49,7 @@ export default ({ type, name, id, ...other }) => {
             {...other}
         />
     </div>
+    const component = <div>{innerElement}</div>;
+
+    return component;
 }

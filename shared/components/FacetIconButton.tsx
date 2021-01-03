@@ -10,12 +10,9 @@ const useStyles = makeStyles({
         textAlign: 'center',
         width: props => props.width ? props.width : '',
     },
-    root: {
-        padding: '0 !important'
-    },
     i: {
         display: 'grid',
-        fill: props => props.isSelected ? color.ice : '',
+        fill: props => props.isSelected ? color.electricB : '',
         "&:hover": {
             fill: color.ice
         }
@@ -31,10 +28,7 @@ export default ({ name, size = "small", fill = color.lightGray,
 
     return <IconButton
         {...other}
-        // className={classes.iconButton}
-        classes={{
-            root: classes.root, // class name, e.g. `classes-nesting-root-x`
-        }}>
+        className={classes.iconButton}>
         <i
             style={{
                 height: customHeight ? customHeight : ''
