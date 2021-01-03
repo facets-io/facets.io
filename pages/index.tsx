@@ -10,38 +10,41 @@ import ContentContainer from '../shared/components/ContentContainer'
 import { color } from '../shared/constant'
 import PreviewFacet from '../shared/components/PreviewFacet'
 import SimpleSafeFast from '../shared/components/SimpleSafeFast'
+import AppProvider from '../shared/components/AppProvider'
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Facet</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <ContentContainer >
-        <Navbar />
-      </ContentContainer>
-      <ContentContainer>
-        <Topbar />
-      </ContentContainer>
-      <ContentContainer color={color.ice}>
-        <Secondary />
-      </ContentContainer>
-      <ContentContainer>
-        <SimpleSafeFast />
-      </ContentContainer>
-      <ContentContainer color={color.ice}>
-        <PreviewFacet />
-      </ContentContainer>
-      <ContentContainer>
-        <Democratizing />
-      </ContentContainer>
-      <ContentContainer>
-        <GetSocial />
-      </ContentContainer>
-      <ContentContainer color={color.black}>
-        <Footer />
-      </ContentContainer>
-    </div>
+    <AppProvider>
+      <div className={styles.container}>
+        <Head>
+          <title>Facet</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <ContentContainer >
+          <Navbar />
+        </ContentContainer>
+        <ContentContainer>
+          <Topbar />
+        </ContentContainer>
+        <ContentContainer color={color.ice}>
+          <Secondary />
+        </ContentContainer>
+        <ContentContainer>
+          <SimpleSafeFast />
+        </ContentContainer>
+        <ContentContainer color={color.ice}>
+          <PreviewFacet />
+        </ContentContainer>
+        <ContentContainer>
+          <Democratizing />
+        </ContentContainer>
+        <ContentContainer>
+          <GetSocial />
+        </ContentContainer>
+        <ContentContainer color={color.black}>
+          <Footer />
+        </ContentContainer>
+      </div>
+    </AppProvider>
   )
 }

@@ -15,7 +15,7 @@ const useStyles = makeStyles({
     },
     i: {
         display: 'grid',
-        fill: props => props.isSelected ? color.electricB : '',
+        fill: props => props.isSelected ? color.ice : '',
         "&:hover": {
             fill: color.ice
         }
@@ -23,7 +23,7 @@ const useStyles = makeStyles({
 });
 
 export default ({ name, size = "small", fill = color.lightGray,
-    isSelected = false, customHeight, width, iconWidth, iconHeight, children, ...other }) => {
+    isSelected = true, customHeight, width, iconWidth, iconHeight, children, ...other }) => {
     const classes = useStyles({ isSelected, width });
     useEffect(() => {
         eva.replace();

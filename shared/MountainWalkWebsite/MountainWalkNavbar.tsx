@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import FacetIconButton from '../components/FacetIconButton';
 import FacetLink from '../components/FacetLink';
 import { color } from '../constant';
 
