@@ -2,6 +2,7 @@ import { Button } from '@material-ui/core';
 import React from 'react';
 import { makeStyles, withStyles } from '@material-ui/core/styles';
 import { color } from '../constant';
+import styled from 'styled-components';
 
 const useStyles = makeStyles(() => ({ root: {} }));
 
@@ -15,23 +16,19 @@ export const electricBtnColor = {
     color: color.white,
     backgroundColor: color.electricA,
     hoverBgColor: color.electricB
-}
+};
+// not working..
+const StyledButton = styled(Button)`
+    color: ${props => props.colorButtonStyle.color}!important;
+    background-color: ${props => props.colorButtonStyle.backgroundColor}!important;
+`;
 
 export default ({ onClick, text, disabled, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
     const classes = useStyles();
 
-    const ColorButton = withStyles(() => ({
-        root: {
-            color: colorButtonStyle.color,
-            backgroundColor: colorButtonStyle.backgroundColor,
-            '&:hover': {
-                backgroundColor: colorButtonStyle.backgroundColor,
-            },
-        },
-    }))(Button);
-
     return <div className={classes.root}>
-        <ColorButton
+        <StyledButton
+            colorButtonStyle={colorButtonStyle}
             style={{ width: '100%' }}
             variant="contained"
             disabled={disabled}
@@ -39,6 +36,6 @@ export default ({ onClick, text, disabled, colorButtonStyle = defaultColorBtnSty
             size="small"
             {...props}>
             {text}
-        </ColorButton>
+        </StyledButton>
     </div >
 }
