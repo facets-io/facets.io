@@ -5,8 +5,8 @@ import FacetLink from './FacetLink';
 
 const StyledGrid = styled.div`
     display: grid;
-    grid-template-columns: 40% 10% 10% 10% 10% 10%;
-    column-gap: 2%;
+    grid-template-columns: 30% 10% 10% 10% 10% 10%;
+    column-gap: 5%;
     align-items: center;
 `;
 

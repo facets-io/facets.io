@@ -15,7 +15,7 @@ export default function Democratizing() {
                 <FacetLabel fontSize={fontSize.xxLarge} color={color.white} text="Democratizing feature life cycle" />
             </div>
             <div>
-                // TODO preview component
+                // TODO video
             </div>
         </MainDiv>
     );
