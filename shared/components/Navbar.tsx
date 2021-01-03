@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 import { color } from '../constant';
 import FacetIconButton from './FacetIconButton';
-import FacetLink from './FacetLink';
+import Link from 'next/link'
+import FacetLabel from './FacetLabel';
 
 const StyledGrid = styled.div`
     display: grid;
     grid-template-columns: 30% 10% 10% 10% 10% 10%;
     column-gap: 5%;
     align-items: center;
+    cursor: pointer;
 `;
 
 const InnerDiv = styled.div`
@@ -21,32 +23,60 @@ const MainDiv = styled.div`
     grid-template-columns: 80% 10% 10%;
 `;
 
+const HoverableDiv = styled.div`
+    cursor: pointer;
+`;
+
 export default function Navbar() {
     return (
         <MainDiv>
             <StyledGrid>
-                <InnerDiv>
-                    <div>
-                        <img src="/facet_white.svg" alt="Facet logo" />
-                    </div>
-                    <div style={{ alignSelf: 'center' }}>
-                        <img src="/facet_typography_white.svg" alt="Facet" />
-                    </div>
-                </InnerDiv>
+                <Link href="/">
+                    <InnerDiv>
+                        <div>
+                            <img src="/facet_white.svg" alt="Facet logo" />
+                        </div>
+                        <div style={{ alignSelf: 'center' }}>
+                            <img src="/facet_typography_white.svg" alt="Facet" />
+                        </div>
+                    </InnerDiv>
+                </Link>
+                <HoverableDiv>
+                    <Link href="/pricing">
+                        <div>
+                            <FacetLabel color={color.white} text="Pricing" />
+                        </div>
+                    </Link>
+                </HoverableDiv>
+                <HoverableDiv>
+                    <Link href="/documentation">
+                        <div>
+                            <FacetLabel color={color.white} text="Documentation" />
+                        </div>
+                    </Link>
+                </HoverableDiv>
                 <div>
-                    <FacetLink text="Pricing" />
+                    <Link href="/blog">
+                        <div>
+                            <FacetLabel color={color.white} text="Blog" />
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <FacetLink text="Documentation" />
+                    <Link href="/blog">
+                        <div>
+                            <FacetLabel color={color.white} text="Contact" />
+                        </div>
+                    </Link>
                 </div>
                 <div>
-                    <FacetLink text="Blog" />
-                </div>
-                <div>
-                    <FacetLink text="Contact" />
-                </div>
-                <div>
-                    <FacetIconButton isSelected={false} title="github" onClick={() => { }} name="github" size="large" />
+                    <Link href="https://github.com/facets-io">
+                        <a target="_blank">
+                            <div>
+                                <FacetIconButton isSelected={false} title="github" onClick={() => { }} name="github" size="large" />
+                            </div>
+                        </a>
+                    </Link>
                 </div>
             </StyledGrid>
         </MainDiv>
