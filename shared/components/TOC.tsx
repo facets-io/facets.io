@@ -1,6 +1,6 @@
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
-import { color } from "../constant";
+import { color, documentationIds } from "../constant";
 
 const MainDiv = styled.div`
     background-color: ${color.darkGray};
@@ -14,24 +14,32 @@ const MainDiv = styled.div`
 
 const PaddingDiv = styled.div`
     padding: .2rem;
+    cursor: pointer;
 `;
+
+const scrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.scrollIntoView();
+    }
+}
 
 export default function TOC() {
     return (
         <MainDiv>
-            <PaddingDiv>
+            <PaddingDiv onClick={() => { scrollTo(documentationIds.facetTitle) }}>
                 <FacetLabel color={color.white} text="Facet" />
             </PaddingDiv>
-            <PaddingDiv>
+            <PaddingDiv onClick={() => { scrollTo(documentationIds.facetDeclaration) }}>
                 <FacetLabel color={color.white} text="Declaring a Facet" />
             </PaddingDiv>
-            <PaddingDiv>
+            <PaddingDiv onClick={() => { scrollTo(documentationIds.holdOffRollOut) }}>
                 <FacetLabel color={color.white} text="Holding off and rolling out facets" />
             </PaddingDiv>
-            <PaddingDiv>
+            <PaddingDiv onClick={() => { scrollTo(documentationIds.oneLineCodeIntegration) }}>
                 <FacetLabel color={color.white} text="One-line code integration" />
             </PaddingDiv>
-            <PaddingDiv>
+            <PaddingDiv onClick={() => { scrollTo(documentationIds.faq) }}>
                 <FacetLabel color={color.white} text="FAQ" />
             </PaddingDiv>
         </MainDiv>

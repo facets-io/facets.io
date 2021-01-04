@@ -28,6 +28,14 @@ const mountainWalkColors = {
     gray: '#262626',
 }
 
+const documentationIds = {
+    facetTitle: 'documentation-facet-title',
+    facetDeclaration: 'documentation-facet-declaration',
+    holdOffRollOut: 'documentation-hold-off-rollout',
+    oneLineCodeIntegration: 'documentation-one-line-code-integration',
+    faq: 'documentation-faq'
+}
+
 const fontSize = {
     xxSmall: 'xx-small',
     xSmall: 'x-small',
@@ -48,5 +56,5 @@ const allFacets = {
 };
 
 export {
-    color, fontSize, allFacets, mountainWalkColors
+    color, fontSize, allFacets, mountainWalkColors, documentationIds
 };

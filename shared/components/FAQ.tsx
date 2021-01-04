@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color } from '../constant'
+import { color, documentationIds } from '../constant'
 
 const StyledDiv = styled.div`
     background-color: ${color.grayB2}
@@ -12,7 +12,7 @@ export default function FAQ() {
             <h2 style={{ marginLeft: '2rem', marginBottom: '1rem' }}>FAQ</h2>
             <ol>
                 <li>
-                    <h4>Why Facet?</h4>
+                    <h4 id={documentationIds.faq}>Why Facet?</h4>
                     <p>
                         Facet abstracts the rollout mechanism that used to be achieved by using feature flags. At facet, we believe that engineers shouldn't spend their time maintaining manual configurations that come along with feature flags. We enable engineers to focus on building the future, while we build the rollout mechanisms which offer rollout abstractions.
                     </p>
