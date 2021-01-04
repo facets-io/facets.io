@@ -14,7 +14,6 @@ const StyledDiv = styled.div`
     grid-template-columns: 40% 40%;
     grid-gap: 5%;
     justify-content: center;
-
 `;
 
 export default function GetSocial() {
@@ -26,7 +25,7 @@ export default function GetSocial() {
             <br />
             <StyledDiv>
                 <div>
-                    <FacetInput  placeholder="email address" />
+                    <FacetInput placeholder="email address" />
                 </div>
                 <div>
                     <FacetButton colorButtonStyle={electricBtnColor} text="STAY UPDATED" />

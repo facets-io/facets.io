@@ -1,9 +1,18 @@
 
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import Documentation from '../shared/components/Documentation'
 import ContentContainer from '../shared/components/ContentContainer'
 import Navbar from '../shared/components/Navbar'
+import styled from 'styled-components'
+import TOC from '../shared/components/TOC'
+import { color } from '../shared/constant'
+
+const StyledDiv = styled.div`
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+`;
 
 export default function DocumentationPage() {
     return (
@@ -16,7 +25,16 @@ export default function DocumentationPage() {
                 <Navbar />
             </ContentContainer>
             <ContentContainer hasPadding={false}>
-                <Documentation />
+                <StyledDiv>
+                    <div>
+                        <div style={{ width: '20%', borderTop: `2px solid ${color.electricB}` }} />
+                        <TOC />
+                        <div style={{ width: '20%', borderTop: `2px solid ${color.electricB}` }} />
+                    </div>
+                    <div>
+                        <Documentation />
+                    </div>
+                </StyledDiv>
             </ContentContainer>
         </div>
     )

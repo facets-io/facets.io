@@ -1,6 +1,14 @@
+import styled from 'styled-components';
+import { color } from '../constant'
+
+const StyledDiv = styled.div`
+    background-color: ${color.grayB2}
+`
+
 export default function FAQ() {
     return (
-        <div>
+        <StyledDiv>
+            <br />
             <h2 style={{ marginLeft: '2rem', marginBottom: '1rem' }}>FAQ</h2>
             <ol>
                 <li>
@@ -60,10 +68,11 @@ export default function FAQ() {
                 <li>
                     <h4>How to contact?</h4>
                     <p>
-                        You can open github issue or email us at support@facet.ninja.
+                        You can open github issue or email us at <b>support@facet.run</b>.
                     </p>
                 </li>
             </ol>
-        </div>
+            <br />
+        </StyledDiv>
     )
 }
