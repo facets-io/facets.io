@@ -14,8 +14,10 @@ export default function Democratizing() {
             <div>
                 <FacetLabel fontSize={fontSize.xxLarge} color={color.white} text="Democratizing feature life cycle" />
             </div>
+            <br />
             <div>
-                // TODO video
+                <div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WARSSkFQHKg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
             </div>
         </MainDiv>
     );
