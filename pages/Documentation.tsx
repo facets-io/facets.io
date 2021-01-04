@@ -14,6 +14,16 @@ const StyledDiv = styled.div`
     margin-right: 2rem;
 `;
 
+const StickyDiv = styled.div`
+    position: sticky;
+    top: 0px;
+`
+
+const InnerStickyDiv = styled.div`
+    position: sticky;
+    top: 0px;
+`
+
 export default function DocumentationPage() {
     return (
         <div>
@@ -26,11 +36,11 @@ export default function DocumentationPage() {
             </ContentContainer>
             <ContentContainer hasPadding={false}>
                 <StyledDiv>
-                    <div>
-                        <div style={{ width: '20%', borderTop: `2px solid ${color.electricB}` }} />
+                    <StickyDiv>
+                        <InnerStickyDiv />
                         <TOC />
-                        <div style={{ width: '20%', borderTop: `2px solid ${color.electricB}` }} />
-                    </div>
+                        <InnerStickyDiv />
+                    </StickyDiv>
                     <div>
                         <Documentation />
                     </div>

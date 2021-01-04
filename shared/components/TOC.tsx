@@ -10,6 +10,8 @@ const MainDiv = styled.div`
     border-color: coral;
     border-left: 2px solid ${color.electricB};
     padding: .5rem;
+    position: sticky;
+    top: 0px;
 `;
 
 const PaddingDiv = styled.div`
