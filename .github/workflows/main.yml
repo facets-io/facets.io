@@ -27,7 +27,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Installing dependencies
-        run: yarn
+        run: npm install
 
       - name: Building the Application
         run: yarn run export
