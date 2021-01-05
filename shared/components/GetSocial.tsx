@@ -20,14 +20,17 @@ export default function GetSocial() {
     return (
         <MainDiv>
             <div>
+                {/* @ts-ignore */}
                 <FacetButton style={{ width: '60%' }} text="Download Our Chrome Extension" />
             </div>
             <br />
             <StyledDiv>
                 <div>
+                    {/* @ts-ignore */}
                     <FacetInput placeholder="email address" />
                 </div>
                 <div>
+                    {/* @ts-ignore */}
                     <FacetButton colorButtonStyle={electricBtnColor} text="STAY UPDATED" />
                 </div>
             </StyledDiv>

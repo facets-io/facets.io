@@ -17,7 +17,8 @@ export default function Democratizing() {
             <br />
             <div>
                 <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WARSSkFQHKg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WARSSkFQHKg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                </div>
             </div>
         </MainDiv>
     );

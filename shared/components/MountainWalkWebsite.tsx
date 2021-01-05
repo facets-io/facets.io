@@ -5,7 +5,7 @@ import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
 import MockSidebar from './MockSidebar';
 import AppContext from './AppContext';
-import MountainWalkSearchBar from './MountainWalkSearchbar';
+import MountainWalkSearchBar from './MountainWalkSearchBar';
 
 const StyledDiv = styled.div`
     display: grid;
@@ -24,7 +24,8 @@ const MainDiv = styled.div`
 
 export default function MountainWalkWebsite() {
 
-    const { hiddenFacets, setHiddenFacets } = useContext(AppContext);
+    // @ts-ignore
+    const { hiddenFacets } = useContext(AppContext);
 
     return (
         <>

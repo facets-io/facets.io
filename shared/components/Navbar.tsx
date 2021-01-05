@@ -73,6 +73,7 @@ export default function Navbar() {
                     <Link href="https://github.com/facets-io">
                         <a target="_blank">
                             <div>
+                                {/* @ts-ignore */}
                                 <FacetIconButton isSelected={false} title="github" onClick={() => { }} name="github" size="large" />
                             </div>
                         </a>

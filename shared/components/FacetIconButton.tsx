@@ -8,10 +8,12 @@ const useStyles = makeStyles({
         padding: '.25rem',
         display: 'grid',
         textAlign: 'center',
+        // @ts-ignore
         width: props => props.width ? props.width : '',
     },
     i: {
         display: 'grid',
+        // @ts-ignore
         fill: props => props.isSelected ? color.electricB : '',
         "&:hover": {
             fill: color.ice
@@ -34,6 +36,7 @@ export default ({ name, size = "small", fill = color.lightGray,
                 height: customHeight ? customHeight : ''
             }}
             className={classes.i}
+            // @ts-ignore
             fill={fill}
             data-eva={name}
             data-eva-hover="true"

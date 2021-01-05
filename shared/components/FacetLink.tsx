@@ -6,6 +6,7 @@ import { color as colorConstant } from '../../shared/constant.js';
 
 export default ({ text, fontSize = "small", underline = 'none', color = colorConstant.white, onClick }) => {
     return <Typography display="inline" style={{ fontSize }}>
+        {/* @ts-ignore */}
         <Link underline={underline} style={{ color }} href="#" onClick={() => onClick ? onClick() : {}}>{text}</Link>
     </Typography>
 }

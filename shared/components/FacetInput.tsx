@@ -41,7 +41,6 @@ export default ({ width = '100%', type, name, id, isMountainWalkWebsite = true, 
                 borderRadius: '.5rem',
                 height: '2rem'
             }}
-            id="standard-adornment-weight"
             aria-describedby="standard-weight-helper-text"
             inputProps={{
                 'aria-label': 'weight',

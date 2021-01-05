@@ -22,6 +22,7 @@ const MainDiv = styled.div`
 `;
 
 export default function MountainWalkNavbar() {
+    {/* @ts-ignore */ }
     const { hiddenFacets, setHiddenFacets } = useContext(AppContext);
 
     return (
@@ -35,15 +36,19 @@ export default function MountainWalkNavbar() {
 
                 {!hiddenFacets.includes(allFacets.facet2) ? <>
                     <div>
+                        {/* @ts-ignore */}
                         <FacetLink color={color.black} text="Home" />
                     </div>
                     <div>
+                        {/* @ts-ignore */}
                         <FacetLink color={color.black} text="About" />
                     </div>
                     <div>
+                        {/* @ts-ignore */}
                         <FacetLink color={color.black} text="Blog" />
                     </div>
                     <div>
+                        {/* @ts-ignore */}
                         <FacetLink color={color.black} text="Contact" />
                     </div>
                 </> : null}
