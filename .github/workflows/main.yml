@@ -20,17 +20,17 @@ jobs:
       - uses: actions/checkout@v2-beta
 
       # Runs a single command using the runners shell
-      - name: Use Node.js 10.14.1
-        uses: actions/setup-node@v1
+      - name: Use Node.js 12
+        uses: actions/setup-node@v2
         with:
-          node-version: 10.14.1
+          node-version: 12
 
       # Runs a set of commands using the runners shell
       - name: Installing dependencies
-        run: npm install
+        run: yarn
 
       - name: Building the Application
-        run: npm run build
+        run: yarn run export
 
       - name: Upload to S3
         uses: jakejarvis/s3-sync-action@v0.5.0
@@ -41,8 +41,4 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-west-2"
-          SOURCE_DIR: "build"
-
-      # investigate
-      # - name: Release to GitHub
-      #   run: npm run release
+          SOURCE_DIR: "out"
