@@ -68,7 +68,7 @@ export default function MockSidebar() {
                         // @ts-ignore
                         : <FacetIconButton key={allFacets.facet4 + "false"} isSelected={false} onClick={() => { setHiddenFacets([...hiddenFacets, allFacets.facet4]) }} name="eye-off-outline" component="span" />}
                 </InitialAlignDiv>
-                {/* <InitialAlignDiv>
+                <InitialAlignDiv>
                     <div>
                         <FacetLabel color={color.grayB} text={allFacets.facet5} />
                     </div>
@@ -77,7 +77,7 @@ export default function MockSidebar() {
                         <FacetIconButton key={allFacets.facet5 + "true"} isSelected={true} onClick={() => { setHiddenFacets(hiddenFacets.filter(e => e !== allFacets.facet5)) }} name="eye-outline" component="span" />
                         // @ts-ignore
                         : <FacetIconButton key={allFacets.facet5 + "false"} isSelected={false} onClick={() => { setHiddenFacets([...hiddenFacets, allFacets.facet5]) }} name="eye-off-outline" component="span" />}
-                </InitialAlignDiv> */}
+                </InitialAlignDiv>
             </StyledDiv>
         </>
     );
