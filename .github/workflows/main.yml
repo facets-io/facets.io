@@ -23,7 +23,7 @@ jobs:
       - name: Use Node.js 12
         uses: actions/setup-node@v2
         with:
-          node-version: 12
+          node-version: 12.18.3
 
       # Runs a set of commands using the runners shell
       - name: Installing dependencies
