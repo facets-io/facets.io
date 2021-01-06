@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2-beta
+
+      - name: Use Node.js 12
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.18.3
+
+      - name: Installing dependencies
+        run: npm install
+
+      - name: Building the Application
+        run: yarn run export
