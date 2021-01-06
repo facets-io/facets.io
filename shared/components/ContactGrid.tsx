@@ -2,7 +2,7 @@ import { TextField } from '@material-ui/core'
 import styled from 'styled-components'
 import { color } from '../constant'
 import FacetButton, { electricBtnColor } from './FacetButton'
-import FacetInput from './FacetInput'
+import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
 import RadioButtons from './RadioButtons'
 import StayUpdated from './StayUpdated'
@@ -36,12 +36,12 @@ export default function ContactGrid() {
                     <div>
                         <FacetLabel text="First name" />
                         {/* @ts-ignore */}
-                        <FacetInput />
+                        <FacetInput colorStyle={electricColor} />
                     </div>
                     <div>
                         <FacetLabel text="Last name" />
                         {/* @ts-ignore */}
-                        <FacetInput />
+                        <FacetInput colorStyle={electricColor} />
                     </div>
                 </TwoColumnGrid>
                 <br />
@@ -49,12 +49,12 @@ export default function ContactGrid() {
                     <div>
                         <FacetLabel text="Email" />
                         {/* @ts-ignore */}
-                        <FacetInput />
+                        <FacetInput colorStyle={electricColor} />
                     </div>
                     <div>
                         <FacetLabel text="Company name" />
                         {/* @ts-ignore */}
-                        <FacetInput />
+                        <FacetInput colorStyle={electricColor} />
                     </div>
                 </TwoColumnGrid>
                 <br />
