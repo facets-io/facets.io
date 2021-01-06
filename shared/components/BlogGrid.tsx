@@ -1,6 +1,4 @@
 import styled from 'styled-components'
-import Posts from '../../posts/index.mdx'
-import FacetLabel from './FacetLabel'
 
 const StyledDiv = styled.div`
     display: grid;
