@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { green } from '@material-ui/core/colors';
 import Radio from '@material-ui/core/Radio';
 import { color } from '../constant';
 import FacetLabel from './FacetLabel';
@@ -31,6 +30,7 @@ export default function RadioButtons() {
         <StyledGrid>
             <div>
                 <IceRadio
+                    // @ts-ignore
                     checked={selectedValue === 'a'}
                     onChange={handleChange}
                     value="a"
@@ -41,6 +41,7 @@ export default function RadioButtons() {
             </div>
             <div>
                 <IceRadio
+                    // @ts-ignore
                     checked={selectedValue === 'b'}
                     onChange={handleChange}
                     value="b"

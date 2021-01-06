@@ -1,8 +1,5 @@
 import styled from 'styled-components'
-import FacetInput from '../shared/components/FacetInput'
-import FacetLabel from '../shared/components/FacetLabel'
 import { color } from '../shared/constant'
-import RadioButtons from '../shared/components/RadioButtons'
 import ContentContainer from '../shared/components/ContentContainer'
 import Head from 'next/head'
 import Navbar from '../shared/components/Navbar'
@@ -18,7 +15,7 @@ const TwoGrid = styled.div`
     display: grid;
     grid-template-columns: 40% 40%;
     grid-gap: 5%;
-`;
+`
 
 export default function ContactPage() {
     return (

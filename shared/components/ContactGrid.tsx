@@ -35,10 +35,12 @@ export default function ContactGrid() {
                 <TwoColumnGrid>
                     <div>
                         <FacetLabel text="First name" />
+                        {/* @ts-ignore */}
                         <FacetInput />
                     </div>
                     <div>
                         <FacetLabel text="Last name" />
+                        {/* @ts-ignore */}
                         <FacetInput />
                     </div>
                 </TwoColumnGrid>
@@ -46,10 +48,12 @@ export default function ContactGrid() {
                 <TwoColumnGrid>
                     <div>
                         <FacetLabel text="Email" />
+                        {/* @ts-ignore */}
                         <FacetInput />
                     </div>
                     <div>
                         <FacetLabel text="Company name" />
+                        {/* @ts-ignore */}
                         <FacetInput />
                     </div>
                 </TwoColumnGrid>
@@ -79,6 +83,7 @@ export default function ContactGrid() {
                     />
                     <br />
                     <br />
+                    {/* @ts-ignore */}
                     <FacetButton colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
                     <br />
                 </div>
