@@ -65,7 +65,7 @@ export default function Navbar() {
                     </Link>
                 </div>
                 <div>
-                    <Link href="/blog">
+                    <Link href="/contact">
                         <div>
                             <FacetLabel color={color.white} text="Contact" />
                         </div>

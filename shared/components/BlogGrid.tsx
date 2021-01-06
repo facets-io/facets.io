@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 const StyledDiv = styled.div`
     display: grid;
-    text-align: center
+    text-align: center;
 `
 
 export default function BlogGrid() {

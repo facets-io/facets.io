@@ -45,13 +45,3 @@ export default function BlogPage() {
         </div>
     )
 }
-
-export async function getStaticProps(context) {
-    return {
-        props: {}, // will be passed to the page component as props
-        // Next.js will attempt to re-generate the page:
-        // - When a request comes in
-        // - At most once every second
-        revalidate: 1, // In seconds
-    }
-}
