@@ -6,10 +6,12 @@ import FacetLabel from './FacetLabel';
 
 const StyledGrid = styled.div`
     display: grid;
-    grid-template-columns: 30% 10% 10% 10% 10% 10%;
+    grid-template-columns: 20% 10% 10% 10% 10% 10%;
     column-gap: 5%;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
+    justify-items: center;
 `;
 
 const InnerDiv = styled.div`
