@@ -10,6 +10,7 @@ module.exports = withMDX({
             '/': { page: '/' },
             '/documentation': { page: '/documentation' },
             '/blog': { page: '/blog' },
+            '/contact': { page: '/contact' },
         }
     },
     pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],

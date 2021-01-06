@@ -26,7 +26,18 @@ const CustomInput = withStyles(
     }
 )(Input);
 
-export default ({ width = '100%', type, name, id, isMountainWalkWebsite = true, ...other }) => {
+const defaultColor = {
+    color: color.white,
+    backgroundColor: color.grayA,
+};
+
+export const electricColor = {
+    color: color.black,
+    backgroundColor: color.ice,
+};
+
+
+export default ({ width = '100%', type, name, id, isMountainWalkWebsite = true, colorStyle = defaultColor, ...other }) => {
 
     const innerElement = <div>
         <CustomInput
@@ -35,8 +46,8 @@ export default ({ width = '100%', type, name, id, isMountainWalkWebsite = true, 
             name={name}
             style={{
                 width,
-                backgroundColor: color.grayA,
-                color: 'white',
+                backgroundColor: colorStyle.backgroundColor,
+                color: colorStyle.color,
                 padding: '.3rem',
                 borderRadius: '.5rem',
                 height: '2rem'
