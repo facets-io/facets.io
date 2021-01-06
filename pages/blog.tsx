@@ -1,0 +1,57 @@
+
+import Head from 'next/head'
+import Documentation from '../shared/components/Documentation'
+import ContentContainer from '../shared/components/ContentContainer'
+import Navbar from '../shared/components/Navbar'
+import styled from 'styled-components'
+import TOC from '../shared/components/TOC'
+import BlogGrid from '../shared/components/BlogGrid'
+import Footer from '../shared/components/Footer'
+import { color } from '../shared/constant'
+
+const StyledDiv = styled.div`
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-left: 2rem;
+    margin-right: 2rem;
+`;
+
+const StickyDiv = styled.div`
+    position: sticky;
+    top: 0px;
+`
+
+const InnerStickyDiv = styled.div`
+    position: sticky;
+    top: 0px;
+`
+
+export default function BlogPage() {
+    return (
+        <div>
+            <Head>
+                <title>Facet</title>
+                <link rel="icon" href="/favicon.ico" />
+            </Head>
+            <ContentContainer>
+                <Navbar />
+            </ContentContainer>
+            <ContentContainer hasPadding={false}>
+                <BlogGrid />
+            </ContentContainer>
+            <ContentContainer color={color.black}>
+                <Footer />
+            </ContentContainer>
+        </div>
+    )
+}
+
+export async function getStaticProps(context) {
+    return {
+        props: {}, // will be passed to the page component as props
+        // Next.js will attempt to re-generate the page:
+        // - When a request comes in
+        // - At most once every second
+        revalidate: 1, // In seconds
+    }
+}
