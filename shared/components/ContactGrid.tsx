@@ -30,64 +30,71 @@ export default function ContactGrid() {
             <h2>Want To Get In Touch?</h2>
             <p>We'd love to hear from you! Contact us using the form below and we'll be happy to help answer your questions.</p>
             <h4>Get in touch</h4>
-            <StyledForm onSubmit={(e) => e.preventDefault()}>
-                <br />
-                <TwoColumnGrid>
-                    <div>
-                        <FacetLabel text="First name" />
-                        {/* @ts-ignore */}
-                        <FacetInput colorStyle={electricColor} />
-                    </div>
-                    <div>
-                        <FacetLabel text="Last name" />
-                        {/* @ts-ignore */}
-                        <FacetInput colorStyle={electricColor} />
-                    </div>
-                </TwoColumnGrid>
-                <br />
-                <TwoColumnGrid>
-                    <div>
-                        <FacetLabel text="Email" />
-                        {/* @ts-ignore */}
-                        <FacetInput colorStyle={electricColor} />
-                    </div>
-                    <div>
-                        <FacetLabel text="Company name" />
-                        {/* @ts-ignore */}
-                        <FacetInput colorStyle={electricColor} />
-                    </div>
-                </TwoColumnGrid>
-                <br />
-                <TwoColumnGrid>
-                    <div>
-                        <FacetLabel text="Do you currently use Facet?" />
+            <TwoColumnGrid>
+                <div>
+                    <StyledForm onSubmit={(e) => e.preventDefault()}>
                         <br />
+                        <TwoColumnGrid>
+                            <div>
+                                <FacetLabel text="First name" />
+                                {/* @ts-ignore */}
+                                <FacetInput colorStyle={electricColor} />
+                            </div>
+                            <div>
+                                <FacetLabel text="Last name" />
+                                {/* @ts-ignore */}
+                                <FacetInput colorStyle={electricColor} />
+                            </div>
+                        </TwoColumnGrid>
                         <br />
-                        <RadioButtons />
-                    </div>
-                </TwoColumnGrid>
-                <br />
-                <div style={{}}></div>
-                <div style={{ padding: '1rem' }}>
-                    <FacetLabel text="Message" />
-                    <br />
-                    <br />
-                    <TextField
-                        style={{ backgroundColor: color.ice }}
-                        id="outlined-multiline-static"
-                        multiline
-                        rows={7}
-                        fullWidth
-                        placeholder="Enter your message"
-                        variant="outlined"
-                    />
-                    <br />
-                    <br />
-                    {/* @ts-ignore */}
-                    <FacetButton colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
-                    <br />
+                        <TwoColumnGrid>
+                            <div>
+                                <FacetLabel text="Email" />
+                                {/* @ts-ignore */}
+                                <FacetInput colorStyle={electricColor} />
+                            </div>
+                            <div>
+                                <FacetLabel text="Company name" />
+                                {/* @ts-ignore */}
+                                <FacetInput colorStyle={electricColor} />
+                            </div>
+                        </TwoColumnGrid>
+                        <br />
+                        <TwoColumnGrid>
+                            <div>
+                                <FacetLabel text="Do you currently use Facet?" />
+                                <br />
+                                <br />
+                                <RadioButtons />
+                            </div>
+                        </TwoColumnGrid>
+                        <br />
+                        <div style={{}}></div>
+                        <div style={{ padding: '1rem' }}>
+                            <FacetLabel text="Message" />
+                            <br />
+                            <br />
+                            <TextField
+                                style={{ backgroundColor: color.ice }}
+                                id="outlined-multiline-static"
+                                multiline
+                                rows={7}
+                                fullWidth
+                                placeholder="Enter your message"
+                                variant="outlined"
+                            />
+                            <br />
+                            <br />
+                            {/* @ts-ignore */}
+                            <FacetButton colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
+                        </div>
+                    </StyledForm>
                 </div>
-            </StyledForm>
+                <div>
+                    <img height="90%" src="/contact.svg" alt="Facet" />
+                </div>
+            </TwoColumnGrid>
+            <br />
             <br />
             <br />
             <StayUpdated />
