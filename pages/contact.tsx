@@ -6,20 +6,14 @@ import Navbar from '../shared/components/Navbar'
 import Footer from '../shared/components/Footer'
 import ContactGrid from '../shared/components/ContactGrid'
 
-const StyledDiv = styled.div`
+const PageContainer = styled.div`
     display: grid;
-    background-color: ${color.darkBlue};
-`
-
-const TwoGrid = styled.div`
-    display: grid;
-    grid-template-columns: 40% 40%;
-    grid-gap: 5%;
+    height: 100%;
 `
 
 export default function ContactPage() {
     return (
-        <div>
+        <PageContainer>
             <Head>
                 <title>Facet</title>
                 <link rel="icon" href="/favicon.ico" />
@@ -33,6 +27,6 @@ export default function ContactPage() {
             <ContentContainer color={color.black}>
                 <Footer />
             </ContentContainer>
-        </div>
+        </PageContainer>
     )
 }

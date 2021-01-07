@@ -6,10 +6,10 @@ const MainDiv = styled.div`
     width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 40%;
     grid-gap: 5%;
     justify-content: center;
-`;
+`
 
 export default function StayUpdated() {
     return (

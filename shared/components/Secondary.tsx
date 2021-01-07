@@ -10,8 +10,9 @@ const MainDiv = styled.div`
 const InnerDiv = styled.div`
     display: grid;
     grid-gap: 5%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 40%;
     text-align: initial;
+    justify-content: center;
 `;
 
 export default function Secondary() {
