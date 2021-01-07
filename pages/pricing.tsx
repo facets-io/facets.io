@@ -33,7 +33,7 @@ export default function PricingPage() {
             </ContentContainer>
             <ContentContainer hasPadding={false}>
                 <StyledDiv2>
-                    <h3 style={{ color: 'white' }}>Thanks for checking us out! Our blog is currently under construction. <br />🚧 Coming soon!</h3>
+                    <h3 style={{ color: 'white' }}>Thanks for checking us out! We are actively implementing our pricing. <br />🚧 Coming soon!</h3>
                     <h3 style={{ color: 'white' }}> </h3>
                 </StyledDiv2>
             </ContentContainer>
