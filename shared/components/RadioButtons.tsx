@@ -1,5 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
+import { green } from '@material-ui/core/colors';
 import Radio from '@material-ui/core/Radio';
 import { color } from '../constant';
 import FacetLabel from './FacetLabel';
@@ -28,28 +29,26 @@ export default function RadioButtons() {
 
     return (
         <StyledGrid>
-            <div>
-                <IceRadio
-                    // @ts-ignore
-                    checked={selectedValue === 'a'}
-                    onChange={handleChange}
-                    value="a"
-                    name="radio-button-demo"
-                    inputProps={{ 'aria-label': 'C' }}
-                />
-                <FacetLabel text='No' />
-            </div>
-            <div>
-                <IceRadio
-                    // @ts-ignore
-                    checked={selectedValue === 'b'}
-                    onChange={handleChange}
-                    value="b"
-                    name="radio-button-demo"
-                    inputProps={{ 'aria-label': 'C' }}
-                />
-                <FacetLabel text='Yes' />
-            </div>
+
+            <IceRadio
+                /* @ts-ignore */
+                checked={selectedValue === 'a'}
+                onChange={handleChange}
+                value="a"
+                name="radio-button-demo"
+                inputProps={{ 'aria-label': 'C' }}
+            />
+            <FacetLabel text='No' />
+            <IceRadio
+                /* @ts-ignore */
+                checked={selectedValue === 'b'}
+                onChange={handleChange}
+                value="b"
+                name="radio-button-demo"
+                inputProps={{ 'aria-label': 'C' }}
+            />
+            <FacetLabel text='Yes' />
+
         </StyledGrid>
     );
 }
