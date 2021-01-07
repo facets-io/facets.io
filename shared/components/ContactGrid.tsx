@@ -75,13 +75,11 @@ export default function ContactGrid() {
                             <br />
                             <br />
                             <TextField
-                                style={{ backgroundColor: color.ice }}
-                                id="outlined-multiline-static"
+                                style={{ backgroundColor: color.ice, width: '100%' }}
+                                id="filled-multiline-static"
                                 multiline
                                 rows={7}
-                                fullWidth
-                                placeholder="Enter your message"
-                                variant="outlined"
+                                variant="filled"
                             />
                             <br />
                             <br />
@@ -89,15 +87,19 @@ export default function ContactGrid() {
                             <FacetButton colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
                         </div>
                     </StyledForm>
+                    <br />
+                    <div style={{ padding: '.5rem' }}>
+                        <StayUpdated />
+                    </div>
                 </div>
                 <div>
-                    <img height="90%" src="/contact.svg" alt="Facet" />
+                    <img src="/contact.svg" alt="Facet" />
                 </div>
             </TwoColumnGrid>
             <br />
             <br />
             <br />
-            <StayUpdated />
+
             <br />
         </StyledDiv>
     )

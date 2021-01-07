@@ -27,7 +27,7 @@ export default function RadioButtons() {
     };
 
     return (
-        <StyledGrid>
+        <div>
             <div>
                 <IceRadio
                     // @ts-ignore
@@ -35,7 +35,7 @@ export default function RadioButtons() {
                     onChange={handleChange}
                     value="a"
                     name="radio-button-demo"
-                    inputProps={{ 'aria-label': 'C' }}
+                    inputProps={{ 'aria-label': 'a' }}
                 />
                 <FacetLabel text='No' />
             </div>
@@ -46,10 +46,10 @@ export default function RadioButtons() {
                     onChange={handleChange}
                     value="b"
                     name="radio-button-demo"
-                    inputProps={{ 'aria-label': 'C' }}
+                    inputProps={{ 'aria-label': 'b' }}
                 />
                 <FacetLabel text='Yes' />
             </div>
-        </StyledGrid>
+        </div>
     );
 }

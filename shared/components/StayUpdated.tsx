@@ -6,7 +6,7 @@ const MainDiv = styled.div`
     width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: 15rem 15rem;
+    grid-template-columns: 50% 50%;
     grid-gap: 5%;
     justify-content: center;
 `;
