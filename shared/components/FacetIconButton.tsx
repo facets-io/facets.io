@@ -1,7 +1,8 @@
-import { IconButton, makeStyles } from '@material-ui/core';
-import React, { useEffect } from 'react';
-import * as eva from "eva-icons";
-import { color } from '../constant';
+import { IconButton, makeStyles } from '@material-ui/core'
+import React, { useEffect } from 'react'
+import * as eva from "eva-icons"
+import { color } from '../constant'
+import styled from 'styled-components'
 
 const useStyles = makeStyles({
     iconButton: {
@@ -21,6 +22,21 @@ const useStyles = makeStyles({
     }
 });
 
+const StyledIconButton = styled(IconButton)`
+    padding: .25rem;
+    display: grid;
+    text-align: center;
+    width: ${props => props.width ? props.width : ''};
+`
+
+const StyledI = styled.i`
+    display: grid,
+    fill: ${props => props.isSelected ? color.electricB : ''},
+    "&:hover": {
+        fill: color.ice
+    }
+`
+
 export default ({ name, size = "small", fill = color.lightGray,
     isSelected = true, customHeight, width, iconWidth, iconHeight, children, ...other }) => {
     const classes = useStyles({ isSelected, width });
@@ -28,14 +44,12 @@ export default ({ name, size = "small", fill = color.lightGray,
         eva.replace();
     }, [name]);
 
-    return <IconButton
-        {...other}
-        className={classes.iconButton}>
-        <i
+    return <StyledIconButton
+        {...other}>
+        <StyledI
             style={{
                 height: customHeight ? customHeight : ''
             }}
-            className={classes.i}
             // @ts-ignore
             fill={fill}
             data-eva={name}
@@ -44,5 +58,5 @@ export default ({ name, size = "small", fill = color.lightGray,
             data-eva-width={iconWidth ? iconWidth : '24'}
         />
         {children}
-    </IconButton>
+    </StyledIconButton>
 }

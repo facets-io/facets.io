@@ -5,7 +5,6 @@ import ContentContainer from '../shared/components/ContentContainer'
 import Navbar from '../shared/components/Navbar'
 import styled from 'styled-components'
 import TOC from '../shared/components/TOC'
-import { color } from '../shared/constant'
 
 const StyledDiv = styled.div`
     display: grid;
