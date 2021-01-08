@@ -16,7 +16,7 @@ export default function Navbar() {
             <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Deploy Features Faster" />
             <br />
             <br />
-            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Rollout features" />
+            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Manage feature rollouts" />
             <i>
                 <FacetLabel color={color.facetBlue} fontSize={fontSize.medium} text=" without code " />
             </i>
