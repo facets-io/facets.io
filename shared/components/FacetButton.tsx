@@ -23,7 +23,7 @@ const StyledButton = styled(Button)`
     background-color: ${props => props.colorButtonStyle.backgroundColor}!important;
 `;
 
-export default ({ onClick, text, disabled, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
+export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
     const classes = useStyles();
 
     return <div className={classes.root}>

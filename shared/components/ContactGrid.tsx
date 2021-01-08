@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { TextField } from '@material-ui/core'
 import styled from 'styled-components'
 import { color } from '../constant'
@@ -6,6 +7,8 @@ import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
 import RadioButtons from './RadioButtons'
 import StayUpdated from './StayUpdated'
+import { useForm } from 'react-hook-form';
+import FacetFormError from './FacetFormError'
 
 const StyledDiv = styled.div`
     display: grid;
@@ -22,10 +25,21 @@ const TwoColumnGrid = styled.div`
     grid-template-columns: 45% 45%;
     grid-gap: 5%;
     justify-content: center;
-    text-align: center;
 `
 
 export default function ContactGrid() {
+
+    const { register, errors, handleSubmit, watch } = useForm({})
+    const [submitting, setSubmitting] = useState(false)
+
+    const onSubmit = async (data) => {
+        setSubmitting(true)
+        try {
+        } catch (error) {
+            setSubmitting(false)
+        }
+    };
+
     return (
         <StyledDiv>
             <h2>Want To Get In Touch?</h2>
@@ -38,26 +52,45 @@ export default function ContactGrid() {
                         <TwoColumnGrid>
                             <div>
                                 <FacetLabel text="First name" />
-                                {/* @ts-ignore */}
-                                <FacetInput colorStyle={electricColor} />
+                                <div style={{ marginTop: '.5rem' }}>
+                                    <FacetInput
+                                        name="firstname"
+                                        colorStyle={electricColor} />
+                                </div>
                             </div>
                             <div>
                                 <FacetLabel text="Last name" />
-                                {/* @ts-ignore */}
-                                <FacetInput colorStyle={electricColor} />
+                                <div style={{ marginTop: '.5rem' }}>
+                                    <FacetInput
+                                        name="lastname"
+                                        colorStyle={electricColor} />
+                                </div>
+                                {errors && errors.lastname && <FacetFormError role="alert" text={errors.lastname.message}></FacetFormError>}
                             </div>
                         </TwoColumnGrid>
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="Email" />
-                                {/* @ts-ignore */}
-                                <FacetInput colorStyle={electricColor} />
+                                <FacetLabel text="Email*" />
+                                <div style={{ marginTop: '.5rem' }}>
+                                    <FacetInput
+                                        name="email"
+                                        inputRef={register({
+                                            required: 'Please specify an email',
+                                            pattern: {
+                                                value: /\S+@\S+\.\S+/,
+                                                message: 'Entered value does not match email format',
+                                            },
+                                        })} colorStyle={electricColor} />
+                                </div>
+                                <br />
+                                {errors && errors.email && <FacetFormError role="alert" text={errors.email.message}></FacetFormError>}
                             </div>
                             <div>
                                 <FacetLabel text="Company name" />
-                                {/* @ts-ignore */}
-                                <FacetInput colorStyle={electricColor} />
+                                <div style={{ marginTop: '.5rem' }}>
+                                    <FacetInput colorStyle={electricColor} />
+                                </div>
                             </div>
                         </TwoColumnGrid>
                         <br />
@@ -84,8 +117,7 @@ export default function ContactGrid() {
                             />
                             <br />
                             <br />
-                            {/* @ts-ignore */}
-                            <FacetButton colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
+                            <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
                         </div>
                     </StyledForm>
                     <br />
@@ -93,14 +125,13 @@ export default function ContactGrid() {
                         <StayUpdated />
                     </div>
                 </div>
-                <div>
+                <div style={{ textAlign: 'center' }}>
                     <img src="/contact.svg" alt="Facet" />
                 </div>
             </TwoColumnGrid>
             <br />
             <br />
             <br />
-
             <br />
         </StyledDiv>
     )

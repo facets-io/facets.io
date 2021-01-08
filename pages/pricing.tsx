@@ -27,12 +27,7 @@ export default function PricingPage() {
             </ContentContainer>
             <ContentContainer hasPadding={false}>
                 <MainDiv>
-                    <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Choose the plan that's right for your team" />
-                    <br />
-                    <br />
-                    <FacetLabel color={color.white} fontSize={fontSize.medium} text="Pay by month or year, and cancel any time." />
-                    <br />
-                    <PricingTable />
+                    // TODO
                 </MainDiv>
             </ContentContainer>
             <ContentContainer color={color.black}>

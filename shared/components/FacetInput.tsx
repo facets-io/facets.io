@@ -37,7 +37,7 @@ export const electricColor = {
 };
 
 
-export default ({ width = '100%', type, name, id, isMountainWalkWebsite = true, colorStyle = defaultColor, ...other }) => {
+export default ({ width = '100%', type = 'input', name = '', id = '', isMountainWalkWebsite = true, colorStyle = defaultColor, ...other }) => {
 
     const innerElement = <div>
         <CustomInput

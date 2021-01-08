@@ -107,8 +107,8 @@ export default function PricingTable() {
     </div>
 
     return (
-        <div>
+        <>
 
-        </div>
+        </>
     );
 }
