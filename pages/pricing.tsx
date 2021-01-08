@@ -27,7 +27,7 @@ export default function PricingPage() {
             </ContentContainer>
             <ContentContainer hasPadding={false}>
                 <MainDiv>
-                    // TODO
+
                 </MainDiv>
             </ContentContainer>
             <ContentContainer color={color.black}>

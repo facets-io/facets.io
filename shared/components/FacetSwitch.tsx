@@ -10,7 +10,7 @@ import { color } from '../constant';
 
 const StyledDiv = styled.div`
     width: 100%;
-    height: 100%
+    height: 100%;
     color: white;
 `;
 
