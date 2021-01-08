@@ -6,11 +6,7 @@ import BlogGrid from '../shared/components/BlogGrid'
 import Footer from '../shared/components/Footer'
 import { color } from '../shared/constant'
 import styled from 'styled-components'
-
-const PageContainer = styled.div`
-    display: grid;
-    height: 100%;
-`
+import PageContainer from '../shared/components/PageContainer'
 
 export default function BlogPage() {
     return (

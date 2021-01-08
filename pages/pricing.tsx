@@ -4,16 +4,15 @@ import ContentContainer from '../shared/components/ContentContainer'
 import Navbar from '../shared/components/Navbar'
 import styled from 'styled-components'
 import Footer from '../shared/components/Footer'
-import { color } from '../shared/constant'
+import { color, fontSize } from '../shared/constant'
+import FacetLabel from '../shared/components/FacetLabel'
+import PricingTable from '../shared/components/PricingTable'
+import PageContainer from '../shared/components/PageContainer'
 
-const StyledDiv = styled.div`
-    display: grid;
+const MainDiv = styled.div`
+    background-color: ${color.darkGray};
+    width: 100%;
     text-align: center;
-`
-
-const PageContainer = styled.div`
-    display: grid;
-    height: 100%;
 `;
 
 export default function PricingPage() {
@@ -27,10 +26,14 @@ export default function PricingPage() {
                 <Navbar />
             </ContentContainer>
             <ContentContainer hasPadding={false}>
-                <StyledDiv>
-                    <h3 style={{ color: 'white' }}>Thanks for checking us out! We are actively implementing our pricing. <br />🚧 Coming soon!</h3>
-                    <h3 style={{ color: 'white' }}> </h3>
-                </StyledDiv>
+                <MainDiv>
+                    <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Choose the plan that's right for your team" />
+                    <br />
+                    <br />
+                    <FacetLabel color={color.white} fontSize={fontSize.medium} text="Pay by month or year, and cancel any time." />
+                    <br />
+                    <PricingTable />
+                </MainDiv>
             </ContentContainer>
             <ContentContainer color={color.black}>
                 <Footer />

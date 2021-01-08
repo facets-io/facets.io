@@ -22,6 +22,7 @@ const TwoColumnGrid = styled.div`
     grid-template-columns: 45% 45%;
     grid-gap: 5%;
     justify-content: center;
+    text-align: center;
 `
 
 export default function ContactGrid() {

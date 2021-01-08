@@ -55,7 +55,7 @@ p {
 
 html,
 body,
-#app,
-#app > div {
+#__next,
+#__next > div {
   height: 100%;
 }
