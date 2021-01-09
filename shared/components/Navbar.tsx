@@ -19,6 +19,7 @@ const StyledGrid = styled.div`
 const InnerDiv = styled.div`
     display: grid;
     grid-template-columns: 3rem 3rem;
+    cursor: pointer;
 `;
 
 const MainDiv = styled.div`
