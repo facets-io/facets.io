@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { useSnackbar, SnackbarContent } from 'notistack';
+import { useSnackbar } from 'notistack';
 import Card from '@material-ui/core/Card';
 import { color, fontSize, snackbar as snackbarConstants } from '../constant';
 import Icon from 'react-eva-icons';
@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
             minWidth: '344px !important',
         },
         padding: '1rem',
-        marginLeft: '16rem'
+        marginLeft: '4rem'
     },
     card: {
         display: 'grid',
@@ -37,11 +37,14 @@ const FacetSnackbar = React.forwardRef((props, ref) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleDismiss = () => {
+        //@ts-ignore
         closeSnackbar(props.id);
     };
+    //@ts-ignore
     const { variant, message } = props;
     return (
-        <SnackbarContent ref={ref} className={classes.root}>
+        //@ts-ignore
+        <div ref={ref} className={classes.root}>
             <Card className={classes.card}>
                 <div className={classes.icon}>
                     <Icon
@@ -54,7 +57,7 @@ const FacetSnackbar = React.forwardRef((props, ref) => {
                     <FacetLabel fontSize={fontSize.medium} color={color.white} text={message} />
                 </div>
             </Card>
-        </SnackbarContent>
+        </div>
     );
 });
 

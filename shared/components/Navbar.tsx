@@ -34,7 +34,6 @@ const LabelContainer = styled.div`
 `
 
 export default function Navbar({ activePage = '' }) {
-    console.log('ACTIVEPAGE', activePage)
     return (
         <MainDiv>
             <StyledGrid>

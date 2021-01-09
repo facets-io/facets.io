@@ -1,14 +1,15 @@
 import { useState } from 'react'
 import { TextField } from '@material-ui/core'
 import styled from 'styled-components'
-import { color } from '../constant'
+import { color, snackbar } from '../constant'
 import FacetButton, { electricBtnColor } from './FacetButton'
 import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
 import RadioButtons from './RadioButtons'
 import StayUpdated from './StayUpdated'
-import { useForm } from 'react-hook-form';
+import { useForm } from 'react-hook-form'
 import FacetFormError from './FacetFormError'
+import { useSnackbar } from 'notistack'
 
 const StyledDiv = styled.div`
     display: grid;
@@ -28,17 +29,38 @@ const TwoColumnGrid = styled.div`
 `
 
 export default function ContactGrid() {
-
+    const { enqueueSnackbar } = useSnackbar();
     const { register, errors, handleSubmit, watch } = useForm({})
     const [submitting, setSubmitting] = useState(false)
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
+    const [email, setEmail] = useState('')
+    const [companyName, setCompanyName] = useState('')
+    const [message, setMessage] = useState('')
+    const [isCurrentUser, setIsCurrentUser] = useState(false)
+
+    const reset = () => {
+        setFirstName('')
+        setLastName('')
+        setEmail('')
+        setCompanyName('')
+        setMessage('')
+        setIsCurrentUser(false)
+    }
 
     const onSubmit = async (data) => {
         setSubmitting(true)
+        // HTTP call goes here ...
         try {
+            enqueueSnackbar({
+                message: 'Message sent! A member of our team will contact you shortly.',
+                variant: snackbar.success.text
+            })
+            reset()
         } catch (error) {
             setSubmitting(false)
         }
-    };
+    }
 
     return (
         <StyledDiv>
@@ -55,7 +77,10 @@ export default function ContactGrid() {
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="firstname"
-                                        colorStyle={electricColor} />
+                                        value={firstName}
+                                        onChange={(e) => { setFirstName(e.target.value) }}
+                                        colorStyle={electricColor}
+                                    />
                                 </div>
                             </div>
                             <div>
@@ -63,6 +88,8 @@ export default function ContactGrid() {
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="lastname"
+                                        value={lastName}
+                                        onChange={(e) => { setLastName(e.target.value) }}
                                         colorStyle={electricColor} />
                                 </div>
                                 {errors && errors.lastname && <FacetFormError role="alert" text={errors.lastname.message}></FacetFormError>}
@@ -75,13 +102,16 @@ export default function ContactGrid() {
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="email"
+                                        value={email}
+                                        onChange={(e) => { setEmail(e.target.value) }}
                                         inputRef={register({
                                             required: 'Please specify an email',
                                             pattern: {
                                                 value: /\S+@\S+\.\S+/,
                                                 message: 'Entered value does not match email format',
                                             },
-                                        })} colorStyle={electricColor} />
+                                        })}
+                                        colorStyle={electricColor} />
                                 </div>
                                 <br />
                                 {errors && errors.email && <FacetFormError role="alert" text={errors.email.message}></FacetFormError>}
@@ -89,7 +119,10 @@ export default function ContactGrid() {
                             <div>
                                 <FacetLabel text="Company name" />
                                 <div style={{ marginTop: '.5rem' }}>
-                                    <FacetInput colorStyle={electricColor} />
+                                    <FacetInput
+                                        value={companyName}
+                                        onChange={(e) => { setCompanyName(e.target.value) }}
+                                        colorStyle={electricColor} />
                                 </div>
                             </div>
                         </TwoColumnGrid>
@@ -114,6 +147,8 @@ export default function ContactGrid() {
                                 multiline
                                 rows={7}
                                 variant="filled"
+                                value={message}
+                                onChange={(e) => { setMessage(e.target.value) }}
                             />
                             <br />
                             <br />
