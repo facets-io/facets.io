@@ -10,13 +10,13 @@ const StyledGrid = styled.div`
     column-gap: 5%;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
     justify-items: center;
 `;
 
 const InnerDiv = styled.div`
     display: grid;
     grid-template-columns: 3rem 3rem;
+    cursor: pointer;
 `;
 
 const MainDiv = styled.div`
@@ -45,28 +45,28 @@ export default function Navbar() {
                 </Link>
                 <HoverableDiv>
                     <Link href="/pricing">
-                        <div>
+                        <div style={{ cursor: 'pointer' }}>
                             <FacetLabel color={color.white} text="Pricing" />
                         </div>
                     </Link>
                 </HoverableDiv>
                 <HoverableDiv>
                     <Link href="/documentation">
-                        <div>
+                        <div style={{ cursor: 'pointer' }}>
                             <FacetLabel color={color.white} text="Documentation" />
                         </div>
                     </Link>
                 </HoverableDiv>
                 <div>
                     <Link href="/blog">
-                        <div>
+                        <div style={{ cursor: 'pointer' }}>
                             <FacetLabel color={color.white} text="Blog" />
                         </div>
                     </Link>
                 </div>
                 <div>
                     <Link href="/contact">
-                        <div>
+                        <div style={{ cursor: 'pointer' }}>
                             <FacetLabel color={color.white} text="Contact" />
                         </div>
                     </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
                 <div>
                     <Link href="https://github.com/facets-io">
                         <a target="_blank">
-                            <div>
+                            <div style={{ cursor: 'pointer' }}>
                                 {/* @ts-ignore */}
                                 <FacetIconButton isSelected={false} title="github" onClick={() => { }} name="github" size="large" />
                             </div>
