@@ -28,16 +28,6 @@ const CustomSwitch = withStyles({
     track: {},
 })(Switch);
 
-const CustomSwitch2 = styled(Switch)`
-        color: color.ice;
-        '&$checked': {
-            color: color.ice;
-        };
-        '&$checked + $track': {
-            backgroundColor: color.ice'
-        };
-`
-
 function FacetSwitch({ labelOn = 'Navigate', labelOff = 'Edit', callBack = (val) => { }, value }) {
     const handleChange = () => {
         callBack(!value);
@@ -51,14 +41,14 @@ function FacetSwitch({ labelOn = 'Navigate', labelOff = 'Edit', callBack = (val)
                 container>
                 <FormControlLabel
                     control={
-                        <CustomSwitch2
+                        <CustomSwitch
                             checked={value}
                             onChange={() => handleChange()} />
                     }
                     label={value ? labelOn : labelOff}
                 />
             </Grid>
-        </StyledDiv >
+        </StyledDiv>
     );
 }
 

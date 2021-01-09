@@ -1,13 +1,14 @@
-
+import { useEffect, useContext } from 'react'
 import Head from 'next/head'
 import ContentContainer from '../shared/components/ContentContainer'
 import Navbar from '../shared/components/Navbar'
 import styled from 'styled-components'
 import Footer from '../shared/components/Footer'
-import { color, fontSize } from '../shared/constant'
-import FacetLabel from '../shared/components/FacetLabel'
-import PricingTable from '../shared/components/PricingTable'
+import { color } from '../shared/constant'
 import PageContainer from '../shared/components/PageContainer'
+import AppProvider from '../shared/components/AppProvider'
+import AppContext, { pages } from '../shared/components/AppContext'
+import FacetLabel from '../shared/components/FacetLabel'
 
 const MainDiv = styled.div`
     background-color: ${color.darkGray};
@@ -17,22 +18,24 @@ const MainDiv = styled.div`
 
 export default function PricingPage() {
     return (
-        <PageContainer>
-            <Head>
-                <title>Facet</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <ContentContainer>
-                <Navbar />
-            </ContentContainer>
-            <ContentContainer hasPadding={false}>
-                <MainDiv>
-
-                </MainDiv>
-            </ContentContainer>
-            <ContentContainer color={color.black}>
-                <Footer />
-            </ContentContainer>
-        </PageContainer>
+        <AppProvider>
+            <PageContainer>
+                <Head>
+                    <title>Facet</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <ContentContainer>
+                    <Navbar activePage={pages.Pricing} />
+                </ContentContainer>
+                <ContentContainer hasPadding>
+                    <MainDiv>
+                        <FacetLabel text="Work in Progress 🚧" />
+                    </MainDiv>
+                </ContentContainer>
+                <ContentContainer color={color.black}>
+                    <Footer />
+                </ContentContainer>
+            </PageContainer>
+        </AppProvider>
     )
 }

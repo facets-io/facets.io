@@ -24,7 +24,6 @@ export default function Navbar() {
             <br />
             <br />
             <div>
-                {/* @ts-ignore */}
                 <FacetButton style={{ width: '30%' }} text="Download Our Chrome Extension" onClick={() => { }} />
                 <br />
                 {/* @ts-ignore */}

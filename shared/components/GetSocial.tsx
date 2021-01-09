@@ -12,7 +12,6 @@ export default function GetSocial() {
     return (
         <MainDiv>
             <div>
-                {/* @ts-ignore */}
                 <FacetButton style={{ width: '30%' }} text="Download Our Chrome Extension" />
             </div>
         </MainDiv>

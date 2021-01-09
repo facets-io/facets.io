@@ -20,7 +20,7 @@ const StyledGrid = styled.div`
 `
 
 export default function RadioButtons() {
-    const [selectedValue, setSelectedValue] = React.useState('a');
+    const [selectedValue, setSelectedValue] = React.useState('no');
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
@@ -31,22 +31,22 @@ export default function RadioButtons() {
             <div>
                 <IceRadio
                     // @ts-ignore
-                    checked={selectedValue === 'a'}
+                    checked={selectedValue === 'no'}
                     onChange={handleChange}
-                    value="a"
+                    value="no"
                     name="radio-button-demo"
-                    inputProps={{ 'aria-label': 'C' }}
+                    inputProps={{ 'aria-label': 'no' }}
                 />
                 <FacetLabel text='No' />
             </div>
             <div>
                 <IceRadio
                     // @ts-ignore
-                    checked={selectedValue === 'b'}
+                    checked={selectedValue === 'yes'}
                     onChange={handleChange}
-                    value="b"
+                    value="yes"
                     name="radio-button-demo"
-                    inputProps={{ 'aria-label': 'C' }}
+                    inputProps={{ 'aria-label': 'yes' }}
                 />
                 <FacetLabel text='Yes' />
             </div>

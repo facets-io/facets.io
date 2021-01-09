@@ -3,7 +3,7 @@ import { color as colorConstant } from '../constant';
 
 const StyledDiv = styled.div`
     background-color: ${props => props.color};
-    padding: ${props => props.hasPadding ? '2rem' : ''};
+    padding: ${props => props.hasPadding ? '1.5rem' : ''};
 `;
 
 export default function ContentContainer({ color = colorConstant.darkGray, hasPadding = true, style = {}, children }) {

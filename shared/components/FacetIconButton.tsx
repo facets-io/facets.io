@@ -39,7 +39,7 @@ const StyledI = styled.i`
 
 export default ({ name, size = "small", fill = color.lightGray,
     isSelected = true, customHeight, width, iconWidth, iconHeight, children, ...other }) => {
-    const classes = useStyles({ isSelected, width });
+
     useEffect(() => {
         eva.replace();
     }, [name]);
