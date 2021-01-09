@@ -1,6 +1,6 @@
 import { Button } from '@material-ui/core';
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import { color } from '../constant';
 import styled from 'styled-components';
 
@@ -23,7 +23,7 @@ const StyledButton = styled(Button)`
     background-color: ${props => props.colorButtonStyle.backgroundColor}!important;
 `;
 
-export default ({ onClick, text, disabled, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
+export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
     const classes = useStyles();
 
     return <div className={classes.root}>

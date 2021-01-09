@@ -28,6 +28,24 @@ const mountainWalkColors = {
     gray: '#262626',
 }
 
+const snackbar = {
+    success: {
+        text: 'success',
+        iconName: 'checkmark-circle-2-outline',
+        fill: 'green'
+    },
+    error: {
+        text: 'error',
+        iconName: 'alert-circle-outline',
+        fill: color.redError
+    },
+    info: {
+        text: 'info',
+        iconName: 'message-circle-outline',
+        fill: color.ice
+    }
+};
+
 const documentationIds = {
     facetTitle: 'documentation-facet-title',
     facetDeclaration: 'documentation-facet-declaration',
@@ -56,5 +74,5 @@ const allFacets = {
 };
 
 export {
-    color, fontSize, allFacets, mountainWalkColors, documentationIds
+    color, fontSize, allFacets, mountainWalkColors, documentationIds, snackbar
 };

@@ -1,47 +1,32 @@
 
 import Head from 'next/head'
-import Documentation from '../shared/components/Documentation'
 import ContentContainer from '../shared/components/ContentContainer'
 import Navbar from '../shared/components/Navbar'
-import styled from 'styled-components'
-import TOC from '../shared/components/TOC'
 import BlogGrid from '../shared/components/BlogGrid'
 import Footer from '../shared/components/Footer'
 import { color } from '../shared/constant'
-
-const StyledDiv = styled.div`
-    display: grid;
-    grid-template-columns: 20% 80%;
-    margin-left: 2rem;
-    margin-right: 2rem;
-`;
-
-const StickyDiv = styled.div`
-    position: sticky;
-    top: 0px;
-`
-
-const InnerStickyDiv = styled.div`
-    position: sticky;
-    top: 0px;
-`
+import PageContainer from '../shared/components/PageContainer'
+import AppProvider from '../shared/components/AppProvider'
+import { pages } from '../shared/components/AppContext'
 
 export default function BlogPage() {
     return (
-        <div>
-            <Head>
-                <title>Facet</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <ContentContainer>
-                <Navbar />
-            </ContentContainer>
-            <ContentContainer hasPadding={false}>
-                <BlogGrid />
-            </ContentContainer>
-            <ContentContainer color={color.black}>
-                <Footer />
-            </ContentContainer>
-        </div>
+        <AppProvider>
+            <PageContainer>
+                <Head>
+                    <title>Facet</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <ContentContainer>
+                    <Navbar activePage={pages.Blog} />
+                </ContentContainer>
+                <ContentContainer hasPadding={false}>
+                    <BlogGrid />
+                </ContentContainer>
+                <ContentContainer color={color.black}>
+                    <Footer />
+                </ContentContainer>
+            </PageContainer>
+        </AppProvider>
     )
 }

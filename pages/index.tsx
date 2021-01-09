@@ -11,6 +11,7 @@ import { color } from '../shared/constant'
 import PreviewFacet from '../shared/components/PreviewFacet'
 import SimpleSafeFast from '../shared/components/SimpleSafeFast'
 import AppProvider from '../shared/components/AppProvider'
+import StayUpdated from '../shared/components/StayUpdated'
 
 export default function Home() {
   return (
@@ -40,6 +41,9 @@ export default function Home() {
         </ContentContainer>
         <ContentContainer>
           <GetSocial />
+        </ContentContainer>
+        <ContentContainer>
+          <StayUpdated />
         </ContentContainer>
         <ContentContainer color={color.black}>
           <Footer />

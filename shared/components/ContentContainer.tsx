@@ -3,13 +3,12 @@ import { color as colorConstant } from '../constant';
 
 const StyledDiv = styled.div`
     background-color: ${props => props.color};
-    padding: ${props => props.hasPadding ? '2rem' : ''};
-    height: 100%;
+    padding: ${props => props.hasPadding ? '1.5rem' : ''};
 `;
 
-export default function ContentContainer({ color = colorConstant.darkGray, hasPadding = true, children }) {
+export default function ContentContainer({ color = colorConstant.darkGray, hasPadding = true, style = {}, children }) {
     return (
-        <StyledDiv color={color} hasPadding={hasPadding}>
+        <StyledDiv style={style} color={color} hasPadding={hasPadding}>
             {children}
         </StyledDiv>
     )

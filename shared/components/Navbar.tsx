@@ -1,8 +1,11 @@
+import { useContext } from 'react'
 import styled from 'styled-components';
 import { color } from '../constant';
 import FacetIconButton from './FacetIconButton';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
+import AppContext from './AppContext';
+import { pages } from './AppContext'
 
 const StyledGrid = styled.div`
     display: grid;
@@ -16,7 +19,6 @@ const StyledGrid = styled.div`
 const InnerDiv = styled.div`
     display: grid;
     grid-template-columns: 3rem 3rem;
-    cursor: pointer;
 `;
 
 const MainDiv = styled.div`
@@ -25,11 +27,13 @@ const MainDiv = styled.div`
     grid-template-columns: 80% 10% 10%;
 `;
 
-const HoverableDiv = styled.div`
+const LabelContainer = styled.div`
+    color: ${props => props.isActive ? color.electricA + '!important' : color.white};
+    text-decoration: ${props => props.isActive ? 'underline' : ''};
     cursor: pointer;
-`;
+`
 
-export default function Navbar() {
+export default function Navbar({ activePage = '' }) {
     return (
         <MainDiv>
             <StyledGrid>
@@ -43,32 +47,32 @@ export default function Navbar() {
                         </div>
                     </InnerDiv>
                 </Link>
-                <HoverableDiv>
+                <div>
                     <Link href="/pricing">
-                        <div style={{ cursor: 'pointer' }}>
-                            <FacetLabel color={color.white} text="Pricing" />
-                        </div>
+                        <LabelContainer isActive={pages.Pricing === activePage}>
+                            <FacetLabel color={activePage === pages.Pricing ? color.electricB : color.white} text={pages.Pricing} />
+                        </LabelContainer>
                     </Link>
-                </HoverableDiv>
-                <HoverableDiv>
+                </div>
+                <div>
                     <Link href="/documentation">
-                        <div style={{ cursor: 'pointer' }}>
-                            <FacetLabel color={color.white} text="Documentation" />
-                        </div>
+                        <LabelContainer isActive={pages.Documentation === activePage}>
+                            <FacetLabel color={activePage === pages.Documentation ? color.electricB : color.white} text={pages.Documentation} />
+                        </LabelContainer>
                     </Link>
-                </HoverableDiv>
+                </div>
                 <div>
                     <Link href="/blog">
-                        <div style={{ cursor: 'pointer' }}>
-                            <FacetLabel color={color.white} text="Blog" />
-                        </div>
+                        <LabelContainer isActive={pages.Blog === activePage}>
+                            <FacetLabel color={activePage === pages.Blog ? color.electricB : color.white} text={pages.Blog} />
+                        </LabelContainer>
                     </Link>
                 </div>
                 <div>
                     <Link href="/contact">
-                        <div style={{ cursor: 'pointer' }}>
-                            <FacetLabel color={color.white} text="Contact" />
-                        </div>
+                        <LabelContainer isActive={pages.Contact === activePage}>
+                            <FacetLabel color={activePage === pages.Contact ? color.electricB : color.white} text="Contact" />
+                        </LabelContainer>
                     </Link>
                 </div>
                 <div>

@@ -5,7 +5,8 @@ import ContentContainer from '../shared/components/ContentContainer'
 import Navbar from '../shared/components/Navbar'
 import styled from 'styled-components'
 import TOC from '../shared/components/TOC'
-import { color } from '../shared/constant'
+import AppProvider from '../shared/components/AppProvider'
+import { pages } from '../shared/components/AppContext'
 
 const StyledDiv = styled.div`
     display: grid;
@@ -26,26 +27,28 @@ const InnerStickyDiv = styled.div`
 
 export default function DocumentationPage() {
     return (
-        <div>
-            <Head>
-                <title>Facet</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <ContentContainer >
-                <Navbar />
-            </ContentContainer>
-            <ContentContainer hasPadding={false}>
-                <StyledDiv>
-                    <StickyDiv>
-                        <InnerStickyDiv />
-                        <TOC />
-                        <InnerStickyDiv />
-                    </StickyDiv>
-                    <div>
-                        <Documentation />
-                    </div>
-                </StyledDiv>
-            </ContentContainer>
-        </div>
+        <AppProvider>
+            <div>
+                <Head>
+                    <title>Facet</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <ContentContainer >
+                    <Navbar activePage={pages.Documentation} />
+                </ContentContainer>
+                <ContentContainer hasPadding={false}>
+                    <StyledDiv>
+                        <StickyDiv>
+                            <InnerStickyDiv />
+                            <TOC />
+                            <InnerStickyDiv />
+                        </StickyDiv>
+                        <div>
+                            <Documentation />
+                        </div>
+                    </StyledDiv>
+                </ContentContainer>
+            </div>
+        </AppProvider>
     )
 }

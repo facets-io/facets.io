@@ -16,7 +16,7 @@ export default function Navbar() {
             <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Deploy Features Faster" />
             <br />
             <br />
-            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Rollout features" />
+            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Manage feature rollouts" />
             <i>
                 <FacetLabel color={color.facetBlue} fontSize={fontSize.medium} text=" without code " />
             </i>
@@ -24,10 +24,7 @@ export default function Navbar() {
             <br />
             <br />
             <div>
-            </div>
-            <div>
-                {/* @ts-ignore */}
-                <FacetButton style={{ width: '60%' }} text="Download Our Chrome Extension" onClick={() => { }} />
+                <FacetButton style={{ width: '30%' }} text="Download Our Chrome Extension" onClick={() => { }} />
                 <br />
                 {/* @ts-ignore */}
                 <FacetLink fontSize={fontSize.large} color={color.ice} variant="contained" type="submit" text="Demo" onClick={() => { }} />

@@ -5,34 +5,32 @@ import Head from 'next/head'
 import Navbar from '../shared/components/Navbar'
 import Footer from '../shared/components/Footer'
 import ContactGrid from '../shared/components/ContactGrid'
+import AppProvider from '../shared/components/AppProvider'
+import { pages } from '../shared/components/AppContext'
 
-const StyledDiv = styled.div`
+const PageContainer = styled.div`
     display: grid;
-    background-color: ${color.darkBlue};
-`
-
-const TwoGrid = styled.div`
-    display: grid;
-    grid-template-columns: 40% 40%;
-    grid-gap: 5%;
+    height: 100%;
 `
 
 export default function ContactPage() {
     return (
-        <div>
-            <Head>
-                <title>Facet</title>
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <ContentContainer>
-                <Navbar />
-            </ContentContainer>
-            <ContentContainer hasPadding={false}>
-                <ContactGrid />
-            </ContentContainer>
-            <ContentContainer color={color.black}>
-                <Footer />
-            </ContentContainer>
-        </div>
+        <AppProvider>
+            <PageContainer>
+                <Head>
+                    <title>Facet</title>
+                    <link rel="icon" href="/favicon.ico" />
+                </Head>
+                <ContentContainer>
+                    <Navbar activePage={pages.Contact} />
+                </ContentContainer>
+                <ContentContainer hasPadding={false}>
+                    <ContactGrid />
+                </ContentContainer>
+                <ContentContainer color={color.black}>
+                    <Footer />
+                </ContentContainer>
+            </PageContainer>
+        </AppProvider>
     )
 }

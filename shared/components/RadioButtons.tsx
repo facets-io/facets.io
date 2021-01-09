@@ -1,6 +1,5 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import { green } from '@material-ui/core/colors';
 import Radio from '@material-ui/core/Radio';
 import { color } from '../constant';
 import FacetLabel from './FacetLabel';
@@ -21,7 +20,7 @@ const StyledGrid = styled.div`
 `
 
 export default function RadioButtons() {
-    const [selectedValue, setSelectedValue] = React.useState('a');
+    const [selectedValue, setSelectedValue] = React.useState('no');
 
     const handleChange = (event) => {
         setSelectedValue(event.target.value);
@@ -29,26 +28,28 @@ export default function RadioButtons() {
 
     return (
         <StyledGrid>
-
-            <IceRadio
-                /* @ts-ignore */
-                checked={selectedValue === 'a'}
-                onChange={handleChange}
-                value="a"
-                name="radio-button-demo"
-                inputProps={{ 'aria-label': 'C' }}
-            />
-            <FacetLabel text='No' />
-            <IceRadio
-                /* @ts-ignore */
-                checked={selectedValue === 'b'}
-                onChange={handleChange}
-                value="b"
-                name="radio-button-demo"
-                inputProps={{ 'aria-label': 'C' }}
-            />
-            <FacetLabel text='Yes' />
-
+            <div>
+                <IceRadio
+                    // @ts-ignore
+                    checked={selectedValue === 'no'}
+                    onChange={handleChange}
+                    value="no"
+                    name="radio-button-demo"
+                    inputProps={{ 'aria-label': 'no' }}
+                />
+                <FacetLabel text='No' />
+            </div>
+            <div>
+                <IceRadio
+                    // @ts-ignore
+                    checked={selectedValue === 'yes'}
+                    onChange={handleChange}
+                    value="yes"
+                    name="radio-button-demo"
+                    inputProps={{ 'aria-label': 'yes' }}
+                />
+                <FacetLabel text='Yes' />
+            </div>
         </StyledGrid>
     );
 }
