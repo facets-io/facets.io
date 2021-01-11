@@ -1,10 +1,8 @@
-import { useContext } from 'react'
 import styled from 'styled-components';
 import { color } from '../constant';
 import FacetIconButton from './FacetIconButton';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
-import AppContext from './AppContext';
 import { pages } from './AppContext'
 
 const StyledGrid = styled.div`
