@@ -15,4 +15,5 @@ module.exports = withMDX({
         }
     },
     pageExtensions: ['mdx', 'jsx', 'js', 'ts', 'tsx'],
+    trailingSlash: true,
 })
