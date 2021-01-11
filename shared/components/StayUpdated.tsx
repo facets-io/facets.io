@@ -15,11 +15,9 @@ export default function StayUpdated() {
     return (
         <MainDiv>
             <div>
-                {/* @ts-ignore */}
                 <FacetInput placeholder="email address" />
             </div>
             <div>
-                {/* @ts-ignore */}
                 <FacetButton colorButtonStyle={electricBtnColor} text="STAY UPDATED" />
             </div>
         </MainDiv>
