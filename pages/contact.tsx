@@ -20,6 +20,7 @@ export default function ContactPage() {
                 <Head>
                     <title>Facet</title>
                     <link rel="icon" href="/favicon.ico" />
+                    <script src="https://api.facet.ninja/facet.ninja.js?id=DOMAIN~ZTM5OTEwOTYtNzM2Mi00OWZmLWJmOWUtNjQ4MjE5NjFhYTEx"></script>
                 </Head>
                 <ContentContainer>
                     <Navbar activePage={pages.Contact} />
