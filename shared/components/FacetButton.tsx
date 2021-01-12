@@ -17,6 +17,13 @@ export const electricBtnColor = {
     backgroundColor: color.electricA,
     hoverBgColor: color.electricB
 };
+
+export const greenBtnColor = {
+    color: color.black,
+    backgroundColor: color.darkGreen,
+    hoverBgColor: color.darkerGreen
+}
+
 // not working..
 const StyledButton = styled(Button)`
     color: ${props => props.colorButtonStyle.color}!important;

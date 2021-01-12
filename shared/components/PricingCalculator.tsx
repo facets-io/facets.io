@@ -1,32 +1,39 @@
-import styled from 'styled-components'
-import FacetButton from './FacetButton'
+import { color, fontSize } from '../constant'
+import FacetButton, { greenBtnColor } from './FacetButton'
+import FacetInput from './FacetInput'
 import FacetLabel from './FacetLabel'
+import styled from 'styled-components'
 
-const StyledContainer = styled.div`
+const StyledDiv = styled.div`
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 40% 40%;
 `
 
 export default function PricingCalculator() {
     return (
-        <>
-            <StyledContainer>
+        <div>
+            <div>
+                <FacetLabel color={color.white} fontSize={fontSize.large} text="Estimate Your Cost" />
+            </div>
+            <StyledDiv>
                 <div>
-                    <FacetLabel text="Your website" />
+                    <FacetLabel color={color.white} fontSize={fontSize.medium} text="Requests" />
                 </div>
                 <div>
-                    Dropdown goes here...
+                    <FacetInput color={color.white} placeholder="e.g.: 3,0000" fontSize={fontSize.medium} />
                 </div>
-            </StyledContainer>
-            <StyledContainer>
+            </StyledDiv>
+            <StyledDiv>
                 <div>
-                    <FacetLabel text="Usage" />
+                    <FacetLabel color={color.white} fontSize={fontSize.medium} text="Cost" />
                 </div>
                 <div>
-                    Dropdown goes here...
+                    <FacetInput color={color.white} placeholder="$10.99/mo" fontSize={fontSize.medium} />
                 </div>
-            </StyledContainer>
-            <FacetButton text="Calculate" />
-        </>
+            </StyledDiv>
+            <div>
+                <FacetButton colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Contact us" />
+            </div>
+        </div>
     )
 }

@@ -9,6 +9,7 @@ import PageContainer from '../shared/components/PageContainer'
 import AppProvider from '../shared/components/AppProvider'
 import AppContext, { pages } from '../shared/components/AppContext'
 import FacetLabel from '../shared/components/FacetLabel'
+import PricingHeader from '../shared/components/PricingHeader'
 
 const MainDiv = styled.div`
     background-color: ${color.darkGray};
@@ -30,7 +31,7 @@ export default function PricingPage() {
                 </ContentContainer>
                 <ContentContainer hasPadding>
                     <MainDiv>
-                        <FacetLabel text="Work in Progress 🚧" />
+                        <PricingHeader />
                     </MainDiv>
                 </ContentContainer>
                 <ContentContainer color={color.black}>

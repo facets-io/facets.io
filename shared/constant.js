@@ -21,7 +21,10 @@ const color = {
         green: '#00D222'
     },
     skyBlue: '#C4DDF2',
-    darkBlue: '#292E36'
+    darkBlue: '#292E36',
+    green: '#33DDB4',
+    darkGreen: '#33DD00',
+    darkerGreen: '#33FF12',
 };
 
 const mountainWalkColors = {
