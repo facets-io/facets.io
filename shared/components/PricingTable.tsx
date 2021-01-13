@@ -1,4 +1,4 @@
-import FacetButton, { greenBtnColor } from './FacetButton';
+import FacetButton, { greenBtnColor, whiteBtnColor } from './FacetButton';
 import styled from 'styled-components';
 import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
@@ -37,20 +37,20 @@ const StyledTable = styled.table`
 
     & td:nth-child(2) {
         padding: 1rem;
-        text-align: left;
+        text-align: center;
         background-color: ${color.pricingGray}
      }
+
+    & th:nth-child(2) {
+        padding: 1rem;
+        text-align: center;
+        background-color: ${color.pricingGray}
+    }
 
     & th:first-child {
         padding: 1rem;
         text-align: left;
         background-color: ${color.pricingBlack}
-    }
-
-    & th:nth-child(2) {
-        padding: 1rem;
-        text-align: left;
-        background-color: ${color.pricingGray}
     }
     
 `
@@ -128,10 +128,10 @@ export default function PricingTable() {
                     <FacetLabel color={color.white} fontSize={fontSize.large} text="Enterprise" />
                 </td>
                 <td>
-                    <FacetButton width='10rem' colorButtonStyle={greenBtnColor} color={color.green} fontSize={fontSize.medium} text="Contact us" />
+                    <FacetButton width='10rem' colorButtonStyle={whiteBtnColor} color={color.white} fontSize={fontSize.medium} text="Contact us" />
                 </td>
                 <td>
-                    <FacetButton width='12rem' colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Calculate" />
+                    <FacetButton width='12rem' colorButtonStyle={whiteBtnColor} fontSize={fontSize.medium} text="Get Started" />
                 </td>
             </tr>
         </StyledTable>

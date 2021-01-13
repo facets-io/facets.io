@@ -12,13 +12,7 @@ const MainDiv = styled.div`
 export default function PricingHeader() {
     return (
         <MainDiv>
-            <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Choose the plan that's right for your team" />
-            <br />
-            <br />
-            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Pay by month or the year, and cancel at any time." />
-            <br />
-            <br />
-            <FacetLabel color={color.white} fontSize={fontSize.medium} text="Pay as you go." />
+            <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Usage Pricing" />
             <br />
             <br />
             <div>

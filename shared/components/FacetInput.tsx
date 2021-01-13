@@ -49,7 +49,6 @@ export default ({ width = '100%', type = 'input', name = '', id = '', isMountain
                 backgroundColor: colorStyle.backgroundColor,
                 color: colorStyle.color,
                 padding: '.3rem',
-                borderRadius: '.5rem',
                 height: '2rem'
             }}
             aria-describedby="standard-weight-helper-text"

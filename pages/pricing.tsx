@@ -34,7 +34,8 @@ export default function PricingPage() {
                         <PricingHeader />
                     </MainDiv>
                 </ContentContainer>
-                <ContentContainer color={color.black}>
+                <ContentContainer color={color.black} hasPadding={false}>
+                    <br/>
                     <Footer />
                 </ContentContainer>
             </PageContainer>

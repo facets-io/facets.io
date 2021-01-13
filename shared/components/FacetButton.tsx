@@ -18,10 +18,17 @@ export const electricBtnColor = {
     hoverBgColor: color.electricB
 };
 
+// @ deprecated
 export const greenBtnColor = {
     color: color.black,
     backgroundColor: color.green,
     hoverBgColor: color.darkerGreen
+}
+
+export const whiteBtnColor = {
+    color: color.black,
+    backgroundColor: color.white,
+    hoverBgColor: color.white
 }
 
 // not working..
@@ -37,7 +44,7 @@ export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: props.width ? props.width : '100%' }}
+            style={{ width: props.width ? props.width : '100%', height: '100%' }}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}
