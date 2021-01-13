@@ -11,10 +11,10 @@ const CustomInput = withStyles(
                 borderBottom: 'none'
             },
             '&:after': {
-                borderBottom: `2px solid ${color.ice}`
+                borderBottom: `2px solid ${color.white}`
             },
             '&:hover:not($disabled):not($focused):not($error):before': {
-                borderBottom: `2px solid ${color.ice}`
+                borderBottom: `2px solid ${color.white}`
             }
         },
         input: {
@@ -37,7 +37,13 @@ export const electricColor = {
 };
 
 
-export default ({ width = '100%', type = 'input', name = '', id = '', isMountainWalkWebsite = true, colorStyle = defaultColor, ...other }) => {
+export default ({
+    width = '100%',
+    type = 'input',
+    name = '', id = '',
+    isMountainWalkWebsite = true,
+    colorStyle = defaultColor,
+    ...other }) => {
 
     const innerElement = <div>
         <CustomInput

@@ -10,6 +10,7 @@ import AppProvider from '../shared/components/AppProvider'
 import AppContext, { pages } from '../shared/components/AppContext'
 import FacetLabel from '../shared/components/FacetLabel'
 import PricingHeader from '../shared/components/PricingHeader'
+import FacetHead from './FacetHead'
 
 const MainDiv = styled.div`
     background-color: ${color.darkGray};
@@ -21,11 +22,7 @@ export default function PricingPage() {
     return (
         <AppProvider>
             <PageContainer>
-                <Head>
-                    <title>Facet</title>
-                    <link rel="icon" href="/favicon.ico" />
-                    <script src="https://api.facet.ninja/facet.ninja.js?id=DOMAIN~ZTM5OTEwOTYtNzM2Mi00OWZmLWJmOWUtNjQ4MjE5NjFhYTEx"></script>
-                </Head>
+                <FacetHead />
                 <ContentContainer>
                     <Navbar activePage={pages.Pricing} />
                 </ContentContainer>
@@ -35,7 +32,7 @@ export default function PricingPage() {
                     </MainDiv>
                 </ContentContainer>
                 <ContentContainer color={color.black} hasPadding={false}>
-                    <br/>
+                    <br />
                     <Footer />
                 </ContentContainer>
             </PageContainer>
