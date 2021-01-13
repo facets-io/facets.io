@@ -1,4 +1,4 @@
-import FacetButton, { electricBtnColor } from "./FacetButton";
+import FacetButton, { electricBtnColor, greenBtnColor } from "./FacetButton";
 import FacetInput from "./FacetInput";
 import styled from 'styled-components';
 
@@ -18,7 +18,7 @@ export default function StayUpdated() {
                 <FacetInput placeholder="email address" />
             </div>
             <div>
-                <FacetButton colorButtonStyle={electricBtnColor} text="STAY UPDATED" />
+                <FacetButton colorButtonStyle={greenBtnColor} text="STAY UPDATED" />
             </div>
         </MainDiv>
     );

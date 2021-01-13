@@ -43,9 +43,6 @@ export default function Home() {
         <ContentContainer>
           <GetSocial />
         </ContentContainer>
-        <ContentContainer>
-          <StayUpdated />
-        </ContentContainer>
         <ContentContainer color={color.black}>
           <Footer />
         </ContentContainer>

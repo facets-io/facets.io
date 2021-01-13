@@ -155,10 +155,6 @@ export default function ContactGrid() {
                             <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
                         </div>
                     </StyledForm>
-                    <br />
-                    <div style={{ padding: '.5rem' }}>
-                        <StayUpdated />
-                    </div>
                 </div>
                 <div style={{ textAlign: 'center' }}>
                     <img src="/contact.svg" alt="Facet" />

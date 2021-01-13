@@ -101,10 +101,10 @@ export default function PricingTable() {
                 </td>
             </tr>
             <tr >
-                <td style={{ padding: "1rem" }}>
+                <td>
                     <FacetLabel color={color.white} fontSize={fontSize.large} text="Enterprise" />
                 </td>
-                <td>
+                <td style={{ padding: '1rem' }}>
                     <FacetButton colorButtonStyle={greenBtnColor} color={color.green} fontSize={fontSize.medium} text="Contact us" />
                 </td>
                 <td>
