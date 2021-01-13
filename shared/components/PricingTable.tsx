@@ -1,29 +1,35 @@
 import FacetButton, { greenBtnColor } from './FacetButton';
-import FacetLink from './FacetLink';
 import styled from 'styled-components';
 import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
-import FacetSwitch from './FacetSwitch';
-import FacetInput from './FacetInput';
 import PricingCalculator from './PricingCalculator';
+import { makeStyles } from '@material-ui/core';
+import FacetDivider from './FacetDivider';
+import MarginTop from './MarginTop';
 
 const MainDiv = styled.div`
     display: grid;
     grid-template-columns: 25% 25% 40%;
-    grid-gap: 5%;
     background-color: ${color.darkGray};
     width: 100%;
     height: 100%;
+    text-align: left;
 `;
+
+const StyledInnerDiv = styled.div`
+    padding: .2rem;
+`
 
 export default function PricingTable() {
 
     const columnA = <div>
+        <br />
         <div>
             <FacetLabel color={color.white} fontSize={fontSize.large} text="Requests" />
             <br />
-            <FacetLabel color={color.white} fontSize={fontSize.medium} text="per month" />
+            <FacetLabel color={color.white} fontSize={fontSize.small} text="per month" />
         </div>
+        <FacetDivider />
         <div>
             <FacetLabel color={color.white} fontSize={fontSize.large} text="First 100" />
         </div>
@@ -39,11 +45,16 @@ export default function PricingTable() {
     </div>;
 
     const columnB = <div>
+        <br />
         <div>
             <FacetLabel color={color.white} fontSize={fontSize.large} text="Per Request" />
-            <br />
+        </div>
+        <br/>
+        <div>
+            <FacetDivider />
             <FacetLabel color={color.white} fontSize={fontSize.medium} text="free" />
         </div>
+
         <div>
             <FacetLabel color={color.white} fontSize={fontSize.medium} text="$0.03" />
         </div>
@@ -56,6 +67,7 @@ export default function PricingTable() {
     </div>
 
     const columnC = <div>
+        <br />
         <PricingCalculator />
     </div>
 

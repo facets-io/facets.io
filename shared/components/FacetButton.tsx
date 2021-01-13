@@ -20,7 +20,7 @@ export const electricBtnColor = {
 
 export const greenBtnColor = {
     color: color.black,
-    backgroundColor: color.darkGreen,
+    backgroundColor: color.green,
     hoverBgColor: color.darkerGreen
 }
 
@@ -28,6 +28,7 @@ export const greenBtnColor = {
 const StyledButton = styled(Button)`
     color: ${props => props.colorButtonStyle.color}!important;
     background-color: ${props => props.colorButtonStyle.backgroundColor}!important;
+    width: ${props => props.width ? props.width : '100%'};
 `;
 
 export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle = defaultColorBtnStyle, ...props }) => {
@@ -36,7 +37,7 @@ export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: '100%' }}
+            style={{ width: props.width ? props.width : '100%' }}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}

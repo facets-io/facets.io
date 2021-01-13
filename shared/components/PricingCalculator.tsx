@@ -3,6 +3,7 @@ import FacetButton, { greenBtnColor } from './FacetButton'
 import FacetInput from './FacetInput'
 import FacetLabel from './FacetLabel'
 import styled from 'styled-components'
+import FacetDivider from './FacetDivider'
 
 const StyledDiv = styled.div`
     display: grid;
@@ -15,6 +16,9 @@ export default function PricingCalculator() {
             <div>
                 <FacetLabel color={color.white} fontSize={fontSize.large} text="Estimate Your Cost" />
             </div>
+            <br />
+            <FacetDivider />
+            <br />
             <StyledDiv>
                 <div>
                     <FacetLabel color={color.white} fontSize={fontSize.medium} text="Requests" />
@@ -23,6 +27,7 @@ export default function PricingCalculator() {
                     <FacetInput color={color.white} placeholder="e.g.: 3,0000" fontSize={fontSize.medium} />
                 </div>
             </StyledDiv>
+            <br />
             <StyledDiv>
                 <div>
                     <FacetLabel color={color.white} fontSize={fontSize.medium} text="Cost" />
@@ -32,7 +37,7 @@ export default function PricingCalculator() {
                 </div>
             </StyledDiv>
             <div>
-                <FacetButton colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Contact us" />
+                <FacetButton width="50%" colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Calculate" />
             </div>
         </div>
     )
