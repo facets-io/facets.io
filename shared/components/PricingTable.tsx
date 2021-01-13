@@ -17,19 +17,42 @@ const MainDiv = styled.div`
     text-align: left;
 `;
 
-const StyledInnerDiv = styled.div`
-    padding: .2rem;
-`
-
 const StyledTable = styled.table`
     color: white;
     width: 100%;
-    & td:first-child {  
+    border: none;
+
+    border-spacing: 0;
+    width: 100%;
+
+    tr th{
+        border-bottom: .2px solid ${color.ice};
+    }
+
+    & td:first-child {
+       padding: 1rem;
        text-align: left;
+       background-color: ${color.pricingBlack}
     }
-    & th:first-child {  
+
+    & td:nth-child(2) {
+        padding: 1rem;
         text-align: left;
+        background-color: ${color.pricingGray}
+     }
+
+    & th:first-child {
+        padding: 1rem;
+        text-align: left;
+        background-color: ${color.pricingBlack}
     }
+
+    & th:nth-child(2) {
+        padding: 1rem;
+        text-align: left;
+        background-color: ${color.pricingGray}
+    }
+    
 `
 
 const StyledDiv = styled.div`
@@ -42,7 +65,7 @@ const StyledDiv = styled.div`
 export default function PricingTable() {
 
     return (
-        <StyledTable>
+        <StyledTable cellspacing="0" cellpadding="0">
             <thead>
                 <tr>
                     <th data-type="numeric">
@@ -104,11 +127,11 @@ export default function PricingTable() {
                 <td>
                     <FacetLabel color={color.white} fontSize={fontSize.large} text="Enterprise" />
                 </td>
-                <td style={{ padding: '1rem' }}>
-                    <FacetButton colorButtonStyle={greenBtnColor} color={color.green} fontSize={fontSize.medium} text="Contact us" />
+                <td>
+                    <FacetButton width='10rem' colorButtonStyle={greenBtnColor} color={color.green} fontSize={fontSize.medium} text="Contact us" />
                 </td>
                 <td>
-                    <FacetButton width="60%" colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Calculate" />
+                    <FacetButton width='12rem' colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Calculate" />
                 </td>
             </tr>
         </StyledTable>

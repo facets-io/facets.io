@@ -3,23 +3,28 @@ import FacetInput from "./FacetInput";
 import styled from 'styled-components';
 
 const MainDiv = styled.div`
-    width: 100%;
     text-align: center;
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 20rem 10rem;
     grid-gap: 5%;
     justify-content: center;
 `
 
+const CoreDiv = styled.div`
+    width: '100%';
+`
+
 export default function StayUpdated() {
     return (
-        <MainDiv>
-            <div>
-                <FacetInput placeholder="email address" />
-            </div>
-            <div>
-                <FacetButton colorButtonStyle={greenBtnColor} text="STAY UPDATED" />
-            </div>
-        </MainDiv>
+        <CoreDiv>
+            <MainDiv>
+                <div>
+                    <FacetInput width="20rem" placeholder="email address" />
+                </div>
+                <div>
+                    <FacetButton height="10rem" width="20rem" colorButtonStyle={greenBtnColor} text="STAY UPDATED" />
+                </div>
+            </MainDiv>
+        </CoreDiv>
     );
 }
