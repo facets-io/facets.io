@@ -8,17 +8,13 @@ import FacetDivider from './FacetDivider'
 const StyledDiv = styled.div`
     display: grid;
     grid-template-columns: 40% 40%;
+    justify-items: center;
+    align-items: center;
 `
 
 export default function PricingCalculator() {
     return (
         <div>
-            <div>
-                <FacetLabel color={color.white} fontSize={fontSize.large} text="Estimate Your Cost" />
-            </div>
-            <br />
-            <FacetDivider />
-            <br />
             <StyledDiv>
                 <div>
                     <FacetLabel color={color.white} fontSize={fontSize.medium} text="Requests" />
@@ -36,9 +32,10 @@ export default function PricingCalculator() {
                     <FacetInput color={color.white} placeholder="$10.99/mo" fontSize={fontSize.medium} />
                 </div>
             </StyledDiv>
-            <div>
-                <FacetButton width="50%" colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Calculate" />
-            </div>
+            <StyledDiv>
+                <div />
+                <FacetButton colorButtonStyle={greenBtnColor} fontSize={fontSize.medium} text="Calculate" />
+            </StyledDiv>
         </div>
     )
 }
