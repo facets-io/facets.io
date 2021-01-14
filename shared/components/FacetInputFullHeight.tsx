@@ -58,6 +58,7 @@ export default ({
             id={id}
             type={type}
             name={name}
+            // @ts-ignore
             type="text"
             style={{
                 width,
