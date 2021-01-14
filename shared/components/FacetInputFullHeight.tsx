@@ -62,12 +62,12 @@ export default ({
                 width,
                 backgroundColor: colorStyle.backgroundColor,
                 color: colorStyle.color,
-                height
+                height,
+                textAlign: 'center'
             }}
             aria-describedby="standard-weight-helper-text"
-            inputProps={{
-                'aria-label': 'weight',
-            }}
+            // mui prop for aligning to center
+            inputProps={{ style: { textAlign: 'center' } }}
             {...other}
         />
     </>

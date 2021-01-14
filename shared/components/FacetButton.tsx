@@ -44,7 +44,7 @@ export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: props.width ? props.width : '100%', height: '100%' }}
+            style={{ width: props.width ? props.width : '100%', height: '100%', borderRadius: 0 }}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}
