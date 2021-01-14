@@ -79,7 +79,7 @@ export default function Navbar({ activePage = '' }) {
                         <a target="_blank">
                             <div style={{ cursor: 'pointer' }}>
                                 {/* @ts-ignore */}
-                                <FacetIconButton isSelected={false} title="github" onClick={() => { }} name="github" size="large" />
+                                <FacetLabel color={activePage === pages.Blog ? color.electricB : color.white} text='GitHub' />
                             </div>
                         </a>
                     </Link>
