@@ -6,8 +6,8 @@ export default function Footer() {
     return (
         <div>
             <StayUpdated />
-            <br/>
-            <br/>
+            <br />
+            <br />
             <div style={{ textAlign: 'center', backgroundColor: color.black }}>
                 <div>
                     <img src="/facet_typography.svg" alt="Facet logo" />
