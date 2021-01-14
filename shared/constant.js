@@ -27,7 +27,8 @@ const color = {
     darkerGreen: '#33FF12',
     pricingBlack: '#1E232B',
     pricingGray: '#2A3341',
-    pricingLightGray: '#1D242E'
+    pricingLightGray: '#1D242E',
+    pricingDivDark: '#212934'
 };
 
 const mountainWalkColors = {

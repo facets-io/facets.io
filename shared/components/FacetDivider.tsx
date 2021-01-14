@@ -7,8 +7,8 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export default () => {
+export default (props) => {
     const classes = useStyles();
 
-    return <Divider className={classes.divider} />
+    return <Divider className={classes.divider} {...props} />
 }

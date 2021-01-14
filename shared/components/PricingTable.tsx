@@ -7,6 +7,7 @@ import FacetInput from './FacetInput'
 import AppContext from './AppContext'
 import MarginTop from './MarginTop'
 import FacetDivider from './FacetDivider'
+import FacetInputFullHeight from './FacetInputFullHeight'
 
 const MainDiv = styled.div`
     display: grid;
@@ -65,13 +66,15 @@ const StyledTable = styled.table`
 
 const StyledDiv = styled.div`
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 49.9% 0.9% 50%;
     justify-items: center;
     align-items: center;
-    background-color: ${color.pricingLightGray};
-    padding: 2rem;
-    margin: 1rem;
+    background-color: ${color.pricingDivDark};
 `
+
+const StyledDivItem = styled.div`
+    padding: 2rem;
+`;
 
 export default function PricingTable() {
 
@@ -104,15 +107,34 @@ export default function PricingTable() {
                         <br />
                         <FacetDivider />
                     </td>
-                    <td>
+                    <td rowSpan={5}>
                         <StyledDiv>
-                            <div>
+                            <StyledDivItem>
                                 <FacetLabel color={color.white} fontSize={fontSize.medium} text="Requests (/mo)" />
-                            </div>
-                            <div>
-                                <FacetInput onChange={(e) => { calculate(e.target.value) }} placeholder="e.g.: 3,0000" fontSize={fontSize.medium} />
+                            </StyledDivItem>
+                            <FacetDivider orientation="vertical" flexItem />
+                            <div style={{ height: '100%', width: '100%' }}>
+                                <FacetInputFullHeight onChange={(e) => { calculate(e.target.value) }} placeholder="e.g.: 3,0000" />
                             </div>
                         </StyledDiv>
+                        <br />
+                        <br />
+                        <StyledDiv>
+                            <StyledDivItem>
+                                <FacetLabel color={color.white} fontSize={fontSize.medium} text="Cost" />
+                            </StyledDivItem>
+                            <FacetDivider orientation="vertical" flexItem />
+                            <StyledDivItem>
+                                <u>
+                                    <FacetLabel color={color.white} fontSize={fontSize.medium} text={`${estimatedCost}`} />
+                                </u>
+                            </StyledDivItem>
+                        </StyledDiv>
+                        <br />
+                        <br />
+                        <div>
+                            <FacetButton width='12rem' colorButtonStyle={whiteBtnColor} fontSize={fontSize.medium} text="Get Started" />
+                        </div>
                     </td>
                 </tr>
                 <tr>
@@ -125,31 +147,16 @@ export default function PricingTable() {
                         <br />
                         <FacetDivider />
                     </td>
-                    <td>
-                        <StyledDiv>
-                            <div>
-                                <FacetLabel color={color.white} fontSize={fontSize.medium} text="Cost" />
-                            </div>
-                            <div>
-                                <u>
-                                    <FacetLabel color={color.white} fontSize={fontSize.medium} text={`${estimatedCost}`} />
-                                </u>
-                            </div>
-                        </StyledDiv>
-                    </td>
                 </tr>
                 <tr>
                     <td>
                         <FacetLabel color={color.white} fontSize={fontSize.large} text={pricingTier[2].name} />
                     </td>
                     <td>
-                        <FacetLabel color={color.white} fontSize={fontSize.medium} text={pricingTier[2].cost.toFixed(7)} />
+                        <FacetLabel color={color.white} fontSize={fontSize.medium} text={`$ ${pricingTier[2].cost.toFixed(7)}`} />
                         <br />
                         <br />
                         <FacetDivider />
-                    </td>
-                    <td>
-                        <FacetButton width='12rem' colorButtonStyle={whiteBtnColor} fontSize={fontSize.medium} text="Get Started" />
                     </td>
                 </tr>
                 <tr >
@@ -161,8 +168,6 @@ export default function PricingTable() {
                         <br />
                         <FacetDivider />
                     </td>
-                    <td></td>
-
                 </tr>
                 <tr >
                     <td>
@@ -177,8 +182,6 @@ export default function PricingTable() {
                             <FacetLabel color={color.white} fontSize={fontSize.small} text={"* Free for OSS and NPOs"} />
                         </div>
                     </td>
-                    <td></td>
-
                 </tr>
             </StyledTable>
         </MainDiv>
