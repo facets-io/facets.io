@@ -22,6 +22,9 @@ const CustomInput = withStyles(
                 transitionDelay: '9999s',
                 transitionProperty: 'background-color, color',
             },
+            '&::placeholder': {
+                // fontStyle: 'italic',
+            },
         },
     }
 )(Input);
@@ -35,7 +38,6 @@ export const electricColor = {
     color: color.black,
     backgroundColor: color.ice,
 };
-
 
 export default ({
     width = '100%',

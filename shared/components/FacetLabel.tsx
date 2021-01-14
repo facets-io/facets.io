@@ -5,7 +5,8 @@ export default ({ text, color = '#A4A7AC', fontSize = 'small' }) => {
         style={{
             width: '100%',
             color,
-            fontSize
+            fontSize,
+
         }}
     >{text}</span>
 }

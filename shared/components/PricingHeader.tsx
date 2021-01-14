@@ -15,6 +15,7 @@ export default function PricingHeader() {
             <FacetLabel color={color.white} fontSize={fontSize.xxLarge} text="Usage Pricing" />
             <br />
             <br />
+            <br />
             <div>
                 <PricingTable />
             </div>

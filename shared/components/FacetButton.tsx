@@ -18,7 +18,7 @@ export const electricBtnColor = {
     hoverBgColor: color.electricB
 };
 
-// @ deprecated
+// @deprecated
 export const greenBtnColor = {
     color: color.black,
     backgroundColor: color.green,
