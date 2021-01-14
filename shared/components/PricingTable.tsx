@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import FacetButton, { whiteBtnColor } from './FacetButton'
 import styled from 'styled-components'
 import { color, fontSize } from '../constant'
@@ -80,6 +80,7 @@ export default function PricingTable() {
 
     //@ts-ignore
     const { estimatedCost, calculate, pricingTier } = useContext(AppContext);
+    const [presentableCost, setPresentableCost] = useState('');
 
     return (
         <MainDiv>
@@ -114,7 +115,15 @@ export default function PricingTable() {
                             </StyledDivItem>
                             <FacetDivider orientation="vertical" flexItem />
                             <div style={{ height: '100%', width: '100%' }}>
-                                <FacetInputFullHeight onChange={(e) => { calculate(e.target.value) }} placeholder="e.g.: 3,0000" />
+                                <FacetInputFullHeight
+                                    value={presentableCost}
+                                    onChange={(e) => {
+                                        var num = e.target.value.replace(/,/gi, "")
+                                        var num2 = num.split(/(?=(?:\d{3})+$)/).join(",")
+                                        setPresentableCost(num2)
+                                        const numberWithCommas = parseFloat(num2.replace(/,/g, ''));
+                                        calculate(numberWithCommas)
+                                    }} placeholder="e.g.: 3,0000" />
                             </div>
                         </StyledDiv>
                         <br />
@@ -126,7 +135,7 @@ export default function PricingTable() {
                             <FacetDivider orientation="vertical" flexItem />
                             <StyledDivItem>
                                 <u>
-                                    <FacetLabel color={color.white} fontSize={fontSize.medium} text={`${estimatedCost}`} />
+                                    <FacetLabel color={color.white} fontSize={fontSize.xLarge} text={`${estimatedCost}`} />
                                 </u>
                             </StyledDivItem>
                         </StyledDiv>

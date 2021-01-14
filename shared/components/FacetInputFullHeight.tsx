@@ -58,7 +58,7 @@ export default ({
             id={id}
             type={type}
             name={name}
-            type="number"
+            type="text"
             style={{
                 width,
                 backgroundColor: colorStyle.backgroundColor,
