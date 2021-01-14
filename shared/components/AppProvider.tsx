@@ -17,7 +17,7 @@ export default function AppProvider({ children }) {
 
     const [hiddenFacets, setHiddenFacets] = useState([allFacets.facet1]);
     const [currentPage, setCurrentPage] = useState();
-    const [estimatedCost, setEstimatedCost] = useState('free');
+    const [estimatedCost, setEstimatedCost] = useState('$ 0.00 /mo');
 
     const pricingTier = [
         {
@@ -53,7 +53,7 @@ export default function AppProvider({ children }) {
         if (remainingRequests > pricingTier[0].limit) {
             remainingRequests -= pricingTier[0].limit;
         } else {
-            setEstimatedCost('$ free/mo')
+            setEstimatedCost('$ 0.00 /mo')
             return
         }
         if (remainingRequests > pricingTier[1].limit) {
@@ -61,7 +61,7 @@ export default function AppProvider({ children }) {
             cost += (pricingTier[1].limit * pricingTier[1].cost)
         } else {
             cost += (remainingRequests * pricingTier[1].cost)
-            setEstimatedCost(`$ ${cost.toFixed(2)}/mo`)
+            setEstimatedCost(`$ ${cost.toFixed(2)} /mo`)
             return
         }
         cost += (remainingRequests * pricingTier[2].cost)
@@ -69,7 +69,7 @@ export default function AppProvider({ children }) {
             setEstimatedCost(`Enterprise Plan`)
             return
         }
-        setEstimatedCost(`$ ${cost.toFixed(2)}/mo`)
+        setEstimatedCost(`$ ${cost.toFixed(2)} /mo`)
     }
 
     return <AppContext.Provider value={{
