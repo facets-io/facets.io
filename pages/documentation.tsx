@@ -7,6 +7,9 @@ import styled from 'styled-components'
 import TOC from '../shared/components/TOC'
 import AppProvider from '../shared/components/AppProvider'
 import { pages } from '../shared/components/AppContext'
+import Footer from '../shared/components/Footer'
+import { color } from '../shared/constant'
+import FacetHead from './FacetHead'
 
 const StyledDiv = styled.div`
     display: grid;
@@ -29,11 +32,7 @@ export default function DocumentationPage() {
     return (
         <AppProvider>
             <div>
-                <Head>
-                    <title>Facet</title>
-                    <link rel="icon" href="/favicon.ico" />
-                    <script src="https://api.facet.ninja/facet.ninja.js?id=DOMAIN~ZTM5OTEwOTYtNzM2Mi00OWZmLWJmOWUtNjQ4MjE5NjFhYTEx"></script>
-                </Head>
+                <FacetHead />
                 <ContentContainer >
                     <Navbar activePage={pages.Documentation} />
                 </ContentContainer>
@@ -48,6 +47,9 @@ export default function DocumentationPage() {
                             <Documentation />
                         </div>
                     </StyledDiv>
+                </ContentContainer>
+                <ContentContainer color={color.black}>
+                    <Footer />
                 </ContentContainer>
             </div>
         </AppProvider>

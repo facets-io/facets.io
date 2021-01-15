@@ -18,6 +18,10 @@ const CustomInput = withStyles(
             }
         },
         input: {
+            backgroundColor: color.pricingDivDark,
+            fontSize: 'x-large',
+            padding: '0 1rem 0 1rem',
+            height: '100%',
             '&:-webkit-autofill': {
                 transitionDelay: '9999s',
                 transitionProperty: 'background-color, color',
@@ -41,32 +45,35 @@ export const electricColor = {
 
 export default ({
     width = '100%',
+    height = '100%',
     type = 'input',
     name = '', id = '',
     isMountainWalkWebsite = true,
     colorStyle = defaultColor,
     ...other }) => {
 
-    const innerElement = <div>
+    const innerElement = <>
         <CustomInput
+            autoFocus
             id={id}
             type={type}
             name={name}
+            // @ts-ignore
+            type="text"
             style={{
                 width,
                 backgroundColor: colorStyle.backgroundColor,
                 color: colorStyle.color,
-                padding: '.3rem',
-                height: '2rem'
+                height,
+                textAlign: 'center'
             }}
             aria-describedby="standard-weight-helper-text"
-            inputProps={{
-                'aria-label': 'weight',
-            }}
+            // mui prop for aligning to center
+            inputProps={{ style: { textAlign: 'center' } }}
             {...other}
         />
-    </div>
-    const component = <div>{innerElement}</div>;
+    </>
+    const component = <>{innerElement}</>;
 
     return component;
 }

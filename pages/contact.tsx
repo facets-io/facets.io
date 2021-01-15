@@ -7,6 +7,7 @@ import Footer from '../shared/components/Footer'
 import ContactGrid from '../shared/components/ContactGrid'
 import AppProvider from '../shared/components/AppProvider'
 import { pages } from '../shared/components/AppContext'
+import FacetHead from './FacetHead'
 
 const PageContainer = styled.div`
     display: grid;
@@ -17,11 +18,7 @@ export default function ContactPage() {
     return (
         <AppProvider>
             <PageContainer>
-                <Head>
-                    <title>Facet</title>
-                    <link rel="icon" href="/favicon.ico" />
-                    <script src="https://api.facet.ninja/facet.ninja.js?id=DOMAIN~ZTM5OTEwOTYtNzM2Mi00OWZmLWJmOWUtNjQ4MjE5NjFhYTEx"></script>
-                </Head>
+                <FacetHead />
                 <ContentContainer>
                     <Navbar activePage={pages.Contact} />
                 </ContentContainer>

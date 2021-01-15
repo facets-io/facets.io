@@ -12,16 +12,13 @@ import PreviewFacet from '../shared/components/PreviewFacet'
 import SimpleSafeFast from '../shared/components/SimpleSafeFast'
 import AppProvider from '../shared/components/AppProvider'
 import StayUpdated from '../shared/components/StayUpdated'
+import FacetHead from './FacetHead'
 
 export default function Home() {
   return (
     <AppProvider>
       <div className={styles.container}>
-        <Head>
-          <script src="https://api.facet.ninja/facet.ninja.js?id=DOMAIN~ZTM5OTEwOTYtNzM2Mi00OWZmLWJmOWUtNjQ4MjE5NjFhYTEx"></script>
-          <title>Facet</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
+        <FacetHead />
         <ContentContainer >
           <Navbar />
         </ContentContainer>
@@ -42,9 +39,6 @@ export default function Home() {
         </ContentContainer>
         <ContentContainer>
           <GetSocial />
-        </ContentContainer>
-        <ContentContainer>
-          <StayUpdated />
         </ContentContainer>
         <ContentContainer color={color.black}>
           <Footer />
