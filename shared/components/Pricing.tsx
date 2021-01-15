@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
-import PricingTable from './PricingTable';
 
 const MainDiv = styled.div`
     background-color: ${color.darkGray};
@@ -18,7 +17,6 @@ export default function Pricing() {
             <br />
             <FacetLabel color={color.white} fontSize={fontSize.medium} text="Pay by month or year, and cancel any time." />
             <br />
-            <PricingTable />
         </MainDiv>
     );
 }
