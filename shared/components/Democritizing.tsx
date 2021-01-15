@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { color, fontSize } from "../constant";
 
 const MainDiv = styled.div`
-    background-color: ${color.darkGray};
+    background-color: ${color.white};
     width: 100%;
     text-align: center;
 `;
@@ -11,15 +11,15 @@ const MainDiv = styled.div`
 export default function Democratizing() {
     return (
         <MainDiv>
+           <br /><br />
             <div>
-                <FacetLabel fontSize={fontSize.xxLarge} color={color.white} text="Democratizing feature life cycle" />
+                <FacetLabel fontSize={fontSize.xxLarge} color={color.black} text="Facet in action" />
             </div>
-            <br />
+            <br /><br />
             <div>
-                <div>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/WARSSkFQHKg" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                </div>
+                <img src="./blank_video.svg" alt="Facet logo" />
             </div>
+            <br /><br />
         </MainDiv>
     );
 }

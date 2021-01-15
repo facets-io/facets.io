@@ -40,7 +40,7 @@ const defaultColor = {
 
 export const electricColor = {
     color: color.black,
-    backgroundColor: color.ice,
+    backgroundColor:  color.white,
 };
 
 export default ({

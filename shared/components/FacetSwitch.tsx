@@ -16,12 +16,12 @@ const StyledDiv = styled.div`
 
 const CustomSwitch = withStyles({
     switchBase: {
-        color: color.ice,
+        color: color.white,
         '&$checked': {
-            color: color.ice,
+            color: color.white,
         },
         '&$checked + $track': {
-            backgroundColor: color.ice,
+            backgroundColor: color.white,
         },
     },
     checked: {},

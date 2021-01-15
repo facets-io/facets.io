@@ -49,7 +49,7 @@ const snackbar = {
     info: {
         text: 'info',
         iconName: 'message-circle-outline',
-        fill: color.ice
+        fill:  color.white
     }
 };
 

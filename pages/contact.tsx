@@ -25,7 +25,7 @@ export default function ContactPage() {
                 <ContentContainer hasPadding={false}>
                     <ContactGrid />
                 </ContentContainer>
-                <ContentContainer color={color.black}>
+                <ContentContainer color={color.white}>
                     <Footer />
                 </ContentContainer>
             </PageContainer>
