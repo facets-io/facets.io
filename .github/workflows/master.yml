@@ -1,38 +1,46 @@
-name: CI
+name: build and deploy
 
 on:
   push:
     branches: [master]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container:
-      image: node:14.15.4-slim
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2.1.0
-      - run: yarn && yarn install && yarn build && yarn export && ls -la && env && yarn --version && npm --version && node --version
+      - name: fetch soure code
+        uses: actions/checkout@v2
+
+      - name: install node
+        uses: actions/setup-node@v2
+        with:
+          node-version: 12.18.3
+
+      - name: node cache
+        uses: actions/cache@v2
+        env:
+          cache-name: modules-node
+        with:
+          path: node_modules
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: build
+        run: yarn build && yarn export
         env:
           NODE_ENV: dev
 
-      - uses: actions/upload-artifact@v2
+      - name: deploy
+        uses: docker://amazon/aws-cli:2.1.18
         with:
-          name: out
-          path: out
-
-      - name: Upload to S3
-        uses: jakejarvis/s3-sync-action@v0.5.0
-        with:
-          args: --delete
+          args: s3 sync out s3://facet.ninja/ --delete
         env:
-          AWS_S3_BUCKET: facet.ninja
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: "us-west-2"
-          SOURCE_DIR: "out"
