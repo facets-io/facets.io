@@ -1,0 +1,53 @@
+<svg width="677" height="370" viewBox="0 0 677 370" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="0.5" y="0.5" width="676" height="368.037" fill="#11141B" stroke="white"/>
+<g filter="url(#filter0_d)">
+<path d="M415.94 171.895C415.94 212.043 381.328 244.691 338.5 244.691C295.672 244.691 261.06 212.043 261.06 171.895C261.06 131.748 295.672 99.0996 338.5 99.0996C381.328 99.0996 415.94 131.748 415.94 171.895Z" stroke="white" stroke-width="2"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M676 324.343V368.037H1V324.343H676Z" fill="black" fill-opacity="0.4"/>
+<path d="M111.436 349.589V340.85H118.661L123.821 335.509V354.444L118.661 349.589H111.436Z" fill="white"/>
+<path d="M111.436 349.589V340.85H118.661L123.821 335.509V354.444L118.661 349.589H111.436Z" stroke="white"/>
+<path d="M126.401 338.908C126.401 338.908 127.95 341.821 127.95 344.734C127.95 347.647 126.401 350.56 126.401 350.56" stroke="white" stroke-linejoin="bevel"/>
+<path d="M128.982 335.994C128.982 335.994 132.078 340.364 132.078 344.733C132.078 349.103 128.982 353.472 128.982 353.472" stroke="white" stroke-linejoin="bevel"/>
+<g filter="url(#filter1_d)">
+<path d="M370.495 171.896L318.89 200.054L318.89 143.737L370.495 171.896Z" fill="white"/>
+</g>
+<g filter="url(#filter2_d)">
+<path d="M70.1514 344.734L55.7018 352.502L55.7018 336.966L70.1514 344.734Z" fill="white"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M90.7936 344.248V341.821L96.9863 344.734L90.7936 347.647V345.219L85.633 347.647L85.633 341.821L90.7936 344.248Z" fill="white"/>
+<rect x="149.624" y="324.343" width="447.936" height="43.6949" fill="black" fill-opacity="0.3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M31.9632 341.82L25.7706 344.733L31.9632 347.646L31.9632 345.219L37.1238 347.646L37.1238 341.82L31.9632 344.248L31.9632 341.82Z" fill="white"/>
+<ellipse cx="169.234" cy="344.733" rx="5.16055" ry="4.85499" fill="white"/>
+<line x1="170.266" y1="344.704" x2="586.206" y2="344.704" stroke="white" stroke-width="2"/>
+<path d="M632.651 341.82V334.052H640.012M654.326 346.675V353.472H646.069" stroke="white" stroke-width="2"/>
+<path d="M646.069 334.052L654.326 334.052V340.849M639.876 353.472L632.651 353.472L632.651 347.61" stroke="white" stroke-width="2"/>
+<defs>
+<filter id="filter0_d" x="256.06" y="98.0996" width="164.881" height="155.592" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter1_d" x="314.89" y="143.737" width="59.6055" height="64.3179" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<filter id="filter2_d" x="51.7018" y="336.966" width="22.4495" height="23.536" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+</defs>
+</svg>
