@@ -26,13 +26,10 @@ export default function Home() {
         <ContentContainer color={ color.white}>
           <Secondary />
         </ContentContainer>
-        <ContentContainer>
-          <SimpleSafeFast />
-        </ContentContainer>
         <ContentContainer  color={ color.white}>
           <Democratizing />
         </ContentContainer>
-        <ContentContainer color={color.black}>
+        <ContentContainer color={color.secondaryGray}>
           <Footer />
         </ContentContainer>
       </div>

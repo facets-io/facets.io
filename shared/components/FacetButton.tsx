@@ -12,10 +12,10 @@ const defaultColorBtnStyle = {
     hoverBgColor: color.electricB
 };
 
-export const blackBtnColor = {
+export const primaryBtnColor = {
     color: color.white,
-    backgroundColor: color.black,
-    hoverBgColor: color.black
+    backgroundColor: color.primary,
+    hoverBgColor: color.primary
 };
 
 export const electricBtnColor = {

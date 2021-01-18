@@ -17,7 +17,7 @@ export default function Democratizing() {
             </div>
             <br /><br />
             <div>
-                <img src="./blank_video.svg" alt="Facet logo" />
+                <a href="https://youtu.be/WARSSkFQHKg" target="_blank"><img src="./blank_video.svg" alt="Facet logo" /></a>
             </div>
             <br /><br />
         </MainDiv>
