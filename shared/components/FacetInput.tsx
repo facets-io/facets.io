@@ -30,13 +30,15 @@ const CustomInput = withStyles(
 )(Input);
 
 const defaultColor = {
-    color: color.white,
-    backgroundColor: color.grayA,
+    color: color.primaryGray,
+    backgroundColor: color.secondaryGray,
+    outlineColor: color.primary,
+    border: `.09rem solid ${color.primary}`
 };
 
 export const electricColor = {
     color: color.black,
-    backgroundColor: color.ice,
+    backgroundColor:  color.white,
 };
 
 export default ({
@@ -57,7 +59,8 @@ export default ({
                 backgroundColor: colorStyle.backgroundColor,
                 color: colorStyle.color,
                 padding: '.3rem',
-                height: '2rem'
+                height: '2rem',
+                border: colorStyle.border,
             }}
             aria-describedby="standard-weight-helper-text"
             inputProps={{

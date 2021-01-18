@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         // @ts-ignore
         fill: props => props.isSelected ? color.electricB : '',
         "&:hover": {
-            fill: color.ice
+            fill:  color.white
         }
     }
 });
@@ -33,7 +33,7 @@ const StyledI = styled.i`
     display: grid,
     fill: ${props => props.isSelected ? color.electricB : ''},
     "&:hover": {
-        fill: color.ice
+        fill:  color.white
     }
 `
 

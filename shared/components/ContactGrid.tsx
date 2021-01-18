@@ -67,8 +67,7 @@ export default function ContactGrid() {
             <h2>Want To Get In Touch?</h2>
             <p>We'd love to hear from you! Contact us using the form below and we'll be happy to help answer your questions.</p>
             <h4>Get in touch</h4>
-            <TwoColumnGrid>
-                <div>
+            <div style={{width:"40rem",textAlign:"center",display:"grid",justifyContent:"center"}}>
                     <StyledForm onSubmit={(e) => e.preventDefault()}>
                         <br />
                         <TwoColumnGrid>
@@ -142,7 +141,7 @@ export default function ContactGrid() {
                             <br />
                             <br />
                             <TextField
-                                style={{ backgroundColor: color.ice, width: '100%' }}
+                                style={{ backgroundColor:  color.white, width: '100%' }}
                                 id="filled-multiline-static"
                                 multiline
                                 rows={7}
@@ -156,10 +155,6 @@ export default function ContactGrid() {
                         </div>
                     </StyledForm>
                 </div>
-                <div style={{ textAlign: 'center' }}>
-                    <img src="/contact.svg" alt="Facet" />
-                </div>
-            </TwoColumnGrid>
             <br />
             <br />
             <br />

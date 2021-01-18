@@ -8,7 +8,7 @@ import styled from 'styled-components';
 const IceRadio = withStyles({
     root: {
         '&$checked': {
-            color: color.ice,
+            color:  color.white,
         },
     },
     checked: {},

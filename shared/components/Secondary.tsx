@@ -18,13 +18,18 @@ const InnerDiv = styled.div`
 export default function Secondary() {
     return (
         <MainDiv>
-            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="What can facets do?" />
-            <br /><br /><br />
+            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Rapid Feature Development" />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <InnerDiv>
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Rollout features without code" />
+                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Install" />
                         </b>
                     </div>
                     <br />
@@ -33,17 +38,51 @@ export default function Secondary() {
                     </div>
                 </div>
                 <div>
+                    <img src="./single_line_of_code.svg"/>
+                </div>
+            </InnerDiv>
+            <br />
+            <br />
+            <br />
+            <InnerDiv>
+                <div>
+                    <img src="./product_screeenshot.svg"/>
+                </div>
+                <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Manage feature life cycle simply" />
+                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Declare" />
                         </b>
                     </div>
                     <br />
                     <div>
-                        <FacetLabel color={color.black} text="Other solutions like feature flags continuously require developer time, maintenance and new code for every feature rollout. With facets, you can rollout feature safely and simply without any code or system maintenance. facets are developer-minded and product-owner friendly." />
+                        <FacetLabel color={color.black} text="Facets are a codeless solution for managing feature life cycle. With facets you can rollout unlimmited features without writing feature-specific code or needing system maintenance. facets are developer-minded and user friendly." />
                     </div>
                 </div>
             </InnerDiv>
+            <br />
+            <br />
+            <br />
+            <InnerDiv>
+                <div>
+                    <div>
+                        <b>
+                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Deploy" />
+                        </b>
+                    </div>
+                    <br />
+                    <div>
+                        <FacetLabel color={color.black} text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
+                    </div>
+                </div>
+                <div style={{display:"grid",justifyContent:"center"}}>
+                    <img src="./rocket.svg"/>
+                </div>
+            </InnerDiv>
+            <br />
+            <br />
+            <br />
+            <br />
         </MainDiv>
     );
 }
