@@ -62,6 +62,7 @@ export default function ContactGrid() {
         }
     }
 
+    // @ts-ignore
     return (
         <StyledDiv>
             <h2>Want To Get In Touch?</h2>
@@ -78,6 +79,7 @@ export default function ContactGrid() {
                                         name="firstname"
                                         value={firstName}
                                         onChange={(e) => { setFirstName(e.target.value) }}
+                                        /*@ts-ignore*/
                                         colorStyle={electricColor}
                                     />
                                 </div>
@@ -89,6 +91,7 @@ export default function ContactGrid() {
                                         name="lastname"
                                         value={lastName}
                                         onChange={(e) => { setLastName(e.target.value) }}
+                                        /*@ts-ignore*/
                                         colorStyle={electricColor} />
                                 </div>
                                 {errors && errors.lastname && <FacetFormError role="alert" text={errors.lastname.message}></FacetFormError>}
@@ -110,6 +113,7 @@ export default function ContactGrid() {
                                                 message: 'Entered value does not match email format',
                                             },
                                         })}
+                                        /*@ts-ignore*/
                                         colorStyle={electricColor} />
                                 </div>
                                 <br />
@@ -121,6 +125,7 @@ export default function ContactGrid() {
                                     <FacetInput
                                         value={companyName}
                                         onChange={(e) => { setCompanyName(e.target.value) }}
+                                        /*@ts-ignore*/
                                         colorStyle={electricColor} />
                                 </div>
                             </div>

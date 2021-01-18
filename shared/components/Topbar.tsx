@@ -36,13 +36,22 @@ export default function Navbar() {
                                 text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice."/>
                     <div>
                     <br/>
-                        <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Single line of code"/></Checkmark>
+                        <Checkmark><StyledImage src="./checkmark2.svg"/>
+                        <FacetLabel
+                            //@ts-ignore
+                            style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Single line of code"/></Checkmark>
                     <br/>
-                        <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Zero engineering"/></Checkmark>
+                        <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel
+                            //@ts-ignore
+                            style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Zero engineering"/></Checkmark>
                     <br/>
-                        <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Unblocked teams"/></Checkmark>
+                     <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel
+                         //@ts-ignore
+                         style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Unblocked teams"/></Checkmark>
                     <br/>
-                        <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Built for engineers used by anyone"/></Checkmark>
+                         <Checkmark><StyledImage src="./checkmark2.svg"/> <FacetLabel
+                        //@ts-ignore
+                        style={{justifySelf: "start",textAlign: "center"}} color={color.black} text="Built for engineers used by anyone"/></Checkmark>
                     </div>
                 </div>
             </div>
