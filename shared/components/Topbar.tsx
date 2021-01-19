@@ -46,9 +46,12 @@ export default function Navbar() {
     return (
         <MainDiv>
             <div style={{justifyContent: "left"}}>
+                {/*@ts-ignore*/}
                 <center><FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Make Feature Management Great Again"/><br /><br />
                 <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Pinson Kotsollaris"/> <br /> <br />
-                    <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="2024"/></center>
+                    <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="2024"/>
+                    {/*@ts-ignore*/}
+                </center>
                 <br/>
                 <br/>
                 <br/>
