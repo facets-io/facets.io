@@ -4,6 +4,8 @@ import styled from 'styled-components';
 import {color, fontSize} from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
+import JsonAnimation from "./JsonGIF";
+import mock_site  from '../../public/mock_site.json'
 
 const MainDiv = styled.div`
     display: grid;
@@ -16,16 +18,16 @@ const MainDiv = styled.div`
 
 const Checkmark = styled.div`
     display: grid;
-    grid-template-columns: 10% 95%;
-    justify-content: center;
-    align-items: center;
+    grid-template-columns: 5% 95%;
+    justify-content: left;
+    align-items: left;
 `;
 
 
 const BulletPoints = styled.div`
     display: grid;
-    grid-template-columns: 40% 50%;
-    grid-template-rolws: 40% 50%
+    grid-template-columns: 0% 50%;
+    grid-template-rows: 40% 50%
     justify-content: center;
     align-items: center;
 `;
@@ -33,7 +35,7 @@ const BulletPoints = styled.div`
 const ButtonDiv = styled.div`
     display: grid;
     grid-gap: 5%;
-    grid-template-columns: 20% 10%;
+    grid-template-columns: 13% 10%;
     text-align: left;
     justify-content: left
 `;
@@ -46,19 +48,16 @@ export default function Navbar() {
     return (
         <MainDiv>
             <div style={{justifyContent: "left"}}>
-                {/*@ts-ignore*/}
-                <center><FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Make Feature Management Great Again"/><br /><br />
-                <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Pinson Kotsollaris"/> <br /> <br />
-                    <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="2024"/>
-                    {/*@ts-ignore*/}
-                </center>
+                <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Release Fast"/>
                 <br/>
                 <br/>
                 <br/>
                 <div>
-                    <FacetParagraph text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice."/>
+                    <FacetParagraph text="Facets are a codeless solution for managing feature life cycles. Manage unlimmited features without code or system maintenance. Our plaform is developer-minded and user-friendly."/>
                     <BulletPoints>
+                        <div />
                         <div>
+                        <br/>
                         <br/>
                         <Checkmark><StyledImage src="./checkmark4.svg"/>
                             <FacetParagraph
@@ -67,40 +66,21 @@ export default function Navbar() {
 
                                 text="Single line of code"/></Checkmark>
                         </div>
+                        <div />
                         <div>
                         <br/>
                         <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
                             //@ts-ignore
                             style={{justifySelf: "start", textAlign: "center"}}
-                            text="Secure"/></Checkmark>
+                            text="No maintenance"/></Checkmark>
                         </div>
+                        <div />
                         <div>
                         <br/>
                         <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
                             //@ts-ignore
                             style={{justifySelf: "start", textAlign: "center"}}
-                            text="Low maintenance"/></Checkmark>
-                        </div>
-                        <div>
-                        <br/>
-                        <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
-                            //@ts-ignore
-                            style={{justifySelf: "start", textAlign: "center"}}
-                            text="Performant"/></Checkmark>
-                        </div>
-                        <div>
-                            <br/>
-                            <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
-                                //@ts-ignore
-                                style={{justifySelf: "start", textAlign: "center"}}
-                                text="Unblocked teams"/></Checkmark>
-                        </div>
-                        <div>
-                            <br/>
-                            <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
-                                //@ts-ignore
-                                style={{justifySelf: "start", textAlign: "center"}}
-                                text="Built for engineers used by everyone"/></Checkmark>
+                            text="Unblocked teams"/></Checkmark>
                         </div>
                     </BulletPoints>
                     <br />
@@ -109,7 +89,7 @@ export default function Navbar() {
                 </div>
             </div>
             <div>
-                <img src="./mock_site.svg"/>
+                <JsonAnimation animationData={mock_site}/>
             </div>
             <br/>
             <br/>

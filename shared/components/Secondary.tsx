@@ -19,7 +19,7 @@ const InnerDiv = styled.div`
 export default function Secondary() {
     return (
         <MainDiv>
-            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Rapid Feature Management" />
+            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Unrivaled Feature Management" />
             <br />
             <br />
             <br />
@@ -35,7 +35,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
+                        <FacetParagraph text="Install the facet extension in under a minute and help your team release features seamlessly. Our platform does not require any setup or maintenance work. A single line of code allows your team to manage unlimited features." />
                     </div>
                 </div>
                 <div>
@@ -47,7 +47,7 @@ export default function Secondary() {
             <br />
             <InnerDiv>
                 <div>
-                    <img src="./product_screeenshot.svg"/>
+                    <img src="./declare.svg"/>
                 </div>
                 <div>
                     <div>
@@ -57,7 +57,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Facets are a codeless solution for managing feature life cycle. With facets you can rollout unlimmited features without writing feature-specific code or needing system maintenance. facets are developer-minded and user friendly." />
+                        <FacetParagraph text="Facets are made up by dynamic groups of elements that you define. Declare, name, and organize unlimmited facets within a few seconds. Optimize the features in the facet workspace according to your workflow requirements." />
                     </div>
                 </div>
             </InnerDiv>
@@ -73,7 +73,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
+                        <FacetParagraph text="Deploy or roll back features instantly and without code. The facet extention makes it simple to roll out features, freeing up developer resources." />
                     </div>
                 </div>
                 <div style={{display:"grid",justifyContent:"center"}}>

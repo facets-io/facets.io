@@ -13,7 +13,7 @@ export default function Democratizing() {
         <MainDiv>
            <br /><br />
             <div>
-                <FacetLabel fontSize={fontSize.xxLarge} color={color.black} text="Facet in action" />
+                <FacetLabel fontSize={fontSize.xxLarge} color={color.black} text="Learn More" />
             </div>
             <br /><br />
             <div>
