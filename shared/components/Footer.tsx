@@ -10,7 +10,7 @@ export default function Footer() {
             <br />
             <div style={{ textAlign: 'center', backgroundColor: color.secondaryGray}}>
                 <div>
-                    <img src="/facet_typography.svg" alt="Facet logo" />
+                    <img src="/facet_typography_primary.svg" alt="Facet logo" />
                 </div>
                 <br />
                 <FacetLabel text="Copyright Facet Technologies Inc. 2021 - All rights reserved. Terms of Service & Privacy Policy" />
