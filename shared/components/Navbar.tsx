@@ -4,7 +4,7 @@ import FacetIconButton from './FacetIconButton';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
 import { pages } from './AppContext'
-import FacetButton, {primaryBtnColor} from "./FacetButton";
+import FacetButton, { primaryBtnColor } from "./FacetButton";
 
 const StyledGrid = styled.div`
     display: grid;
@@ -13,7 +13,8 @@ const StyledGrid = styled.div`
     align-items: center;
     justify-content: left;
     justify-items: left;
-    margin-left: 8rem
+    margin-left: 8rem;
+    justify-content: center;
 `;
 
 
@@ -42,53 +43,39 @@ export default function Navbar({ activePage = '' }) {
                         <div>
                             <img src="/facet_primary.svg" alt="Facet logo" />
                         </div>
-                        <div style={{ alignSelf: 'center' }}>
-                            <img src="/facet_typography_black.svg" alt="Facet" />
-                        </div>
+                        <img src="/facet_typography_black.svg" alt="Facet" />
                     </InnerDiv>
                 </Link>
-                <div/>
-                <div style={{justifySelf:"center"}}>
-                    <Link href="/pricing">
-                        <LabelContainer isActive={pages.Pricing === activePage}>
-                            <FacetLabel color={color.black} text={pages.Pricing} />
-                        </LabelContainer>
-                    </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <Link href="/documentation">
-                        <LabelContainer isActive={pages.Documentation === activePage}>
-                            <FacetLabel color={color.black} text={pages.Documentation} />
-                        </LabelContainer>
-                    </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <Link href="/blog">
-                        <LabelContainer isActive={pages.Blog === activePage}>
-                            <FacetLabel color={color.black} text={pages.Blog} />
-                        </LabelContainer>
-                    </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <Link href="/contact">
-                        <LabelContainer isActive={pages.Contact === activePage}>
-                            <FacetLabel color={color.black} text="Contact" />
-                        </LabelContainer>
-                    </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <Link href="https://github.com/facets-io">
-                        <a target="_blank">
-                            <div style={{ cursor: 'pointer' }}>
-                                {/* @ts-ignore */}
-                                <FacetLabel color={color.black} text='GitHub' />
-                            </div>
-                        </a>
-                    </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { }} />
-                </div>
+                <div />
+                <Link href="/pricing">
+                    <LabelContainer isActive={pages.Pricing === activePage}>
+                        <FacetLabel color={color.black} text={pages.Pricing} />
+                    </LabelContainer>
+                </Link>
+                <Link href="/documentation">
+                    <LabelContainer isActive={pages.Documentation === activePage}>
+                        <FacetLabel color={color.black} text={pages.Documentation} />
+                    </LabelContainer>
+                </Link>
+                <Link href="/blog">
+                    <LabelContainer isActive={pages.Blog === activePage}>
+                        <FacetLabel color={color.black} text={pages.Blog} />
+                    </LabelContainer>
+                </Link>
+                <Link href="/contact">
+                    <LabelContainer isActive={pages.Contact === activePage}>
+                        <FacetLabel color={color.black} text="Contact" />
+                    </LabelContainer>
+                </Link>
+                <Link href="https://github.com/facets-io">
+                    <a target="_blank">
+                        <div style={{ cursor: 'pointer' }}>
+                            {/* @ts-ignore */}
+                            <FacetLabel color={color.black} text='GitHub' />
+                        </div>
+                    </a>
+                </Link>
+                <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { }} />
             </StyledGrid>
         </MainDiv>
     );
