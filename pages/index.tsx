@@ -17,16 +17,16 @@ export default function Home() {
     <AppProvider>
       <div className={styles.container}>
         <FacetHead />
-        <ContentContainer color={ color.white}>
+        <ContentContainer color={color.white}>
           <Navbar />
         </ContentContainer>
-        <ContentContainer color={ color.white}>
+        <ContentContainer color={color.white}>
           <Topbar />
         </ContentContainer>
-        <ContentContainer color={ color.white}>
+        <ContentContainer color={color.secondaryGray}>
           <Secondary />
         </ContentContainer>
-        <ContentContainer  color={ color.white}>
+        <ContentContainer  color={color.white}>
           <Democratizing />
         </ContentContainer>
         <ContentContainer color={color.secondaryGray}>

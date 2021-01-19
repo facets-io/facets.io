@@ -18,6 +18,12 @@ export const primaryBtnColor = {
     hoverBgColor: color.primary
 };
 
+export const primaryGrayBtnColor = {
+    color: color.white,
+    backgroundColor: color.primaryGray,
+    hoverBgColor: color.primaryGray
+};
+
 export const electricBtnColor = {
     color: color.white,
     backgroundColor: color.electricA,
@@ -50,7 +56,7 @@ export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: props.width ? props.width : '100%', height: '100%', borderRadius: 0 }}
+            style={{ width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0 }}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}

@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import styled  from 'styled-components';
 import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
+import FacetParagraph from "./FacetParagraph";
 
 const MainDiv = styled.div`
     width: 100%;
@@ -18,7 +19,7 @@ const InnerDiv = styled.div`
 export default function Secondary() {
     return (
         <MainDiv>
-            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Rapid Feature Development" />
+            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Rapid Feature Management" />
             <br />
             <br />
             <br />
@@ -29,12 +30,12 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Install" />
+                            <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Install" />
                         </b>
                     </div>
                     <br />
                     <div>
-                        <FacetLabel color={color.black} text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
+                        <FacetParagraph text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
                     </div>
                 </div>
                 <div>
@@ -51,12 +52,12 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Declare" />
+                            <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Declare" />
                         </b>
                     </div>
                     <br />
                     <div>
-                        <FacetLabel color={color.black} text="Facets are a codeless solution for managing feature life cycle. With facets you can rollout unlimmited features without writing feature-specific code or needing system maintenance. facets are developer-minded and user friendly." />
+                        <FacetParagraph text="Facets are a codeless solution for managing feature life cycle. With facets you can rollout unlimmited features without writing feature-specific code or needing system maintenance. facets are developer-minded and user friendly." />
                     </div>
                 </div>
             </InnerDiv>
@@ -67,12 +68,12 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.medium} text="Deploy" />
+                            <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Deploy" />
                         </b>
                     </div>
                     <br />
                     <div>
-                        <FacetLabel color={color.black} text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
+                        <FacetParagraph text="Facets are deliverable features. Use our extension to test, rollout and hide any elements  on your website. facet is a codeless solution that can be used by every member of your team. With facets, you can interface to any analytic platform of your choice." />
                     </div>
                 </div>
                 <div style={{display:"grid",justifyContent:"center"}}>

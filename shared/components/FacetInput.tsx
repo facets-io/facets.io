@@ -32,8 +32,7 @@ const CustomInput = withStyles(
 const defaultColor = {
     color: color.primaryGray,
     backgroundColor: color.secondaryGray,
-    outlineColor: color.primary,
-    border: `.09rem solid ${color.primary}`
+    border: `.124rem solid ${color.black}`
 };
 
 export const electricColor = {
@@ -54,6 +53,7 @@ export default ({
             id={id}
             type={type}
             name={name}
+
             style={{
                 width,
                 backgroundColor: colorStyle.backgroundColor,

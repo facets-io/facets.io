@@ -30,7 +30,7 @@ const color = {
     pricingLightGray: '#1D242E',
     pricingDivDark: '#212934',
     primary: '#9D1757',
-    primaryGray: "#11141B",
+    primaryGray: "#9D989E",
     secondaryGray: '#F3F3F3'
 };
 
