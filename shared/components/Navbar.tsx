@@ -1,95 +1,167 @@
 import styled from 'styled-components';
-import { color } from '../constant';
-import FacetIconButton from './FacetIconButton';
+import {color, fontSize} from '../constant';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
-import { pages } from './AppContext'
+import {pages} from './AppContext'
 import FacetButton, {primaryBtnColor} from "./FacetButton";
 
 const StyledGrid = styled.div`
     display: grid;
-    grid-template-columns: 30% 20.5% 5% 5% 5% 5% 5% 8%;
-    column-gap: 0%;
+    grid-template-columns: 20% 10% 5% 5% 5% 5% 5% 8%;
+    column-gap: 5%;
     align-items: center;
     justify-content: left;
-    justify-items: left;
-    margin-left: 8rem
+    width: 100%;
 `;
 
+const LogoDiv = styled.div`
+    display: grid;
+    grid-template-columns: 6rem 3rem;
+    cursor: pointer;
+    align-items: center;
+`;
+
+const LeftDiv = styled.div`
+    display: grid;
+    grid-template-columns: 100%;
+    align-items: center;
+    justify-content: left;
+`;
+
+const RightDiv = styled.div`
+  display: grid;
+  min-height: 100px;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-gap: 1.5em;
+  padding: 0 40px;
+`;
 
 const InnerDiv = styled.div`
     display: grid;
-    grid-template-columns: 3rem 3rem;
-    cursor: pointer;
+    grid-template-columns: 51.6% 51.6%;
+    align-items: center;
+    justify-content: left;
 `;
 
-const MainDiv = styled.div`
+const OuterDiv = styled.div`
     background-color: ${color.white};
-    width: 100%;
-    grid-template-columns: 100% 10% 20%;
+    display: grid;
+    grid-template-columns: 85%; 
+    justify-content: center;
 `;
 
 const LabelContainer = styled.div`
     cursor: pointer;
 `
 
-export default function Navbar({ activePage = '' }) {
+
+export default function Navbar({activePage = ''}) {
     return (
-        <MainDiv>
-            <StyledGrid>
-                <Link href="/">
-                    <InnerDiv>
-                        <div>
-                            <img src="/facet_primary.svg" alt="Facet logo" />
-                        </div>
-                        <div style={{ alignSelf: 'center' }}>
-                            <img src="/facet_typography_black.svg" alt="Facet" />
-                        </div>
-                    </InnerDiv>
-                </Link>
-                <div/>
-                <div style={{justifySelf:"center"}}>
+        <OuterDiv>
+            <InnerDiv>
+                <LeftDiv>
+                    <Link href="/">
+                        <LogoDiv>
+                            <img src="/facet_primary.svg" alt="Facet logo"/>
+                            <img src="/facet_typography_black.svg" alt="Facet"/>
+                        </LogoDiv>
+                    </Link>
+                </LeftDiv>
+                <RightDiv>
                     <Link href="/pricing">
                         <LabelContainer isActive={pages.Pricing === activePage}>
-                            <FacetLabel color={color.black} text={pages.Pricing} />
+                            <FacetLabel color={color.black} text={pages.Pricing}/>
                         </LabelContainer>
                     </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
                     <Link href="/documentation">
                         <LabelContainer isActive={pages.Documentation === activePage}>
-                            <FacetLabel color={color.black} text={pages.Documentation} />
+                            <FacetLabel color={color.black} text={pages.Documentation}/>
                         </LabelContainer>
                     </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
                     <Link href="/blog">
                         <LabelContainer isActive={pages.Blog === activePage}>
-                            <FacetLabel color={color.black} text={pages.Blog} />
+                            <FacetLabel color={color.black} text={pages.Blog}/>
                         </LabelContainer>
                     </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
                     <Link href="/contact">
                         <LabelContainer isActive={pages.Contact === activePage}>
-                            <FacetLabel color={color.black} text="Contact" />
+                            <FacetLabel color={color.black} text="Contact"/>
                         </LabelContainer>
                     </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <Link href="https://github.com/facets-io">
+                    <Link href="https:github.com/facets-io">
                         <a target="_blank">
-                            <div style={{ cursor: 'pointer' }}>
+                            <div style={{cursor: 'pointer'}}>
                                 {/* @ts-ignore */}
-                                <FacetLabel color={color.black} text='GitHub' />
+                                <FacetLabel color={color.black} text='GitHub'/>
                             </div>
                         </a>
                     </Link>
-                </div>
-                <div style={{justifySelf:"center"}}>
-                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { }} />
-                </div>
-            </StyledGrid>
-        </MainDiv>
+                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => {}}/>
+                </RightDiv>
+            </InnerDiv>
+        </OuterDiv>
     );
 }
+
+//export default function Navbar({ activePage = '' }) {
+//    return (
+//        <MainDiv>
+//            <StyledGrid>
+//                <Link href="/">
+//                    <InnerDiv>
+//                        <div>
+//                            <img src="/facet_primary.svg" alt="Facet logo" />
+//                        </div>
+//                        <div style={{ alignSelf: 'center' }}>
+//                            <img src="/facet_typography_black.svg" alt="Facet" />
+//                        </div>
+//                    </InnerDiv>
+//                </Link>
+//                <div/>
+//                <div style={{justifySelf:"center"}}>
+//                    <Link href="/pricing">
+//                        <LabelContainer isActive={pages.Pricing === activePage}>
+//                            <FacetLabel color={color.black} text={pages.Pricing} />
+//                        </LabelContainer>
+//                    </Link>
+//                </div>
+//                <div style={{justifySelf:"center"}}>
+//                    <Link href="/documentation">
+//                        <LabelContainer isActive={pages.Documentation === activePage}>
+//                            <FacetLabel color={color.black} text={pages.Documentation} />
+//                        </LabelContainer>
+//                    </Link>
+//                </div>
+//                <div style={{justifySelf:"center"}}>
+//                    <Link href="/blog">
+//                        <LabelContainer isActive={pages.Blog === activePage}>
+//                            <FacetLabel color={color.black} text={pages.Blog} />
+//                        </LabelContainer>
+//                    </Link>
+//                </div>
+//                <div style={{justifySelf:"center"}}>
+//                    <Link href="/contact">
+//                        <LabelContainer isActive={pages.Contact === activePage}>
+//                            <FacetLabel color={color.black} text="Contact" />
+//                        </LabelContainer>
+//                    </Link>
+//                </div>
+//                <div style={{justifySelf:"center"}}>
+//                    <Link href="https://github.com/facets-io">
+//                        <a target="_blank">
+//                            <div style={{ cursor: 'pointer' }}>
+//                                {/* @ts-ignore */}
+//                                <FacetLabel color={color.black} text='GitHub' />
+//                            </div>
+//                        </a>
+//                    </Link>
+//                </div>
+//                <div style={{justifySelf:"center"}}>
+//                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { }} />
+//                </div>
+//
+//            </StyledGrid>
+//        </MainDiv>
+//    );
+//}

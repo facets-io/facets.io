@@ -35,7 +35,7 @@ const BulletPoints = styled.div`
 const ButtonDiv = styled.div`
     display: grid;
     grid-gap: 5%;
-    grid-template-columns: 13% 10%;
+    grid-template-columns: 40% 40%;
     text-align: left;
     justify-content: left
 `;
