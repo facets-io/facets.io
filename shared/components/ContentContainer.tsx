@@ -1,15 +1,25 @@
 import styled from 'styled-components';
 import { color as colorConstant } from '../constant';
 
-const StyledDiv = styled.div`
+const InnerDiv = styled.div`
     background-color: ${props => props.color};
-    padding: ${props => props.hasPadding ? '1.5rem' : ''};
+    padding: ${props => props.hasPadding ? '3rem' : ''};
+    width: 100%;
+    max-width: 100rem;
+    margin: auto;
+`;
+
+const OuterDiv = styled.div`
+    background-color: ${props => props.color};
+    width: 100%;
 `;
 
 export default function ContentContainer({ color = colorConstant.black, hasPadding = true, style = {}, children }) {
     return (
-        <StyledDiv style={style} color={color} hasPadding={hasPadding}>
-            {children}
-        </StyledDiv>
+        <OuterDiv style={style} color={color}>
+            <InnerDiv hasPadding={hasPadding}>
+              {children}
+            </InnerDiv>
+        </OuterDiv>
     )
 }

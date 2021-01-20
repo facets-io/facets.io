@@ -11,7 +11,6 @@ const MainDiv = styled.div`
 export default function Democratizing() {
     return (
         <MainDiv>
-           <br /><br />
             <div>
                 <FacetLabel fontSize={fontSize.xxLarge} color={color.black} text="Learn More" />
             </div>
