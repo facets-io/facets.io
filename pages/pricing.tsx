@@ -27,7 +27,7 @@ export default function PricingPage() {
                     <Navbar activePage={pages.Pricing} />
                 </ContentContainer>
                 <ContentContainer>
-                    <MainDiv>g
+                    <MainDiv>
                         <PricingHeader />
                     </MainDiv>
                 </ContentContainer>

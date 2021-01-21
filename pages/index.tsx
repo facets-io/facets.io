@@ -31,6 +31,7 @@ export default function Home() {
         <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"}color={color.white}>
           <Navbar />
         </ContentContainer>
+
         <ContentContainer color={color.white} paddingTop={"9rem"}>
           <Topbar />
         </ContentContainer>

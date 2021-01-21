@@ -11,7 +11,7 @@ const CustomInput = withStyles(
                 borderBottom: 'none'
             },
             '&:after': {
-                borderBottom: `2px solid ${color.white}`
+                borderBottom: `2px solid ${color.none}`
             },
             '&:hover:not($disabled):not($focused):not($error):before': {
                 borderBottom: `2px solid ${color.white}`
@@ -53,7 +53,7 @@ export default ({
             id={id}
             type={type}
             name={name}
-
+            disableUnderline={true}
             style={{
                 width,
                 backgroundColor: colorStyle.backgroundColor,

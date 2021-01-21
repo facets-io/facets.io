@@ -8,6 +8,7 @@ const MainDiv = styled.div`
     grid-template-columns: 20rem 10rem;
     grid-gap: 2%;
     justify-content: center;
+    align-items: center;
 `
 
 const CoreDiv = styled.div`

@@ -5,15 +5,6 @@ import FacetLabel from './FacetLabel';
 import {pages} from './AppContext'
 import FacetButton, {primaryBtnColor} from "./FacetButton";
 
-const StyledGrid = styled.div`
-    display: grid;
-    grid-template-columns: 20% 10% 5% 5% 5% 5% 5% 8%;
-    column-gap: 5%;
-    align-items: center;
-    justify-content: left;
-    width: 100%;
-`;
-
 const LogoDiv = styled.div`
     display: grid;
     grid-template-columns: 4rem 3rem;
@@ -32,13 +23,13 @@ const RightDiv = styled.div`
   display: grid;
   grid-auto-flow: column;
   align-items: center;
-  grid-gap: 1.5em;
-  padding: 0 40px;
+  grid-gap: 1.5rem;
+  padding: 0 60px;
 `;
 
 const InnerDiv = styled.div`
     display: grid;
-    grid-template-columns: 51.6% 51.6%;
+    grid-template-columns: 52.4% 52.4%;
     align-items: center;
     justify-content: left;
 `;
@@ -70,28 +61,28 @@ export default function Navbar({activePage = ''}) {
                 <RightDiv>
                     <Link href="/pricing">
                         <LabelContainer isActive={pages.Pricing === activePage}>
-                            <FacetLabel color={color.black} text={pages.Pricing}/>
+                            <FacetLabel fontFamily="Roboto" fontSize={"16"} color={color.black} text={pages.Pricing}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/documentation">
                         <LabelContainer isActive={pages.Documentation === activePage}>
-                            <FacetLabel color={color.black} text={pages.Documentation}/>
+                            <FacetLabel fontFamily="Roboto" fontSize={"16"} color={color.black} text={pages.Documentation}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/blog">
                         <LabelContainer isActive={pages.Blog === activePage}>
-                            <FacetLabel color={color.black} text={pages.Blog}/>
+                            <FacetLabel fontFamily="Roboto" fontSize={"16"} color={color.black} text={pages.Blog}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/contact">
                         <LabelContainer isActive={pages.Contact === activePage}>
-                            <FacetLabel color={color.black} text="Contact"/>
+                            <FacetLabel fontFamily="Roboto" fontSize={"16"} color={color.black} text="Contact"/>
                         </LabelContainer>
                     </Link>
                     <Link href="https:github.com/facets-io">
                         <a target="_blank">
                             <div style={{cursor: 'pointer'}}>
-                                <FacetLabel color={color.black} text='GitHub'/>
+                                <FacetLabel fontFamily="Roboto" fontSize={"16"} color={color.black} text='GitHub'/>
                             </div>
                         </a>
                     </Link>

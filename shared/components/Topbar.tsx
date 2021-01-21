@@ -83,7 +83,7 @@ export default function Navbar() {
                         <br/>
                         <br/>
                         <ButtonDiv>
-                            <FacetButton colorButtonStyle={primaryBtnColor} text="Get Started" onClick={() => {}}/>
+                            <FacetButton colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" onClick={() => {}}/>
                         </ButtonDiv>
                     </div>
                 </div>
