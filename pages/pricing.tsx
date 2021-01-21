@@ -26,12 +26,12 @@ export default function PricingPage() {
                 <ContentContainer>
                     <Navbar activePage={pages.Pricing} />
                 </ContentContainer>
-                <ContentContainer hasPadding>
-                    <MainDiv>
+                <ContentContainer>
+                    <MainDiv>g
                         <PricingHeader />
                     </MainDiv>
                 </ContentContainer>
-                <ContentContainer color={color.black} hasPadding={false}>
+                <ContentContainer color={color.black}>
                     <br />
                     <Footer />
                 </ContentContainer>

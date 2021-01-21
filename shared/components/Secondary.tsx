@@ -19,6 +19,9 @@ const InnerDiv = styled.div`
 export default function Secondary() {
     return (
         <MainDiv>
+            <br />
+            <br />
+            <br />
             <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Unrivaled Feature Management" />
             <br />
             <br />
@@ -77,13 +80,9 @@ export default function Secondary() {
                     </div>
                 </div>
                 <div style={{display:"grid",justifyContent:"center"}}>
-                    <img src="./rocket.svg"/>
+                    <img style={{top:"-5.3rem", position: "relative"}} src="./rocket.svg"/>
                 </div>
             </InnerDiv>
-            <br />
-            <br />
-            <br />
-            <br />
         </MainDiv>
     );
 }

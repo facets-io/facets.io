@@ -36,7 +36,7 @@ export default function DocumentationPage() {
                 <ContentContainer >
                     <Navbar activePage={pages.Documentation} />
                 </ContentContainer>
-                <ContentContainer hasPadding={false}>
+                <ContentContainer>
                     <StyledDiv>
                         <StickyDiv>
                             <InnerStickyDiv />

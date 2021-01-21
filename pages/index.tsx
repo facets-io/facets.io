@@ -11,16 +11,27 @@ import SimpleSafeFast from '../shared/components/SimpleSafeFast'
 import AppProvider from '../shared/components/AppProvider'
 import StayUpdated from '../shared/components/StayUpdated'
 import FacetHead from './FacetHead'
+import styled from 'styled-components';
+
+const Border = styled.div`
+  background-color: ${color.primary};
+  position:fixed;
+  top:0;
+  width:100%;
+  height: .275rem;
+  z-index: 500;
+`;
 
 export default function Home() {
   return (
     <AppProvider>
       <div className={styles.container}>
         <FacetHead />
-        <ContentContainer color={color.white}>
+        <Border />
+        <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"}color={color.white}>
           <Navbar />
         </ContentContainer>
-        <ContentContainer color={color.white}>
+        <ContentContainer color={color.white} paddingTop={"9rem"}>
           <Topbar />
         </ContentContainer>
         <ContentContainer color={color.secondaryGray}>

@@ -11,10 +11,17 @@ const MainDiv = styled.div`
 export default function Democratizing() {
     return (
         <MainDiv>
+            <br />
+            <br />
+            <br />
             <div>
                 <FacetLabel fontSize={fontSize.xxLarge} color={color.black} text="Learn More" />
             </div>
-            <br /><br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
             <div>
                 <a href="https://youtu.be/WARSSkFQHKg" target="_blank"><img src="./blank_video.svg" alt="Facet logo" /></a>
             </div>

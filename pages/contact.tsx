@@ -22,7 +22,7 @@ export default function ContactPage() {
                 <ContentContainer>
                     <Navbar activePage={pages.Contact} />
                 </ContentContainer>
-                <ContentContainer hasPadding={false}>
+                <ContentContainer>
                     <ContactGrid />
                 </ContentContainer>
                 <ContentContainer color={color.white}>

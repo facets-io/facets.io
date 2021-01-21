@@ -18,7 +18,7 @@ export default function BlogPage() {
                 <ContentContainer>
                     <Navbar activePage={pages.Blog} />
                 </ContentContainer>
-                <ContentContainer hasPadding={false}>
+                <ContentContainer>
                     <BlogGrid />
                 </ContentContainer>
                 <ContentContainer color={color.black}>

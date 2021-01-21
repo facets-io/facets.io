@@ -5,7 +5,7 @@ import {color, fontSize} from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
 import JsonAnimation from "./JsonGIF";
-import mock_site  from '../../public/mock_site.json'
+import mock_site from '../../public/mock_site.json'
 
 const MainDiv = styled.div`
     display: grid;
@@ -19,8 +19,9 @@ const MainDiv = styled.div`
 const Checkmark = styled.div`
     display: grid;
     grid-template-columns: 5% 95%;
+    grid-gap: .8rem;
     justify-content: left;
-    align-items: left;
+    align-items: center;
 `;
 
 
@@ -35,7 +36,7 @@ const BulletPoints = styled.div`
 const ButtonDiv = styled.div`
     display: grid;
     grid-gap: 5%;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 23% 40%;
     text-align: left;
     justify-content: left
 `;
@@ -46,55 +47,54 @@ const StyledImage = styled.img`
 
 export default function Navbar() {
     return (
-        <MainDiv>
-            <div style={{justifyContent: "left"}}>
-                <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Release Fast"/>
-                <br/>
-                <br/>
-                <br/>
+        <div>
+            <MainDiv><FacetLabel color={color.black} fontSize={fontSize.xxxLarge} text="Release Fast"/>
+            </MainDiv>
+            <br/>
+            <br/>
+            <br/>
+            <MainDiv>
                 <div>
-                    <FacetParagraph text="Facets are a codeless solution for managing feature life cycles. Manage unlimmited features without code or system maintenance. Our plaform is developer-minded and user-friendly."/>
-                    <BulletPoints>
-                        <div />
-                        <div>
+                    <div>
+                        <FacetParagraph text="Facets are a codeless solution for managing feature life cycles. Manage unlimited features without code or system maintenance. Our platform is developer-minded and user-friendly."/>
+                        <BulletPoints>
+                            <div/>
+                            <div>
+                                <br/>
+                                <Checkmark><StyledImage src="./checkmark4.svg"/>
+                                    <FacetParagraph text="Single line of code"/>
+                                </Checkmark>
+                            </div>
+                            <div/>
+                            <div>
+                                <br/>
+                                <Checkmark><StyledImage src="./checkmark4.svg"/>
+                                    <FacetParagraph text="No maintenance"/>
+                                </Checkmark>
+                            </div>
+                            <div/>
+                            <div>
+                                <br/>
+                                <Checkmark><StyledImage src="./checkmark4.svg"/>
+                                    <FacetParagraph text="Unblocked teams"/>
+                                </Checkmark>
+                            </div>
+                        </BulletPoints>
                         <br/>
                         <br/>
-                        <Checkmark><StyledImage src="./checkmark4.svg"/>
-                            <FacetParagraph
-                                //@ts-ignore
-                                style={{justifySelf: "start", textAlign: "center"}}
-
-                                text="Single line of code"/></Checkmark>
-                        </div>
-                        <div />
-                        <div>
-                        <br/>
-                        <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
-                            //@ts-ignore
-                            style={{justifySelf: "start", textAlign: "center"}}
-                            text="No maintenance"/></Checkmark>
-                        </div>
-                        <div />
-                        <div>
-                        <br/>
-                        <Checkmark><StyledImage src="./checkmark4.svg"/> <FacetParagraph
-                            //@ts-ignore
-                            style={{justifySelf: "start", textAlign: "center"}}
-                            text="Unblocked teams"/></Checkmark>
-                        </div>
-                    </BulletPoints>
-                    <br />
-                    <br />
-                    <ButtonDiv><FacetButton colorButtonStyle={primaryBtnColor} text="Get Started" onClick={() => { }} /></ButtonDiv>
+                        <ButtonDiv>
+                            <FacetButton colorButtonStyle={primaryBtnColor} text="Get Started" onClick={() => {}}/>
+                        </ButtonDiv>
+                    </div>
                 </div>
-            </div>
-            <div>
-                <JsonAnimation animationData={mock_site}/>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-        </MainDiv>
+                <div>
+                    <JsonAnimation animationData={mock_site}/>
+                </div>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+            </MainDiv>
+        </div>
     );
 }

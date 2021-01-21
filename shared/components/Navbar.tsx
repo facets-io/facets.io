@@ -16,7 +16,7 @@ const StyledGrid = styled.div`
 
 const LogoDiv = styled.div`
     display: grid;
-    grid-template-columns: 6rem 3rem;
+    grid-template-columns: 4rem 3rem;
     cursor: pointer;
     align-items: center;
 `;
@@ -30,7 +30,6 @@ const LeftDiv = styled.div`
 
 const RightDiv = styled.div`
   display: grid;
-  min-height: 100px;
   grid-auto-flow: column;
   align-items: center;
   grid-gap: 1.5em;
@@ -92,7 +91,6 @@ export default function Navbar({activePage = ''}) {
                     <Link href="https:github.com/facets-io">
                         <a target="_blank">
                             <div style={{cursor: 'pointer'}}>
-                                {/* @ts-ignore */}
                                 <FacetLabel color={color.black} text='GitHub'/>
                             </div>
                         </a>
@@ -103,65 +101,3 @@ export default function Navbar({activePage = ''}) {
         </OuterDiv>
     );
 }
-
-//export default function Navbar({ activePage = '' }) {
-//    return (
-//        <MainDiv>
-//            <StyledGrid>
-//                <Link href="/">
-//                    <InnerDiv>
-//                        <div>
-//                            <img src="/facet_primary.svg" alt="Facet logo" />
-//                        </div>
-//                        <div style={{ alignSelf: 'center' }}>
-//                            <img src="/facet_typography_black.svg" alt="Facet" />
-//                        </div>
-//                    </InnerDiv>
-//                </Link>
-//                <div/>
-//                <div style={{justifySelf:"center"}}>
-//                    <Link href="/pricing">
-//                        <LabelContainer isActive={pages.Pricing === activePage}>
-//                            <FacetLabel color={color.black} text={pages.Pricing} />
-//                        </LabelContainer>
-//                    </Link>
-//                </div>
-//                <div style={{justifySelf:"center"}}>
-//                    <Link href="/documentation">
-//                        <LabelContainer isActive={pages.Documentation === activePage}>
-//                            <FacetLabel color={color.black} text={pages.Documentation} />
-//                        </LabelContainer>
-//                    </Link>
-//                </div>
-//                <div style={{justifySelf:"center"}}>
-//                    <Link href="/blog">
-//                        <LabelContainer isActive={pages.Blog === activePage}>
-//                            <FacetLabel color={color.black} text={pages.Blog} />
-//                        </LabelContainer>
-//                    </Link>
-//                </div>
-//                <div style={{justifySelf:"center"}}>
-//                    <Link href="/contact">
-//                        <LabelContainer isActive={pages.Contact === activePage}>
-//                            <FacetLabel color={color.black} text="Contact" />
-//                        </LabelContainer>
-//                    </Link>
-//                </div>
-//                <div style={{justifySelf:"center"}}>
-//                    <Link href="https://github.com/facets-io">
-//                        <a target="_blank">
-//                            <div style={{ cursor: 'pointer' }}>
-//                                {/* @ts-ignore */}
-//                                <FacetLabel color={color.black} text='GitHub' />
-//                            </div>
-//                        </a>
-//                    </Link>
-//                </div>
-//                <div style={{justifySelf:"center"}}>
-//                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { }} />
-//                </div>
-//
-//            </StyledGrid>
-//        </MainDiv>
-//    );
-//}

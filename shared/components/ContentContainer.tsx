@@ -1,9 +1,11 @@
 import styled from 'styled-components';
-import { color as colorConstant } from '../constant';
+import {color, color as colorConstant} from '../constant';
 
 const InnerDiv = styled.div`
     background-color: ${props => props.color};
-    padding: ${props => props.hasPadding ? '3rem' : ''};
+    padding: ${props => props.padding};
+    padding-top: ${props => props.paddingTop};
+    padding-bottom: ${props => props.paddingBottom};
     width: 100%;
     max-width: 100rem;
     margin: auto;
@@ -14,10 +16,10 @@ const OuterDiv = styled.div`
     width: 100%;
 `;
 
-export default function ContentContainer({ color = colorConstant.black, hasPadding = true, style = {}, children }) {
+export default function ContentContainer({ color = colorConstant.black, padding = "3rem", paddingTop = "3rem", paddingBottom = "3rem",style = {}, children}) {
     return (
         <OuterDiv style={style} color={color}>
-            <InnerDiv hasPadding={hasPadding}>
+            <InnerDiv padding={padding} paddingTop={paddingTop} paddingBottom={paddingBottom}>
               {children}
             </InnerDiv>
         </OuterDiv>
