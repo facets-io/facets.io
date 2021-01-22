@@ -18,8 +18,8 @@ const CustomInput = withStyles(
             }
         },
         input: {
-            backgroundColor: color.pricingDivDark,
-            fontSize: 'x-large',
+            backgroundColor: color.pricingGray,
+            fontSize: 'large',
             padding: '0 1rem 0 1rem',
             height: '100%',
             '&:-webkit-autofill': {
@@ -34,7 +34,7 @@ const CustomInput = withStyles(
 )(Input);
 
 const defaultColor = {
-    color: color.white,
+    color: color.black,
     backgroundColor: color.grayA,
 };
 
@@ -58,6 +58,7 @@ export default ({
             id={id}
             type={type}
             name={name}
+            disableUnderline={true}
             // @ts-ignore
             type="text"
             style={{

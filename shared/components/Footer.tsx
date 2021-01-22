@@ -28,11 +28,11 @@ export default function Footer() {
             <br/>
             <div style={{textAlign: 'center', backgroundColor: color.secondaryGray}}>
                 <div>
-                    <Link href="/"><StyledImg src="./facet_typography_primary.svg" alt="Facet logo" height="30"/></Link>
+                    <Link href="/"><StyledImg src="/facet_typography_primary.svg" alt="Facet logo" height="30"/></Link>
                 </div>
                 <br/>
-                <Link href="https://github.com/facets-io/"><StyledImg src="./gitHub.svg" height="24.71"/></Link> &nbsp;
-                <Link href="https://twitter.com/runFacet/"><StyledImg src="./twitter.svg" height="24.71"/></Link>
+                <Link href="https://github.com/facets-io/"><StyledImg src="/gitHub.svg" height="24.71"/></Link> &nbsp;
+                <Link href="https://twitter.com/runFacet/"><StyledImg src="/twitter.svg" height="24.71"/></Link>
                 <br/>
                 <br/>
                 <Div>

@@ -9,38 +9,51 @@ const useStyles = makeStyles(() => ({ root: {} }));
 const defaultColorBtnStyle = {
     color: color.black,
     backgroundColor:  color.white,
-    hoverBgColor: color.electricB
+    hoverBgColor: color.electricB,
+    border: 'none'
 };
 
 export const primaryBtnColor = {
     color: color.white,
     backgroundColor: color.primary,
-    hoverBgColor: color.primary
+    hoverBgColor: color.primary,
+    border: `${defaultColorBtnStyle.border}`
 };
+
+export const secondaryBtnColor = {
+    color: color.primary,
+    backgroundColor: color.secondaryGray,
+    hoverBgColor: color.secondaryGray,
+    border: `1px solid ${color.primary}`
+}
 
 export const primaryGrayBtnColor = {
     color: color.white,
     backgroundColor: color.primaryGray,
-    hoverBgColor: color.primaryGray
+    hoverBgColor: color.primaryGray,
+    border: `${defaultColorBtnStyle.border}`
 };
 
 export const electricBtnColor = {
     color: color.white,
     backgroundColor: color.electricA,
-    hoverBgColor: color.electricB
+    hoverBgColor: color.electricB,
+    border: `${defaultColorBtnStyle.border}`
 };
 
 // @deprecated
 export const greenBtnColor = {
     color: color.black,
     backgroundColor: color.green,
-    hoverBgColor: color.darkerGreen
+    hoverBgColor: color.darkerGreen,
+    border: `${defaultColorBtnStyle.border}`
 }
 
 export const whiteBtnColor = {
     color: color.black,
     backgroundColor: color.white,
-    hoverBgColor: color.white
+    hoverBgColor: color.white,
+    border: `${defaultColorBtnStyle.border}`
 }
 
 // not working..
@@ -56,7 +69,7 @@ export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0 ,minWidth}}
+            style={{ width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0 ,minWidth, border: colorButtonStyle.border}}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}

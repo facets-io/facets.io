@@ -26,7 +26,7 @@ const color = {
     darkGreen: '#33DD00',
     darkerGreen: '#33FF12',
     pricingBlack: '#1E232B',
-    pricingGray: '#2A3341',
+    pricingGray: '#F9F9F9',
     pricingLightGray: '#1D242E',
     pricingDivDark: '#212934',
     primary: '#9D1757',
