@@ -50,7 +50,7 @@ export default function Secondary() {
             <br />
             <InnerDiv>
                 <div>
-                    <img src="./declare.svg"/>
+                    <img src="./declare_tmp.svg"/>
                 </div>
                 <div>
                     <div>
