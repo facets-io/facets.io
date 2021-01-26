@@ -17,7 +17,7 @@ const MainDiv = styled.div`
 
 const StyledTable = styled.table`
     color: ${color.black};
-    font-family: HammersmithOne;
+    font-family: Manrope;
     font-size: 21px;
     width: 60rem !important;
     border: none;
@@ -95,7 +95,7 @@ export default function PricingTable() {
                     <tr>
                         <th data-type="numeric" style={{textAlign: "center"}}>
                             <div>
-                                <FacetLabel color={color.black} fontSize={fontSize.large} text="Monthly Requests" />
+                                <FacetLabel color={color.black} fontWeight={700} fontFamily={"Manrope"} fontSize={fontSize.large} text="Monthly Requests" />
                             </div>
                         </th>
                         <th data-type="text-short">Pricing</th>
@@ -104,10 +104,10 @@ export default function PricingTable() {
                 </thead>
                 <tr>
                     <td>
-                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Roboto"  fontSize={"17px"} text={pricingTier[0].name} />
+                        <FacetLabel color={color.black} fontWeight={700} fontFamily={"Manrope"}  fontSize={"17px"} text={pricingTier[0].name} />
                     </td>
                     <td>
-                        <FacetLabel color={color.black} fontFamily="Roboto"  fontSize={"17px"} text={pricingTier[0].costText} />
+                        <FacetLabel color={color.black} fontFamily="Manrope"  fontSize={"17px"} text={pricingTier[0].costText} />
                         <br />
                         <br />
                         <FacetDivider />
@@ -117,7 +117,7 @@ export default function PricingTable() {
                             <table cellSpacing={0} width={"95%"}>
                                 <tr>
                                     <td style={{border: "1px solid #C0C0C0", padding: "1rem",  textAlign: "center"}}>
-                                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Roboto"  fontSize={"17px"} text="Requests" />
+                                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope"  fontSize={"17px"} text="Requests" />
                                     </td>
                                     <td style={{border: "1px solid #C0C0C0", borderLeft: "none", backgroundColor: color.pricingGray}}>
                                         <FacetInputFullHeight
@@ -136,10 +136,10 @@ export default function PricingTable() {
                                 </tr>
                                 <tr>
                                     <td style={{border: "1px solid #C0C0C0", padding: "1rem",  textAlign: "center"}}>
-                                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Roboto"  fontSize={"17px"} text="Monthly Cost" />
+                                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope"  fontSize={"17px"} text="Monthly Cost" />
                                     </td>
                                     <td style={{border: "1px solid #C0C0C0", borderLeft: "none", backgroundColor: color.pricingGray}}>
-                                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Roboto"  fontSize={fontSize.xLarge} text={`${estimatedCost}`}/>
+                                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope"  fontSize={fontSize.xLarge} text={`${estimatedCost}`}/>
                                     </td>
                                 </tr>
                             </table>
@@ -154,10 +154,10 @@ export default function PricingTable() {
                 </tr>
                 <tr>
                     <td>
-                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Roboto"  fontSize={"17px"}  text={pricingTier[1].name} />
+                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text={pricingTier[1].name} />
                     </td>
                     <td>
-                        <FacetLabel color={color.black} fontFamily="Roboto"  fontSize={"17px"} text={pricingTier[1].costText} />
+                        <FacetLabel color={color.black} fontFamily="Manrope"  fontSize={"17px"} text={pricingTier[1].costText} />
                         <br />
                         <br />
                         <FacetDivider />
@@ -165,10 +165,10 @@ export default function PricingTable() {
                 </tr>
                 <tr>
                     <td>
-                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Roboto"  fontSize={"17px"}  text={pricingTier[2].name} />
+                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text={pricingTier[2].name} />
                     </td>
                     <td>
-                        <FacetLabel color={color.black} fontFamily="Roboto" fontSize={"17px"} text={pricingTier[2].costText}/>
+                        <FacetLabel color={color.black} fontFamily="Manrope" fontSize={"17px"} text={pricingTier[2].costText}/>
                         <br />
                         <br />
                         <FacetDivider />
@@ -176,7 +176,7 @@ export default function PricingTable() {
                 </tr>
                 <tr >
                     <td>
-                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Roboto"  fontSize={"17px"}  text="Enterprise" />
+                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text="Enterprise" />
                     </td>
                     <td>
                         <FacetButton width='10rem' colorButtonStyle={secondaryBtnColor} fontSize={fontSize.medium} text="Contact Sales" />
@@ -184,15 +184,15 @@ export default function PricingTable() {
                 </tr>
                 <tr>
                     <td>
-                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Roboto"  fontSize={"17px"}  text="Self Hosted" />
+                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text="Self Hosted" />
                     </td>
                     <td>
                         <div>
-                            <FacetLabel color={color.black} fontFamily="Roboto" fontSize={"17px"} text={"$ 5,000"} />
+                            <FacetLabel color={color.black} fontFamily="Manrope" fontSize={"17px"} text={"$ 5,000"} />
                         </div>
                         <MarginTop value='.5rem' />
                         <div>
-                            <FacetLabel color={color.black} fontFamily="Roboto" fontSize={"17px"} text={"* Free for OSS and NPOs"} />
+                            <FacetLabel color={color.black} fontFamily="Manrope" fontSize={"17px"} text={"* Free for OSS and NPOs"} />
                         </div>
                     </td>
                 </tr>

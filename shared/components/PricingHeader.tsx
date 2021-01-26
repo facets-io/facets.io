@@ -12,11 +12,11 @@ const MainDiv = styled.div`
 export default function PricingHeader() {
     return (
         <MainDiv>
-            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Pricing that scales with your needs" />
+            <FacetLabel color={color.black} fontSize={"38px"} fontWeight={700}  text="Pricing that scales with your needs" />
             <br />
             <br />
             <br />
-            <FacetLabel color={color.black} fontSize={fontSize.large} fontFamily="Futura" fontWeight={200} text="Unlimited access to product features and pay as you go" />
+            <FacetLabel color={color.black} fontSize={"20px"} fontWeight={700} text="Unlimited access to product features and pay as you go" />
 
             <br />
             <br />
