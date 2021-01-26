@@ -16,7 +16,8 @@ import {Component, useEffect} from "react";
 
 const TableDiv = styled.div`
      display: grid;
-     grid-template-columns: 15% 76%;
+     grid-template-columns: 15% 50%;
+     grid-gap: 9rem;
 `;
 
 const MainDiv = styled.div`

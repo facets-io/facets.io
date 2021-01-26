@@ -60,7 +60,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Facets are made up by dynamic groups of elements that you define. Declare, name, and organize unlimmited facets within a few seconds. Optimize the features in the facet workspace according to your workflow requirements." />
+                        <FacetParagraph text="Facets are made up by dynamic groups of elements that you define. Declare, name, and organize unlimited facets within a few seconds. Optimize the features in the facet workspace according to your workflow requirements." />
                     </div>
                 </div>
             </InnerDiv>

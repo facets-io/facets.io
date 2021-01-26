@@ -30,14 +30,14 @@ export default function AppProvider({ children }) {
         {
             name: 'Next 250 Million',
             cost: 0.000001,
-            costText: '$0.10 per 1M',
+            costText: '$0.20 per 1M',
             limit: 250000000
         }
         ,
         {
             name: 'Next 1 Billion',
             cost: 0.0000009,
-            costText: '$0.20 per 1M',
+            costText: '$0.10 per 1M',
             limit: 1000000000,
         },
         {

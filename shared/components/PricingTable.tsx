@@ -107,7 +107,7 @@ export default function PricingTable() {
                         <FacetLabel color={color.black} fontWeight={700} fontFamily={"Manrope"}  fontSize={"17px"} text={pricingTier[0].name} />
                     </td>
                     <td>
-                        <FacetLabel color={color.black} fontFamily="Manrope"  fontSize={"17px"} text={pricingTier[0].costText} />
+                        <FacetLabel color={color.primary} fontFamily="Manrope"  fontWeight={700} fontSize={"17px"} text={pricingTier[0].costText} />
                         <br />
                         <br />
                         <FacetDivider />
@@ -128,7 +128,7 @@ export default function PricingTable() {
                                                 setPresentableCost(num2)
                                                 const numberWithCommas = parseFloat(num2.replace(/,/g, ''));
                                                 calculate(numberWithCommas)
-                                            }} placeholder="3,0000" />
+                                            }} placeholder="3,000" />
                                     </td>
                                 </tr>
                                 <tr>

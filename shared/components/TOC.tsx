@@ -14,7 +14,7 @@ const MainDiv = styled.div`
     position: sticky;
     top: 0px;
     border-radius: 5%;
-    width: 155px;
+    width: 195px;
 `;
 
 const PaddingDiv = styled.div`

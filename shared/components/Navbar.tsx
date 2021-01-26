@@ -61,7 +61,7 @@ export default function Navbar({activePage = ''}) {
                 <RightDiv>
                     <Link href="/">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={"Welcome"}/>
+                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={"Home"}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/pricing">
