@@ -31,7 +31,8 @@ const color = {
     pricingDivDark: '#212934',
     primary: '#9D1757',
     primaryGray: "#9D989E",
-    secondaryGray: '#F3F3F3'
+    secondaryGray: '#F3F3F3',
+    paragraph: '#494949'
 };
 
 const mountainWalkColors = {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ({ text, color = '#A4A7AC', fontSize = 'small', fontFamily= 'Helvetica-Bold, Arial, sans-serif', textDecoration = "", fontWeight = 500}) => {
+export default ({ text, color = '#A4A7AC', fontSize = 'small', fontFamily= 'Helvetica', textDecoration = "", fontWeight = 500, backgroundColor = ""}) => {
     return <span
         style={{
             width: '100%',
@@ -8,7 +8,8 @@ export default ({ text, color = '#A4A7AC', fontSize = 'small', fontFamily= 'Helv
             fontSize,
             fontFamily,
             fontWeight,
-            textDecoration
+            textDecoration,
+            backgroundColor
         }}
     >{text}</span>
 }

@@ -48,7 +48,7 @@ const StyledImage = styled.img`
 export default function Navbar() {
     return (
         <div>
-            <MainDiv><FacetLabel color={color.black} fontSize={fontSize.xxxLarge} text="Release Fast"/>
+            <MainDiv><FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Release Fast"/>
             </MainDiv>
             <br/>
             <br/>

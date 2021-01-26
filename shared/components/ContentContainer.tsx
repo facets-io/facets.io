@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import {color, color as colorConstant} from '../constant';
+import {color, color as colorConstant, fontSize} from '../constant';
+import FacetLabel from "./FacetLabel";
 
 const InnerDiv = styled.div`
     background-color: ${props => props.color};

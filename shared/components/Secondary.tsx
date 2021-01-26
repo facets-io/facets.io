@@ -22,7 +22,7 @@ export default function Secondary() {
             <br />
             <br />
             <br />
-            <FacetLabel color={color.black} fontSize={fontSize.xxLarge} text="Unrivaled Feature Management" />
+            <FacetLabel color={color.black} fontSize={"36px"} fontWeight={700} text="Unrivaled Feature Management" />
             <br />
             <br />
             <br />
@@ -33,7 +33,7 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Install" />
+                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Install" />
                         </b>
                     </div>
                     <br />
@@ -55,7 +55,7 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Declare" />
+                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700}  text="Declare" />
                         </b>
                     </div>
                     <br />
@@ -71,7 +71,7 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={fontSize.xLarge} text="Deploy" />
+                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700}  text="Deploy" />
                         </b>
                     </div>
                     <br />

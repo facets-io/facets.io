@@ -1,6 +1,7 @@
 import React from 'react'
 
 const pages = {
+    Home: 'Home',
     Pricing: 'Pricing',
     Documentation: 'Documentation',
     Blog: 'Blog',

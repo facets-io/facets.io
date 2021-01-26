@@ -35,10 +35,10 @@ const InnerDiv = styled.div`
 `;
 
 const OuterDiv = styled.div`
-    background-color: ${color.white};
     display: grid;
     grid-template-columns: 85%; 
     justify-content: center;
+    +6352
 `;
 
 const LabelContainer = styled.div`
@@ -59,23 +59,28 @@ export default function Navbar({activePage = ''}) {
                     </Link>
                 </LeftDiv>
                 <RightDiv>
+                    <Link href="/">
+                        <LabelContainer>
+                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={"Welcome"}/>
+                        </LabelContainer>
+                    </Link>
                     <Link href="/pricing">
-                        <LabelContainer isActive={pages.Pricing === activePage}>
+                        <LabelContainer>
                             <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Pricing ? color.primary : color.black} text={pages.Pricing}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/documentation">
-                        <LabelContainer isActive={pages.Documentation === activePage}>
+                        <LabelContainer>
                             <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Documentation ? color.primary : color.black} text={pages.Documentation}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/blog">
-                        <LabelContainer isActive={pages.Blog === activePage}>
+                        <LabelContainer>
                             <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Blog ? color.primary : color.black} text={pages.Blog}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/contact">
-                        <LabelContainer isActive={pages.Contact === activePage}>
+                        <LabelContainer>
                             <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Contact ? color.primary : color.black} text="Contact"/>
                         </LabelContainer>
                     </Link>

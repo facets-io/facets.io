@@ -12,6 +12,7 @@ import AppProvider from '../shared/components/AppProvider'
 import StayUpdated from '../shared/components/StayUpdated'
 import FacetHead from './FacetHead'
 import styled from 'styled-components';
+import {pages} from "../shared/components/AppContext";
 
 const Border = styled.div`
   background-color: ${color.primary};
@@ -28,8 +29,8 @@ export default function Home() {
       <div className={styles.container}>
         <FacetHead />
         <Border />
-        <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"}color={color.white}>
-          <Navbar />
+        <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"} color={color.white}>
+          <Navbar activePage={pages.Home}/>
         </ContentContainer>
         <ContentContainer color={color.white} paddingTop={"9rem"}>
           <Topbar />
