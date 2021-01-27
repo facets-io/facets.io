@@ -89,7 +89,7 @@ export default function Navbar({activePage = ''}) {
                             <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={color.black} text='GitHub'/>
                         </div>
                     </Link>
-                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => {}}/>
+                    <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => {location.href='https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh'}}/>
                 </RightDiv>
             </InnerDiv>
         </OuterDiv>

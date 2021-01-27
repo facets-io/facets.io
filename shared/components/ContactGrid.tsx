@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { TextField } from '@material-ui/core'
 import styled from 'styled-components'
 import { color, snackbar } from '../constant'
-import FacetButton, { electricBtnColor } from './FacetButton'
+import FacetButton, { primaryBtnColor } from './FacetButton'
 import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
 import RadioButtons from './RadioButtons'
@@ -10,15 +10,24 @@ import StayUpdated from './StayUpdated'
 import { useForm } from 'react-hook-form'
 import FacetFormError from './FacetFormError'
 import { useSnackbar } from 'notistack'
+import JsonAnimation from "./JsonGIF";
+import mock_site from "../../public/paper_plane_contacts.json";
 
 const StyledDiv = styled.div`
     display: grid;
-    margin-left: 2rem;
-    margin-right: 2rem;
+    grid-template-columns: 40% 40%;
+    grid-gap: 14%;
+    justify-content: left;
+    padding-left: 7.5%
+`
+
+const StyledDiv2 = styled.div`
+    padding-left: 7.5%;
 `
 
 const StyledForm = styled.form`
-    background-color: ${color.darkBlue};
+    background-color: ${color.secondaryGray};
+    width: 525px;
 `
 
 const TwoColumnGrid = styled.div`
@@ -64,16 +73,29 @@ export default function ContactGrid() {
 
     // @ts-ignore
     return (
+        <div>
+            <StyledDiv2>
+            <div>
+            <FacetLabel fontWeight={700} fontSize={"42px" } text="Want To Get In Touch?"/>
+            <br />
+            <br />
+            <FacetLabel fontWeight={300} fontSize={"20px" } text="We’d love to hear from you! Contct us using the form below and we’ll be happy to answer your questions." />
+            <br />
+            <br/>
+                <br/>
+                <br/>
+                <br/>
+            </div>
+            </StyledDiv2>
         <StyledDiv>
-            <h2>Want To Get In Touch?</h2>
-            <p>We'd love to hear from you! Contact us using the form below and we'll be happy to help answer your questions.</p>
-            <h4>Get in touch</h4>
-            <div style={{width:"40rem",textAlign:"center",display:"grid",justifyContent:"center"}}>
+
+
+            <div style={{textAlign:"left",display:"grid",justifyContent:"left"}}>
                     <StyledForm onSubmit={(e) => e.preventDefault()}>
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="First name" />
+                                <FacetLabel text="First name" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="firstname"
@@ -85,7 +107,7 @@ export default function ContactGrid() {
                                 </div>
                             </div>
                             <div>
-                                <FacetLabel text="Last name" />
+                                <FacetLabel text="Last name" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="lastname"
@@ -100,7 +122,7 @@ export default function ContactGrid() {
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="Email*" />
+                                <FacetLabel text="Email*" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="email"
@@ -120,7 +142,7 @@ export default function ContactGrid() {
                                 {errors && errors.email && <FacetFormError role="alert" text={errors.email.message}></FacetFormError>}
                             </div>
                             <div>
-                                <FacetLabel text="Company name" />
+                                <FacetLabel text="Company name" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         value={companyName}
@@ -133,7 +155,7 @@ export default function ContactGrid() {
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="Do you currently use Facet?" />
+                                <FacetLabel text="Do you currently use Facet?" color={color.black}/>
                                 <br />
                                 <br />
                                 <RadioButtons />
@@ -141,8 +163,8 @@ export default function ContactGrid() {
                         </TwoColumnGrid>
                         <br />
                         <div style={{}}></div>
-                        <div style={{ padding: '1rem' }}>
-                            <FacetLabel text="Message" />
+                        <div style={{ padding: '1rem'}}>
+                            <FacetLabel text="Message" color={color.black}/>
                             <br />
                             <br />
                             <TextField
@@ -153,17 +175,21 @@ export default function ContactGrid() {
                                 variant="filled"
                                 value={message}
                                 onChange={(e) => { setMessage(e.target.value) }}
+                                InputProps={{
+                                    style: {backgroundColor: color.white},
+                                }}
                             />
                             <br />
                             <br />
-                            <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={electricBtnColor} style={{ width: '20%' }} text="Submit" />
+                            <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={primaryBtnColor} style={{ width: '100%' }} text="Submit" />
                         </div>
                     </StyledForm>
                 </div>
-            <br />
-            <br />
-            <br />
-            <br />
+
+            <div>
+                <JsonAnimation animationData={mock_site} style={{borderRadius: "3rem", overflow:"hidden", height: "605.19px", width: undefined}}/>
+            </div>
         </StyledDiv>
+        </div>
     )
 }

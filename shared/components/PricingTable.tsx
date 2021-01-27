@@ -147,7 +147,7 @@ export default function PricingTable() {
                                 <br />
                             </div>
                             <div>
-                                <FacetButton width='12rem' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
+                                <FacetButton width='12rem' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" onClick={() => {location.href='https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh'}}/>
                             </div>
                         </PricingCalculatorDiv>
                     </td>

@@ -9,6 +9,7 @@ import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import {Divider} from "@material-ui/core";
 
 
 const StyledDiv = styled.div`
@@ -36,7 +37,7 @@ export default function FAQ() {
 
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
                 >
@@ -53,7 +54,7 @@ export default function FAQ() {
             </Accordion>
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
                 >
@@ -68,7 +69,7 @@ export default function FAQ() {
             </Accordion>
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
                 >
@@ -83,7 +84,7 @@ export default function FAQ() {
             </Accordion>
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
                 >
@@ -98,7 +99,7 @@ export default function FAQ() {
             </Accordion>
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
                 >
@@ -112,11 +113,11 @@ export default function FAQ() {
             </Accordion>
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
                 >
-                    <Typography className={classes.heading}>Is facet open source??</Typography>
+                    <Typography className={classes.heading}>Is facet open source?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
@@ -126,7 +127,7 @@ export default function FAQ() {
             </Accordion>
             <Accordion>
                 <AccordionSummary
-                    expandIcon={<ExpandMoreIcon htmlColor={color.primary}/>}
+                    expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
                 >

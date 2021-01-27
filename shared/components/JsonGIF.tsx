@@ -3,7 +3,9 @@ import Lottie from 'react-lottie';
 
 export default function ({animationData, isStopped= false, isPaused= false, style= {
             borderRadius: "3rem",
-            overflow:"hidden"
+            overflow:"hidden",
+            width: undefined,
+            height: undefined
         },
         options = {
             loop: true,

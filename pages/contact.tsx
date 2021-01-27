@@ -14,21 +14,32 @@ const PageContainer = styled.div`
     height: 100%;
 `
 
+const Border = styled.div`
+  background-color: ${color.primary};
+  position:sticky;
+  top:0;
+  width:100%;
+  height: .275rem;
+  z-index: 500;
+`;
+
+
 export default function ContactPage() {
     return (
         <AppProvider>
-            <PageContainer>
+
                 <FacetHead />
-                <ContentContainer>
+                <Border />
+                <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"} color={color.white}>
                     <Navbar activePage={pages.Contact} />
                 </ContentContainer>
-                <ContentContainer>
+                <ContentContainer color={color.white} paddingTop={"9rem"}>
                     <ContactGrid />
                 </ContentContainer>
-                <ContentContainer color={color.white}>
+                <ContentContainer color={color.secondaryGray}>
                     <Footer />
                 </ContentContainer>
-            </PageContainer>
+
         </AppProvider>
     )
 }
