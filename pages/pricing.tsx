@@ -28,7 +28,6 @@ const Border = styled.div`
   z-index: 500;
 `;
 
-
 export default function PricingPage() {
     return (
         <AppProvider>
