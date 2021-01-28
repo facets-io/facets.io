@@ -61,32 +61,32 @@ export default function Navbar({activePage = ''}) {
                 <RightDiv>
                     <Link href="/">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={"Home"}/>
+                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Home ? 500 : 300} fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={pages.Home}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/pricing">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Pricing ? color.primary : color.black} text={pages.Pricing}/>
+                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Pricing ? 500 : 300} fontSize={"16px"} color={activePage === pages.Pricing ? color.primary : color.black} text={pages.Pricing}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/documentation">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Documentation ? color.primary : color.black} text={pages.Documentation}/>
+                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Documentation ? 500 : 300} fontSize={"16px"} color={activePage === pages.Documentation ? color.primary : color.black} text={pages.Documentation}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/blog">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Blog ? color.primary : color.black} text={pages.Blog}/>
+                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Blog ? 500 : 300} fontSize={"16px"} color={activePage === pages.Blog ? color.primary : color.black} text={pages.Blog}/>
                         </LabelContainer>
                     </Link>
                     <Link href="/contact">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={activePage === pages.Contact ? color.primary : color.black} text="Contact"/>
+                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Contact ? 500 : 300} fontSize={"16px"} color={activePage === pages.Contact ? color.primary : color.black} text={pages.Contact}/>
                         </LabelContainer>
                     </Link>
                     <Link href="https:github.com/facets-io">
                         <div style={{cursor: 'pointer'}}>
-                            <FacetLabel fontFamily="Roboto" fontSize={"16px"} color={color.black} text='GitHub'/>
+                            <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub'/>
                         </div>
                     </Link>
                     <FacetButton colorButtonStyle={primaryBtnColor} text="Download" onClick={() => {location.href='https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh'}}/>

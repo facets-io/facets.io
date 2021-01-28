@@ -107,12 +107,19 @@ export default function PricingTable() {
                         <FacetLabel color={color.black} fontWeight={700} fontFamily={"Manrope"}  fontSize={"17px"} text={pricingTier[0].name} />
                     </td>
                     <td>
+                        <br />
                         <FacetLabel color={color.primary} fontFamily="Manrope"  fontWeight={700} fontSize={"17px"} text={pricingTier[0].costText} />
                         <br />
                         <br />
                         <FacetDivider />
                     </td>
                     <td rowSpan={5}>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+
                         <PricingCalculatorDiv>
                             <table cellSpacing={0} width={"95%"}>
                                 <tr>
@@ -131,6 +138,8 @@ export default function PricingTable() {
                                             }} placeholder="3,000" />
                                     </td>
                                 </tr>
+                                <br />
+
                                 <tr>
                                     <br/>
                                 </tr>
@@ -144,9 +153,12 @@ export default function PricingTable() {
                                 </tr>
                             </table>
                             <div>
-                                <br />
-                            </div>
-                            <div>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
+                                <br/>
                                 <FacetButton width='12rem' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" onClick={() => {location.href='https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh'}}/>
                             </div>
                         </PricingCalculatorDiv>
@@ -157,6 +169,7 @@ export default function PricingTable() {
                         <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text={pricingTier[1].name} />
                     </td>
                     <td>
+                        <br />
                         <FacetLabel color={color.black} fontFamily="Manrope"  fontSize={"17px"} text={pricingTier[1].costText} />
                         <br />
                         <br />
@@ -168,18 +181,11 @@ export default function PricingTable() {
                         <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text={pricingTier[2].name} />
                     </td>
                     <td>
+                        <br />
                         <FacetLabel color={color.black} fontFamily="Manrope" fontSize={"17px"} text={pricingTier[2].costText}/>
                         <br />
                         <br />
                         <FacetDivider />
-                    </td>
-                </tr>
-                <tr >
-                    <td>
-                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text="Enterprise" />
-                    </td>
-                    <td>
-                        <FacetButton width='10rem' colorButtonStyle={secondaryBtnColor} fontSize={fontSize.medium} text="Contact Sales" />
                     </td>
                 </tr>
                 <tr>
@@ -194,8 +200,19 @@ export default function PricingTable() {
                         <div>
                             <FacetLabel color={color.black} fontFamily="Manrope" fontSize={"17px"} text={"* Free for OSS and NPOs"} />
                         </div>
+                        <br />
+                        <FacetDivider />
                     </td>
                 </tr>
+                <tr >
+                    <td>
+                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope"  fontSize={"17px"}  text="Enterprise" />
+                    </td>
+                    <td>
+                        <FacetButton width='10rem' colorButtonStyle={secondaryBtnColor} fontSize={fontSize.medium} text="Contact Sales" onClick={() => {location.href='/contact'}}/>
+                    </td>
+                </tr>
+
             </StyledTable>
         </MainDiv>
     );

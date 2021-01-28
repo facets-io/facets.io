@@ -5,7 +5,6 @@ import { color, snackbar } from '../constant'
 import FacetButton, { primaryBtnColor } from './FacetButton'
 import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
-import RadioButtons from './RadioButtons'
 import StayUpdated from './StayUpdated'
 import { useForm } from 'react-hook-form'
 import FacetFormError from './FacetFormError'
@@ -15,10 +14,10 @@ import mock_site from "../../public/paper_plane_contacts.json";
 
 const StyledDiv = styled.div`
     display: grid;
-    grid-template-columns: 40% 40%;
-    grid-gap: 14%;
-    justify-content: left;
-    padding-left: 7.5%
+    grid-template-columns: 35% 35%;
+    grid-gap: 5%;
+    justify-content: center;
+    align-items: center;
 `
 
 const StyledDiv2 = styled.div`
@@ -28,6 +27,7 @@ const StyledDiv2 = styled.div`
 const StyledForm = styled.form`
     background-color: ${color.secondaryGray};
     width: 525px;
+    padding: .5rem;
 `
 
 const TwoColumnGrid = styled.div`
@@ -152,18 +152,7 @@ export default function ContactGrid() {
                                 </div>
                             </div>
                         </TwoColumnGrid>
-                        <br />
-                        <TwoColumnGrid>
-                            <div>
-                                <FacetLabel text="Do you currently use Facet?" color={color.black}/>
-                                <br />
-                                <br />
-                                <RadioButtons />
-                            </div>
-                        </TwoColumnGrid>
-                        <br />
-                        <div style={{}}></div>
-                        <div style={{ padding: '1rem'}}>
+                        <div style={{ padding: '1rem', paddingTop: '0'}}>
                             <FacetLabel text="Message" color={color.black}/>
                             <br />
                             <br />
@@ -171,12 +160,13 @@ export default function ContactGrid() {
                                 style={{ backgroundColor:  color.white, width: '100%' }}
                                 id="filled-multiline-static"
                                 multiline
-                                rows={7}
+                                rows={16}
                                 variant="filled"
                                 value={message}
                                 onChange={(e) => { setMessage(e.target.value) }}
                                 InputProps={{
                                     style: {backgroundColor: color.white},
+                                    disableUnderline: true
                                 }}
                             />
                             <br />
@@ -185,9 +175,8 @@ export default function ContactGrid() {
                         </div>
                     </StyledForm>
                 </div>
-
             <div>
-                <JsonAnimation animationData={mock_site} style={{borderRadius: "3rem", overflow:"hidden", height: "605.19px", width: undefined}}/>
+                <JsonAnimation animationData={mock_site} style={{borderRadius: "3rem", overflow:"hidden", height: "500px", width: undefined, boxShadow: undefined}}/>
             </div>
         </StyledDiv>
         </div>

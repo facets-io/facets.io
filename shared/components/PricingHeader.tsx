@@ -16,7 +16,7 @@ export default function PricingHeader() {
             <br />
             <br />
             <br />
-            <FacetLabel color={color.black} fontSize={"20px"} fontWeight={700} text="Unlimited access to product features and pay as you go" />
+            <FacetLabel color={color.black} fontSize={"20px"} fontWeight={300} text="Have unlimited access to product features and pay as you go." />
 
             <br />
             <br />

@@ -27,7 +27,7 @@ const Checkmark = styled.div`
 
 const BulletPoints = styled.div`
     display: grid;
-    grid-template-columns: 0% 50%;
+    grid-template-columns: 0% 100%%;
     grid-template-rows: 40% 50%
     justify-content: center;
     align-items: center;
@@ -48,7 +48,7 @@ const StyledImage = styled.img`
 export default function Navbar() {
     return (
         <div>
-            <MainDiv><FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Release Fast"/>
+            <MainDiv><FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Deliver Features Without Code"/>
             </MainDiv>
             <br/>
             <br/>
@@ -56,29 +56,35 @@ export default function Navbar() {
             <MainDiv>
                 <div>
                     <div>
-                        <FacetParagraph text="Facets are a codeless solution for managing feature life cycles. Manage unlimited features without code or system maintenance. Our platform is developer-minded and user-friendly."/>
+                        <FacetParagraph text="Facets are a codeless solution for managing features. With facets, DevOps and product teams converge to deliver software faster and safer."/>
                         <BulletPoints>
                             <div/>
                             <div>
                                 <br/>
                                 <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                    <FacetParagraph text="Single line of code"/>
+                                    <FacetParagraph text="Use a single line of code"/>
                                 </Checkmark>
                             </div>
                             <div/>
                             <div>
                                 <br/>
                                 <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                    <FacetParagraph text="No maintenance"/>
+                                    <FacetParagraph text="Decouple feature management from engineering resources"/>
                                 </Checkmark>
                             </div>
                             <div/>
                             <div>
                                 <br/>
                                 <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                    <FacetParagraph text="Unblocked teams"/>
+                                    <FacetParagraph text="Streamline your software delivery process "/>
                                 </Checkmark>
                             </div>
+                            <div>
+                            <br/>
+                            <Checkmark><StyledImage src="./checkmark4.svg"/>
+                                <FacetParagraph text="Instantly enable and disable features in production "/>
+                            </Checkmark>
+                    </div>
                         </BulletPoints>
                         <br/>
                         <br/>
@@ -88,7 +94,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div>
-                    <JsonAnimation animationData={mock_site}/>
+                    <JsonAnimation style={{borderRadius: "0", overflow:"hidden", width: undefined, height: undefined, boxShadow: `0px 0px 600px -60px ${color.black}`}} animationData={mock_site}/>
                 </div>
                 <br/>
                 <br/>

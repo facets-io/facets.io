@@ -38,7 +38,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Install the facet extension in under a minute and help your team release features seamlessly. Our platform does not require any setup or maintenance work. A single line of code allows your team to manage unlimited features." />
+                        <FacetParagraph text="A one-time installation of the facet extension allows your team to release features seamlessly. Using facets requires no setup or maintenance work." />
                     </div>
                 </div>
                 <div>
@@ -49,8 +49,8 @@ export default function Secondary() {
             <br />
             <br />
             <InnerDiv>
-                <div>
-                    <img src="./declare_facet.svg"/>
+                <div style={{textAlign: "center"}}>
+                    <img style={{boxShadow: `0px 0px 100px -40px ${color.black}`}} src="./declare_facet.svg"/>
                 </div>
                 <div>
                     <div>
@@ -60,7 +60,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Facets are made up by dynamic groups of elements that you define. Declare, name, and organize unlimited facets within a few seconds. Optimize the features in the facet workspace according to your workflow requirements." />
+                        <FacetParagraph text="Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule." />
                     </div>
                 </div>
             </InnerDiv>
@@ -76,7 +76,7 @@ export default function Secondary() {
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Deploy or roll back features instantly and without code. The facet extention makes it simple to roll out features, freeing up developer resources." />
+                        <FacetParagraph text="Deploy and roll back features instantly. The facet extension decouples feature management from developer resources, giving your team ultimate control over your software delivery process." />
                     </div>
                 </div>
                 <div style={{display:"grid",justifyContent:"center"}}>

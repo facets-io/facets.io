@@ -68,11 +68,11 @@ export default function AppProvider({ children }) {
             return
         }
         cost += (remainingRequests * pricingTier[2].cost)
-        if (cost > 4500) {
+        if (cost < 5000) {
             setEstimatedCost(`$ ${cost.toFixed(2)}`)
             return
         }
-        setEstimatedCost(`$ ${cost.toFixed(2)}`)
+        setEstimatedCost(`Enterprise`)
     }
 
     return <AppContext.Provider value={{

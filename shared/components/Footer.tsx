@@ -37,17 +37,6 @@ export default function Footer() {
                 <br/>
                 <Div>
                     <FacetLabel color={color.black} fontFamily="GeosansLight" fontSize="16" text="Copyright © Facet Technologies, Inc. 2021 - All rights reserved.  "/>
-                    <Link href="/">
-                        <LabelContainer>
-                            <FacetLabel color={color.black} fontFamily="GeosansLight" fontSize="16" text="Terms of Service"/>
-                        </LabelContainer>
-                    </Link>
-                    <FacetLabel color={color.black} fontFamily="GeosansLight" fontSize="16" text=" & "/>
-                    <Link href="/">
-                        <LabelContainer>
-                            <FacetLabel color={color.black} fontFamily="GeosansLight" fontSize="16" text="Privacy Policy"/>
-                        </LabelContainer>
-                    </Link>
                 </Div>
             </div>
         </div>

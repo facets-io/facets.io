@@ -18,7 +18,7 @@ const StyledDiv = styled.div`
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        width: '100%',
+        width: '100%'
     },
     heading: {
         fontSize: theme.typography.pxToRem(15),
@@ -26,8 +26,16 @@ const useStyles = makeStyles((theme) => ({
     },
     body: {
        color: "#5D5D5D"
+    },
+    border: {
+    },
+    borderDetails: {
+    },
+    shadow: {
+        boxShadow: "0px 2px 1px -1px #9D1757, 0px 1px 1px 0px #9D1757, 0px 1px 3px 0px #9D1757"
     }
 }));
+
 
 export default function FAQ() {
     const classes = useStyles();
@@ -35,16 +43,17 @@ export default function FAQ() {
         <StyledDiv>
             <h2 id={documentationIds.faq} style={{fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600}}>Common Questions</h2>
 
-            <Accordion>
+            <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel1a-content"
                     id="panel1a-header"
+
                 >
                     <Typography className={classes.heading}>Why Facet</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className={classes.body}>
+                    <Typography>
                         Facet abstracts the rollout mechanism that used to be achieved by using feature flags. At facet,
                         we believe that engineers shouldn't spend their time maintaining manual configurations that come
                         along with feature flags. We enable engineers to focus on building the future, while we build
@@ -52,11 +61,12 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+            <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel2a-content"
                     id="panel2a-header"
+                   
                 >
                     <Typography className={classes.heading}>What is a facet?</Typography>
                 </AccordionSummary>
@@ -67,11 +77,12 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
+                   
                 >
                     <Typography className={classes.heading}>How to hide a facet before rolling out to
                         production?</Typography>
@@ -82,11 +93,12 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
+                   
                 >
                     <Typography className={classes.heading}>Can I declare facets within backend technologies?
                         production?</Typography>
@@ -97,11 +109,12 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
+                   
                 >
                     <Typography className={classes.heading}>Is facet secure?</Typography>
                 </AccordionSummary>
@@ -111,11 +124,12 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
+                   
                 >
                     <Typography className={classes.heading}>Is facet open source?</Typography>
                 </AccordionSummary>
@@ -125,7 +139,7 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion>
+             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg"/>}
                     aria-controls="panel3a-content"

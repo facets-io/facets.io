@@ -5,7 +5,8 @@ export default function ({animationData, isStopped= false, isPaused= false, styl
             borderRadius: "3rem",
             overflow:"hidden",
             width: undefined,
-            height: undefined
+            height: undefined,
+            boxShadow: undefined
         },
         options = {
             loop: true,
