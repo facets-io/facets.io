@@ -176,7 +176,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Currently, facet-extension is open source. We believe in open source and we plan to open source many of our systems as they become mature and ready for the public.
+                        Currently, facet-extension is <a href='https://github.com/facets-io/'></a>open source. We believe in open source and we plan to open source many of our systems as they become mature and ready for the public.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
