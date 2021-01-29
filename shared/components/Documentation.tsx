@@ -38,6 +38,9 @@ export default function Documentation() {
                             <figcaption>Installing facet-extension in Chrome</figcaption>
                         </figure>
                     </div>
+                    <blockquote>
+                        We are actively working on publishing the extension through the chrome store, and once we do so we will update the docs.
+                    </blockquote>
                 </FacetParagraph>
                 <h1 style={{ fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600 }} id={documentationIds.oneLineCodeIntegration}>Integration</h1>
                 <p>

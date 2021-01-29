@@ -91,7 +91,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Currently this is not possible, but we are working on adding this important feature soon!
+                        Currently this is not possible, but we are working on adding this important feature.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -161,7 +161,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        At facet, Security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps,including <a href='https://snyk.io/'>Snyk</a> and
+                        At facet, Security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps,including <a href='https://snyk.io/'>Snyk</a> and {''}
                         <a href='https://github.com/dependabot'>Github</a>, to ensure secure codebases. We are also working on getting CCPA, GDPR, HIPAA, FERPA, PCI and other data privacy regulations.                    </Typography>
                 </AccordionDetails>
             </Accordion>
