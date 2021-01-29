@@ -16,7 +16,6 @@ const FacetCode = styled.div`
     text-align: center;
 `;
 
-
 export default () => {
     return (
         <StyledDiv>
@@ -30,7 +29,7 @@ export default () => {
                 <FacetH1 text="Download and install the facet-extension" id={documentationIds.download} />
                 <FacetParagraph color={"#5D5D5D"}>
                     You can find the latest version of the facet-extension through <a href="http://cdn.facet.ninja/extension-chrome-facet-ninja.zip">this URL</a>. Once the zip is downloaded, unzip the folder and load it in the
-                    Chrome Web store via the "Load unpacked" option. "Manage Extensions" -> "Load unpacked" -> "Load the unzipped folder". The extension should then be loaded in your browser.
+                    Chrome Web store via the "Load unpacked" option. "Manage Extensions" {'->'} "Load unpacked" {'->'} "Load the unzipped folder". The extension should then be loaded in your browser.
                     <br />
                     <br />
                     <div style={{ textAlign: 'center' }}>

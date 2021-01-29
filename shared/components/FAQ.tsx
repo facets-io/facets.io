@@ -140,7 +140,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Yes. By default, facets are declared global. You can change their visibility to non-global, which mean that their rules will be applied to the current domain (pathname). Click on the desired facet -> select the "more options button", and click on the "global" checkbox.
+                        Yes. By default, facets are declared global. You can change their visibility to non-global, which mean that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
                         <br />
                         <figure>
                             <img width='100%' src='../../images/global_facet_declaration.png' />
