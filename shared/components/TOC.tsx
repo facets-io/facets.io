@@ -1,6 +1,6 @@
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
-import { color, documentationIds, fontSize } from "../constant";
+import { color, documentationIds, documentationText, fontSize } from "../constant";
 import { pages } from "./AppContext";
 import { act } from "react-dom/test-utils";
 import { useEffect, useState } from "react";
@@ -33,62 +33,42 @@ const scrollTo = (id) => {
 
 export default function TOC() {
     const [activePage, setActivePage] = useState(documentationIds.facetTitle);
-    const [state, setState] = useState({
-        color: 'white'
-    });
 
+    // TODO abstract this
     const listenScrollEvent = e => {
         if (window.scrollY < document.getElementById(documentationIds.facetTitle)?.offsetTop) {
-            setActivePage(documentationIds.facetTitle)
-        } else if (window.scrollY > document.getElementById(documentationIds.download)?.offsetTop && window.scrollY < document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop) {
-            setActivePage(documentationIds.oneLineCodeIntegration)
+            setActivePage(documentationIds.facetTitle);
         } else if (window.scrollY > document.getElementById(documentationIds.facetTitle)?.offsetTop && window.scrollY < document.getElementById(documentationIds.download)?.offsetTop) {
-            setActivePage(documentationIds.download)
-        } else if (window.scrollY > document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.facetDeclaration)?.offsetTop) {
-            setActivePage(documentationIds.facetDeclaration)
-        } else if (window.scrollY > document.getElementById(documentationIds.facetDeclaration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.holdOffRollOut)?.offsetTop) {
-            setActivePage(documentationIds.holdOffRollOut)
+            setActivePage(documentationIds.download);
+        } else if (window.scrollY > document.getElementById(documentationIds.download)?.offsetTop && window.scrollY < document.getElementById(documentationIds.facetDeclaration)?.offsetTop) {
+            setActivePage(documentationIds.facetDeclaration);
+        } else if (window.scrollY > document.getElementById(documentationIds.facetDeclaration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop) {
+            setActivePage(documentationIds.oneLineCodeIntegration);
+        } else if (window.scrollY > document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.holdOffRollOut)?.offsetTop) {
+            setActivePage(documentationIds.holdOffRollOut);
         } else if (window.scrollY > document.getElementById(documentationIds.holdOffRollOut)?.offsetTop) {
-            setActivePage(documentationIds.faq)
+            setActivePage(documentationIds.faq);
         }
     }
 
     useEffect(() => {
         window.addEventListener('scroll', listenScrollEvent);
-    }, [])
+    }, []);
+
+    const TocItem = (id, text) => <PaddingDiv onClick={() => { scrollTo(id) }}>
+        <div style={{ backgroundColor: activePage === id ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
+            <FacetLabel color={activePage === id ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text={text} />
+        </div>
+    </PaddingDiv>
 
     return (
-        <MainDiv id="sweetness">
-            <PaddingDiv onClick={() => { scrollTo(documentationIds.facetTitle) }}>
-                <div style={{ backgroundColor: activePage === documentationIds.facetTitle ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
-                    <FacetLabel color={activePage === documentationIds.facetTitle ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text="Facet" />
-                </div>
-            </PaddingDiv>
-            <PaddingDiv onClick={() => { scrollTo(documentationIds.download) }}>
-                <div style={{ backgroundColor: activePage === documentationIds.download ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
-                    <FacetLabel color={activePage === documentationIds.download ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text="Download" />
-                </div>
-            </PaddingDiv>
-            <PaddingDiv onClick={() => { scrollTo(documentationIds.oneLineCodeIntegration) }}>
-                <div style={{ backgroundColor: activePage === documentationIds.oneLineCodeIntegration ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
-                    <FacetLabel color={activePage === documentationIds.oneLineCodeIntegration ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text="Integration" />
-                </div>
-            </PaddingDiv>
-            <PaddingDiv onClick={() => { scrollTo(documentationIds.facetDeclaration); setActivePage(documentationIds.facetDeclaration) }}>
-                <div style={{ backgroundColor: activePage === documentationIds.facetDeclaration ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
-                    <FacetLabel color={activePage === documentationIds.facetDeclaration ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text="Declare" />
-                </div>
-            </PaddingDiv>
-            <PaddingDiv onClick={() => { scrollTo(documentationIds.holdOffRollOut); setActivePage(documentationIds.holdOffRollOut) }}>
-                <div style={{ backgroundColor: activePage === documentationIds.holdOffRollOut ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
-                    <FacetLabel color={activePage === documentationIds.holdOffRollOut ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text="Rollout" />
-                </div>
-            </PaddingDiv>
-            <PaddingDiv onClick={() => { scrollTo(documentationIds.faq); setActivePage(documentationIds.faq); }}>
-                <div style={{ backgroundColor: activePage === documentationIds.faq ? color.primary : color.secondaryGray, padding: ".5rem", borderRadius: ".51rem" }} >
-                    <FacetLabel color={activePage === documentationIds.faq ? color.white : color.black} fontSize={fontSize.medium} fontFamily={"Roboto"} fontWeight={400} text="Common Questions " />
-                </div>
-            </PaddingDiv>
+        <MainDiv>
+            {TocItem(documentationIds.facetTitle, documentationText.facetTitle)}
+            {TocItem(documentationIds.download, documentationText.download)}
+            {TocItem(documentationIds.facetDeclaration, documentationText.facetDeclaration)}
+            {TocItem(documentationIds.oneLineCodeIntegration, documentationText.oneLineCodeIntegration)}
+            {TocItem(documentationIds.holdOffRollOut, documentationText.holdOffRollOut)}
+            {TocItem(documentationIds.faq, documentationText.faq)}
         </MainDiv>
     );
 }

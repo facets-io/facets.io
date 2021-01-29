@@ -66,6 +66,15 @@ const documentationIds = {
     faq: 'documentation-faq'
 }
 
+const documentationText = {
+    download: 'Download',
+    facetTitle: 'Introduction',
+    facetDeclaration: 'Declaration',
+    holdOffRollOut: 'Rollout',
+    oneLineCodeIntegration: 'Integration',
+    faq: 'Common Questions'
+}
+
 const fontSize = {
     xxSmall: 'xx-small',
     xSmall: 'x-small',
@@ -86,5 +95,5 @@ const allFacets = {
 };
 
 export {
-    color, fontSize, allFacets, mountainWalkColors, documentationIds, snackbar
+    color, fontSize, allFacets, mountainWalkColors, documentationIds, snackbar, documentationText
 };
