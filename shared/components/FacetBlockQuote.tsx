@@ -4,8 +4,8 @@ const CenteredBlockQuote = styled.blockquote`
     text-align: center;
 `
 
-export default ({children}) => {
+export default ({ children }) => {
     return <CenteredBlockQuote>
-        ❝ {children} ❞
+        {children}
     </CenteredBlockQuote>
 }
