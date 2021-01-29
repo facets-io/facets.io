@@ -53,11 +53,12 @@ const snackbar = {
     info: {
         text: 'info',
         iconName: 'message-circle-outline',
-        fill:  color.white
+        fill: color.white
     }
 };
 
 const documentationIds = {
+    download: 'facet-download',
     facetTitle: 'documentation-facet-title',
     facetDeclaration: 'documentation-facet-declaration',
     holdOffRollOut: 'documentation-hold-off-rollout',
