@@ -1,7 +1,7 @@
-import FacetButton, {primaryBtnColor} from './FacetButton';
+import FacetButton, { primaryBtnColor } from './FacetButton';
 import FacetLink from './FacetLink';
 import styled from 'styled-components';
-import {color, fontSize} from '../constant';
+import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
 import JsonAnimation from "./JsonGIF";
@@ -48,58 +48,58 @@ const StyledImage = styled.img`
 export default function Navbar() {
     return (
         <div>
-            <MainDiv><FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Deliver Features Without Code"/>
+            <MainDiv><FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="No-code feature rollouts" />
             </MainDiv>
-            <br/>
-            <br/>
-            <br/>
+            <br />
+            <br />
+            <br />
             <MainDiv>
                 <div>
                     <div>
-                        <FacetParagraph text="Facets are a codeless solution for managing features. With facets, DevOps and product teams converge to deliver software faster and safer."/>
+                        <FacetParagraph text="Facets are a codeless solution for managing features. With facets, DevOps and Product teams converge to deliver software faster and safer." />
                         <BulletPoints>
-                            <div/>
+                            <div />
                             <div>
-                                <br/>
-                                <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                    <FacetParagraph text="Use a single line of code"/>
+                                <br />
+                                <Checkmark><StyledImage src="./checkmark4.svg" />
+                                    <FacetParagraph text="Use a single line of code" />
                                 </Checkmark>
                             </div>
-                            <div/>
+                            <div />
                             <div>
-                                <br/>
-                                <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                    <FacetParagraph text="Decouple feature management from engineering resources"/>
+                                <br />
+                                <Checkmark><StyledImage src="./checkmark4.svg" />
+                                    <FacetParagraph text="Decouple feature management from engineering resources" />
                                 </Checkmark>
                             </div>
-                            <div/>
+                            <div />
                             <div>
-                                <br/>
-                                <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                    <FacetParagraph text="Streamline your software delivery process "/>
+                                <br />
+                                <Checkmark><StyledImage src="./checkmark4.svg" />
+                                    <FacetParagraph text="Streamline your software delivery process " />
                                 </Checkmark>
                             </div>
                             <div>
-                            <br/>
-                            <Checkmark><StyledImage src="./checkmark4.svg"/>
-                                <FacetParagraph text="Instantly enable and disable features in production "/>
-                            </Checkmark>
-                    </div>
+                                <br />
+                                <Checkmark><StyledImage src="./checkmark4.svg" />
+                                    <FacetParagraph text="Instantly enable and disable features in production " />
+                                </Checkmark>
+                            </div>
                         </BulletPoints>
-                        <br/>
-                        <br/>
+                        <br />
+                        <br />
                         <ButtonDiv>
-                            <FacetButton colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" onClick={() => {location.href='https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh'}}/>
+                            <FacetButton colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
                         </ButtonDiv>
                     </div>
                 </div>
                 <div>
-                    <JsonAnimation style={{borderRadius: "0", overflow:"hidden", width: undefined, height: undefined, boxShadow: `0px 0px 600px -60px ${color.black}`}} animationData={mock_site}/>
+                    <JsonAnimation style={{ borderRadius: "0", overflow: "hidden", width: undefined, height: undefined, boxShadow: `0px 0px 600px -60px ${color.black}` }} animationData={mock_site} />
                 </div>
-                <br/>
-                <br/>
-                <br/>
-                <br/>
+                <br />
+                <br />
+                <br />
+                <br />
             </MainDiv>
         </div>
     );

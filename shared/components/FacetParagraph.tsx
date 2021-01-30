@@ -1,7 +1,7 @@
 import React from 'react';
-import {color as colors, fontSize} from '../constant';
+import { color as colors, fontSize } from '../constant';
 
-export default ({ text, color = colors.black, fontSize = 'medium' }) => {
+export default ({ text = null, color = colors.black, fontSize = 'medium', children = null }) => {
     return <span
         style={{
             width: '100%',
@@ -11,5 +11,8 @@ export default ({ text, color = colors.black, fontSize = 'medium' }) => {
             lineHeight: '168.1%'
 
         }}
-    >{text}</span>
+    >
+        {text}
+        {children}
+    </span>
 }

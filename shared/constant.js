@@ -53,16 +53,26 @@ const snackbar = {
     info: {
         text: 'info',
         iconName: 'message-circle-outline',
-        fill:  color.white
+        fill: color.white
     }
 };
 
 const documentationIds = {
+    download: 'facet-download',
     facetTitle: 'documentation-facet-title',
     facetDeclaration: 'documentation-facet-declaration',
     holdOffRollOut: 'documentation-hold-off-rollout',
     oneLineCodeIntegration: 'documentation-one-line-code-integration',
     faq: 'documentation-faq'
+}
+
+const documentationText = {
+    download: 'Download',
+    facetTitle: 'Introduction',
+    facetDeclaration: 'Declaration',
+    holdOffRollOut: 'Rollout',
+    oneLineCodeIntegration: 'Integration',
+    faq: 'Common Questions'
 }
 
 const fontSize = {
@@ -85,5 +95,5 @@ const allFacets = {
 };
 
 export {
-    color, fontSize, allFacets, mountainWalkColors, documentationIds, snackbar
+    color, fontSize, allFacets, mountainWalkColors, documentationIds, snackbar, documentationText
 };
