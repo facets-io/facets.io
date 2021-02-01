@@ -38,7 +38,7 @@ const StyledI = styled.i`
 `
 
 export default ({ name, size = "small", fill = color.lightGray,
-    isSelected = true, customHeight, width, iconWidth, iconHeight, children, ...other }) => {
+    isSelected = true, iconWidth, iconHeight, children = null, ...other }) => {
 
     useEffect(() => {
         eva.replace();
@@ -47,9 +47,6 @@ export default ({ name, size = "small", fill = color.lightGray,
     return <Icon
         {...other}>
         <StyledI
-            style={{
-                height: customHeight ? customHeight : ''
-            }}
             // @ts-ignore
             fill={fill}
             data-eva={name}
