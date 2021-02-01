@@ -40,13 +40,15 @@ export default function TOC() {
             setActivePage(documentationIds.facetTitle);
         } else if (window.scrollY > document.getElementById(documentationIds.facetTitle)?.offsetTop && window.scrollY < document.getElementById(documentationIds.download)?.offsetTop) {
             setActivePage(documentationIds.download);
-        } else if (window.scrollY > document.getElementById(documentationIds.download)?.offsetTop && window.scrollY < document.getElementById(documentationIds.facetDeclaration)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(documentationIds.download)?.offsetTop && window.scrollY < document.getElementById(documentationIds.addDomainToWorkspace)?.offsetTop) {
+            setActivePage(documentationIds.addDomainToWorkspace);
+        } else if (window.scrollY > document.getElementById(documentationIds.addDomainToWorkspace)?.offsetTop && window.scrollY < document.getElementById(documentationIds.facetDeclaration)?.offsetTop) {
             setActivePage(documentationIds.facetDeclaration);
-        } else if (window.scrollY > document.getElementById(documentationIds.facetDeclaration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(documentationIds.facetDeclaration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.preview)?.offsetTop) {
+            setActivePage(documentationIds.preview);
+        } else if (window.scrollY > document.getElementById(documentationIds.preview)?.offsetTop && window.scrollY < document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop) {
             setActivePage(documentationIds.oneLineCodeIntegration);
-        } else if (window.scrollY > document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.holdOffRollOut)?.offsetTop) {
-            setActivePage(documentationIds.holdOffRollOut);
-        } else if (window.scrollY > document.getElementById(documentationIds.holdOffRollOut)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.faq)?.offsetTop) {
             setActivePage(documentationIds.faq);
         }
     }
@@ -65,9 +67,10 @@ export default function TOC() {
         <MainDiv>
             {TocItem(documentationIds.facetTitle, documentationText.facetTitle)}
             {TocItem(documentationIds.download, documentationText.download)}
+            {TocItem(documentationIds.addDomainToWorkspace, documentationText.addDomainToWorkspace)}
             {TocItem(documentationIds.facetDeclaration, documentationText.facetDeclaration)}
+            {TocItem(documentationIds.preview, documentationText.preview)}
             {TocItem(documentationIds.oneLineCodeIntegration, documentationText.oneLineCodeIntegration)}
-            {TocItem(documentationIds.holdOffRollOut, documentationText.holdOffRollOut)}
             {TocItem(documentationIds.faq, documentationText.faq)}
         </MainDiv>
     );

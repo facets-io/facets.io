@@ -62,15 +62,19 @@ const documentationIds = {
     facetTitle: 'documentation-facet-title',
     facetDeclaration: 'documentation-facet-declaration',
     holdOffRollOut: 'documentation-hold-off-rollout',
+    addDomainToWorkspace: 'add-domain-to-workspace',
     oneLineCodeIntegration: 'documentation-one-line-code-integration',
+    preview: 'preview',
     faq: 'documentation-faq'
 }
 
 const documentationText = {
     download: 'Download',
     facetTitle: 'Introduction',
+    addDomainToWorkspace: 'Domain',
     facetDeclaration: 'Declaration',
     holdOffRollOut: 'Rollout',
+    preview: 'Preview',
     oneLineCodeIntegration: 'Integration',
     faq: 'Common Questions'
 }
