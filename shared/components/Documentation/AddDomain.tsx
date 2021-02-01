@@ -6,8 +6,8 @@ export default () => {
     return <>
         <FacetH1 id={documentationIds.addDomainToWorkspace}>Add Domain to Workspace</FacetH1>
         <FacetParagraph color={"#5D5D5D"} >
-            In order facet extension to run in the web page, click on the facet extension popup and click on "Add Domain To Workspace".
-            Once the domain is added on your workspace, a sidebar with options will open on the left side, allowing you to CRUD facets across the page.
+            Navigate to the webpage where you want to create facets and click on the facet extension icon on the top right corner of your browser.
+            Click on “Add Domain To Workspace” to enable the extension on this domain. The facet extension will remain enabled for every domain you add to your workspace. To enable or disable the extension on an added workspace or to remove it from the workspace, click on the facet extension icon on the top right corner of your browser.
         </FacetParagraph>
         <div style={{ textAlign: 'center' }}>
             <figure>

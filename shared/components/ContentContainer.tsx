@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import {color, color as colorConstant, fontSize} from '../constant';
-import FacetLabel from "./FacetLabel";
+import { color as colorConstant } from '../constant';
 
 const InnerDiv = styled.div`
     background-color: ${props => props.color};
@@ -17,11 +16,11 @@ const OuterDiv = styled.div`
     width: 100%;
 `;
 
-export default function ContentContainer({ color = colorConstant.black, padding = "3rem", paddingTop = "3rem", paddingBottom = "3rem",style = {}, children}) {
+export default function ContentContainer({ color = colorConstant.black, padding = "3rem", paddingTop = "3rem", paddingBottom = "3rem", style = {}, children }) {
     return (
         <OuterDiv style={style} color={color}>
             <InnerDiv padding={padding} paddingTop={paddingTop} paddingBottom={paddingBottom}>
-              {children}
+                {children}
             </InnerDiv>
         </OuterDiv>
     )

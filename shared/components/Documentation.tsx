@@ -1,15 +1,12 @@
 import styled from 'styled-components';
-import { color, color as colorConstant, documentationIds, fontSize } from '../constant';
+import { color } from '../constant';
 import FAQ from './FAQ';
-import FacetLabel from "./FacetLabel";
-import FacetParagraph from "./FacetParagraph";
-import FacetH1 from './FacetH1';
-import FacetBlockQuote from './FacetBlockQuote';
 import Introduction from './Documentation/Introduction';
 import DownloadAndInstall from './Documentation/DownloadAndInstall';
 import AddDomain from './Documentation/AddDomain';
 import FacetDeclaration from './Documentation/FacetDeclaration';
 import Preview from './Documentation/Preview';
+import Integration from './Documentation/Integration';
 
 const StyledDiv = styled.div`
     color: ${color.black};
@@ -30,6 +27,8 @@ export default () => {
                 <FacetDeclaration />
                 <br />
                 <Preview />
+                <br />
+                <Integration />
                 <br />
                 <FAQ />
                 <br />
