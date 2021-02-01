@@ -1,9 +1,10 @@
 import { documentationIds } from "../../constant"
+import FacetH1 from "../FacetH1"
 import FacetParagraph from "../FacetParagraph"
 
 export default () => {
     return <>
-        <h1 style={{ fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600 }} id={documentationIds.facetDeclaration}>Declare facets</h1>
+        <FacetH1 id={documentationIds.facetDeclaration}>Declare facets</FacetH1>
         <FacetParagraph color={"#5D5D5D"}>
             Creating/Reading/Updating/Deleting (CRUD) facets is achieved by using the facet extension. To start using facets, log into the platform. Navigate to the application where you want to create facets, and click on the facet extension icon on the top right corner of your browser. Click on “Whitelist” to enable the extension on this domain.
         </FacetParagraph>

@@ -7,8 +7,8 @@ const StyledH1 = styled.h1`
     font-weight: 600;
 `;
 
-export default ({ text, ...props }) => {
+export default ({ children, ...props }) => {
     return <StyledH1 {...props}>
-        {text}
+        {children}
     </StyledH1 >
 }
