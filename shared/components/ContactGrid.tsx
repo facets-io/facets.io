@@ -133,6 +133,7 @@ export default function ContactGrid() {
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="contact"
+                                        value={email}
                                         onChange={(e) => { setEmail(e.target.value) }}
                                         inputRef={register({
                                             required: 'Please specify an email',
