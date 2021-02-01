@@ -1,17 +1,14 @@
 import { useState } from 'react';
-import { allFacets } from '../constant';
+import {allFacets, color} from '../constant';
 import AppContext from './AppContext';
 import { SnackbarProvider } from 'notistack';
 import FacetSnackbar from './FacetSnackbar';
 
 const snackbarConfig = {
     autoHideDuration: 5000,
-    vertical: 'bottom',
+    vertical: 'top',
     horizontal: 'left'
 }
-
-
-
 
 export default function AppProvider({ children }) {
 
@@ -81,7 +78,7 @@ export default function AppProvider({ children }) {
     }}>
         {/* @ts-ignore */}
         <SnackbarProvider
-            style={{ height: '100%' }}
+            style={{ height: '100%'}}
             maxSnack={4}
             disableWindowBlurListener
             autoHideDuration={snackbarConfig.autoHideDuration}

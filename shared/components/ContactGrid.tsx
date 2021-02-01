@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { TextField } from '@material-ui/core'
+import {Input, TextField} from '@material-ui/core'
 import styled from 'styled-components'
 import { color, snackbar } from '../constant'
 import FacetButton, { primaryBtnColor } from './FacetButton'
@@ -57,12 +57,16 @@ export default function ContactGrid() {
         setIsCurrentUser(false)
     }
 
-    const onSubmit = async (data) => {
-        setSubmitting(true)
-        // HTTP call goes here ...
+    const onSubmit = async data => {
+        fetch('https://api.facet.run/notification', {
+            method: 'POST',
+            body: JSON.stringify(data)
+        })
+            .then(response => response.json())
+            .then(data => console.log(data));
         try {
             enqueueSnackbar({
-                message: 'Message sent! A member of our team will contact you shortly.',
+                message: 'Thank you!  We will get back to with soon.',
                 variant: snackbar.success.text
             })
             reset()
@@ -79,7 +83,7 @@ export default function ContactGrid() {
             <FacetLabel fontWeight={700} fontSize={"42px" } text="Want To Get In Touch?"/>
             <br />
             <br />
-            <FacetLabel fontWeight={300} fontSize={"20px" } text="We’d love to hear from you! Contct us using the form below and we’ll be happy to answer your questions." />
+            <FacetLabel fontWeight={300} fontSize={"20px" } text="We’d love to hear from you! Contact us using the form below and we’ll be happy to answer your questions." />
             <br />
             <br/>
                 <br/>
@@ -92,15 +96,17 @@ export default function ContactGrid() {
 
             <div style={{textAlign:"left",display:"grid",justifyContent:"left"}}>
                     <StyledForm onSubmit={(e) => e.preventDefault()}>
+                        <Input /* A hidden element to send hard coded value to API.*/ style={{display: "none"}} value="General Inquiry" name={"subject"} inputRef={register()}/>
                         <br />
                         <TwoColumnGrid>
                             <div>
                                 <FacetLabel text="First name" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
-                                        name="firstname"
+                                        name="firstName"
                                         value={firstName}
                                         onChange={(e) => { setFirstName(e.target.value) }}
+                                        inputRef={register()}
                                         /*@ts-ignore*/
                                         colorStyle={electricColor}
                                     />
@@ -110,9 +116,10 @@ export default function ContactGrid() {
                                 <FacetLabel text="Last name" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
-                                        name="lastname"
+                                        name="lastName"
                                         value={lastName}
                                         onChange={(e) => { setLastName(e.target.value) }}
+                                        inputRef={register()}
                                         /*@ts-ignore*/
                                         colorStyle={electricColor} />
                                 </div>
@@ -125,8 +132,7 @@ export default function ContactGrid() {
                                 <FacetLabel text="Email*" color={color.black}/>
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
-                                        name="email"
-                                        value={email}
+                                        name="contact"
                                         onChange={(e) => { setEmail(e.target.value) }}
                                         inputRef={register({
                                             required: 'Please specify an email',
@@ -146,6 +152,8 @@ export default function ContactGrid() {
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         value={companyName}
+                                        name="company"
+                                        inputRef={register()}
                                         onChange={(e) => { setCompanyName(e.target.value) }}
                                         /*@ts-ignore*/
                                         colorStyle={electricColor} />
@@ -157,6 +165,7 @@ export default function ContactGrid() {
                             <br />
                             <br />
                             <TextField
+                                name="message"
                                 style={{ backgroundColor:  color.white, width: '100%' }}
                                 id="filled-multiline-static"
                                 multiline
@@ -164,6 +173,7 @@ export default function ContactGrid() {
                                 variant="filled"
                                 value={message}
                                 onChange={(e) => { setMessage(e.target.value) }}
+                                inputRef={register()}
                                 InputProps={{
                                     style: {backgroundColor: color.white},
                                     disableUnderline: true
@@ -171,7 +181,7 @@ export default function ContactGrid() {
                             />
                             <br />
                             <br />
-                            <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={primaryBtnColor} style={{ width: '100%' }} text="Submit" />
+                                <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={primaryBtnColor} style={{ width: '100%' }} text="Submit" />
                         </div>
                     </StyledForm>
                 </div>
