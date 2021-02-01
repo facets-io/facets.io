@@ -43,7 +43,7 @@ export default () => {
             button at the bottom right corner of the extension.
             <div style={{ textAlign: 'center' }}>
                 <figure>
-                    <img width='100%' src='../../images/facet_extension_in_action.png' />
+                    <img width='100%' src='../../images/declare_facet_docs.png' />
                     <figcaption>Using the facet extension</figcaption>
                 </figure>
             </div>

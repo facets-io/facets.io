@@ -7,13 +7,14 @@ export default () => {
         <FacetH1 id={documentationIds.addDomainToWorkspace}>Add Domain to Workspace</FacetH1>
         <FacetParagraph color={"#5D5D5D"} >
             Navigate to the webpage where you want to create facets and click on the facet extension icon on the top right corner of your browser.
-            Click on “Add Domain To Workspace” to enable the extension on this domain. The facet extension will remain enabled for every domain you add to your workspace. To enable or disable the extension on an added workspace or to remove it from the workspace, click on the facet extension icon on the top right corner of your browser.
-        </FacetParagraph>
+            Click on “Add Domain To Workspace” to enable the extension on this domain.
+            The facet extension will remain enabled for every domain you add to your workspace. To enable or disable the extension on an added workspace or to remove it from the workspace, click on the facet extension icon on the top right corner of your browser.
         <div style={{ textAlign: 'center' }}>
-            <figure>
-                <img width='100%' src='../../add_to_workspace.png' />
-                <figcaption>Adding domain to the workspace</figcaption>
-            </figure>
-        </div>
+                <figure>
+                    <img width='100%' src='../../add_to_workspace.png' />
+                    <figcaption>Adding domain to the workspace</figcaption>
+                </figure>
+            </div>
+        </FacetParagraph>
     </>
 }

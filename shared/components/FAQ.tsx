@@ -73,7 +73,7 @@ export default function FAQ() {
                     <div style={{ textAlign: 'center' }}>
                             <figure>
                                 <img width='100%' src='../../images/authentication_facet_example.png' />
-                                <figcaption>Installing facet-extension in Chrome</figcaption>
+                                <figcaption>Facet declaration</figcaption>
                             </figure>
                         </div>
                     </Typography>
