@@ -40,11 +40,21 @@ export default () => {
                 fill={color.grayA}
                 name="plus-circle-outline"
                 title="Settings" />)
-            button at the bottom right corner of the extension.
+            button at the bottom right corner of the extension.  To save your configuration, click on the save icon (
+            <Icon
+                iconWidth="20"
+                iconHeight="15"
+                fill={color.grayA}
+                name="save-outline"
+                title="Settings" />) on the top navigation bar of the extension.
+            <br />
+            <br />
+            <br />
+            <br />
             <div style={{ textAlign: 'center' }}>
                 <figure>
                     <img width='100%' src='../../images/declare_facet_docs.png' />
-                    <figcaption>Using the facet extension</figcaption>
+                    <figcaption><i>Using the facet extension</i></figcaption>
                 </figure>
             </div>
         </FacetParagraph>

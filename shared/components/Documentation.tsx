@@ -14,24 +14,29 @@ const StyledDiv = styled.div`
     font-weight: 400;
 `;
 
+const Space = <>
+    < br />
+    < br />
+    < br />
+</>
+
 export default () => {
     return (
         <StyledDiv>
             <div>
                 <Introduction />
-                <br />
+                {Space}
                 <DownloadAndInstall />
-                <br />
+                {Space}
                 <AddDomain />
-                <br />
+                {Space}
                 <FacetDeclaration />
-                <br />
+                {Space}
                 <Preview />
-                <br />
+                {Space}
                 <Integration />
-                <br />
+                {Space}
                 <FAQ />
-                <br />
             </div>
         </StyledDiv >
     )

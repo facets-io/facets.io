@@ -42,7 +42,7 @@ export default function Secondary() {
                     </div>
                 </div>
                 <div>
-                    <img src="./single_line_of_code.svg"/>
+                    <iframe src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu"  style={{width: "656px", height: "310px", border: 0,  transform: "scale(1)", overflow: "hidden"}} sandbox="allow-scripts allow-same-origin" />
                 </div>
             </InnerDiv>
             <br />
