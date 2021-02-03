@@ -94,7 +94,7 @@ export default function Navbar() {
                     </div>
                 </div>
                 <div>
-                    <JsonAnimation style={{ borderRadius: "0", overflow: "hidden", width: undefined, height: undefined, boxShadow: `0px 0px 600px -60px ${color.black}` }} animationData={mock_site} />
+                    <JsonAnimation style={{ borderRadius: "0", overflow: "hidden", width: undefined, height: undefined, boxShadow: `0px 0px 300px -60px ${color.black}` }} animationData={mock_site} />
                 </div>
                 <br />
                 <br />

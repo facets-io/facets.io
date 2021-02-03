@@ -202,7 +202,7 @@ export default function PricingTable() {
                         <br />
                     </td>
                     <td>
-                        <FacetButton width='10rem' colorButtonStyle={secondaryBtnColor} fontSize={fontSize.medium} text="Contact Sales" onClick={() => {location.href='/contact'}}/>
+                        <FacetButton width='10rem' colorButtonStyle={secondaryBtnColor} fontSize={fontSize.medium} text="Contact Sales" onClick={() => {location.href='/contact/'}}/>
                         <br />
                         <br />
                     </td>
