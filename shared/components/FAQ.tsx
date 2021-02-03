@@ -180,20 +180,6 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-            <Accordion className={classes.shadow}>
-                <AccordionSummary
-                    expandIcon={<img src="/toc_expand.svg" />}
-                    aria-controls="panel3a-content"
-                    id="panel3a-header"
-                >
-                    <Typography className={classes.heading}>How to contact?</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <Typography className={classes.body}>
-                        Open <a href='https://github.com/facets-io/facet-extension/issues'>github issue</a> or email us at support@facet.run
-                    </Typography>
-                </AccordionDetails>
-            </Accordion>
         </StyledDiv>
     )
 }
