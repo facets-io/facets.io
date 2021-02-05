@@ -1,7 +1,8 @@
 import React from 'react';
-import {color as colors} from "../constant";
+import { color as colors } from "../constant";
 
-export default ({ text, color = colors.black, fontSize = 'small', fontFamily= 'Helvetica', textDecoration = "", fontWeight = 500, backgroundColor = "", border="", borderRadius="",  padding="0", paddingTop= "0", paddingBottom="0"},) => {
+export default ({ text, color = colors.black, fontSize = 'small', fontFamily = 'Helvetica', textDecoration = "none", fontWeight = 500, backgroundColor = "none",
+    border = "none", borderRadius = "none", padding = "0", paddingTop = "0", paddingBottom = "0" }) => {
     return <span
         style={{
             width: '100%',

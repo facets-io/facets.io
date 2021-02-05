@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, fontSize } from '../constant';
+import { color } from '../constant';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
 import { pages } from './AppContext'
@@ -45,8 +45,10 @@ const LabelContainer = styled.div`
     cursor: pointer;
 `
 
-
 export default function Navbar({ activePage = '' }) {
+
+    const NavLabel = ({ text }) => <FacetLabel fontFamily="Roboto" fontWeight={activePage === text ? 500 : 300} fontSize="16px" color={activePage === text ? color.primary : color.black} text={text} />;
+
     return (
         <OuterDiv>
             <InnerDiv>
@@ -61,27 +63,27 @@ export default function Navbar({ activePage = '' }) {
                 <RightDiv>
                     <Link href="/">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Home ? 500 : 300} fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={pages.Home} />
+                            <NavLabel text={pages.Home} />
                         </LabelContainer>
                     </Link>
                     <Link href="/pricing">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Pricing ? 500 : 300} fontSize={"16px"} color={activePage === pages.Pricing ? color.primary : color.black} text={pages.Pricing} />
+                            <NavLabel text={pages.Pricing} />
                         </LabelContainer>
                     </Link>
                     <Link href="/documentation">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Documentation ? 500 : 300} fontSize={"16px"} color={activePage === pages.Documentation ? color.primary : color.black} text={pages.Documentation} />
+                            <NavLabel text={pages.Documentation} />
                         </LabelContainer>
                     </Link>
                     <Link href="/blog">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Blog ? 500 : 300} fontSize={"16px"} color={activePage === pages.Blog ? color.primary : color.black} text={pages.Blog} />
+                            <NavLabel text={pages.Blog} />
                         </LabelContainer>
                     </Link>
                     <Link href="/contact">
                         <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Contact ? 500 : 300} fontSize={"16px"} color={activePage === pages.Contact ? color.primary : color.black} text={pages.Contact} />
+                            <NavLabel text={pages.Contact} />
                         </LabelContainer>
                     </Link>
                     <Link href="https:github.com/facets-io">

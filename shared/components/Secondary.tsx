@@ -1,4 +1,4 @@
-import styled  from 'styled-components';
+import styled from 'styled-components';
 import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
@@ -16,13 +16,20 @@ const InnerDiv = styled.div`
     justify-content: center;
 `;
 
+const BottomDiv = styled.div`
+    display: grid, 
+    justifyContent: center;
+`;
+
+const StyledFacetLabel = ({ text, fontSize = '36px' }) => <FacetLabel color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
+
 export default function Secondary() {
     return (
         <MainDiv>
             <br />
             <br />
             <br />
-            <FacetLabel color={color.black} fontSize={"36px"} fontWeight={700} text="Unrivaled Feature Management" />
+            <StyledFacetLabel text='Unrivaled Feature Management' />
             <br />
             <br />
             <br />
@@ -31,9 +38,16 @@ export default function Secondary() {
             <br />
             <InnerDiv>
                 <div>
+                    <b>
+                        <StyledFacetLabel fontSize='27px' text='Install' />
+                    </b>
+                </div>
+            </InnerDiv>
+            {/* <InnerDiv>
+                <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Install" />
+                            <StyledFacetLabel fontSize='27px' text='Install' />
                         </b>
                     </div>
                     <br />
@@ -42,25 +56,26 @@ export default function Secondary() {
                     </div>
                 </div>
                 <div>
-                    <iframe src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu"  style={{width: "656px", height: "310px", border: 0,  transform: "scale(1.3)", overflow: "hidden"}} sandbox="allow-scripts allow-same-origin" />
                 </div>
             </InnerDiv>
             <br />
             <br />
             <br />
             <InnerDiv>
-                <div style={{textAlign: "center"}}>
-                    <img style={{boxShadow: `0px 0px 100px -40px ${color.black}`}} src="./declare_facet.svg"/>
+                <div style={{ textAlign: "center" }}>
+                    <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
                 </div>
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700}  text="Declare" />
+                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Declare" />
                         </b>
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule." />
+                        <FacetParagraph >
+                            Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule.
+                        </FacetParagraph>
                     </div>
                 </div>
             </InnerDiv>
@@ -71,18 +86,20 @@ export default function Secondary() {
                 <div>
                     <div>
                         <b>
-                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700}  text="Deploy" />
+                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Deploy" />
                         </b>
                     </div>
                     <br />
                     <div>
-                        <FacetParagraph text="Deploy and roll back features instantly. The facet extension decouples feature management from developer resources, giving your team ultimate control over your software delivery process." />
+                        <FacetParagraph >
+                            Deploy and roll back features instantly. The facet extension decouples feature management from developer resources, giving your team ultimate control over your software delivery process.
+                        </FacetParagraph>
                     </div>
                 </div>
-                <div style={{display:"grid",justifyContent:"center"}}>
-                    <img style={{top:"-5.3rem", position: "relative"}} src="./rocket.svg"/>
-                </div>
-            </InnerDiv>
+                <BottomDiv>
+                    <img style={{ top: "-5.3rem", position: "relative" }} src="./rocket.svg" />
+                </BottomDiv>
+            </InnerDiv> */}
         </MainDiv>
     );
 }

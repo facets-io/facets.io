@@ -16,7 +16,15 @@ const OuterDiv = styled.div`
     width: 100%;
 `;
 
-export default function ContentContainer({ color = colorConstant.black, padding = "3rem", paddingTop = "3rem", paddingBottom = "3rem", style = {}, children }) {
+const navBarStyle = {
+    position: "fixed",
+    top: ".275rem",
+    width: "100%",
+    zIndex: 500
+}
+
+export default function ContentContainer({ color = colorConstant.black, padding = "3rem", paddingTop = "3rem", paddingBottom = "3rem", isNavBar = false, children }) {
+    const style = isNavBar ? navBarStyle : {};
     return (
         <OuterDiv style={style} color={color}>
             <InnerDiv padding={padding} paddingTop={paddingTop} paddingBottom={paddingBottom}>

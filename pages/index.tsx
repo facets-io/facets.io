@@ -12,7 +12,7 @@ import AppProvider from '../shared/components/AppProvider'
 import StayUpdated from '../shared/components/StayUpdated'
 import FacetHead from './FacetHead'
 import styled from 'styled-components';
-import {pages} from "../shared/components/AppContext";
+import { pages } from "../shared/components/AppContext";
 
 const Border = styled.div`
   background-color: ${color.primary};
@@ -26,11 +26,12 @@ const Border = styled.div`
 export default function Home() {
   return (
     <AppProvider>
-      <div className={styles.container}>
+      <div>
         <FacetHead />
+        <div>This is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long text</div>
         <Border />
-        <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"} color={color.white}>
-          <Navbar activePage={pages.Home}/>
+        <ContentContainer isNavBar paddingTop={"1rem"} paddingBottom={".5rem"} color={color.white}>
+          <Navbar activePage={pages.Home} />
         </ContentContainer>
         <ContentContainer color={color.white} paddingTop={"9rem"}>
           <Topbar />
@@ -38,12 +39,12 @@ export default function Home() {
         <ContentContainer color={color.secondaryGray}>
           <Secondary />
         </ContentContainer>
-        <ContentContainer  color={color.white}>
+        {/* <ContentContainer color={color.white}>
           <Democratizing />
         </ContentContainer>
         <ContentContainer color={color.secondaryGray}>
           <Footer />
-        </ContentContainer>
+        </ContentContainer> */}
       </div>
     </AppProvider>
   )
