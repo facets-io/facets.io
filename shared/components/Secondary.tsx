@@ -23,67 +23,59 @@ const StyledImg = styled.img`
 `;
 
 const StyledFacetLabel = ({ text, fontSize = '36px', style = {} }) => <FacetLabel extraStyle={style} color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
+const tpiElements = [
+    {
+        title: <div>
+            <b>
+                <StyledFacetLabel fontSize='27px' text='Install' />
+            </b>
+        </div>,
+        paragraph: <div>
+            <FacetParagraph text="A one-time installation of the facet extension allows your team to release features seamlessly. Using facets requires no setup or maintenance work." />
+        </div>,
+        image: <div>
+            <iframe src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu" style={{ width: "656px", height: "310px", border: 0, transform: "scale(1.3)", overflow: "hidden" }} sandbox="allow-scripts allow-same-origin" />
+        </div>
+    },
+    {
+        title: <div>
+            <b>
+                <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Declare" />
+            </b>
+        </div>,
+        paragraph: <div>
+            <FacetParagraph >
+                Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule.
+        </FacetParagraph>
+        </div>,
+        image: <div style={{ textAlign: "center" }}>
+            <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
+        </div>
+    },
+    {
+        title: <div>
+            <b>
+                <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Deploy" />
+            </b>
+        </div>,
+        paragraph: <div>
+            <FacetParagraph >
+                Deploy and roll back features instantly. The facet extension decouples feature management from developer resources, giving your team ultimate control over your software delivery process.
+        </FacetParagraph>
+        </div>,
+        image: <div>
+            <StyledImg src="./rocket.svg" />
+        </div>
+    }
 
+]
 export default function Secondary() {
     return (
         <MainDiv>
             <StyledFacetLabel style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
-            <TitleParagraphImage>
-                <div>
-                    <b>
-                        <StyledFacetLabel fontSize='27px' text='Install' />
-                    </b>
-                </div>
-                <br />
-                <div>
-                    <FacetParagraph text="A one-time installation of the facet extension allows your team to release features seamlessly. Using facets requires no setup or maintenance work." />
-                </div>
-                <div>
-                    //TODO
-                </div>
-                {/* <div>
-                    <iframe src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu" style={{ width: "656px", height: "310px", border: 0, transform: "scale(1.3)", overflow: "hidden" }} sandbox="allow-scripts allow-same-origin" />
-                </div> */}
-            </TitleParagraphImage>
-            <TitleParagraphImage>
-                <div>
-                    <div>
-                        <b>
-                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Declare" />
-                        </b>
-                    </div>
-                    <br />
-                    <div>
-                        <FacetParagraph >
-                            Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule.
-                        </FacetParagraph>
-                    </div>
-                    <br />
-                    <div style={{ textAlign: "center" }}>
-                        <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
-                    </div>
-                </div>
-            </TitleParagraphImage>
-            <TitleParagraphImage>
-                <div>
-                    <div>
-                        <b>
-                            <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Deploy" />
-                        </b>
-                    </div>
-                    <br />
-                    <div>
-                        <FacetParagraph >
-                            Deploy and roll back features instantly. The facet extension decouples feature management from developer resources, giving your team ultimate control over your software delivery process.
-                        </FacetParagraph>
-                    </div>
-                </div>
-                <BottomDiv>
-                    <div>
-                        <StyledImg src="./rocket.svg" />
-                    </div>
-                </BottomDiv>
-            </TitleParagraphImage>
+            <TitleParagraphImage element={tpiElements[0]} />
+            <TitleParagraphImage isReverse element={tpiElements[1]} />
+            <TitleParagraphImage element={tpiElements[2]} />
         </MainDiv>
     );
 }

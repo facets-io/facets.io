@@ -28,9 +28,8 @@ export default function Home() {
     <AppProvider>
       <div>
         <FacetHead />
-        <div>This is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long textThis is a very long text</div>
         <Border />
-        <ContentContainer isNavBar paddingTop={"1rem"} paddingBottom={".5rem"} color={color.white}>
+        <ContentContainer isNavBar color={color.white}>
           <Navbar activePage={pages.Home} />
         </ContentContainer>
         <ContentContainer color={color.white} paddingTop={"9rem"}>

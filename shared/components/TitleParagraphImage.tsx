@@ -1,6 +1,6 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { responsiveThresholds } from '../constant';
+import { isMobile, responsiveThresholds } from '../constant';
 import useMedia from '../hooks/useMedia';
 
 const InnerDiv = styled.div`
@@ -18,10 +18,37 @@ const InnerDiv = styled.div`
 `;
 
 
-export default ({ children = null }) => {
-    const column = useMedia();
+export default ({ element, isReverse = false, children = null }) => {
+    const media = useMedia();
+    // const [isViewMobile, setIsViewMobile] = useState(false);
 
-    return <InnerDiv order>
-        {children}
-    </InnerDiv>
+    // setIsViewMobile(isMobile(media))
+    const isViewMobile = isMobile(media);
+
+    const result = isViewMobile ? <InnerDiv>
+        <div>
+            {element.title}
+            {element.paragraph}
+            {element.image}
+        </div>
+    </InnerDiv> : !isReverse ? <InnerDiv>
+        <div>
+            {element.title}
+            {element.paragraph}
+        </div>
+        <div>
+            {element.image}
+        </div>
+
+    </InnerDiv> : <InnerDiv>
+                <div>
+                    {element.image}
+                </div>
+                <div>
+                    {element.title}
+                    {element.paragraph}
+                </div>
+            </InnerDiv>
+
+    return result;
 }

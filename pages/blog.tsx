@@ -7,10 +7,7 @@ export default function BlogPage() {
         <AppProvider>
             <PageContainer>
                 <FacetHead />
-                <div>
-                This is a very long long textThis is a very long long textThis is a very long long textThis is a very long long textThis is a very long long textThis is a very long long textThis is a very long long textThis is a very long long textThis is a very long long textThis is a very long long text
 
-                </div>
             </PageContainer>
         </AppProvider>
     )
