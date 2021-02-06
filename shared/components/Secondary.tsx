@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, fontSize } from '../constant';
+import { color } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
 import TitleParagraphImage from './TitleParagraphImage';
@@ -7,20 +7,6 @@ import TitleParagraphImage from './TitleParagraphImage';
 const MainDiv = styled.div`
     width: 100%;
     text-align: center;
-`;
-
-const InnerDiv = styled.div`
-    display: grid;
-    grid-gap: 5%;
-    grid-template-columns: 40% 40%;
-    text-align: initial;
-    justify-content: center;
-    margin-top: 2rem;
-
-    @media (max-width: 768px) {
-        display: grid;
-        grid-template-columns: 100%;
-    }
 `;
 
 const BottomDiv = styled.div`
@@ -42,7 +28,7 @@ export default function Secondary() {
     return (
         <MainDiv>
             <StyledFacetLabel style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
-            <InnerDiv>
+            <TitleParagraphImage>
                 <div>
                     <b>
                         <StyledFacetLabel fontSize='27px' text='Install' />
@@ -58,9 +44,8 @@ export default function Secondary() {
                 {/* <div>
                     <iframe src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu" style={{ width: "656px", height: "310px", border: 0, transform: "scale(1.3)", overflow: "hidden" }} sandbox="allow-scripts allow-same-origin" />
                 </div> */}
-                <TitleParagraphImage />
-            </InnerDiv>
-            <InnerDiv>
+            </TitleParagraphImage>
+            <TitleParagraphImage>
                 <div>
                     <div>
                         <b>
@@ -78,8 +63,8 @@ export default function Secondary() {
                         <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
                     </div>
                 </div>
-            </InnerDiv>
-            <InnerDiv>
+            </TitleParagraphImage>
+            <TitleParagraphImage>
                 <div>
                     <div>
                         <b>
@@ -98,19 +83,7 @@ export default function Secondary() {
                         <StyledImg src="./rocket.svg" />
                     </div>
                 </BottomDiv>
-            </InnerDiv>
-            {/*
-           
-             */}
-            {/* 
-            <br />
-            <br />
-            <br />
-            
-            <br />
-            <br />
-            <br />
-            */}
+            </TitleParagraphImage>
         </MainDiv>
     );
 }

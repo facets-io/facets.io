@@ -8,7 +8,7 @@ import ContactGrid from '../shared/components/ContactGrid'
 import AppProvider from '../shared/components/AppProvider'
 import { pages } from '../shared/components/AppContext'
 import FacetHead from './FacetHead'
-import {inspect} from "util";
+import { inspect } from "util";
 import styles from "../styles/Home.module.css";
 
 const PageContainer = styled.div`
@@ -32,14 +32,14 @@ export default function ContactPage() {
             <div className={styles.container}>
                 <FacetHead />
                 <Border />
-                <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"} color={color.white}>
+                <ContentContainer isNavBar>
                     <Navbar activePage={pages.Contact} />
                 </ContentContainer>
                 <ContentContainer color={color.white} paddingTop={"9rem"}>
                     <ContactGrid />
                 </ContentContainer>
                 <ContentContainer color={color.secondaryGray}>
-                    <Footer/>
+                    <Footer />
                 </ContentContainer>
             </div>
         </AppProvider>

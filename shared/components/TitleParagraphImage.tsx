@@ -17,11 +17,11 @@ const InnerDiv = styled.div`
     }
 `;
 
-export default ({ ordered = true }) => {
+
+export default ({ children = null }) => {
     const column = useMedia();
-    console.log('h!', column);
 
-    return <InnerDiv>
-
+    return <InnerDiv order>
+        {children}
     </InnerDiv>
 }

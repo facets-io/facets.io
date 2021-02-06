@@ -31,10 +31,10 @@ const Border = styled.div`
 export default function PricingPage() {
     return (
         <AppProvider>
-            <div className={styles.container} style={{position: "relative"}}>
+            <div className={styles.container} style={{ position: "relative" }}>
                 <FacetHead />
                 <Border />
-                <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"} color={color.white}>
+                <ContentContainer isNavBar>
                     <Navbar activePage={pages.Pricing} />
                 </ContentContainer>
                 <ContentContainer color={color.white} paddingTop={"9rem"}>
@@ -42,7 +42,7 @@ export default function PricingPage() {
                         <PricingHeader />
                     </MainDiv>
                 </ContentContainer>
-                <ContentContainer color={color.secondaryGray} style={{height: "40%"}}>
+                <ContentContainer color={color.secondaryGray}>
                     <br />
                     <Footer />
                 </ContentContainer>
