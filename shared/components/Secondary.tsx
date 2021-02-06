@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
+import TitleParagraphImage from './TitleParagraphImage';
 
 const MainDiv = styled.div`
     width: 100%;
@@ -14,57 +15,52 @@ const InnerDiv = styled.div`
     grid-template-columns: 40% 40%;
     text-align: initial;
     justify-content: center;
+    margin-top: 2rem;
+
+    @media (max-width: 768px) {
+        display: grid;
+        grid-template-columns: 100%;
+    }
 `;
 
 const BottomDiv = styled.div`
-    display: grid, 
-    justifyContent: center;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 100%;
 `;
 
-const StyledFacetLabel = ({ text, fontSize = '36px' }) => <FacetLabel color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
+const StyledImg = styled.img`
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+`;
+
+const StyledFacetLabel = ({ text, fontSize = '36px', style = {} }) => <FacetLabel extraStyle={style} color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
 
 export default function Secondary() {
     return (
         <MainDiv>
-            <br />
-            <br />
-            <br />
-            <StyledFacetLabel text='Unrivaled Feature Management' />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
+            <StyledFacetLabel style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
             <InnerDiv>
                 <div>
                     <b>
                         <StyledFacetLabel fontSize='27px' text='Install' />
                     </b>
                 </div>
-            </InnerDiv>
-            {/* <InnerDiv>
+                <br />
                 <div>
-                    <div>
-                        <b>
-                            <StyledFacetLabel fontSize='27px' text='Install' />
-                        </b>
-                    </div>
-                    <br />
-                    <div>
-                        <FacetParagraph text="A one-time installation of the facet extension allows your team to release features seamlessly. Using facets requires no setup or maintenance work." />
-                    </div>
+                    <FacetParagraph text="A one-time installation of the facet extension allows your team to release features seamlessly. Using facets requires no setup or maintenance work." />
                 </div>
                 <div>
+                    //TODO
                 </div>
+                {/* <div>
+                    <iframe src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu" style={{ width: "656px", height: "310px", border: 0, transform: "scale(1.3)", overflow: "hidden" }} sandbox="allow-scripts allow-same-origin" />
+                </div> */}
+                <TitleParagraphImage />
             </InnerDiv>
-            <br />
-            <br />
-            <br />
             <InnerDiv>
-                <div style={{ textAlign: "center" }}>
-                    <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
-                </div>
                 <div>
                     <div>
                         <b>
@@ -77,11 +73,12 @@ export default function Secondary() {
                             Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule.
                         </FacetParagraph>
                     </div>
+                    <br />
+                    <div style={{ textAlign: "center" }}>
+                        <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
+                    </div>
                 </div>
             </InnerDiv>
-            <br />
-            <br />
-            <br />
             <InnerDiv>
                 <div>
                     <div>
@@ -97,9 +94,23 @@ export default function Secondary() {
                     </div>
                 </div>
                 <BottomDiv>
-                    <img style={{ top: "-5.3rem", position: "relative" }} src="./rocket.svg" />
+                    <div>
+                        <StyledImg src="./rocket.svg" />
+                    </div>
                 </BottomDiv>
-            </InnerDiv> */}
+            </InnerDiv>
+            {/*
+           
+             */}
+            {/* 
+            <br />
+            <br />
+            <br />
+            
+            <br />
+            <br />
+            <br />
+            */}
         </MainDiv>
     );
 }

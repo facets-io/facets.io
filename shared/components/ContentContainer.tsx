@@ -23,7 +23,7 @@ const navBarStyle = {
     zIndex: 500
 }
 
-export default function ContentContainer({ color = colorConstant.black, padding = "3rem", paddingTop = "3rem", paddingBottom = "3rem", isNavBar = false, children }) {
+export default function ContentContainer({ color = colorConstant.black, padding = "0", paddingTop = "0", paddingBottom = "0", isNavBar = false, children }) {
     const style = isNavBar ? navBarStyle : {};
     return (
         <OuterDiv style={style} color={color}>

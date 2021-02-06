@@ -98,6 +98,14 @@ const allFacets = {
     facet5: 'Facet-Content'
 };
 
+const responsiveThresholds = {
+    xs: '(max-width: 320px)',
+    sm: '(max-width: 720px)',
+    md: '(max-width: 1024px)',
+    upperTH: '(min-width: 1024px)'
+}
+
 export {
-    color, fontSize, allFacets, mountainWalkColors, documentationIds, snackbar, documentationText
+    color, fontSize, allFacets, mountainWalkColors, documentationIds,
+    snackbar, documentationText, responsiveThresholds
 };
