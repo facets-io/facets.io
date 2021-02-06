@@ -13,7 +13,7 @@ export default () => {
     const getValue = () => {
         // Get index of first media query that matches
         const index = mediaQueryLists.findIndex(mql => mql.matches);
-        
+
         return queries[index];
     };
 

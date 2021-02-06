@@ -105,7 +105,11 @@ const responsiveThresholds = {
     upperTH: '(min-width: 1024px)'
 }
 
+const isMobile = (threshHoldValue) => {
+    return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm;
+}
+
 export {
     color, fontSize, allFacets, mountainWalkColors, documentationIds,
-    snackbar, documentationText, responsiveThresholds
+    snackbar, documentationText, responsiveThresholds, isMobile
 };
