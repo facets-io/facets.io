@@ -3,6 +3,7 @@ import { color } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
 import TitleParagraphImage from './TitleParagraphImage';
+import { CopyBlock, dracula } from "react-code-blocks";
 
 const MainDiv = styled.div`
     width: 100%;
@@ -15,6 +16,7 @@ const StyledImg = styled.img`
     margin-right: auto;
     display: block;
     top: 0;
+    width: 100%;
 
     @media (min-width: 1024px) {
         display: grid;
@@ -37,7 +39,20 @@ const tpiElements = [
             <FacetParagraph text="A one-time installation of the facet extension allows your team to release features seamlessly. Using facets requires no setup or maintenance work." />
         </div>,
         image: <div>
-            <iframe scrolling="no" src="https://carbon.now.sh/embed/ySE7xaQp2xii4cLsQ6mu" style={{ width: "456px", height: "310px", border: 0, transform: "scale(1.3)", overflow: "hidden" }} sandbox="allow-scripts allow-same-origin" />
+            <CopyBlock
+                style={{ textAlign: 'left' }}
+                text={`<Head>
+
+    <script src="https://api.facet.run/js?id={ID}"></script>
+    <title>...</title>
+
+</Head>`}
+                language={'jsx'}
+                theme={dracula}
+                wrapLines={true}
+                codeBlock
+                highlight="1,3"
+            />
         </div>
     },
     {
@@ -52,7 +67,7 @@ const tpiElements = [
         </FacetParagraph>
         </div>,
         image: <div style={{ textAlign: "center" }}>
-            <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}` }} src="./declare_facet.svg" />
+            <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}`, width: '100%' }} src="./declare_facet.svg" />
         </div>
     },
     {

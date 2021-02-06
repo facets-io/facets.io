@@ -17,16 +17,6 @@ const InnerDiv = styled.div`
     }
 `;
 
-
-const Centered = styled.div`
-    text-align: center;
-`;
-
-const space = <>
-    <br />
-    <br />
-</>;
-
 export default ({ element, isReverse = false }) => {
     const media = useMedia();
     const isViewMobile = isMobile(media);
@@ -34,23 +24,27 @@ export default ({ element, isReverse = false }) => {
     const result = isViewMobile ? <InnerDiv>
         <div>
             {element.title}
+            <br />
             {element.paragraph}
-            {space}
-            <Centered>
+            <br />
+            <br />
+            <div>
                 {element.image}
-            </Centered>
+            </div>
         </div>
     </InnerDiv> : !isReverse ? <InnerDiv>
         <div>
             {element.title}
             {element.paragraph}
         </div>
-        <Centered>
+        <div>
+            <br />
             {element.image}
-        </Centered>
+        </div>
 
     </InnerDiv> : <InnerDiv>
                 <div>
+                    <br />
                     {element.image}
                 </div>
                 <div>
