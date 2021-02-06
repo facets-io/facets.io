@@ -7,28 +7,17 @@ import Democratizing from '../shared/components/Democritizing'
 import Footer from '../shared/components/Footer'
 import ContentContainer from '../shared/components/ContentContainer'
 import { color } from '../shared/constant'
-import SimpleSafeFast from '../shared/components/SimpleSafeFast'
 import AppProvider from '../shared/components/AppProvider'
-import StayUpdated from '../shared/components/StayUpdated'
 import FacetHead from './FacetHead'
-import styled from 'styled-components';
 import { pages } from "../shared/components/AppContext";
-
-const Border = styled.div`
-  background-color: ${color.primary};
-  position:fixed;
-  top:0;
-  width:100%;
-  height: .275rem;
-  z-index: 500;
-`;
+import TopBorder from '../shared/components/TopBorder'
 
 export default function Home() {
   return (
     <AppProvider>
       <div>
         <FacetHead />
-        <Border />
+        <TopBorder />
         <ContentContainer isNavBar color={color.white}>
           <Navbar activePage={pages.Home} />
         </ContentContainer>

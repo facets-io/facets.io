@@ -8,30 +8,15 @@ import ContactGrid from '../shared/components/ContactGrid'
 import AppProvider from '../shared/components/AppProvider'
 import { pages } from '../shared/components/AppContext'
 import FacetHead from './FacetHead'
-import { inspect } from "util";
 import styles from "../styles/Home.module.css";
-
-const PageContainer = styled.div`
-    display: grid;
-    height: 100%;
-`
-
-const Border = styled.div`
-  background-color: ${color.primary};
-  position:sticky;
-  top:0;
-  width:100%;
-  height: .275rem;
-  z-index: 500;
-`;
-
+import TopBorder from '../shared/components/TopBorder'
 
 export default function ContactPage() {
     return (
         <AppProvider>
             <div className={styles.container}>
                 <FacetHead />
-                <Border />
+                <TopBorder />
                 <ContentContainer isNavBar>
                     <Navbar activePage={pages.Contact} />
                 </ContentContainer>

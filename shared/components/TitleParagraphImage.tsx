@@ -1,6 +1,5 @@
-import { useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { isMobile, responsiveThresholds } from '../constant';
+import { isMobile } from '../constant';
 import useMedia from '../hooks/useMedia';
 
 const InnerDiv = styled.div`
@@ -11,34 +10,44 @@ const InnerDiv = styled.div`
     justify-content: center;
     margin-top: 2rem;
 
-    @media (max-width: 768px) {
+    @media (max-width: 1024px) {
         display: grid;
-        grid-template-columns: 100%;
+        grid-template-columns: 85%;
+        justify-content: center;
     }
 `;
 
 
-export default ({ element, isReverse = false, children = null }) => {
-    const media = useMedia();
-    // const [isViewMobile, setIsViewMobile] = useState(false);
+const Centered = styled.div`
+    text-align: center;
+`;
 
-    // setIsViewMobile(isMobile(media))
+const space = <>
+    <br />
+    <br />
+</>;
+
+export default ({ element, isReverse = false }) => {
+    const media = useMedia();
     const isViewMobile = isMobile(media);
 
     const result = isViewMobile ? <InnerDiv>
         <div>
             {element.title}
             {element.paragraph}
-            {element.image}
+            {space}
+            <Centered>
+                {element.image}
+            </Centered>
         </div>
     </InnerDiv> : !isReverse ? <InnerDiv>
         <div>
             {element.title}
             {element.paragraph}
         </div>
-        <div>
+        <Centered>
             {element.image}
-        </div>
+        </Centered>
 
     </InnerDiv> : <InnerDiv>
                 <div>
@@ -49,6 +58,5 @@ export default ({ element, isReverse = false, children = null }) => {
                     {element.paragraph}
                 </div>
             </InnerDiv>
-
     return result;
 }
