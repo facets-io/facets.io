@@ -1,15 +1,28 @@
+import { useState } from 'react';
 import styled from 'styled-components';
-import { color, fontSize } from '../constant';
+import { color, isMobile, isMobileLg } from '../constant';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
 import { pages } from './AppContext'
 import FacetButton, { primaryBtnColor } from "./FacetButton";
+import useMedia from '../hooks/useMedia';
+import FacetIconButton from './FacetIconButton';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const LogoDiv = styled.div`
     display: grid;
-    grid-template-columns: 4rem 3rem;
+    grid-template-columns: 5rem 3rem;
     cursor: pointer;
     align-items: center;
+
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-gap: 2%;
+        grid-template-columns: 2rem;
+        align-items: center;
+        justify-content: start;
+    }
 `;
 
 const LeftDiv = styled.div`
@@ -29,7 +42,7 @@ const RightDiv = styled.div`
 
 const InnerDiv = styled.div`
     display: grid;
-    grid-template-columns: 52.4% 52.4%;
+    grid-template-columns: 26% 52%;
     align-items: center;
     justify-content: left;
 `;
@@ -38,62 +51,157 @@ const OuterDiv = styled.div`
     display: grid;
     grid-template-columns: 85%; 
     justify-content: center;
-    +6352
+
+    @media (max-width: 1024px) {
+        display: grid;
+        grid-gap: 5%;
+        grid-template-columns: 50% 15% 10%;
+        align-items: center;
+        justify-content: center;
+    }
 `;
 
 const LabelContainer = styled.div`
     cursor: pointer;
 `
 
-
 export default function Navbar({ activePage = '' }) {
-    return (
+    const media = useMedia();
+    const isViewMobile = isMobileLg(media);
+    const [anchorEl, setAnchorEl] = useState(null);
+
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+    const NavLabel = ({ text }) => <FacetLabel fontFamily="Roboto" fontWeight={activePage === text ? 500 : 300} fontSize="16px" color={activePage === text ? color.primary : color.black} text={text} />;
+
+    const LogoLink = isViewMobile ? <Link href="/">
+        <LogoDiv>
+            <img src="/facet_primary.svg" alt="Facet logo" />
+        </LogoDiv>
+    </Link> : <Link href="/">
+            <LogoDiv>
+                <img src="/facet_primary.svg" alt="Facet logo" />
+                <img src="/facet_typography_black.svg" alt="Facet" />
+            </LogoDiv>
+        </Link>;
+
+    const displayingElement = isViewMobile ? <>
         <OuterDiv>
-            <InnerDiv>
-                <LeftDiv>
-                    <Link href="/">
-                        <LogoDiv>
-                            <img src="/facet_primary.svg" alt="Facet logo" />
-                            <img src="/facet_typography_black.svg" alt="Facet" />
-                        </LogoDiv>
-                    </Link>
-                </LeftDiv>
-                <RightDiv>
-                    <Link href="/">
-                        <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Home ? 500 : 300} fontSize={"16px"} color={activePage === pages.Home ? color.primary : color.black} text={pages.Home} />
-                        </LabelContainer>
-                    </Link>
-                    <Link href="/pricing">
-                        <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Pricing ? 500 : 300} fontSize={"16px"} color={activePage === pages.Pricing ? color.primary : color.black} text={pages.Pricing} />
-                        </LabelContainer>
-                    </Link>
-                    <Link href="/documentation">
-                        <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Documentation ? 500 : 300} fontSize={"16px"} color={activePage === pages.Documentation ? color.primary : color.black} text={pages.Documentation} />
-                        </LabelContainer>
-                    </Link>
-                    <Link href="/blog">
-                        <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Blog ? 500 : 300} fontSize={"16px"} color={activePage === pages.Blog ? color.primary : color.black} text={pages.Blog} />
-                        </LabelContainer>
-                    </Link>
-                    <Link href="/contact">
-                        <LabelContainer>
-                            <FacetLabel fontFamily="Roboto" fontWeight={activePage === pages.Contact ? 500 : 300} fontSize={"16px"} color={activePage === pages.Contact ? color.primary : color.black} text={pages.Contact} />
-                        </LabelContainer>
-                    </Link>
-                    <Link href="https:github.com/facets-io">
-                        <div style={{ cursor: 'pointer' }}>
-                            <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
-                        </div>
-                    </Link>
-                    <FacetButton
-                        onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
-                        colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
-                </RightDiv>
-            </InnerDiv>
+            <div>
+                {LogoLink}
+            </div>
+            <div style={{ justifySelf: 'end' }}>
+                <FacetButton
+                    onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
+                    colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }}
+                />
+            </div>
+            <div style={{ justifySelf: 'end' }}>
+                <FacetIconButton iconWidth="40" iconHeight="70" size="medium" title="Enable" key="edit" fill={color.primary} name="menu-outline" onClick={handleClick} />
+                <Menu
+                    id="simple-menu"
+                    anchorEl={anchorEl}
+                    keepMounted
+                    open={Boolean(anchorEl)}
+                    onClose={handleClose}
+                >
+                    <MenuItem onClick={handleClose}>
+                        <Link href="/">
+                            <LabelContainer>
+                                <NavLabel text={pages.Home} />
+                            </LabelContainer>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                        <Link href="/pricing">
+                            <LabelContainer>
+                                <NavLabel text={pages.Pricing} />
+                            </LabelContainer>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                        <Link href="/documentation">
+                            <LabelContainer>
+                                <NavLabel text={pages.Documentation} />
+                            </LabelContainer>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem>
+                        <Link href="/blog">
+                            <LabelContainer>
+                                <NavLabel text={pages.Blog} />
+                            </LabelContainer>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                        <Link href="/contact">
+                            <LabelContainer>
+                                <NavLabel text={pages.Contact} />
+                            </LabelContainer>
+                        </Link>
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                        <Link href="https:github.com/facets-io">
+                            <div>
+                                <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
+                            </div>
+                        </Link>
+                    </MenuItem>
+                </Menu>
+            </div>
         </OuterDiv>
+    </> : <>
+            <OuterDiv>
+                <InnerDiv>
+                    <LeftDiv>
+                        {LogoLink}
+                    </LeftDiv>
+                    <RightDiv>
+                        <Link href="/">
+                            <LabelContainer>
+                                <NavLabel text={pages.Home} />
+                            </LabelContainer>
+                        </Link>
+                        <Link href="/pricing">
+                            <LabelContainer>
+                                <NavLabel text={pages.Pricing} />
+                            </LabelContainer>
+                        </Link>
+                        <Link href="/documentation">
+                            <LabelContainer>
+                                <NavLabel text={pages.Documentation} />
+                            </LabelContainer>
+                        </Link>
+                        <Link href="/blog">
+                            <LabelContainer>
+                                <NavLabel text={pages.Blog} />
+                            </LabelContainer>
+                        </Link>
+                        <Link href="/contact">
+                            <LabelContainer>
+                                <NavLabel text={pages.Contact} />
+                            </LabelContainer>
+                        </Link>
+                        <Link href="https:github.com/facets-io">
+                            <div style={{ cursor: 'pointer' }}>
+                                <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
+                            </div>
+                        </Link>
+                        <FacetButton
+                            onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
+                            colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
+                    </RightDiv>
+                </InnerDiv>
+            </OuterDiv>
+        </>;
+
+    return (
+        displayingElement
     );
 }

@@ -1,16 +1,16 @@
-import FacetButton, {primaryBtnColor, primaryGrayBtnColor, whiteBtnColor} from "./FacetButton";
+import FacetButton, { primaryBtnColor, primaryGrayBtnColor } from "./FacetButton";
 import FacetInput from "./FacetInput";
 import styled from 'styled-components';
-import {useSnackbar} from "notistack";
-import {useForm} from "react-hook-form";
-import {useState} from "react";
-import {snackbar} from "../constant";
-import {Input} from "@material-ui/core";
+import { useSnackbar } from "notistack";
+import { useForm } from "react-hook-form";
+import { useState } from "react";
+import { snackbar } from "../constant";
+import { Input } from "@material-ui/core";
 
 const MainForm = styled.form`
     text-align: center;
     display: grid;
-    grid-template-columns: 20rem 10rem;
+    grid-template-columns: 50% 30%;
     grid-gap: 2%;
     justify-content: center;
     align-items: center;
@@ -33,7 +33,7 @@ export default function StayUpdated() {
     }
 
     const onSubmit = async data => {
-        if(data.contact != "") {
+        if (data.contact != "") {
             fetch('https://api.facet.run/notification', {
                 method: 'POST',
                 body: JSON.stringify(data)
@@ -44,23 +44,28 @@ export default function StayUpdated() {
                 enqueueSnackbar({
                     message: 'Thank you!  We will get back with you soon.',
                     variant: snackbar.success.text
-                })
-                reset()
+                });
+                reset();
             } catch (error) {
+                enqueueSnackbar({
+                    message: 'Apologies. Something went wrong.',
+                    variant: snackbar.error.text
+                });
                 setSubmitting(false)
             }
         }
-    }
+    };
+
     return (
         <CoreDiv>
             <MainForm onSubmit={(e) => e.preventDefault()}>
-                    <div>
-                        <Input /* A hidden element to send hard coded value to API.*/ style={{display: "none"}} value="General Update" name={"subject"} inputRef={register()}/>
-                        <FacetInput width="20rem" value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
-                    </div>
-                    <div>
-                        <FacetButton width="10rem" colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Stay Updated"/>
-                    </div>
+                <div>
+                    <Input style={{ display: "none" }} value="General Update" name={"subject"} inputRef={register()} />
+                    <FacetInput value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
+                </div>
+                <div>
+                    <FacetButton colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Stay Updated" />
+                </div>
             </MainForm>
         </CoreDiv>
     )

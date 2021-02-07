@@ -12,6 +12,7 @@ import FacetLabel from '../shared/components/FacetLabel'
 import PricingHeader from '../shared/components/PricingHeader'
 import FacetHead from './FacetHead'
 import styles from "../styles/Home.module.css";
+import TopBorder from '../shared/components/TopBorder'
 
 const MainDiv = styled.div`
     background-color: ${color.white};
@@ -19,22 +20,13 @@ const MainDiv = styled.div`
     text-align: center;
 `;
 
-const Border = styled.div`
-  background-color: ${color.primary};
-  position:sticky;
-  top:0;
-  width:100%;
-  height: .275rem;
-  z-index: 500;
-`;
-
 export default function PricingPage() {
     return (
         <AppProvider>
-            <div className={styles.container} style={{position: "relative"}}>
+            <div className={styles.container} style={{ position: "relative" }}>
                 <FacetHead />
-                <Border />
-                <ContentContainer style={{position: "fixed",top: ".275rem", width: "100%", zIndex: 500}} paddingTop={"1rem"}  paddingBottom={".5rem"} color={color.white}>
+                <TopBorder />
+                <ContentContainer isNavBar>
                     <Navbar activePage={pages.Pricing} />
                 </ContentContainer>
                 <ContentContainer color={color.white} paddingTop={"9rem"}>
@@ -42,7 +34,7 @@ export default function PricingPage() {
                         <PricingHeader />
                     </MainDiv>
                 </ContentContainer>
-                <ContentContainer color={color.secondaryGray} style={{height: "40%"}}>
+                <ContentContainer color={color.secondaryGray}>
                     <br />
                     <Footer />
                 </ContentContainer>

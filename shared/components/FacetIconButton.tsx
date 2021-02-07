@@ -17,7 +17,7 @@ const useStyles = makeStyles({
         // @ts-ignore
         fill: props => props.isSelected ? color.electricB : '',
         "&:hover": {
-            fill:  color.white
+            fill: color.white
         }
     }
 });
@@ -38,7 +38,7 @@ const StyledI = styled.i`
 `
 
 export default ({ name, size = "small", fill = color.lightGray,
-    isSelected = true, customHeight, width, iconWidth, iconHeight, children, ...other }) => {
+    isSelected = true, customHeight = null, width = null, iconWidth = null, iconHeight = null, children = null, ...other }) => {
 
     useEffect(() => {
         eva.replace();
