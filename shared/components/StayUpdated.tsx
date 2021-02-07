@@ -1,4 +1,4 @@
-import FacetButton, { primaryBtnColor, primaryGrayBtnColor, whiteBtnColor } from "./FacetButton";
+import FacetButton, { primaryBtnColor, primaryGrayBtnColor } from "./FacetButton";
 import FacetInput from "./FacetInput";
 import styled from 'styled-components';
 import { useSnackbar } from "notistack";
