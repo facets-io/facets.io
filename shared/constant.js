@@ -109,7 +109,11 @@ const isMobile = (threshHoldValue) => {
     return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm;
 }
 
+const isMobileLg = (threshHoldValue) => {
+    return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm || threshHoldValue === responsiveThresholds.md;
+}
+
 export {
     color, fontSize, allFacets, mountainWalkColors, documentationIds,
-    snackbar, documentationText, responsiveThresholds, isMobile
+    snackbar, documentationText, responsiveThresholds, isMobile, isMobileLg
 };

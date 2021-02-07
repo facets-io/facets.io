@@ -25,7 +25,6 @@ const Checkmark = styled.div`
     align-items: center;
 `;
 
-
 const BulletPoints = styled.div`
     display: grid;
     grid-template-columns: 0% 100%%;
