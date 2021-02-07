@@ -106,7 +106,7 @@ const responsiveThresholds = {
 }
 
 const isMobile = (threshHoldValue) => {
-    return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm || threshHoldValue === responsiveThresholds.md;
+    return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm;
 }
 
 export {

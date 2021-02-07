@@ -10,7 +10,7 @@ const InnerDiv = styled.div`
     justify-content: center;
     margin-top: 2rem;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 720px) {
         display: grid;
         grid-template-columns: 85%;
         justify-content: center;
@@ -31,17 +31,25 @@ export default ({ element, isReverse = false }) => {
             <div>
                 {element.image}
             </div>
+            {element.extraElement ? <>
+                <br />
+                {element.extraElement}
+            </> : null}
         </div>
     </InnerDiv> : !isReverse ? <InnerDiv>
         <div>
             {element.title}
+            <br />
             {element.paragraph}
+            <br />
+            {element.extraElement ? <>
+                {element.extraElement}
+            </> : null}
         </div>
         <div>
             <br />
             {element.image}
         </div>
-
     </InnerDiv> : <InnerDiv>
                 <div>
                     <br />
@@ -49,6 +57,7 @@ export default ({ element, isReverse = false }) => {
                 </div>
                 <div>
                     {element.title}
+                    <br />
                     {element.paragraph}
                 </div>
             </InnerDiv>
