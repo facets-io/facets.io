@@ -1,9 +1,10 @@
 import styled from 'styled-components';
-import { color } from '../constant';
+import { color, isMobile } from '../constant';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
 import { pages } from './AppContext'
 import FacetButton, { primaryBtnColor } from "./FacetButton";
+import useMedia from '../hooks/useMedia';
 
 const LogoDiv = styled.div`
     display: grid;
@@ -38,7 +39,6 @@ const OuterDiv = styled.div`
     display: grid;
     grid-template-columns: 85%; 
     justify-content: center;
-    +6352
 `;
 
 const LabelContainer = styled.div`
@@ -46,6 +46,8 @@ const LabelContainer = styled.div`
 `
 
 export default function Navbar({ activePage = '' }) {
+    const media = useMedia();
+    const isViewMobile = isMobile(media);
 
     const NavLabel = ({ text }) => <FacetLabel fontFamily="Roboto" fontWeight={activePage === text ? 500 : 300} fontSize="16px" color={activePage === text ? color.primary : color.black} text={text} />;
 

@@ -29,7 +29,7 @@ const Checkmark = styled.div`
 const BulletPoints = styled.div`
     display: grid;
     grid-template-columns: 0% 100%%;
-    grid-template-rows: 40% 50%
+    grid-template-rows: 40% 100%
     justify-content: center;
     align-items: center;
 `;
@@ -43,7 +43,7 @@ const ButtonDiv = styled.div`
 
     @media (max-width: 720px) {
         display: grid;
-        grid-template-columns: 40%;
+        grid-template-columns: 100%;
         justify-content: center;
         text-align: center;
     }
@@ -53,13 +53,21 @@ const StyledImage = styled.img`
     height: 1rem;
 `;
 
+const Centered = styled.div`
+    text-align: initial;
+
+    @media (max-width: 720px) {
+        text-align: center;
+    }
+`
+
 export default function Navbar() {
     return (
         <div>
             <MainDiv>
-                <div>
+                <Centered>
                     <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="No-code feature rollouts" />
-                </div>
+                </Centered>
             </MainDiv>
             <TitleParagraphImage element={{
                 title: null,
@@ -103,7 +111,7 @@ export default function Navbar() {
                 </div>,
                 extraElement:
                     <ButtonDiv >
-                        <FacetButton colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
+                        <FacetButton maxWidth="40%" colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
                     </ButtonDiv>
             }} />
         </div>

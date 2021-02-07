@@ -29,8 +29,8 @@ export default function Home() {
         </ContentContainer>
         {/* <ContentContainer color={color.white}>
           <Democratizing />
-        </ContentContainer>
-        <ContentContainer color={color.secondaryGray}>
+        </ContentContainer> */}
+        {/* <ContentContainer color={color.secondaryGray}>
           <Footer />
         </ContentContainer> */}
       </div>

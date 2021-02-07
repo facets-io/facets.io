@@ -14,6 +14,7 @@ const InnerDiv = styled.div`
         display: grid;
         grid-template-columns: 85%;
         justify-content: center;
+        text-align: initial;
     }
 `;
 
@@ -28,12 +29,14 @@ export default ({ element, isReverse = false }) => {
             {element.paragraph}
             <br />
             <br />
-            <div>
+            <div style={{ width: '100%!important' }}>
                 {element.image}
             </div>
             {element.extraElement ? <>
                 <br />
-                {element.extraElement}
+                <div>
+                    {element.extraElement}
+                </div>
             </> : null}
         </div>
     </InnerDiv> : !isReverse ? <InnerDiv>

@@ -8,7 +8,7 @@ const useStyles = makeStyles(() => ({ root: {} }));
 
 const defaultColorBtnStyle = {
     color: color.black,
-    backgroundColor:  color.white,
+    backgroundColor: color.white,
     hoverBgColor: color.electricB,
     border: 'none'
 };
@@ -63,13 +63,13 @@ const StyledButton = styled(Button)`
     width: ${props => props.width ? props.width : '100%'};
 `;
 
-export default ({ onClick = () => { }, text, disabled = false, colorButtonStyle = defaultColorBtnStyle, minWidth = '7rem', ...props }) => {
+export default ({ onClick = () => { }, text, maxWidth = "100%", disabled = false, colorButtonStyle = defaultColorBtnStyle, minWidth = '7rem', ...props }) => {
     const classes = useStyles();
 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0 ,minWidth, border: colorButtonStyle.border}}
+            style={{ width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0, minWidth, maxWidth, border: colorButtonStyle.border }}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}
