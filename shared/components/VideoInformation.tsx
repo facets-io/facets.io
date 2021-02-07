@@ -8,22 +8,21 @@ const MainDiv = styled.div`
     text-align: center;
 `;
 
-export default function Democratizing() {
+export default function VideoInformation() {
     return (
         <MainDiv>
             <br />
             <br />
-            <br />
             <div>
-                <FacetLabel color={color.black} fontSize={"38px"} fontWeight={700}  text="Learn More" />
+                <FacetLabel color={color.black} fontSize={"36px"} fontWeight={700} text="Learn More" />
             </div>
             <br />
             <br />
             <br />
-            <br />
-            <br />
             <div>
-                <a href="https://youtu.be/WARSSkFQHKg" target="_blank"><img src="./blank_video.svg" alt="Facet logo" /></a>
+                <a href="https://youtu.be/WARSSkFQHKg" target="_blank">
+                    <img style={{ maxWidth: '40rem' }} width="85%" src="./blank_video.svg" alt="Facet logo" />
+                </a>
             </div>
             <br /><br />
         </MainDiv>
