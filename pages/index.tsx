@@ -30,9 +30,9 @@ export default function Home() {
         {/* <ContentContainer color={color.white}>
           <Democratizing />
         </ContentContainer> */}
-        {/* <ContentContainer color={color.secondaryGray}>
+        <ContentContainer color={color.secondaryGray}>
           <Footer />
-        </ContentContainer> */}
+        </ContentContainer>
       </div>
     </AppProvider>
   )

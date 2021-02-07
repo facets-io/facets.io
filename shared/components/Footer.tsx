@@ -8,7 +8,7 @@ const StyledImg = styled.img`
   cursor: pointer;
 `
 
-const Div = styled.div`
+const StyledDiv = styled.div`
   display: grid;
   grid-auto-flow: column;
   align-items: center;
@@ -27,7 +27,6 @@ export default function Footer() {
           <Link href="/"><StyledImg src="/facet_typography_primary.svg" alt="Facet logo" height="30" /></Link>
         </div>
         <br />
-
         <Link href="https://github.com/facets-io/">
           <StyledImg
             onAuxClick={() => { window.open("https://github.com/facets-io/", "_blank") }}
@@ -41,9 +40,10 @@ export default function Footer() {
         </Link>
         <br />
         <br />
-        <Div>
-          <FacetLabel color={color.black} fontFamily="Manrope" fontSize="16" text="Copyright © Facet Technologies, Inc. 2021 - All rights reserved.  " />
-        </Div>
+        <div>
+          <FacetLabel color={color.lightGray} fontFamily="Manrope" fontSize="16" text="Copyright © Facet Technologies, Inc. 2021 - All rights reserved.  " />
+        </div>
+
       </div>
     </div>
   )
