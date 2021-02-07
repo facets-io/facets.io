@@ -38,11 +38,12 @@ const RightDiv = styled.div`
   align-items: center;
   grid-gap: 1.5rem;
   padding: 0 60px;
+  justify-content: end;
 `;
 
 const InnerDiv = styled.div`
     display: grid;
-    grid-template-columns: 26% 52%;
+    grid-template-columns: 25% 80%;
     align-items: center;
     justify-content: left;
 `;
@@ -158,6 +159,7 @@ export default function Navbar({ activePage = '' }) {
         </OuterDiv>
     </> : <>
             <OuterDiv>
+                <br />
                 <InnerDiv>
                     <LeftDiv>
                         {LogoLink}
@@ -193,11 +195,15 @@ export default function Navbar({ activePage = '' }) {
                                 <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
                             </div>
                         </Link>
-                        <FacetButton
-                            onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
-                            colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
+                        <div style={{ justifySelf: 'end' }}>
+                            <FacetButton
+                                onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
+                                colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
+                        </div>
+
                     </RightDiv>
                 </InnerDiv>
+                <br />
             </OuterDiv>
         </>;
 

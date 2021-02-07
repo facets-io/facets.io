@@ -65,7 +65,7 @@ export default function Navbar() {
         <div>
             <MainDiv>
                 <Centered>
-                    <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="No-code feature rollouts" />
+                    <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="No-Code Feature Rollouts" />
                 </Centered>
             </MainDiv>
             <TitleParagraphImage element={{
