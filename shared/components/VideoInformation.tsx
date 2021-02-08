@@ -14,7 +14,7 @@ export default function VideoInformation() {
             <br />
             <br />
             <div>
-                <FacetLabel color={color.black} fontSize={"36px"} fontWeight={700} text="Learn More" />
+                <FacetLabel color={color.black} fontSize={"36px"} fontWeight={700} text="Learn how to use Facet" />
             </div>
             <br />
             <br />

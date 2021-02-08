@@ -50,11 +50,11 @@ export default function FAQ() {
                     id="panel1a-header"
 
                 >
-                    <Typography className={classes.heading}>Why Facet?</Typography>
+                    <Typography className={classes.heading}>Is your platform production-ready?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Facet abstracts the rollout process that is commonly achieved by using feature flags. At facet, we believe that engineers shouldn't spend their time maintaining manual configurations like the ones feature flags require. We enable engineers to focus on building their product, while we build the rollout abstractions to support them throughout the journey.
+                        Version 1 of our product, facet extension, is production-ready. There might be some edge cases and bugs to iron out. We would be glad to receive your feedback and we are committed to providing you hands-on support.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -82,16 +82,15 @@ export default function FAQ() {
             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg" />}
-                    aria-controls="panel3a-content"
-                    id="panel3a-header"
+                    aria-controls="panel1a-content"
+                    id="panel1a-header"
 
                 >
-                    <Typography className={classes.heading}>How to hide a facet before rolling out to
-                        production?</Typography>
+                    <Typography className={classes.heading}>Why choose facet as you feature management solution?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className={classes.body}>
-                        Currently this is not possible, but we are working on adding this important feature.
+                    <Typography>
+                        Facet abstracts the rollout process that is commonly achieved by using feature flags. At facet, we believe that engineers shouldn't spend their time maintaining manual configurations like the ones feature flags require. We enable engineers to focus on building their product, while we build the rollout abstractions to support them throughout the journey.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -102,12 +101,31 @@ export default function FAQ() {
                     id="panel3a-header"
 
                 >
-                    <Typography className={classes.heading}>Can I declare facets within backend technologies?
-                        production?</Typography>
+                    <Typography className={classes.heading}>What is your roadmap?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Not yet. Our team is working hard to offer facet declaration for backend systems. We will be soon launching a pilot, initially we are targeting java as the piloting language. However, we are planning to open source the API, so that affiliating SDKs can be implemented from devs.
+                        Some of our scheduled features are the following:
+                        <ol>
+                            <li>Ability to schedule a rollout</li>
+                            <li>Add environment configuration</li>
+                            <li>Personalized Dashboard</li>
+                        </ol>
+                    </Typography>
+                </AccordionDetails>
+            </Accordion>
+            <Accordion className={classes.shadow}>
+                <AccordionSummary
+                    expandIcon={<img src="/toc_expand.svg" />}
+                    aria-controls="panel3a-content"
+                    id="panel3a-header"
+
+                >
+                    <Typography className={classes.heading}>Can I declare facets in my backend?</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                    <Typography className={classes.body}>
+                        Not yet. Our team is developing solutions to offer backend system support. Stay tuned!
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -136,11 +154,11 @@ export default function FAQ() {
                     id="panel3a-header"
 
                 >
-                    <Typography className={classes.heading}> My facet is declared in multiple pages (ie: menu). Can I declare a global facets?</Typography>
+                    <Typography className={classes.heading}>Can I manage features that appear in multiple pages?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Yes. By default, facets are declared global. You can change their visibility to non-global, which mean that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
+                        Yes! By default, facets are declared with a global scope. You can change their visibility to non-global, which mean that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
                         <br />
                         <figure>
                             <img width='100%' src='../../images/global_facet_declaration.png' />
@@ -161,7 +179,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        At facet, Security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps,including <a href='https://snyk.io/'>Snyk</a> and {''}
+                        At facet, Security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps, including <a href='https://snyk.io/'>Snyk</a> and {''}
                         <a href='https://github.com/dependabot'>Github</a>, to ensure secure codebases. We are also working on getting CCPA, GDPR, HIPAA, FERPA, PCI and other data privacy regulations.                    </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -176,7 +194,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Currently, facet-extension is <a href='https://github.com/facets-io/'></a>open source. We believe in open source and we plan to open source many of our systems as they become mature and ready for the public.
+                        Currently, the facet extension is <a href='https://github.com/facets-io/'></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems.
                     </Typography>
                 </AccordionDetails>
             </Accordion>

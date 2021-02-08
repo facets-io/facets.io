@@ -65,14 +65,14 @@ export default function Navbar() {
         <div>
             <MainDiv>
                 <Centered>
-                    <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="No-Code Feature Rollouts" />
+                    <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Rollout Features Without Code" />
                 </Centered>
             </MainDiv>
             <TitleParagraphImage element={{
                 title: null,
                 paragraph: <div>
                     <div>
-                        <FacetParagraph text="Facets are a codeless solution for managing features. With facets, DevOps and Product teams converge to deliver software faster and safer." />
+                        <FacetParagraph text="Facets offers a codeless solution for managing features. With facets, DevOps and Product teams work together to deliver software faster and safer." />
                         <BulletPoints>
                             <div />
                             <div>
@@ -82,23 +82,17 @@ export default function Navbar() {
                                 </Checkmark>
                             </div>
                             <div />
-                            <div>
-                                <br />
-                                <Checkmark><StyledImage src="./checkmark4.svg" />
-                                    <FacetParagraph text="Decouple feature management from engineering resources" />
-                                </Checkmark>
-                            </div>
                             <div />
                             <div>
                                 <br />
                                 <Checkmark><StyledImage src="./checkmark4.svg" />
-                                    <FacetParagraph text="Streamline your software delivery process " />
+                                    <FacetParagraph text="Instantly toggle features in production" />
                                 </Checkmark>
                             </div>
                             <div>
                                 <br />
                                 <Checkmark><StyledImage src="./checkmark4.svg" />
-                                    <FacetParagraph text="Instantly enable and disable features in production " />
+                                    <FacetParagraph text="Manage features without using engineering resources" />
                                 </Checkmark>
                             </div>
                         </BulletPoints>

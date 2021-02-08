@@ -8,7 +8,7 @@ export default () => {
         <FacetH1 id={documentationIds.download}>Download and install the facet extension</FacetH1>
         <FacetParagraph color={"#5D5D5D"}>
 
-            Download the latest version of the <a href="http://cdn.facet.run/extension-chrome-facet-ninja.zip">facet extension</a>. Unzip the folder and load it as an extension in your chrome browser via the
+            Download the latest version of the <a href="http://cdn.facet.run/extension-chrome-facet-ninja.zip">facet extension</a>. Unzip the folder and load it as an extension in your Chrome browser via the
             <b>"Load unpacked"</b> option. 
             <br/>
 
