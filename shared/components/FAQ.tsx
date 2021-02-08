@@ -41,7 +41,7 @@ export default function FAQ() {
     const classes = useStyles();
     return (
         <StyledDiv>
-            <h2 id={documentationIds.faq} style={{ fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600 }}>Common Questions</h2>
+            <h2 id={documentationIds.faq} style={{ fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600 }}>FAQ</h2>
 
             <Accordion className={classes.shadow}>
                 <AccordionSummary

@@ -76,7 +76,7 @@ const documentationText = {
     holdOffRollOut: 'Rollout',
     preview: 'Preview',
     oneLineCodeIntegration: 'Integration',
-    faq: 'Common Questions'
+    faq: 'FAQ'
 }
 
 const fontSize = {
