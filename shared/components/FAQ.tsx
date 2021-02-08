@@ -108,8 +108,10 @@ export default function FAQ() {
                         Some of our scheduled features are the following:
                         <ol>
                             <li>Ability to schedule a rollout</li>
+                            <li>CRUD facets in responsive layouts</li>
                             <li>Add environment configuration</li>
                             <li>Personalized Dashboard</li>
+                            <li>OAuth 2.0 and Single Sign-On (SSO)</li>
                         </ol>
                     </Typography>
                 </AccordionDetails>

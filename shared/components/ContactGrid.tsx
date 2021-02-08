@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import {Input, TextField} from '@material-ui/core'
+import { Input, TextField } from '@material-ui/core'
 import styled from 'styled-components'
 import { color, snackbar } from '../constant'
 import FacetButton, { primaryBtnColor } from './FacetButton'
@@ -75,32 +75,31 @@ export default function ContactGrid() {
         }
     }
 
-    // @ts-ignore
     return (
         <div>
             <StyledDiv2>
-            <div>
-            <FacetLabel fontWeight={700} fontSize={"42px" } text="Want To Get In Touch?"/>
-            <br />
-            <br />
-            <FacetLabel fontWeight={300} fontSize={"20px" } text="We’d love to hear from you! Contact us using the form below and we’ll be happy to answer your questions." />
-            <br />
-            <br/>
-                <br/>
-                <br/>
-                <br/>
-            </div>
+                <div>
+                    <FacetLabel fontWeight={700} fontSize={"42px"} text="Want To Get In Touch?" />
+                    <br />
+                    <br />
+                    <FacetLabel fontWeight={300} fontSize={"20px"} text="We’d love to hear from you! Contact us using the form below and we’ll be happy to answer your questions." />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
             </StyledDiv2>
-        <StyledDiv>
+            <StyledDiv>
 
 
-            <div style={{textAlign:"left",display:"grid",justifyContent:"left"}}>
+                <div style={{ textAlign: "left", display: "grid", justifyContent: "left" }}>
                     <StyledForm onSubmit={(e) => e.preventDefault()}>
-                        <Input /* A hidden element to send hard coded value to API.*/ style={{display: "none"}} value="General Inquiry" name={"subject"} inputRef={register()}/>
+                        <Input /* A hidden element to send hard coded value to API.*/ style={{ display: "none" }} value="General Inquiry" name={"subject"} inputRef={register()} />
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="First name" color={color.black}/>
+                                <FacetLabel text="First name" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="firstName"
@@ -113,7 +112,7 @@ export default function ContactGrid() {
                                 </div>
                             </div>
                             <div>
-                                <FacetLabel text="Last name" color={color.black}/>
+                                <FacetLabel text="Last name" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="lastName"
@@ -129,7 +128,7 @@ export default function ContactGrid() {
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="Email*" color={color.black}/>
+                                <FacetLabel text="Email*" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="contact"
@@ -149,7 +148,7 @@ export default function ContactGrid() {
                                 {errors && errors.email && <FacetFormError role="alert" text={errors.email.message}></FacetFormError>}
                             </div>
                             <div>
-                                <FacetLabel text="Company name" color={color.black}/>
+                                <FacetLabel text="Company name" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         value={companyName}
@@ -161,13 +160,13 @@ export default function ContactGrid() {
                                 </div>
                             </div>
                         </TwoColumnGrid>
-                        <div style={{ padding: '1rem', paddingTop: '0'}}>
-                            <FacetLabel text="Message" color={color.black}/>
+                        <div style={{ padding: '1rem', paddingTop: '0' }}>
+                            <FacetLabel text="Message" color={color.black} />
                             <br />
                             <br />
                             <TextField
                                 name="message"
-                                style={{ backgroundColor:  color.white, width: '100%' }}
+                                style={{ backgroundColor: color.white, width: '100%' }}
                                 id="filled-multiline-static"
                                 multiline
                                 rows={16}
@@ -176,20 +175,20 @@ export default function ContactGrid() {
                                 onChange={(e) => { setMessage(e.target.value) }}
                                 inputRef={register()}
                                 InputProps={{
-                                    style: {backgroundColor: color.white},
+                                    style: { backgroundColor: color.white },
                                     disableUnderline: true
                                 }}
                             />
                             <br />
                             <br />
-                                <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={primaryBtnColor} style={{ width: '100%' }} text="Submit" />
+                            <FacetButton onClick={handleSubmit(onSubmit)} colorButtonStyle={primaryBtnColor} style={{ width: '100%' }} text="Submit" />
                         </div>
                     </StyledForm>
                 </div>
-            <div>
-                <JsonAnimation animationData={mock_site} style={{borderRadius: "3rem", overflow:"hidden", height: "500px", width: undefined, boxShadow: undefined}}/>
-            </div>
-        </StyledDiv>
+                <div>
+                    <JsonAnimation animationData={mock_site} style={{ borderRadius: "3rem", overflow: "hidden", height: "500px", width: undefined, boxShadow: undefined }} />
+                </div>
+            </StyledDiv>
         </div>
     )
 }
