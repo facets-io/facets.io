@@ -16,7 +16,6 @@ const MainDiv = styled.div`
     text-align: initial;
 `;
 
-
 const Checkmark = styled.div`
     display: grid;
     grid-template-columns: 5% 95%;
@@ -72,7 +71,7 @@ export default function Navbar() {
                 title: null,
                 paragraph: <div>
                     <div>
-                        <FacetParagraph text="Facets offers a codeless solution for managing features. With facets, DevOps and Product teams work together to deliver software faster and safer." />
+                        <FacetParagraph text="Facets offers a codeless solution for managing features. With Facet, Engineering and Product teams work together to deliver software faster and safer." />
                         <BulletPoints>
                             <div />
                             <div>

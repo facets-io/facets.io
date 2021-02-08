@@ -7,10 +7,10 @@ import React from "react";
 const MainDiv = styled.div`
     background-color: ${color.secondaryGray};
     width: 100%;
-    padding: .5rem;
     position: sticky;
-    top: 0px;
     border-radius: 5%;
+    width: 195px;
+    top: 7rem;
     width: 195px;
 `;
 

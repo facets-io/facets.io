@@ -34,8 +34,7 @@ const MainDiv = styled.div`
 `;
 
 const StickyDiv = styled.div`
-    position: fixed;
-    top: 100px;
+
 `;
 
 export default function DocumentationPage() {
@@ -59,7 +58,6 @@ export default function DocumentationPage() {
                     <MainDiv >
                         <TableDiv>
                             {menu}
-                            {isMobileView ? null : <div></div>}
                             <div>
                                 <FacetLabel color={color.black} fontSize={"39px"} fontWeight={700} text="Documentation" />
                                 <br />
