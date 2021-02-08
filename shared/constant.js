@@ -102,7 +102,8 @@ const responsiveThresholds = {
     xs: '(max-width: 320px)',
     sm: '(max-width: 720px)',
     md: '(max-width: 1024px)',
-    upperTH: '(min-width: 1024px)'
+    xxLarge: '(min-width: 1564px)',
+    upperTH: '(min-width: 1024px)',
 }
 
 const isMobile = (threshHoldValue) => {

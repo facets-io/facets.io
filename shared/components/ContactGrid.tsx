@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { Input, TextField } from '@material-ui/core'
+import { Input, TextField, TextareaAutosize } from '@material-ui/core'
 import styled from 'styled-components'
-import { color, snackbar } from '../constant'
+import { color, responsiveThresholds, snackbar } from '../constant'
 import FacetButton, { primaryBtnColor } from './FacetButton'
 import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
@@ -11,6 +11,7 @@ import FacetFormError from './FacetFormError'
 import { useSnackbar } from 'notistack'
 import JsonAnimation from "./JsonGIF";
 import mock_site from "../../public/paper_plane_contacts.json";
+import useMedia from '../hooks/useMedia'
 
 const StyledDiv = styled.div`
     display: grid;
@@ -18,6 +19,13 @@ const StyledDiv = styled.div`
     grid-gap: 5%;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 1564px) {
+        grid-template-columns: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+    
 `
 
 const StyledDiv2 = styled.div`
@@ -26,8 +34,12 @@ const StyledDiv2 = styled.div`
 
 const StyledForm = styled.form`
     background-color: ${color.secondaryGray};
-    width: 525px;
+    width: 30rem;
     padding: .5rem;
+
+    @media (max-width: 720px) {
+        width: 100%;
+    }
 `
 
 const TwoColumnGrid = styled.div`
@@ -73,7 +85,10 @@ export default function ContactGrid() {
         } catch (error) {
             setSubmitting(false)
         }
-    }
+    };
+
+    const media = useMedia();
+    const shouldDisplayJSON = media === responsiveThresholds.xxLarge
 
     return (
         <div>
@@ -93,9 +108,9 @@ export default function ContactGrid() {
             <StyledDiv>
 
 
-                <div style={{ textAlign: "left", display: "grid", justifyContent: "left" }}>
+                <div style={{ textAlign: "left", display: "grid", justifyContent: "center" }}>
                     <StyledForm onSubmit={(e) => e.preventDefault()}>
-                        <Input /* A hidden element to send hard coded value to API.*/ style={{ display: "none" }} value="General Inquiry" name={"subject"} inputRef={register()} />
+                        <Input style={{ display: "none" }} value="General Inquiry" name={"subject"} inputRef={register()} />
                         <br />
                         <TwoColumnGrid>
                             <div>
@@ -166,10 +181,11 @@ export default function ContactGrid() {
                             <br />
                             <TextField
                                 name="message"
+                                size="small"
                                 style={{ backgroundColor: color.white, width: '100%' }}
                                 id="filled-multiline-static"
                                 multiline
-                                rows={16}
+                                rows={8}
                                 variant="filled"
                                 value={message}
                                 onChange={(e) => { setMessage(e.target.value) }}
@@ -185,10 +201,12 @@ export default function ContactGrid() {
                         </div>
                     </StyledForm>
                 </div>
-                <div>
+                {shouldDisplayJSON ? <div>
                     <JsonAnimation animationData={mock_site} style={{ borderRadius: "3rem", overflow: "hidden", height: "500px", width: undefined, boxShadow: undefined }} />
-                </div>
+                </div> : null}
             </StyledDiv>
+            <br />
+            <br />
         </div>
     )
 }
