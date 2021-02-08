@@ -112,20 +112,20 @@ export default function Navbar({ activePage = '' }) {
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
                 >
-                    <MenuItem onClick={handleClose}>
-                        <Link href="/">
+                    <Link href="/">
+                        <MenuItem onClick={handleClose}>
                             <LabelContainer>
                                 <NavLabel text={pages.Home} />
                             </LabelContainer>
-                        </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                        <Link href="/pricing">
+                        </MenuItem>
+                    </Link>
+                    <Link href="/pricing">
+                        <MenuItem onClick={handleClose}>
                             <LabelContainer>
                                 <NavLabel text={pages.Pricing} />
                             </LabelContainer>
-                        </Link>
-                    </MenuItem>
+                        </MenuItem>
+                    </Link>
                     <MenuItem onClick={handleClose}>
                         <Link href="/documentation">
                             <LabelContainer>
@@ -133,27 +133,27 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </Link>
                     </MenuItem>
-                    <MenuItem>
-                        <Link href="/blog">
+                    <Link href="/blog">
+                        <MenuItem>
                             <LabelContainer>
                                 <NavLabel text={pages.Blog} />
                             </LabelContainer>
-                        </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                        <Link href="/contact">
+                        </MenuItem>
+                    </Link>
+                    <Link href="/contact">
+                        <MenuItem onClick={handleClose}>
                             <LabelContainer>
                                 <NavLabel text={pages.Contact} />
                             </LabelContainer>
-                        </Link>
-                    </MenuItem>
-                    <MenuItem onClick={handleClose}>
-                        <Link href="https:github.com/facets-io">
+                        </MenuItem>
+                    </Link>
+                    <Link href="https:github.com/facets-io">
+                        <MenuItem onClick={handleClose}>
                             <div>
                                 <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
                             </div>
-                        </Link>
-                    </MenuItem>
+                        </MenuItem>
+                    </Link>
                 </Menu>
             </div>
         </OuterDiv>

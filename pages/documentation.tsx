@@ -17,7 +17,6 @@ const TableDiv = styled.div`
      display: grid;
      grid-template-columns: 15% 50%;
      grid-gap: 9rem;
-     padding-bottom: 50%
 
      @media (max-width: 720px) {
         display: grid;

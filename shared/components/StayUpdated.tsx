@@ -63,7 +63,7 @@ export default function StayUpdated() {
                     <FacetInput extraStyle={{ maxWidth: "20rem" }} value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
                 </div>
                 <div>
-                    <FacetButton maxWidth="20rem" colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Stay Updated" />
+                    <FacetButton maxWidth="20rem" colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Subscribe" />
                 </div>
             </MainForm>
         </CoreDiv>
