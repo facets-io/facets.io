@@ -35,7 +35,6 @@ const StyledDiv2 = styled.div`
 const StyledForm = styled.form`
     background-color: ${color.secondaryGray};
     width: 30rem;
-    padding: .5rem;
 
     @media (max-width: 720px) {
         width: 100%;
