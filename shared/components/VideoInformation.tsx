@@ -20,7 +20,7 @@ export default function VideoInformation() {
             <br />
             <br />
             <div>
-                <a href="https://youtu.be/WARSSkFQHKg" target="_blank">
+                <a href="https://youtu.be/mvM7AnwMe8A" target="_blank">
                     <img style={{ maxWidth: '40rem' }} width="85%" src="./blank_video.svg" alt="Facet logo" />
                 </a>
             </div>
