@@ -14,6 +14,8 @@ const InnerDiv = styled.div`
 const OuterDiv = styled.div`
     background-color: ${props => props.color};
     width: 100%;
+    backdrop-filter: saturate(180%) blur(5px);
+    opacity: 90%;
 `;
 
 const navBarStyle = {
