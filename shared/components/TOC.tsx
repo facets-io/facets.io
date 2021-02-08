@@ -1,10 +1,7 @@
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
 import { color, documentationIds, documentationText, fontSize } from "../constant";
-import { pages } from "./AppContext";
-import { act } from "react-dom/test-utils";
 import { useEffect, useState } from "react";
-import { loadGetInitialProps } from "next/dist/next-server/lib/utils";
 import React from "react";
 
 const MainDiv = styled.div`
