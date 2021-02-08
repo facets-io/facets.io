@@ -215,30 +215,10 @@ export default function PricingTable() {
                                 </BorderDivItem>
                             </BorderDiv>
                         </td>
-                        {/* <td style={{ border: ".1px solid #C0C0C0", padding: "1rem", textAlign: "center" }}>
-                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope" fontSize={"17px"} text="Requests" />
-                    </td>
-                    <td style={{ border: ".1px solid #C0C0C0", borderLeft: "none", backgroundColor: color.pricingGray }}>
-                        <FacetInputFullHeight
-                            value={presentableCost}
-                            onChange={(e) => {
-                                var num = e.target.value.replace(/,/gi, "")
-                                var num2 = num.split(/(?=(?:\d{3})+$)/).join(",")
-                                setPresentableCost(num2)
-                                const numberWithCommas = parseFloat(num2.replace(/,/g, ''));
-                                calculate(numberWithCommas)
-                            }} placeholder="3,000" />
-                    </td> */}
                     </tr>
                     <tr>
                     </tr>
                     <tr>
-                        {/* <td style={{ border: "1px solid #C0C0C0", padding: "1rem", textAlign: "center" }}>
-                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope" fontSize={"17px"} text="Monthly Cost" />
-                    </td>
-                    <td style={{ border: "1px solid #C0C0C0", borderLeft: "none", backgroundColor: color.pricingGray }}>
-                        <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope" fontSize={fontSize.xLarge} text={`${estimatedCost}`} />
-                    </td> */}
                         <td colSpan={2}>
                             <BorderDiv>
                                 <BorderDivItem>
