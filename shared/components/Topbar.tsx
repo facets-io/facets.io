@@ -5,7 +5,7 @@ import { color, fontSize } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
 import JsonAnimation from "./JsonGIF";
-import mock_site from '../../public/mock_site.json'
+import mock_site from '../../public/GIf_.json'
 import TitleParagraphImage from './TitleParagraphImage';
 
 const MainDiv = styled.div`
@@ -100,7 +100,7 @@ export default function Navbar() {
                     </div>
                 </div>,
                 image: <div>
-                    <JsonAnimation style={{ borderRadius: "0", overflow: "hidden", width: undefined, height: undefined, boxShadow: `0px 0px 300px -60px ${color.black}` }} animationData={mock_site} />
+                    <JsonAnimation animationData={mock_site} />
                 </div>,
                 extraElement:
                     <ButtonDiv >

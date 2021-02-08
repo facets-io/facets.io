@@ -54,7 +54,8 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Version 1 of our product, facet extension, is production-ready. There might be some edge cases and bugs to iron out. We would be glad to receive your feedback and we are committed to providing you hands-on support.
+                        Version 1 of our product, facet extension, is production-ready. There might be some edge cases and bugs to iron out.
+                        We would be glad to receive your feedback and we are committed to providing you hands-on support on any issues that might arise during onboarding.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
