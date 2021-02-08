@@ -10,7 +10,7 @@ import { Input } from "@material-ui/core";
 const MainForm = styled.form`
     text-align: center;
     display: grid;
-    grid-template-columns: 50% 30%;
+    grid-template-columns: 30% 20%;
     grid-gap: 2%;
     justify-content: center;
     align-items: center;
@@ -60,11 +60,10 @@ export default function StayUpdated() {
         <CoreDiv>
             <MainForm onSubmit={(e) => e.preventDefault()}>
                 <div>
-                    <Input style={{ display: "none" }} value="General Update" name={"subject"} inputRef={register()} />
-                    <FacetInput extraStyle={{ maxWidth: '25rem' }} value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
+                    <FacetInput extraStyle={{ maxWidth: "20rem" }} value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
                 </div>
                 <div>
-                    <FacetButton colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Stay Updated" />
+                    <FacetButton maxWidth="20rem" colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Stay Updated" />
                 </div>
             </MainForm>
         </CoreDiv>
