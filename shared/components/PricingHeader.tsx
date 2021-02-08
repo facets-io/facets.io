@@ -9,18 +9,19 @@ const MainDiv = styled.div`
     text-align: center;
 `;
 
+const space = <>
+    <br />
+    <br />
+    <br />
+</>
+
 export default function PricingHeader() {
     return (
         <MainDiv>
-            <FacetLabel color={color.black} fontSize={"38px"} fontWeight={700}  text="Pricing that scales with your needs" />
-            <br />
-            <br />
-            <br />
+            <FacetLabel color={color.black} fontSize={"38px"} fontWeight={700} text="Pricing that scales with your needs" />
+            {space}
             <FacetLabel color={color.black} fontSize={"20px"} fontWeight={300} text="Have unlimited access to product features and pay as you go." />
-
-            <br />
-            <br />
-            <br />
+            {space}
             <div>
                 <PricingTable />
             </div>
