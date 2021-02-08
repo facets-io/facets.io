@@ -61,7 +61,7 @@ export default function StayUpdated() {
             <MainForm onSubmit={(e) => e.preventDefault()}>
                 <div>
                     <Input style={{ display: "none" }} value="General Update" name={"subject"} inputRef={register()} />
-                    <FacetInput value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
+                    <FacetInput extraStyle={{ maxWidth: '25rem' }} value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
                 </div>
                 <div>
                     <FacetButton colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Stay Updated" />

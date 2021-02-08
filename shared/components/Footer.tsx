@@ -11,8 +11,8 @@ const StyledImg = styled.img`
 export default function Footer() {
   return (
     <div>
-      <br/>
-      <br/>
+      <br />
+      <br />
       <StayUpdated />
       <br />
       <br />

@@ -37,7 +37,7 @@ const defaultColor = {
 
 export const electricColor = {
     color: color.black,
-    backgroundColor:  color.white,
+    backgroundColor: color.white,
 };
 
 export default ({
@@ -46,6 +46,7 @@ export default ({
     name = '', id = '',
     isMountainWalkWebsite = true,
     colorStyle = defaultColor,
+    extraStyle = {},
     ...other }) => {
 
     const innerElement = <div>
@@ -61,6 +62,7 @@ export default ({
                 padding: '.3rem',
                 height: '2rem',
                 border: colorStyle.border,
+                ...extraStyle
             }}
             aria-describedby="standard-weight-helper-text"
             inputProps={{
