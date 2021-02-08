@@ -40,7 +40,7 @@ const defaultColor = {
 
 export const electricColor = {
     color: color.black,
-    backgroundColor:  color.white,
+    backgroundColor: color.white,
 };
 
 export default ({
@@ -54,7 +54,6 @@ export default ({
 
     const innerElement = <>
         <CustomInput
-            autoFocus
             id={id}
             type={type}
             name={name}
