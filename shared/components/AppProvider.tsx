@@ -53,7 +53,6 @@ export default function AppProvider({ children }) {
         if (remainingRequests > pricingTier[0].limit) {
             remainingRequests -= pricingTier[0].limit;
         } else {
-            // setEstimatedCost('$ 0.00')
             return '$ 0.00'
         }
         if (remainingRequests > pricingTier[1].limit) {
@@ -61,15 +60,13 @@ export default function AppProvider({ children }) {
             cost += (pricingTier[1].limit * pricingTier[1].cost)
         } else {
             cost += (remainingRequests * pricingTier[1].cost)
-            // setEstimatedCost(`$ ${cost.toFixed(2)}`)
             return `$ ${cost.toFixed(2)}`
         }
         cost += (remainingRequests * pricingTier[2].cost)
         if (cost < 5000) {
-            // setEstimatedCost(`$ ${cost.toFixed(2)}`)
             return `$ ${cost.toFixed(2)}`
         }
-        // setEstimatedCost(`Enterprise`)
+        return 'Enterprise';
     }
 
     return <AppContext.Provider value={{

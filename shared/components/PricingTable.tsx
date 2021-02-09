@@ -98,11 +98,8 @@ const BorderDivItem = styled.div`
 export default function PricingTable() {
 
     //@ts-ignore
-    const { calculate, pricingTier } = useContext(AppContext);
+    const { estimatedCost, setEstimatedCost, calculate, pricingTier } = useContext(AppContext);
     const [presentableCost, setPresentableCost] = useState('');
-    const [estimatedCost, setEstimatedCost] = useState('$ 0.00');
-    const [estimatedCost123, setEstimatedCost123] = useState('$ 0.00');
-
 
     return (
         <MainDiv>
@@ -217,10 +214,6 @@ export default function PricingTable() {
                                         placeholder="3,000"
                                         onValueChange={({ value: v }) => {
                                             setPresentableCost(v);
-                                            // var num = v.replace(/,/gi, "")
-                                            // var num2 = num.split(/(?=(?:\d{3})+$)/).join(",")
-                                            // setPresentableCost(num2)
-                                            // const numberWithCommas = parseFloat(num2.replace(/,/g, ''));
                                             const cost = calculate(v);
                                             setEstimatedCost(cost);
                                         }}
