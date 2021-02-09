@@ -35,8 +35,8 @@ export default function VideoInformation() {
                     margin: '2rem',
                 }}
             >
-                {/* @ts-ignore */}
                 <iframe
+                    allowFullScreen
                     style={{
                         position: "absolute",
                         top: 0,
@@ -44,6 +44,7 @@ export default function VideoInformation() {
                         width: "100%",
                         height: "100%"
                     }}
+                    // @ts-ignore
                     width={iframeDimensions[0]} height={iframeDimensions[1]} src="https://www.youtube.com/embed/mvM7AnwMe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
             </div>
             <br />

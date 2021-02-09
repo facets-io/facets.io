@@ -32,15 +32,20 @@ export default () => {
             <br />
             <br />
             <div style={{ textAlign: 'center' }}>
-                <img width='50%' src='../../images/facet_integration.png' />
+                <img width='50%' src='../../facet_integration.svg' />
             </div>
+            <br />
+            <br />
            This is the single line of code your need to paste in your <i>head HTML</i> to use our platform.
+            <br />
+            <br />
             <CodeDiv>
                 <CodeBlock />
                 <i>
                     <FacetLabel fontSize={fontSize.small} text="Note: ID is automatically generated from the facet extension" />
                 </i>
             </CodeDiv>
+            <br />
             <br />
             Make sure to embed the script tag as early as your application loads, to ensure correct DOM dismissal before the elements are loaded on the page.
     </FacetParagraph>
