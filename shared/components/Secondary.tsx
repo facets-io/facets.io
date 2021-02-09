@@ -114,7 +114,9 @@ export default function Secondary() {
         <MainDiv>
             <br />
             <br />
-            <StyledFacetLabel isMobile={isViewMobile} style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
+            <div>
+                <StyledFacetLabel isMobile={isViewMobile} style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
+            </div>
             <TitleParagraphImage element={tpiElements[0]} />
             <br />
             <br />
