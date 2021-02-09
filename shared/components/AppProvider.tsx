@@ -25,17 +25,24 @@ export default function AppProvider({ children }) {
         }
         ,
         {
-            name: 'Next 5 Thousand',
-            cost: 0.05,
-            costText: '$0.05 per request',
-            limit: 5000
+            name: 'Next 20 Thousand',
+            cost: 0.005,
+            costText: '$0.005 per request',
+            limit: 20000
         }
         ,
         {
-            name: 'Next 250 Thousand',
-            cost: 0.0033,
-            costText: '$0.0033 per request',
-            limit: 250000,
+            name: 'Next 100 Thousand',
+            cost: 0.001,
+            costText: '$0.001 per request',
+            limit: 100000
+        }
+        ,
+        {
+            name: 'Next 5 Million',
+            cost: 0.0002,
+            costText: '$0.0002 per request',
+            limit: 9999999999999999999999999999999999999999999999999999999999999,
         },
         {
             name: 'Enterprise',
@@ -47,26 +54,27 @@ export default function AppProvider({ children }) {
         }
     ]
 
-    const calculate = (requestNumber) => {
-        let remainingRequests = requestNumber;
-        let cost = 0;
-        if (remainingRequests > pricingTier[0].limit) {
-            remainingRequests -= pricingTier[0].limit;
+    const calculate = (numberOfRequests) => {
+        let enterpriseLimit = 1200
+        let remainingRequests = numberOfRequests;
+        let price = 0
+        for (let i = 0; i < pricingTier.length && remainingRequests > 0 ;  i++) {
+            let limit = pricingTier[i].limit
+            let rate = pricingTier[i].cost
+            if (remainingRequests > limit && i < pricingTier.length - 1) {
+                price += limit * rate
+                remainingRequests -= limit;
+            } else {
+                price += remainingRequests * rate
+                remainingRequests = 0
+            }
+        }
+        if(price <= enterpriseLimit) {
+            return `$ ${price.toFixed(2)}`
         } else {
-            return '$ 0.00'
+            return `Enterprise`
         }
-        if (remainingRequests > pricingTier[1].limit) {
-            remainingRequests -= pricingTier[1].limit
-            cost += (pricingTier[1].limit * pricingTier[1].cost)
-        } else {
-            cost += (remainingRequests * pricingTier[1].cost)
-            return `$ ${cost.toFixed(2)}`
-        }
-        cost += (remainingRequests * pricingTier[2].cost)
-        if (cost < 5000) {
-            return `$ ${cost.toFixed(2)}`
-        }
-        return 'Enterprise';
+        return price
     }
 
     return <AppContext.Provider value={{

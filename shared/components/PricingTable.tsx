@@ -167,6 +167,23 @@ export default function PricingTable() {
                         <FacetDivider />
                     </td>
                 </tr>
+                <tr>
+                    <td>
+                        <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope" fontSize={"17px"} text={pricingTier[3].name} />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </td>
+                    <td>
+                        <FacetLabel color={color.black} fontFamily="Manrope" fontSize={"17px"} text={pricingTier[3].costText} />
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                        <FacetDivider />
+                    </td>
+                </tr>
                 <tr >
                     <td>
                         <FacetLabel color={color.black} fontWeight={600} fontFamily="Manrope" fontSize={"17px"} text="Enterprise" />
