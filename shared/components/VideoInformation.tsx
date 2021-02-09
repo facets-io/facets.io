@@ -27,7 +27,7 @@ export default function VideoInformation() {
             <br />
             <div>
                 {/* @ts-ignore */}
-                <iframe width={iframeDimensions[0]} height={iframeDimensions[1]} src="https://www.youtube.com/embed/mvM7AnwMe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
+                {/* <iframe width={560} height={315} src="https://www.youtube.com/embed/mvM7AnwMe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen /> */}
             </div>
             <br /><br />
         </MainDiv>

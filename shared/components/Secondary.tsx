@@ -53,6 +53,7 @@ const StyledFacetLabel = ({ text, fontSize = '36px', style = {}, isMobile = fals
         <FacetLabel extraStyle={style} color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
     </MobileContainer> :
         <FacetLabel extraStyle={style} color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
+
 const tpiElements = [
     {
         title: <div>

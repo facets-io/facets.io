@@ -58,14 +58,14 @@ export const whiteBtnColor = {
 
 // not working..
 const StyledButton = styled(Button)`
-    color: ${props => props.colorButtonStyle.color}!important;
-    background-color: ${props => props.colorButtonStyle.backgroundColor}!important;
+    color: ${props => props.colorButtonStyle?.color}!important;
+    background-color: ${props => props.colorButtonStyle?.backgroundColor}!important;
     width: ${props => props.width ? props.width : '100%'};
 `;
 
-export default ({ onClick = () => { }, text, maxWidth = "100%", disabled = false, colorButtonStyle = defaultColorBtnStyle, minWidth = '7rem', ...props }) => {
-    const classes = useStyles();
+const FacetButton = ({ onClick = () => { }, text, maxWidth = "100%", disabled = false, colorButtonStyle = defaultColorBtnStyle, minWidth = '7rem', ...props }) => {
 
+    const classes = useStyles();
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
@@ -79,3 +79,5 @@ export default ({ onClick = () => { }, text, maxWidth = "100%", disabled = false
         </StyledButton>
     </div >
 }
+
+export default FacetButton;

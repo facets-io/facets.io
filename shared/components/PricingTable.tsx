@@ -225,7 +225,6 @@ export default function PricingTable() {
 
                                     <NumberFormat
                                         thousandSeparator={true}
-                                        type="text"
                                         value={presentableCost}
                                         customInput={FacetInputFullHeight}
                                         placeholder="3,000"
