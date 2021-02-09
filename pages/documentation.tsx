@@ -33,18 +33,14 @@ const MainDiv = styled.div`
     }
 `;
 
-const StickyDiv = styled.div`
-
-`;
-
 export default function DocumentationPage() {
 
     const media = useMedia();
     const isMobileView = isMobile(media);
 
-    const menu = !isMobileView ? <StickyDiv>
+    const menu = !isMobileView ? <div>
         <TOC />
-    </StickyDiv> : null;
+    </div> : null;
 
     return (
         <AppProvider>

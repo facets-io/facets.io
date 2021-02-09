@@ -6,6 +6,8 @@ import FacetLabel from './FacetLabel'
 import AppContext from './AppContext'
 import FacetDivider from './FacetDivider'
 import FacetInputFullHeight from './FacetInputFullHeight'
+import NumberFormat from 'react-number-format';
+import { TextField } from '@material-ui/core'
 
 const MainDiv = styled.div`
     display: grid;
@@ -77,28 +79,27 @@ const StyledTable = styled.table`
         padding: 1rem;
         text-align: left;
         background-color: ${color.pricingGray}
-    }
-    
+    }   
+`
+
+const BorderDiv = styled.div`
+    display: grid;
+    grid-template-columns: 50% 50%;
+`;
+
+const BorderDivItem = styled.div`
+    border: 1px solid #C0C0C0;
+    borderLeft: none;
+    backgroundColor: color.pricingGray;
+    padding: 2rem 0rem 2rem 0rem;
+    text-align: center;
 `
 
 export default function PricingTable() {
 
     //@ts-ignore
-    const { estimatedCost, calculate, pricingTier } = useContext(AppContext);
+    const { estimatedCost, setEstimatedCost, calculate, pricingTier } = useContext(AppContext);
     const [presentableCost, setPresentableCost] = useState('');
-
-    const BorderDiv = styled.div`
-        display: grid;
-        grid-template-columns: 50% 50%;
-    `;
-
-    const BorderDivItem = styled.div`
-        border: 1px solid #C0C0C0;
-        borderLeft: none;
-        backgroundColor: color.pricingGray;
-        padding: 2rem 0rem 2rem 0rem;
-        text-align: center;
-    `
 
     return (
         <MainDiv>
@@ -203,15 +204,21 @@ export default function PricingTable() {
                                     <FacetLabel color={color.black} fontWeight={700} fontFamily="Manrope" fontSize={"17px"} text="Requests" />
                                 </BorderDivItem>
                                 <BorderDivItem>
-                                    <FacetInputFullHeight
+
+
+                                    <NumberFormat
+                                        thousandSeparator={true}
+                                        type="text"
                                         value={presentableCost}
-                                        onChange={(e) => {
-                                            var num = e.target.value.replace(/,/gi, "")
-                                            var num2 = num.split(/(?=(?:\d{3})+$)/).join(",")
-                                            setPresentableCost(num2)
-                                            const numberWithCommas = parseFloat(num2.replace(/,/g, ''));
-                                            calculate(numberWithCommas)
-                                        }} placeholder="3,000" />
+                                        customInput={FacetInputFullHeight}
+                                        placeholder="3,000"
+                                        onValueChange={({ value: v }) => {
+                                            setPresentableCost(v);
+                                            const cost = calculate(v);
+                                            setEstimatedCost(cost);
+                                        }}
+                                    />
+
                                 </BorderDivItem>
                             </BorderDiv>
                         </td>
