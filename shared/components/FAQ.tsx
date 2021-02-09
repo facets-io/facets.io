@@ -197,7 +197,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Currently, the facet extension is <a href='https://github.com/facets-io/'></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems.
+                        Currently, the facet extension is <a href='https://github.com/facets-io/'></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems as they become more mature.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
