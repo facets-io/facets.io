@@ -13,7 +13,6 @@ export default function VideoInformation() {
 
     const media = useMedia();
     const isMobileView = isMobile(media);
-    console.log('isMobileView', isMobileView)
     const iframeDimensions = isMobileView ? [280, 157] : [560, 315];
 
     console.log('iframeDimensions', iframeDimensions);
