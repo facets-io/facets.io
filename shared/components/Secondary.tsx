@@ -10,11 +10,13 @@ import FacetLink from './FacetLink';
 
 const CodeBlock = () => {
     const codeString = `<Head>
-    <script src="https://api.facet.run/js?id={ID}"></script>
+    <script 
+        src="https://api.facet.run/js?id={ID}">
+    </script>
     <title>...</title>
 </Head>`;
     return (
-        <SyntaxHighlighter showLineNumbers language="javascript" style={atomDark}>
+        <SyntaxHighlighter showLineNumbers language="language-markup" style={atomDark}>
             {codeString}
         </SyntaxHighlighter>
     );
