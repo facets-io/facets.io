@@ -7,8 +7,10 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-export default (props) => {
+const FacetDivider = (props) => {
     const classes = useStyles();
 
     return <Divider className={classes.divider} {...props} />
 }
+
+export default FacetDivider;

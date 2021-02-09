@@ -10,9 +10,11 @@ const ErrorSpan = styled.span`
     color: #FF5050;
 `;
 
-export default ({ text, ...other }) => {
+const FacetFormError = ({ text, ...other }) => {
     return <StyledDiv>
         <FacetImage src='./facet_form_error.svg' />
         <ErrorSpan {...other}>{text}</ErrorSpan>
     </StyledDiv>
 }
+
+export default FacetFormError;
