@@ -18,24 +18,24 @@ export default function AppProvider({ children }) {
 
     const pricingTier = [
         {
-            name: 'First 1 Million',
+            name: 'First 1 Thousand',
             cost: 0,
             costText: 'free',
-            limit: 1000000
+            limit: 1000
         }
         ,
         {
-            name: 'Next 250 Million',
-            cost: 0.000001,
-            costText: '$0.20 per 1M',
-            limit: 250000000
+            name: 'Next 5 Thousand',
+            cost: 0.05,
+            costText: '$0.05 per request',
+            limit: 5000
         }
         ,
         {
-            name: 'Next 1 Billion',
-            cost: 0.0000009,
-            costText: '$0.10 per 1M',
-            limit: 1000000000,
+            name: 'Next 250 Thousand',
+            cost: 0.0033,
+            costText: '$0.0033 per request',
+            limit: 250000,
         },
         {
             name: 'Enterprise',
@@ -65,7 +65,7 @@ export default function AppProvider({ children }) {
             return
         }
         cost += (remainingRequests * pricingTier[2].cost)
-        if (cost < 5000) {
+        if (cost <= 1075) {
             setEstimatedCost(`$ ${cost.toFixed(2)}`)
             return
         }
