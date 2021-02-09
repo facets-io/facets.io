@@ -114,6 +114,7 @@ export default function FAQ() {
                             <li>Personalized Dashboard</li>
                             <li>OAuth 2.0 and Single Sign-On (SSO)</li>
                         </ol>
+                        You can also find what we are currently working on through our <a href='https://github.com/facets-io'>GitHub page</a>. 
                     </Typography>
                 </AccordionDetails>
             </Accordion>

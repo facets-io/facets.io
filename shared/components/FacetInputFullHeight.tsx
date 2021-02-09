@@ -60,7 +60,6 @@ export default ({
             disableUnderline={true}
             // @ts-ignore
             type="text"
-            autoFocus
             style={{
                 width,
                 backgroundColor: colorStyle.backgroundColor,
