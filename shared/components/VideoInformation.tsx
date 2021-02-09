@@ -1,6 +1,7 @@
 import FacetLabel from "./FacetLabel";
 import styled from 'styled-components';
-import { color, fontSize } from "../constant";
+import { color, fontSize, isMobile } from "../constant";
+import useMedia from "../hooks/useMedia";
 
 const MainDiv = styled.div`
     background-color: ${color.white};
@@ -9,6 +10,14 @@ const MainDiv = styled.div`
 `;
 
 export default function VideoInformation() {
+
+    const media = useMedia();
+    const isMobileView = isMobile(media);
+    console.log('isMobileView', isMobileView)
+    const iframeDimensions = isMobileView ? [280, 157] : [560, 315];
+
+    console.log('iframeDimensions', iframeDimensions);
+
     return (
         <MainDiv>
             <br />
@@ -20,9 +29,8 @@ export default function VideoInformation() {
             <br />
             <br />
             <div>
-                <a href="https://youtu.be/mvM7AnwMe8A" target="_blank">
-                    <img style={{ maxWidth: '40rem' }} width="85%" src="./blank_video.svg" alt="Facet logo" />
-                </a>
+                {/* @ts-ignore */}
+                <iframe width={iframeDimensions[0]} height={iframeDimensions[1]} src="https://www.youtube.com/embed/mvM7AnwMe8A" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen />
             </div>
             <br /><br />
         </MainDiv>

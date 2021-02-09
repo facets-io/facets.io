@@ -106,7 +106,7 @@ const responsiveThresholds = {
     upperTH: '(min-width: 1024px)',
 }
 
-const isMobile = (threshHoldValue) => {
+const isMobile = (threshHoldValue = responsiveThresholds.sm) => {
     return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm;
 }
 

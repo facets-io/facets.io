@@ -23,7 +23,6 @@ const scrollTo = (id) => {
     const element = document.getElementById(id);
     if (element) {
         element.scrollIntoView(true);
-        //document.getElementById("sweetness").scrollTop += 10;
         window.scrollBy(0, -100);
     }
 }
