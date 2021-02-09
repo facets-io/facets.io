@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import {allFacets, color} from '../constant';
+import { allFacets, color } from '../constant';
 import AppContext from './AppContext';
 import { SnackbarProvider } from 'notistack';
 import FacetSnackbar from './FacetSnackbar';
@@ -53,23 +53,23 @@ export default function AppProvider({ children }) {
         if (remainingRequests > pricingTier[0].limit) {
             remainingRequests -= pricingTier[0].limit;
         } else {
-            setEstimatedCost('$ 0.00')
-            return
+            // setEstimatedCost('$ 0.00')
+            return '$ 0.00'
         }
         if (remainingRequests > pricingTier[1].limit) {
             remainingRequests -= pricingTier[1].limit
             cost += (pricingTier[1].limit * pricingTier[1].cost)
         } else {
             cost += (remainingRequests * pricingTier[1].cost)
-            setEstimatedCost(`$ ${cost.toFixed(2)}`)
-            return
+            // setEstimatedCost(`$ ${cost.toFixed(2)}`)
+            return `$ ${cost.toFixed(2)}`
         }
         cost += (remainingRequests * pricingTier[2].cost)
-        if (cost <= 1075) {
-            setEstimatedCost(`$ ${cost.toFixed(2)}`)
-            return
+        if (cost < 5000) {
+            // setEstimatedCost(`$ ${cost.toFixed(2)}`)
+            return `$ ${cost.toFixed(2)}`
         }
-        setEstimatedCost(`Enterprise`)
+        // setEstimatedCost(`Enterprise`)
     }
 
     return <AppContext.Provider value={{
@@ -78,7 +78,7 @@ export default function AppProvider({ children }) {
     }}>
         {/* @ts-ignore */}
         <SnackbarProvider
-            style={{ height: '100%'}}
+            style={{ height: '100%' }}
             maxSnack={4}
             disableWindowBlurListener
             autoHideDuration={snackbarConfig.autoHideDuration}
