@@ -54,7 +54,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Version 1 of our product, facet extension, is production-ready. There might be some edge cases and bugs to iron out.
+                        Version 1 of our product, the facet extension, is production-ready. There might be some edge cases and bugs to iron out.
                         We would be glad to receive your feedback and we are committed to providing you hands-on support on any issues that might arise during onboarding.
                     </Typography>
                 </AccordionDetails>
@@ -87,7 +87,7 @@ export default function FAQ() {
                     id="panel1a-header"
 
                 >
-                    <Typography className={classes.heading}>Why choose facet as you feature management solution?</Typography>
+                    <Typography className={classes.heading}>Why choose facet as your feature management solution?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
@@ -162,7 +162,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Yes! By default, facets are declared with a global scope. You can change their visibility to non-global, which mean that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
+                        Yes! By default, facets are declared with a global scope. You can change their visibility to non-global, which means that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
                         <br />
                         <figure>
                             <img width='100%' src='../../images/global_facet_declaration.png' />
@@ -183,8 +183,8 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        At facet, Security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps, including <a href='https://snyk.io/'>Snyk</a> and {''}
-                        <a href='https://github.com/dependabot'>Github</a>, to ensure secure codebases. We are also working on getting CCPA, GDPR, HIPAA, FERPA, PCI and other data privacy regulations.                    </Typography>
+                        At facet, security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps, including <a href='https://snyk.io/'>Snyk</a> and {''}
+                        <a href='https://github.com/dependabot'>Github</a>, to ensure secure codebases. We are also working on getting CCPA, GDPR, HIPAA, FERPA, PCI, SOC 2 and other data privacy regulations.                    </Typography>
                 </AccordionDetails>
             </Accordion>
             <Accordion className={classes.shadow}>

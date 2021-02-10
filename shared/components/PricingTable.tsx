@@ -7,7 +7,7 @@ import AppContext from './AppContext'
 import FacetDivider from './FacetDivider'
 import FacetInputFullHeight from './FacetInputFullHeight'
 import NumberFormat from 'react-number-format';
-import { TextField } from '@material-ui/core'
+import { Link, TextField } from '@material-ui/core'
 
 const MainDiv = styled.div`
     display: grid;
@@ -257,7 +257,12 @@ export default function PricingTable() {
                         <td colSpan={2}>
                             <br />
                             <div style={{ textAlign: 'center' }}>
-                                <FacetButton width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
+                                {/* @ts-ignore */}
+                                <Link style={{
+                                    textDecoration: 'none'
+                                }} href='../documentation/' passHref>
+                                    <FacetButton width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
+                                </Link>
                             </div>
                             <br />
                         </td>

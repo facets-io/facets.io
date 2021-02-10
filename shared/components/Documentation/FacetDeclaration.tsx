@@ -26,7 +26,7 @@ const facetDeclaration = () => {
                 name="eye-outline"
                 title="Settings" />)
         next to each facet, you can toggle it.
-        You can rename and delete a facet by selecting on the Menu button (
+        You can rename and delete a facet by selecting on the menu button (
     <Icon
                 iconWidth="20"
                 iconHeight="15"
@@ -34,14 +34,14 @@ const facetDeclaration = () => {
                 name="more-vertical-outline"
                 title="Settings" />).
 
-    To create a new facet, select the Add button (
+    To create a new facet, select the add button (
     <Icon
                 iconWidth="20"
                 iconHeight="15"
                 fill={color.grayA}
                 name="plus-circle-outline"
                 title="Settings" />)
-    button at the bottom right corner of the extension.  To save your configuration, select the Save button (
+    button at the bottom right corner of the extension.  To save your configuration, select the save button (
     <Icon
                 iconWidth="20"
                 iconHeight="15"

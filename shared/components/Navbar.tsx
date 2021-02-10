@@ -98,10 +98,15 @@ export default function Navbar({ activePage = '' }) {
                 {LogoLink}
             </div>
             <div style={{ justifySelf: 'end' }}>
-                <FacetButton
-                    onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
-                    colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }}
-                />
+                {/* @ts-ignore */}
+                <Link style={{
+                    textDecoration: 'none'
+                }} href='../documentation/' passHref>
+                    <FacetButton
+                        colorButtonStyle={primaryBtnColor} text="Download"
+                    />
+                </Link>
+
             </div>
             <div style={{ justifySelf: 'end' }}>
                 <FacetIconButton iconWidth="40" iconHeight="70" size="medium" title="Enable" key="edit" fill={color.primary} name="menu-outline" onClick={handleClick} />
@@ -196,9 +201,13 @@ export default function Navbar({ activePage = '' }) {
                             </div>
                         </Link>
                         <div style={{ justifySelf: 'end' }}>
-                            <FacetButton
-                                onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
-                                colorButtonStyle={primaryBtnColor} text="Download" onClick={() => { location.href = 'https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh' }} />
+                            {/* @ts-ignore */}
+                            <Link style={{
+                                textDecoration: 'none'
+                            }} href='../documentation/' passHref>
+                                <FacetButton
+                                    colorButtonStyle={primaryBtnColor} text="Download" />
+                            </Link>
                         </div>
 
                     </RightDiv>
