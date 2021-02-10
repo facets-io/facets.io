@@ -103,7 +103,6 @@ export default function Navbar({ activePage = '' }) {
                     textDecoration: 'none'
                 }} href='../documentation/' passHref>
                     <FacetButton
-                        onAuxClick={() => { window.open("https://chrome.google.com/webstore/detail/facetninja/hpkpjkdhgldjhcopdkmljdgceeojoglh", "_blank") }}
                         colorButtonStyle={primaryBtnColor} text="Download"
                     />
                 </Link>
