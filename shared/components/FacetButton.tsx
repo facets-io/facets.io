@@ -56,7 +56,6 @@ export const whiteBtnColor = {
     border: `${defaultColorBtnStyle.border}`
 }
 
-// not working..
 const StyledButton = styled(Button)`
     color: ${props => props.colorButtonStyle?.color}!important;
     background-color: ${props => props.colorButtonStyle?.backgroundColor}!important;
