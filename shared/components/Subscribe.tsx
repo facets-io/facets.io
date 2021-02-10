@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { snackbar } from "../constant";
 import { Input } from "@material-ui/core";
+import FacetFormError from "./FacetFormError";
 
 const MainForm = styled.form`
     text-align: center;
@@ -33,7 +34,7 @@ export default function StayUpdated() {
     }
 
     const onSubmit = async data => {
-        if (data.contact != "") {
+        if (data.email != "") {
             fetch('https://api.facet.run/notification', {
                 method: 'POST',
                 body: JSON.stringify(data)
@@ -60,7 +61,20 @@ export default function StayUpdated() {
         <CoreDiv>
             <MainForm onSubmit={(e) => e.preventDefault()}>
                 <div>
-                    <FacetInput extraStyle={{ maxWidth: "20rem" }} value={email} onChange={(e) => { setEmail(e.target.value) }} placeholder="email" name="contact" inputRef={register()} />
+                    <FacetInput extraStyle={{ maxWidth: "20rem" }} value={email} onChange={(e) => { setEmail(e.target.value) }}
+
+                        placeholder="example@domain.com"
+                        name="email"
+                        inputRef={register({
+                            required: 'Please specify an email',
+                            pattern: {
+                                value: /\S+@\S+\.\S+/,
+                                message: 'Entered value does not match email format',
+                            },
+                        })}
+                    />
+                    {errors && errors.email && <FacetFormError text={errors.email.message}></FacetFormError>}
+
                 </div>
                 <div>
                     <FacetButton maxWidth="20rem" colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Subscribe" />
