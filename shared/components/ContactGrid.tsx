@@ -130,7 +130,7 @@ export default function ContactGrid() {
                                 </div>
                             </div>
                             <div>
-                                <FacetLabel text="Last name*" color={color.black} />
+                                <FacetLabel text="Last name *" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="lastName"
