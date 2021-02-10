@@ -10,6 +10,11 @@ const MainDiv = styled.div`
     text-align: center;
 `;
 
+const StyledVideo = styled.video`
+    width: 100% !important;
+    height: auto !important;
+`;
+
 export default function VideoInformation() {
 
     const media = useMedia();
@@ -21,7 +26,7 @@ export default function VideoInformation() {
             <br />
             <br />
             <div>
-                <StyledFacetLabel text="Learn how to use Facet"/>
+                <StyledFacetLabel text="Learn how to use Facet" />
             </div>
             <br />
             <br />
@@ -31,12 +36,9 @@ export default function VideoInformation() {
                 margin: '0 auto',
                 padding: '1rem'
             }}>
-                <video style={{
-                    width: '100% !important',
-                    height: 'auto!important'
-                }} poster="./video/video_placeholder.png" src="./video/Facet_Demo.mov" controls></video>
+                <StyledVideo poster="./video/video_placeholder.png" src="./video/Facet_Demo.mov" controls />
             </div>
-            <br/>
+            <br />
         </MainDiv >
     );
 }
