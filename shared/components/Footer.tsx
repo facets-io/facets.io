@@ -1,6 +1,6 @@
 import { color } from "../constant";
 import FacetLabel from "./FacetLabel";
-import StayUpdated from "./StayUpdated";
+import StayUpdated from "./Subscribe";
 import Link from 'next/link'
 import styled from "styled-components";
 

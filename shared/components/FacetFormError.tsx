@@ -12,7 +12,7 @@ const ErrorSpan = styled.span`
 
 const FacetFormError = ({ text, ...other }) => {
     return <StyledDiv>
-        <FacetImage src='./facet_form_error.svg' />
+        <FacetImage src='../facet_form_error.svg' />
         <ErrorSpan {...other}>{text}</ErrorSpan>
     </StyledDiv>
 }

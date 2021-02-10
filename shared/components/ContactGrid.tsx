@@ -5,7 +5,7 @@ import { color, responsiveThresholds, snackbar } from '../constant'
 import FacetButton, { primaryBtnColor } from './FacetButton'
 import FacetInput, { electricColor } from './FacetInput'
 import FacetLabel from './FacetLabel'
-import StayUpdated from './StayUpdated'
+import StayUpdated from './Subscribe'
 import { useForm } from 'react-hook-form'
 import FacetFormError from './FacetFormError'
 import { useSnackbar } from 'notistack'
@@ -50,7 +50,7 @@ const TwoColumnGrid = styled.div`
 
 export default function ContactGrid() {
     const { enqueueSnackbar } = useSnackbar();
-    const { register, errors, handleSubmit, watch } = useForm({})
+    const { register, errors, handleSubmit } = useForm({})
     const [submitting, setSubmitting] = useState(false)
     const [firstName, setFirstName] = useState('')
     const [lastName, setLastName] = useState('')
@@ -106,46 +106,55 @@ export default function ContactGrid() {
             </StyledDiv2>
             <StyledDiv>
 
-
                 <div style={{ textAlign: "left", display: "grid", justifyContent: "center" }}>
                     <StyledForm onSubmit={(e) => e.preventDefault()}>
                         <Input style={{ display: "none" }} value="General Inquiry" name={"subject"} inputRef={register()} />
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="First name" color={color.black} />
+                                <FacetLabel text="First name *" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="firstName"
                                         value={firstName}
                                         onChange={(e) => { setFirstName(e.target.value) }}
-                                        inputRef={register()}
+                                        inputRef={register({
+                                            required: 'Please specify a first name',
+                                        })}
                                         /*@ts-ignore*/
                                         colorStyle={electricColor}
                                     />
                                 </div>
+                                <div>
+                                    {errors && errors.firstName && <FacetFormError text={errors.firstName.message}></FacetFormError>}
+                                </div>
                             </div>
                             <div>
-                                <FacetLabel text="Last name" color={color.black} />
+                                <FacetLabel text="Last name *" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
                                         name="lastName"
                                         value={lastName}
                                         onChange={(e) => { setLastName(e.target.value) }}
-                                        inputRef={register()}
+                                        inputRef={register({
+                                            required: 'Please specify a last name',
+                                        }
+                                        )}
                                         /*@ts-ignore*/
                                         colorStyle={electricColor} />
                                 </div>
-                                {errors && errors.lastname && <FacetFormError role="alert" text={errors.lastname.message}></FacetFormError>}
+                                <div>
+                                    {errors && errors.lastName && <FacetFormError text={errors.lastName.message}></FacetFormError>}
+                                </div>
                             </div>
                         </TwoColumnGrid>
                         <br />
                         <TwoColumnGrid>
                             <div>
-                                <FacetLabel text="Email*" color={color.black} />
+                                <FacetLabel text="Email *" color={color.black} />
                                 <div style={{ marginTop: '.5rem' }}>
                                     <FacetInput
-                                        name="contact"
+                                        name="email"
                                         value={email}
                                         onChange={(e) => { setEmail(e.target.value) }}
                                         inputRef={register({
@@ -157,9 +166,11 @@ export default function ContactGrid() {
                                         })}
                                         /*@ts-ignore*/
                                         colorStyle={electricColor} />
+                                    <div>
+                                        {errors && errors.email && <FacetFormError role="alert" text={errors.email.message}></FacetFormError>}
+                                    </div>
                                 </div>
                                 <br />
-                                {errors && errors.email && <FacetFormError role="alert" text={errors.email.message}></FacetFormError>}
                             </div>
                             <div>
                                 <FacetLabel text="Company name" color={color.black} />
