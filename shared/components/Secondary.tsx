@@ -10,11 +10,13 @@ import FacetLink from './FacetLink';
 
 const CodeBlock = () => {
     const codeString = `<Head>
-    <script src="https://api.facet.run/js?id={ID}"></script>
+    <script 
+        src="https://api.facet.run/js?id={ID}">
+    </script>
     <title>...</title>
 </Head>`;
     return (
-        <SyntaxHighlighter showLineNumbers language="javascript" style={atomDark}>
+        <SyntaxHighlighter showLineNumbers language="language-markup" style={atomDark}>
             {codeString}
         </SyntaxHighlighter>
     );
@@ -53,6 +55,7 @@ const StyledFacetLabel = ({ text, fontSize = '36px', style = {}, isMobile = fals
         <FacetLabel extraStyle={style} color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
     </MobileContainer> :
         <FacetLabel extraStyle={style} color={color.black} fontSize={fontSize} fontWeight={700} text={text} />
+
 const tpiElements = [
     {
         title: <div>
@@ -113,7 +116,9 @@ export default function Secondary() {
         <MainDiv>
             <br />
             <br />
-            <StyledFacetLabel isMobile={isViewMobile} style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
+            <div>
+                <StyledFacetLabel isMobile={isViewMobile} style={{ marginTop: '2rem' }} text='Unrivaled Feature Management' />
+            </div>
             <TitleParagraphImage element={tpiElements[0]} />
             <br />
             <br />

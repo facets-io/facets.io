@@ -40,10 +40,12 @@ export const electricColor = {
     backgroundColor: color.white,
 };
 
-export default ({
+
+const FacetInput = ({
     width = '100%',
     type = 'input',
-    name = '', id = '',
+    name = '',
+    id = '',
     isMountainWalkWebsite = true,
     colorStyle = defaultColor,
     extraStyle = {},
@@ -52,7 +54,6 @@ export default ({
     const innerElement = <div>
         <CustomInput
             id={id}
-            type={type}
             name={name}
             disableUnderline={true}
             style={{
@@ -75,3 +76,5 @@ export default ({
 
     return component;
 }
+
+export default FacetInput;

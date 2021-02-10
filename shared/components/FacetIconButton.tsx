@@ -1,26 +1,8 @@
-import { IconButton, makeStyles } from '@material-ui/core'
+import { IconButton } from '@material-ui/core'
 import React, { useEffect } from 'react'
 import * as eva from "eva-icons"
 import { color } from '../constant'
 import styled from 'styled-components'
-
-const useStyles = makeStyles({
-    iconButton: {
-        padding: '.25rem',
-        display: 'grid',
-        textAlign: 'center',
-        // @ts-ignore
-        width: props => props.width ? props.width : '',
-    },
-    i: {
-        display: 'grid',
-        // @ts-ignore
-        fill: props => props.isSelected ? color.electricB : '',
-        "&:hover": {
-            fill: color.white
-        }
-    }
-});
 
 const StyledIconButton = styled(IconButton)`
     padding: .25rem;
@@ -37,7 +19,7 @@ const StyledI = styled.i`
     }
 `
 
-export default ({ name, size = "small", fill = color.lightGray,
+const FacetIconButton = ({ name, size = "small", fill = color.lightGray,
     isSelected = true, customHeight = null, width = null, iconWidth = null, iconHeight = null, children = null, ...other }) => {
 
     useEffect(() => {
@@ -60,3 +42,5 @@ export default ({ name, size = "small", fill = color.lightGray,
         {children}
     </StyledIconButton>
 }
+
+export default FacetIconButton;

@@ -37,7 +37,9 @@ export default function Footer() {
         </div>
         <br />
         <div>
-          <FacetLabel color={color.lightGray} fontFamily="Manrope" fontSize="16" text="Copyright © Facet Technologies, Inc. 2021 - All rights reserved.  " />
+          <FacetLabel color={color.lightGray} fontFamily="Manrope" fontSize="16" text="Copyright © Facet Technologies, Inc. 2021" />
+          <br />
+          <FacetLabel color={color.lightGray} fontFamily="Manrope" fontSize="16" text="All rights reserved" />
         </div>
         <br />
       </div>

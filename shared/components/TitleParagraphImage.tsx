@@ -18,7 +18,7 @@ const InnerDiv = styled.div`
     }
 `;
 
-export default ({ element, isReverse = false }) => {
+const TitleParagraphImage = ({ element, isReverse = false }) => {
     const media = useMedia();
     const isViewMobile = isMobile(media);
 
@@ -66,3 +66,5 @@ export default ({ element, isReverse = false }) => {
             </InnerDiv>
     return result;
 }
+
+export default TitleParagraphImage;

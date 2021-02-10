@@ -20,7 +20,7 @@ const Space = <>
     < br />
 </>
 
-export default () => {
+const Documentation = () => {
     return (
         <StyledDiv>
             <div>
@@ -41,3 +41,5 @@ export default () => {
         </StyledDiv >
     )
 }
+
+export default Documentation;

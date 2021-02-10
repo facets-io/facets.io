@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default (props) => {
+const FacetImage = (props) => {
     const aElement = props.href ? <a href={props.href} > <img {...props} />
     </a> :
         <>
@@ -8,3 +8,5 @@ export default (props) => {
         </>;
     return aElement
 }
+
+export default FacetImage;

@@ -11,7 +11,6 @@ export default () => {
             Download the latest version of the <a href="http://cdn.facet.run/extension-chrome-facet-ninja.zip">facet extension</a>. Unzip the folder and load it as an extension in your Chrome browser via the
             <b>"Load unpacked"</b> option. 
             <br/>
-
             <br/>
             Navigate to <b>"chrome://extensions"</b> in the Chrome browser and enable <b>"Developer mode"</b> in the top right corner. In the top left corner, select <b>"Load unpacked"</b> {'->'} <b>"Load the unzipped folder"</b> and open the unzipped facet extension folder. The extension should be installed in your browser.
             <br />

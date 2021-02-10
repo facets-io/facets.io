@@ -1,7 +1,7 @@
 import React from 'react';
 import { color as colors, fontSize } from '../constant';
 
-export default ({ text = null, color = colors.black, fontSize = 'medium', children = null }) => {
+const FacetParagraph = ({ text = null, color = colors.black, fontSize = 'medium', children = null }) => {
     return <span
         style={{
             width: '100%',
@@ -16,3 +16,5 @@ export default ({ text = null, color = colors.black, fontSize = 'medium', childr
         {children}
     </span>
 }
+
+export default FacetParagraph;

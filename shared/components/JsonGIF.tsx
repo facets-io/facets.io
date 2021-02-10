@@ -1,7 +1,7 @@
 import React from 'react'
 import Lottie from 'react-lottie';
 
-export default function ({ animationData, isStopped = false, isPaused = false, style = {
+const JsonGIF = ({ animationData, isStopped = false, isPaused = false, style = {
     borderRadius: undefined,
     overflow: "hidden",
     width: undefined,
@@ -14,8 +14,7 @@ export default function ({ animationData, isStopped = false, isPaused = false, s
         rendererSettings: {
             preserveAspectRatio: 'xMidYMid slice'
         }
-    } }
-) {
+    } }) => {
     const defaultOptions = {
         ...options, animationData
     };
@@ -25,5 +24,6 @@ export default function ({ animationData, isStopped = false, isPaused = false, s
             isStopped={isStopped}
             isPaused={isPaused} />
     </div>
-
 }
+
+export default JsonGIF;

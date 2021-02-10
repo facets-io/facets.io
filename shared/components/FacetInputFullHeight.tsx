@@ -55,11 +55,8 @@ export default ({
     const innerElement = <>
         <CustomInput
             id={id}
-            type={type}
             name={name}
             disableUnderline={true}
-            // @ts-ignore
-            type="text"
             style={{
                 width,
                 backgroundColor: colorStyle.backgroundColor,

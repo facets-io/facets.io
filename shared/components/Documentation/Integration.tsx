@@ -5,7 +5,6 @@ import FacetParagraph from "../FacetParagraph"
 import styled from "styled-components";
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
-import FacetImage from "../FacetImage";
 
 const CodeDiv = styled.div`
     text-align: center;
@@ -16,11 +15,13 @@ export default () => {
 
     const CodeBlock = () => {
         const codeString = `<Head>
-    <script src="https://api.facet.run/js?id={ID}"></script>
+    <script 
+        src="https://api.facet.run/js?id={ID}">
+    </script>
     <title>...</title>
 </Head>`;
         return (
-            <SyntaxHighlighter showLineNumbers language="javascript" style={atomDark}>
+            <SyntaxHighlighter showLineNumbers language="language-markup" style={atomDark}>
                 {codeString}
             </SyntaxHighlighter>
         );
@@ -32,15 +33,20 @@ export default () => {
             <br />
             <br />
             <div style={{ textAlign: 'center' }}>
-                <img width='50%' src='../../images/facet_integration.png' />
+                <img width='50%' src='../../facet_integration.svg' />
             </div>
+            <br />
+            <br />
            This is the single line of code your need to paste in your <i>head HTML</i> to use our platform.
+            <br />
+            <br />
             <CodeDiv>
                 <CodeBlock />
                 <i>
                     <FacetLabel fontSize={fontSize.small} text="Note: ID is automatically generated from the facet extension" />
                 </i>
             </CodeDiv>
+            <br />
             <br />
             Make sure to embed the script tag as early as your application loads, to ensure correct DOM dismissal before the elements are loaded on the page.
     </FacetParagraph>

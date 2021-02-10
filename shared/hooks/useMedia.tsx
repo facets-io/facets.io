@@ -4,7 +4,7 @@ import { responsiveThresholds } from '../constant';
 /**
  * Taken from https://usehooks.com/useMedia/
  */
-export default () => {
+const useMedia = () => {
     const queries = Object.values(responsiveThresholds);
     // Array containing a media query list for each query
     const mediaQueryLists = process.browser ? queries.map(q => window.matchMedia(q)) : [];
@@ -33,3 +33,5 @@ export default () => {
 
     return value;
 }
+
+export default useMedia;
