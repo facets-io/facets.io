@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { useSnackbar } from "notistack";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { snackbar } from "../constant";
-import { Input } from "@material-ui/core";
+import { color, snackbar } from "../constant";
 import FacetFormError from "./FacetFormError";
 
 const MainForm = styled.form`
@@ -15,11 +14,32 @@ const MainForm = styled.form`
     grid-gap: 2%;
     justify-content: center;
     align-items: center;
+
+    @media (max-width: 720px) {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-gap: 15%;
+        align-items: center;
+        justify-content: center;
+    }
 `
 
+const StyledFacetButton = styled(FacetButton)`
+    max-width: 10rem;
+
+    @media (max-width: 720px) {
+        width: 100%
+    }
+`;
+
 const CoreDiv = styled.div`
-    width: 100%;
-`
+    margin: 2rem;
+`;
+
+export const mainColor = {
+    color: color.black,
+    backgroundColor: color.white,
+};
 
 export default function StayUpdated() {
     const { enqueueSnackbar } = useSnackbar();
@@ -61,9 +81,8 @@ export default function StayUpdated() {
         <CoreDiv>
             <MainForm onSubmit={(e) => e.preventDefault()}>
                 <div>
-                    <FacetInput extraStyle={{ maxWidth: "20rem" }} value={email} onChange={(e) => { setEmail(e.target.value) }}
-
-                        placeholder="example@domain.com"
+                    <FacetInput extraStyle={{ maxWidth: "30rem" }} value={email} onChange={(e) => { setEmail(e.target.value) }}
+                        placeholder="email"
                         name="email"
                         inputRef={register({
                             required: 'Please specify an email',
@@ -72,12 +91,14 @@ export default function StayUpdated() {
                                 message: 'Entered value does not match email format',
                             },
                         })}
+                        // @ts-ignore
+                        colorStyle={mainColor}
                     />
-                    {errors && errors.email && <FacetFormError text={errors.email.message}></FacetFormError>}
-
+                    {errors && errors.email && <FacetFormError text={errors.email.message}>
+                    </FacetFormError>}
                 </div>
-                <div>
-                    <FacetButton maxWidth="20rem" colorButtonStyle={primaryGrayBtnColor} onClick={handleSubmit(onSubmit)} text="Subscribe" />
+                <div >
+                    <StyledFacetButton style={{ maxWidth: "30rem" }} colorButtonStyle={primaryBtnColor} onClick={handleSubmit(onSubmit)} text="Subscribe" />
                 </div>
             </MainForm>
         </CoreDiv>

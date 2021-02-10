@@ -108,7 +108,7 @@ export default function Navbar({ activePage = '' }) {
                 </Link>
 
             </div>
-            <div style={{ justifySelf: 'end' }}>
+            <div style={{ justifySelf: 'center' }}>
                 <FacetIconButton iconWidth="40" iconHeight="70" size="medium" title="Enable" key="edit" fill={color.primary} name="menu-outline" onClick={handleClick} />
                 <Menu
                     id="simple-menu"
@@ -209,7 +209,6 @@ export default function Navbar({ activePage = '' }) {
                                     colorButtonStyle={primaryBtnColor} text="Download" />
                             </Link>
                         </div>
-
                     </RightDiv>
                 </InnerDiv>
                 <br />
