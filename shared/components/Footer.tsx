@@ -12,10 +12,7 @@ export default function Footer() {
   return (
     <div>
       <br />
-      <br />
       <StayUpdated />
-      <br />
-      <br />
       <div style={{ textAlign: 'center', backgroundColor: color.secondaryGray }}>
         <div>
           <Link href="/"><StyledImg src="/facet_typography_primary.svg" alt="Facet logo" height="30" /></Link>
