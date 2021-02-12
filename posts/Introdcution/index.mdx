@@ -1,0 +1,59 @@
+import CodeBlock from "./Codeblock.tsx";
+
+# Facet and Feature Flags: Comparisson
+
+Just as we shipped the first iteration of our platform, I thought of writting down the expectation what
+we are trying to solve, the tone behind the culture of the company, as well as what to expect from us.
+
+# Why create another feature management solution
+
+The primary way of rolling out feature is the one through feature flags. Programmers set their
+feature flags through code, where the declare logic as to what is supposed to go out in production
+and what not. This could look something like the following:
+
+<CodeBlock />
+
+In a realistic scenarion, the value of `useNewAlgorithmFlag` would be driven from a live-vendor configuration.
+That would determine of what would be displayed or not in the screen.
+
+## IESS "if-else-statement-syndrome"
+
+As project progress and the more feature flags are added in the system, the more of the these conditional statement
+grow. However, the very nature of feature flags is that they are short lived and should be deleted immediatedly after
+a feature is rolled out. As I was maintaining logic in my previous project, it stroke me as quite odd the very
+fact of maintaining these feature flags and CRUDing them is such a manual manner. I thought of the following:
+
+> We, the engineers, write code that should be long-lived, along with the features we deliver. How come the status quo of rolling our features requires such a controversial way of doing things?
+
+I thought of a solution that could be long-lived, required zero manual configuration and maintainance, so that engineers
+can focus on delivering features while the rollout mechanisms are maintained from a different platform, and that was when Facet was born.
+
+## How is Facet different?
+
+Facet takes a very minimal low-code approach, where Facets are declared through a GUI component and are only maintained through there. This
+means that there is no conditional code maintainance, and hence all logic is maintained from the Facet CDN script. This is
+a major shift when comparing with existing solutions, as changes are made through UI and not code. A side effect of conditional-statements in code
+is that now developers have to maintain not only business logic, but also rollout logic as to which feature should be rolled out or not. The tricky part
+here is that usually which feature goes out and which not, is derrived from different roles within a company; usually Project Managers/Owners have a big say to that.
+This can usually lead to unwanted behaviors caused by the potential communication barriers between these two roles.
+
+This brings us to this follow up question:
+
+## Should code be determining what goes out and what not?
+
+Traditionally, with feature flags, project managers and engineers collaborate towards selectively choosing what goes out and what not.
+Wouldn't it be nice if a framework could abstract the rollout mechanisms independetly from what is developed versus when it's derived to customers?
+At facet, we focus on creating this layer of abstraction where engineers can focus on business logic and use our platform to determine what goes out and what not.
+We want to embrace a healthy communication between teams by removing bridges and unwanted communiation traps that are presented during feature flag usage.
+
+## Can the same logic be applied for Backend?
+
+Unlike frontend where it's quite straightforward to select a combination of elements to be rolled out, Backend could be a little bit more trickier than that.
+However, if we were to treat each function codeblock as a potential facet, we could very easily come up with a UI component containing every possible function and
+offer what's rolled out and what not through a UI selection.
+
+## Benefits of choosing Facet
+
+- Declare what's shipped and what not independetly from Business logic
+- No need for SDK implementation/maintance
+- No need for maintaining conditional code and _remembering_ to delete right after rollout
