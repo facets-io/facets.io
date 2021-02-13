@@ -68,7 +68,10 @@ const FacetButton = ({ onClick = () => { }, text, maxWidth = "100%", disabled = 
     return <div className={classes.root}>
         <StyledButton
             colorButtonStyle={colorButtonStyle}
-            style={{ width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0, minWidth, maxWidth, border: colorButtonStyle.border }}
+            style={{
+                width: props.width ? props.width : '100%', height: '2.5rem', borderRadius: 0,
+                minWidth, maxWidth, border: colorButtonStyle.border, textTransform: 'none'
+            }}
             variant="contained"
             disabled={disabled}
             onClick={() => { if (onClick) { onClick() } }}

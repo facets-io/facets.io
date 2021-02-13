@@ -257,10 +257,9 @@ export default function PricingTable() {
                         <td colSpan={2}>
                             <br />
                             <div style={{ textAlign: 'center' }}>
-                                {/* @ts-ignore */}
                                 <Link style={{
                                     textDecoration: 'none'
-                                }} href='../documentation/' passHref>
+                                }} href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en">
                                     <FacetButton width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
                                 </Link>
                             </div>

@@ -104,12 +104,10 @@ export default function Navbar() {
                 </div>,
                 extraElement:
                     <ButtonDiv >
-                        {/* @ts-ignore */}
                         <Link style={{
                             textDecoration: 'none'
-                        }} href='../documentation/' passHref>
-                            <FacetButton maxWidth="40%" colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started"  />
-
+                        }} href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en" target='_blank'>
+                            <FacetButton maxWidth="40%" colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" />
                         </Link>
                     </ButtonDiv>
             }} />

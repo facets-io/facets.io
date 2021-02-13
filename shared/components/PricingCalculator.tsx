@@ -3,7 +3,6 @@ import FacetButton, { greenBtnColor } from './FacetButton'
 import FacetInput from './FacetInput'
 import FacetLabel from './FacetLabel'
 import styled from 'styled-components'
-import FacetDivider from './FacetDivider'
 
 const StyledDiv = styled.div`
     display: grid;
