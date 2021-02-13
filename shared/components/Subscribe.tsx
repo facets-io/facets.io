@@ -24,14 +24,6 @@ const MainForm = styled.form`
     }
 `
 
-const StyledFacetButton = styled(FacetButton)`
-    max-width: 10rem;
-
-    @media (max-width: 720px) {
-        width: 100%
-    }
-`;
-
 const CoreDiv = styled.div`
     margin: 2rem;
 `;
@@ -98,7 +90,7 @@ export default function StayUpdated() {
                     </FacetFormError>}
                 </div>
                 <div >
-                    <StyledFacetButton style={{ maxWidth: "30rem" }} colorButtonStyle={primaryBtnColor} onClick={handleSubmit(onSubmit)} text="Subscribe" />
+                    <FacetButton style={{ maxWidth: "30rem" }} colorButtonStyle={primaryBtnColor} onClick={handleSubmit(onSubmit)} text="Subscribe" />
                 </div>
             </MainForm>
         </CoreDiv>

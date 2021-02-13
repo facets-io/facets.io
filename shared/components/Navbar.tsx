@@ -101,7 +101,7 @@ export default function Navbar({ activePage = '' }) {
                 {/* @ts-ignore */}
                 <Link style={{
                     textDecoration: 'none'
-                }} href='../documentation/' passHref>
+                }} href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en">
                     <FacetButton
                         colorButtonStyle={primaryBtnColor} text="Download"
                     />
@@ -201,12 +201,8 @@ export default function Navbar({ activePage = '' }) {
                             </div>
                         </Link>
                         <div style={{ justifySelf: 'end' }}>
-                            {/* @ts-ignore */}
-                            <Link style={{
-                                textDecoration: 'none'
-                            }} href='../documentation/' passHref>
-                                <FacetButton
-                                    colorButtonStyle={primaryBtnColor} text="Download" />
+                            <Link href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en">
+                                <FacetButton colorButtonStyle={primaryBtnColor} text="Download" />
                             </Link>
                         </div>
                     </RightDiv>
