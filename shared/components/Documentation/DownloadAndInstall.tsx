@@ -25,7 +25,9 @@ export default () => {
             <FacetBlockQuote>
                 We are actively working on publishing the extension from the Chrome Web Store. Once it is published, we will update the documentation accordingly.
             </FacetBlockQuote>
-            Download and install the latest version of the facet extension through the <a href='https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en'>Google Chrome Web store</a>. After the installation is complete, create and authenticate your user account so that you can start using the facet extension.
-            </FacetParagraph>
+            <div>
+                Download and install the latest version of the facet extension through the <a href='https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en'>Google Chrome Web store</a>. After the installation is complete, create and authenticate your user account so that you can start using the facet extension.
+            </div>
+        </FacetParagraph>
     </>
 }
