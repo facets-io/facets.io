@@ -96,7 +96,7 @@ export default function ContactGrid() {
                     <FacetLabel fontWeight={700} fontSize={"42px"} text="Want To Get In Touch?" />
                     <br />
                     <br />
-                    <FacetLabel fontWeight={300} fontSize={"20px"} text="We’d love to hear from you! Contact us using the form below and we’ll be happy to answer your questions." />
+                    <FacetLabel fontWeight={300} fontSize={"20px"} text="We would love to hear from you! Contact us using the form below and we’ll be happy to answer your questions." />
                     <br />
                     <br />
                     <br />
