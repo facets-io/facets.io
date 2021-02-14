@@ -4,7 +4,7 @@ import { documentationIds } from "../../constant"
 import FacetBlockQuote from '../FacetBlockQuote';
 
 export default () => {
-    return <>
+    return <div>
         <FacetH1 id={documentationIds.download}>Download and install the facet extension</FacetH1>
         <FacetParagraph color={"#5D5D5D"}>
             Download the latest version of the <a href="http://cdn.facet.run/extension-chrome-facet-ninja.zip">facet extension</a>. Unzip the folder and load it as an extension in your Chrome browser via the
@@ -29,5 +29,5 @@ export default () => {
                 Download and install the latest version of the facet extension through the <a href='https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en'>Google Chrome Web store</a>. After the installation is complete, create and authenticate your user account so that you can start using the facet extension.
             </div>
         </FacetParagraph>
-    </>
+    </div>
 }
