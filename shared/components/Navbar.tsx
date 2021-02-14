@@ -9,6 +9,7 @@ import useMedia from '../hooks/useMedia';
 import FacetIconButton from './FacetIconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
+import { useRouter } from 'next/router';
 
 const LogoDiv = styled.div`
     display: grid;
@@ -70,6 +71,7 @@ export default function Navbar({ activePage = '' }) {
     const media = useMedia();
     const isViewMobile = isMobileLg(media);
     const [anchorEl, setAnchorEl] = useState(null);
+    const router = useRouter();
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -98,15 +100,11 @@ export default function Navbar({ activePage = '' }) {
                 {LogoLink}
             </div>
             <div style={{ justifySelf: 'end' }}>
-                {/* @ts-ignore */}
-                <Link style={{
-                    textDecoration: 'none'
-                }} href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en">
-                    <FacetButton
-                        colorButtonStyle={primaryBtnColor} text="Download"
-                    />
-                </Link>
-
+                <FacetButton
+                    onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en"); }}
+                    colorButtonStyle={primaryBtnColor}
+                    text="Download"
+                />
             </div>
             <div style={{ justifySelf: 'center' }}>
                 <FacetIconButton iconWidth="40" iconHeight="70" size="medium" title="Enable" key="edit" fill={color.primary} name="menu-outline" onClick={handleClick} />
@@ -201,9 +199,11 @@ export default function Navbar({ activePage = '' }) {
                             </div>
                         </Link>
                         <div style={{ justifySelf: 'end' }}>
-                            <Link href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en">
-                                <FacetButton colorButtonStyle={primaryBtnColor} text="Download" />
-                            </Link>
+                            <FacetButton
+                                onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }}
+                                colorButtonStyle={primaryBtnColor}
+                                text="Download"
+                            />
                         </div>
                     </RightDiv>
                 </InnerDiv>

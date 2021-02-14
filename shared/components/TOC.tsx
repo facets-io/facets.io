@@ -34,9 +34,9 @@ export default function TOC() {
     const listenScrollEvent = e => {
         if (window.scrollY < document.getElementById(documentationIds.facetTitle)?.offsetTop) {
             setActivePage(documentationIds.facetTitle);
-        } else if (window.scrollY > document.getElementById(documentationIds.facetTitle)?.offsetTop && window.scrollY < document.getElementById(documentationIds.download)?.offsetTop) {
-            setActivePage(documentationIds.download);
-        } else if (window.scrollY > document.getElementById(documentationIds.download)?.offsetTop && window.scrollY < document.getElementById(documentationIds.addDomainToWorkspace)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(documentationIds.facetTitle)?.offsetTop && window.scrollY < document.getElementById(documentationIds.install)?.offsetTop) {
+            setActivePage(documentationIds.install);
+        } else if (window.scrollY > document.getElementById(documentationIds.install)?.offsetTop && window.scrollY < document.getElementById(documentationIds.addDomainToWorkspace)?.offsetTop) {
             setActivePage(documentationIds.addDomainToWorkspace);
         } else if (window.scrollY > document.getElementById(documentationIds.addDomainToWorkspace)?.offsetTop && window.scrollY < document.getElementById(documentationIds.facetDeclaration)?.offsetTop) {
             setActivePage(documentationIds.facetDeclaration);
@@ -62,7 +62,7 @@ export default function TOC() {
     return (
         <MainDiv>
             {TocItem(documentationIds.facetTitle, documentationText.facetTitle)}
-            {TocItem(documentationIds.download, documentationText.download)}
+            {TocItem(documentationIds.install, documentationText.install)}
             {TocItem(documentationIds.addDomainToWorkspace, documentationText.addDomainToWorkspace)}
             {TocItem(documentationIds.facetDeclaration, documentationText.facetDeclaration)}
             {TocItem(documentationIds.preview, documentationText.preview)}

@@ -257,11 +257,7 @@ export default function PricingTable() {
                         <td colSpan={2}>
                             <br />
                             <div style={{ textAlign: 'center' }}>
-                                <Link style={{
-                                    textDecoration: 'none'
-                                }} href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en">
-                                    <FacetButton width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
-                                </Link>
+                                <FacetButton onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }} width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
                             </div>
                             <br />
                         </td>

@@ -59,6 +59,7 @@ const snackbar = {
 
 const documentationIds = {
     download: 'facet-download',
+    install: 'install',
     facetTitle: 'documentation-facet-title',
     facetDeclaration: 'documentation-facet-declaration',
     holdOffRollOut: 'documentation-hold-off-rollout',
@@ -70,6 +71,7 @@ const documentationIds = {
 
 const documentationText = {
     download: 'Download',
+    install: 'Install',
     facetTitle: 'Introduction',
     addDomainToWorkspace: 'Domain',
     facetDeclaration: 'Declaration',

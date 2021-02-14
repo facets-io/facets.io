@@ -7,6 +7,7 @@ import AddDomain from './Documentation/AddDomain';
 import FacetDeclaration from './Documentation/FacetDeclaration';
 import Preview from './Documentation/Preview';
 import Integration from './Documentation/Integration';
+import InstallChromeStore from './Documentation/InstallChromeStore';
 
 const StyledDiv = styled.div`
     color: ${color.black};
@@ -27,6 +28,7 @@ const Documentation = () => {
                 <Introduction />
                 {Space}
                 <DownloadAndInstall />
+                <InstallChromeStore />
                 {Space}
                 <AddDomain />
                 {Space}

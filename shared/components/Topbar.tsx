@@ -7,7 +7,6 @@ import FacetParagraph from "./FacetParagraph";
 import JsonAnimation from "./JsonGIF";
 import mock_site from '../../public/GIf_.json'
 import TitleParagraphImage from './TitleParagraphImage';
-import { Link } from '@material-ui/core';
 
 const MainDiv = styled.div`
     display: grid;
@@ -104,11 +103,9 @@ export default function Navbar() {
                 </div>,
                 extraElement:
                     <ButtonDiv >
-                        <Link style={{
-                            textDecoration: 'none'
-                        }} href="https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en" target='_blank'>
-                            <FacetButton maxWidth="40%" colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" />
-                        </Link>
+                        <FacetButton
+                            onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }}
+                            maxWidth="40%" colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" />
                     </ButtonDiv>
             }} />
         </div>
