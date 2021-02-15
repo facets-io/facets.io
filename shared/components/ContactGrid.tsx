@@ -77,7 +77,7 @@ export default function ContactGrid() {
             .then(data => console.log(data));
         try {
             enqueueSnackbar({
-                message: 'Thank you!  We will get back to with soon.',
+                message: 'Thank you!  We will get back to you soon.',
                 variant: snackbar.success.text
             })
             reset()
