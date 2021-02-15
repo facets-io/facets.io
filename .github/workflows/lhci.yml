@@ -13,4 +13,4 @@ jobs:
           node-version: 12.18.3
       - run: npm install && npm install -g @lhci/cli@0.7.x
       - run: npm run build
-      - run: LHCI_NO_LIGHTHOUSERC=1 lhci autorun --collect.url=http://localhost
+      - run: lhci autorun
