@@ -150,7 +150,9 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </MenuItem>
                     </Link>
-                    <a href="https://github.com/facets-io" target="_blank">
+                    <a href="https://github.com/facets-io" target="_blank" style={{
+                        textDecoration: 'none'
+                    }}>
                         <MenuItem onClick={handleClose}>
                             <div>
                                 <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
