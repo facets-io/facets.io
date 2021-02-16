@@ -71,7 +71,7 @@ export default function Navbar() {
                 title: null,
                 paragraph: <div>
                     <div>
-                        <FacetParagraph text="Facets offers a codeless solution for managing features. With Facet, Engineering and Product teams work together to deliver software faster and safer." />
+                        <FacetParagraph text="Facet offers a codeless solution for managing features. With Facet, Engineering and Product teams work together to deliver software faster and safer." />
                         <BulletPoints>
                             <div />
                             <div>
