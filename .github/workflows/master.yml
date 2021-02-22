@@ -49,7 +49,7 @@ jobs:
       - name: cloudfront cache
         uses: docker://amazon/aws-cli:2.1.18
         with:
-          args: cloudfront create-invalidation --distribution-id E1E4CSCKLAVKX3 --paths "/*"
+          args: cloudfront create-invalidation --distribution-id E22O0I4OF7A1X --paths "/*"
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
