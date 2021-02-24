@@ -82,7 +82,7 @@ const tpiElements = [
         </div>,
         paragraph: <div>
             <FacetParagraph >
-                Facets are dynamic sets of elements making up features. Declare, name, and organize unlimmited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule.
+                Facets are dynamic sets of elements making up features. Declare, name, and organize unlimited facets within seconds using the facet extension. Continually optimize the facet workspace according to your rollout schedule.
         </FacetParagraph>
         </div>,
         image: <div>
