@@ -9,6 +9,7 @@ import AppProvider from '../shared/components/AppProvider'
 import FacetHead from './FacetHead'
 import { pages } from "../shared/components/AppContext";
 import TopBorder from '../shared/components/TopBorder'
+import UserInput from '../shared/components/UserInput'
 
 export default function Home() {
   return (
@@ -27,6 +28,9 @@ export default function Home() {
         </ContentContainer>
         <ContentContainer color={color.white}>
           <VideoInformation />
+        </ContentContainer>
+        <ContentContainer color={color.white}>
+          <UserInput />
         </ContentContainer>
         <ContentContainer color={color.secondaryGray}>
           <Footer />
