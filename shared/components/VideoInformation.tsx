@@ -17,9 +17,6 @@ const StyledVideo = styled.video`
 
 export default function VideoInformation() {
 
-    const media = useMedia();
-    const isMobileView = isMobile(media);
-
     return (
         <MainDiv>
             <br />
@@ -32,7 +29,7 @@ export default function VideoInformation() {
             <br />
             <div style={{
                 background: 'white',
-                maxWidth: '600px',
+                maxWidth: '900px',
                 margin: '0 auto',
                 padding: '1rem'
             }}>
