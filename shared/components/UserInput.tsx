@@ -23,7 +23,8 @@ const Grid = styled.div`
 
 const StyledP = styled.p`
     & a {
-        color: ${color.primary}
+        text-decoration: none;
+        color: ${color.primary};
     }
 `;
 
