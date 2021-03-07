@@ -14,11 +14,6 @@ const FacetHead = () => <Head>
       `,
   }}
   />
-  <script
-    async
-    src="https://platform.twitter.com/widgets.js"
-    charset="utf-8"
-  ></script>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <title>Facet</title>
   <link rel="icon" href="/favicon.ico" />
