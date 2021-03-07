@@ -21,11 +21,16 @@ const StyledImg = styled.img`
 const StyledA = styled.a`
     text-decoration: none;
     color: black;
+    font-family: Manrope;
 `
 
 const StyledP = styled.p`
     margin: 0;
 `
+
+const StyledNameSpan = styled.span`
+    font-weight: 550;
+`;
 
 const TwitterCard = ({ name, aHref, info, imgSrc, children }) => {
     return <StyledA href={aHref} target='_blank'>
@@ -34,7 +39,7 @@ const TwitterCard = ({ name, aHref, info, imgSrc, children }) => {
                 <StyledImg src={imgSrc} />
             </div>
             <div className="content">
-                <StyledP style={{ color: color.grayA }}>{name}<span>{info}</span></StyledP>
+                <StyledP><StyledNameSpan>{name}</StyledNameSpan><span style={{ color: color.grayB, marginLeft: '.5rem' }}>{info}</span></StyledP>
                 {children}
             </div>
         </GridCard>
