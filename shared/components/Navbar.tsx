@@ -67,6 +67,10 @@ const LabelContainer = styled.div`
     cursor: pointer;
 `
 
+const StyledA = styled.a`
+    text-decoration: none;
+`
+
 export default function Navbar({ activePage = '' }) {
     const media = useMedia();
     const isViewMobile = isMobileLg(media);
@@ -88,11 +92,11 @@ export default function Navbar({ activePage = '' }) {
             <img src="/facet_primary.svg" alt="Facet logo" />
         </LogoDiv>
     </Link> : <Link href="/">
-            <LogoDiv>
-                <img src="/facet_primary.svg" alt="Facet logo" />
-                <img src="/facet_typography_black.svg" alt="Facet" />
-            </LogoDiv>
-        </Link>;
+        <LogoDiv>
+            <img src="/facet_primary.svg" alt="Facet logo" />
+            <img src="/facet_typography_black.svg" alt="Facet" />
+        </LogoDiv>
+    </Link>;
 
     const displayingElement = isViewMobile ? <>
         <OuterDiv>
@@ -136,11 +140,13 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </Link>
                     </MenuItem>
-                    <Link href="/blog">
+                    <Link href="https://medium.com/runfacet" passHref>
                         <MenuItem>
-                            <LabelContainer>
-                                <NavLabel text={pages.Blog} />
-                            </LabelContainer>
+                            <StyledA target="_blank" rel="noreferrer">
+                                <LabelContainer>
+                                    <NavLabel text={pages.Blog} />
+                                </LabelContainer>
+                            </StyledA>
                         </MenuItem>
                     </Link>
                     <Link href="/contact">
@@ -163,57 +169,59 @@ export default function Navbar({ activePage = '' }) {
             </div>
         </OuterDiv>
     </> : <>
-            <OuterDiv>
-                <br />
-                <InnerDiv>
-                    <LeftDiv>
-                        {LogoLink}
-                    </LeftDiv>
-                    <RightDiv>
-                        <Link href="/">
-                            <LabelContainer>
-                                <NavLabel text={pages.Home} />
-                            </LabelContainer>
-                        </Link>
-                        <Link href="/pricing">
-                            <LabelContainer>
-                                <NavLabel text={pages.Pricing} />
-                            </LabelContainer>
-                        </Link>
-                        <Link href="/documentation">
-                            <LabelContainer>
-                                <NavLabel text={pages.Documentation} />
-                            </LabelContainer>
-                        </Link>
-                        <Link href="/blog">
+        <OuterDiv>
+            <br />
+            <InnerDiv>
+                <LeftDiv>
+                    {LogoLink}
+                </LeftDiv>
+                <RightDiv>
+                    <Link href="/">
+                        <LabelContainer>
+                            <NavLabel text={pages.Home} />
+                        </LabelContainer>
+                    </Link>
+                    <Link href="/pricing">
+                        <LabelContainer>
+                            <NavLabel text={pages.Pricing} />
+                        </LabelContainer>
+                    </Link>
+                    <Link href="/documentation">
+                        <LabelContainer>
+                            <NavLabel text={pages.Documentation} />
+                        </LabelContainer>
+                    </Link>
+                    <Link href="https://medium.com/runfacet" passHref>
+                        <StyledA target="_blank" rel="noreferrer">
                             <LabelContainer>
                                 <NavLabel text={pages.Blog} />
                             </LabelContainer>
-                        </Link>
-                        <Link href="/contact">
-                            <LabelContainer>
-                                <NavLabel text={pages.Contact} />
-                            </LabelContainer>
-                        </Link>
-                        <a href="https://github.com/facets-io" style={{
-                            textDecoration: 'none'
-                        }} target="_blank">
-                            <div style={{ cursor: 'pointer' }}>
-                                <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
-                            </div>
-                        </a>
-                        <div style={{ justifySelf: 'end' }}>
-                            <FacetButton
-                                onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }}
-                                colorButtonStyle={primaryBtnColor}
-                                text="Download"
-                            />
+                        </StyledA>
+                    </Link>
+                    <Link href="/contact">
+                        <LabelContainer>
+                            <NavLabel text={pages.Contact} />
+                        </LabelContainer>
+                    </Link>
+                    <a href="https://github.com/facets-io" style={{
+                        textDecoration: 'none'
+                    }} target="_blank">
+                        <div style={{ cursor: 'pointer' }}>
+                            <FacetLabel fontFamily="Roboto" fontWeight={300} fontSize={"16px"} color={color.black} text='GitHub' />
                         </div>
-                    </RightDiv>
-                </InnerDiv>
-                <br />
-            </OuterDiv>
-        </>;
+                    </a>
+                    <div style={{ justifySelf: 'end' }}>
+                        <FacetButton
+                            onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }}
+                            colorButtonStyle={primaryBtnColor}
+                            text="Download"
+                        />
+                    </div>
+                </RightDiv>
+            </InnerDiv>
+            <br />
+        </OuterDiv>
+    </>;
 
     return (
         displayingElement
