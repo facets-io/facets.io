@@ -9,7 +9,6 @@ module.exports = withMDX({
         return {
             '/': { page: '/' },
             '/documentation': { page: '/documentation' },
-            '/blog': { page: '/blog' },
             '/contact': { page: '/contact' },
             '/pricing': { page: '/pricing' },
             '/privacy-policy': { page: '/privacy-policy' },
