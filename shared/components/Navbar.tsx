@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { color, isMobile, isMobileLg } from '../constant';
+import { color, isMobileLg } from '../constant';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
 import { pages } from './AppContext'
