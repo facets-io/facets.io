@@ -140,6 +140,13 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </Link>
                     </MenuItem>
+                    <Link href="/contact">
+                        <MenuItem onClick={handleClose}>
+                            <LabelContainer>
+                                <NavLabel text={pages.Contact} />
+                            </LabelContainer>
+                        </MenuItem>
+                    </Link>
                     <Link href="https://medium.com/runfacet" passHref>
                         <MenuItem>
                             <StyledA target="_blank" rel="noreferrer">
@@ -147,13 +154,6 @@ export default function Navbar({ activePage = '' }) {
                                     <NavLabel text={pages.Blog} />
                                 </LabelContainer>
                             </StyledA>
-                        </MenuItem>
-                    </Link>
-                    <Link href="/contact">
-                        <MenuItem onClick={handleClose}>
-                            <LabelContainer>
-                                <NavLabel text={pages.Contact} />
-                            </LabelContainer>
                         </MenuItem>
                     </Link>
                     <a href="https://github.com/facets-io" target="_blank" style={{
@@ -191,17 +191,17 @@ export default function Navbar({ activePage = '' }) {
                             <NavLabel text={pages.Documentation} />
                         </LabelContainer>
                     </Link>
+                    <Link href="/contact">
+                        <LabelContainer>
+                            <NavLabel text={pages.Contact} />
+                        </LabelContainer>
+                    </Link>
                     <Link href="https://medium.com/runfacet" passHref>
                         <StyledA target="_blank" rel="noreferrer">
                             <LabelContainer>
                                 <NavLabel text={pages.Blog} />
                             </LabelContainer>
                         </StyledA>
-                    </Link>
-                    <Link href="/contact">
-                        <LabelContainer>
-                            <NavLabel text={pages.Contact} />
-                        </LabelContainer>
                     </Link>
                     <a href="https://github.com/facets-io" style={{
                         textDecoration: 'none'

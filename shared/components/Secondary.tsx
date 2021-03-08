@@ -105,8 +105,8 @@ const tpiElements = [
             <StyledImg src="./rocket.svg" />
         </div>
     }
+];
 
-]
 export default function Secondary() {
 
     const media = useMedia();
