@@ -140,22 +140,11 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </Link>
                     </MenuItem>
-                    <Link href="https://medium.com/runfacet" passHref>
+                    <Link href="/blog">
                         <MenuItem>
-                            <StyledA target="_blank" rel="noreferrer">
-                                <LabelContainer>
-                                    <NavLabel text={pages.Blog} />
-                                </LabelContainer>
-                            </StyledA>
-                        </MenuItem>
-                    </Link>
-                    <Link href="https://medium.com/runfacet" passHref>
-                        <MenuItem>
-                            <StyledA target="_blank" rel="noreferrer">
-                                <LabelContainer>
-                                    <NavLabel text={pages.Blog} />
-                                </LabelContainer>
-                            </StyledA>
+                            <LabelContainer>
+                                <NavLabel text={pages.Blog} />
+                            </LabelContainer>
                         </MenuItem>
                     </Link>
                     <Link href="/contact">
@@ -199,13 +188,6 @@ export default function Navbar({ activePage = '' }) {
                         <LabelContainer>
                             <NavLabel text={pages.Documentation} />
                         </LabelContainer>
-                    </Link>
-                    <Link href="https://medium.com/runfacet" passHref>
-                        <StyledA target="_blank" rel="noreferrer">
-                            <LabelContainer>
-                                <NavLabel text={pages.Blog} />
-                            </LabelContainer>
-                        </StyledA>
                     </Link>
                     <Link href="https://medium.com/runfacet" passHref>
                         <StyledA target="_blank" rel="noreferrer">
