@@ -140,11 +140,13 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </Link>
                     </MenuItem>
-                    <Link href="/blog">
+                    <Link href="https://medium.com/runfacet" passHref>
                         <MenuItem>
-                            <LabelContainer>
-                                <NavLabel text={pages.Blog} />
-                            </LabelContainer>
+                            <StyledA target="_blank" rel="noreferrer">
+                                <LabelContainer>
+                                    <NavLabel text={pages.Blog} />
+                                </LabelContainer>
+                            </StyledA>
                         </MenuItem>
                     </Link>
                     <Link href="/contact">
