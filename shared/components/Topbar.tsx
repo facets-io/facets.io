@@ -1,7 +1,6 @@
 import FacetButton, { primaryBtnColor } from './FacetButton';
-import FacetLink from './FacetLink';
 import styled from 'styled-components';
-import { color, fontSize } from '../constant';
+import { color } from '../constant';
 import FacetLabel from './FacetLabel';
 import FacetParagraph from "./FacetParagraph";
 import JsonAnimation from "./JsonGIF";

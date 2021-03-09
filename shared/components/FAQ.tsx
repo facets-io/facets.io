@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { color, documentationIds, links } from '../constant'
-
-
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
@@ -125,7 +123,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Not yet. Our team is developing solutions to offer backend system support. Stay tuned!
+                    Not yet. Our team is developing solutions to offer backend system support. Stay tuned!
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -142,7 +140,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        JS code is delivered at all times to the end user. The facet CDN script observes facets and hides them from the website, but code is still being delivered to the website.
+                    JS code is delivered at all times to the end user. The facet CDN script observes facets and hides them from the website, but code is still being delivered to the website.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -158,7 +156,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Yes! By default, facets are declared with a global scope. You can change their visibility to non-global, which means that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
+                    Yes! By default, facets are declared with a global scope. You can change their visibility to non-global, which means that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
                         <br />
                         <figure>
                             <img width='100%' src='../../images/global_facet_declaration.png' />
@@ -179,7 +177,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        At facet, security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps, including <a href='https://snyk.io/'>Snyk</a> and {''}
+                    At facet, security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps, including <a href='https://snyk.io/'>Snyk</a> and {''}
                         <a href='https://github.com/dependabot'>Github</a>, to ensure secure codebases. We are also working on getting CCPA, GDPR, HIPAA, FERPA, PCI, SOC 2 and other data privacy regulations.                    </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -194,10 +192,10 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Currently, the facet extension is <a href={links.github}></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems as they become more mature.
+                    Currently, the facet extension is <a href={links.github}></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems as they become more mature.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </StyledDiv>
+        </StyledDiv >
     )
 }
