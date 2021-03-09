@@ -256,7 +256,7 @@ export default function PricingTable() {
                         <td colSpan={2}>
                             <br />
                             <div style={{ textAlign: 'center' }}>
-                                <FacetButton onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }} width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
+                                <FacetButton onClick={() => { window.open("https://app.facet.run") }} width='50%' colorButtonStyle={primaryBtnColor} fontSize={fontSize.medium} text="Get Started" />
                             </div>
                             <br />
                         </td>

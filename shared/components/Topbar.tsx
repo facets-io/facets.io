@@ -103,7 +103,7 @@ export default function Navbar() {
                 extraElement:
                     <ButtonDiv >
                         <FacetButton
-                            onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }}
+                            onClick={() => { window.open("https://app.facet.run") }}
                             maxWidth="40%" colorButtonStyle={primaryBtnColor} minWidth="8rem" text="Get Started" />
                     </ButtonDiv>
             }} />
