@@ -6,7 +6,6 @@ import TitleParagraphImage from './TitleParagraphImage';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import useMedia from '../hooks/useMedia';
-import FacetLink from './FacetLink';
 
 const CodeBlock = () => {
     const codeString = `<Head>

@@ -17,6 +17,10 @@ const MainDiv = styled.div`
     }
 `;
 
+const PaddingDiv = styled.div`
+    padding-bottom: 22rem;
+`
+
 export default function DocumentationPage() {
 
     return (
@@ -27,7 +31,7 @@ export default function DocumentationPage() {
                 <ContentContainer isNavBar>
                     <Navbar activePage={pages.Documentation} />
                 </ContentContainer>
-                <div style={{ paddingBottom: '22rem' }}>
+                <PaddingDiv>
                     <ContentContainer color={color.white} paddingTop={"6.5rem"}>
                         <MainDiv >
                             <DocumentationSelection />
@@ -35,7 +39,7 @@ export default function DocumentationPage() {
                         <br />
                         <br />
                     </ContentContainer>
-                </div>
+                </PaddingDiv>
                 <ContentContainer isFooter color={color.secondaryGray}>
                     <Footer />
                 </ContentContainer>
