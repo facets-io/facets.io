@@ -9,7 +9,6 @@ const FacetParagraph = ({ text = null, color = colors.black, fontSize = 'medium'
             fontSize,
             fontFamily: 'Manrope',
             lineHeight: '168.1%'
-
         }}
     >
         {text}

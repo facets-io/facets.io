@@ -1,14 +1,12 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Theme, makeStyles, createStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
+import { color } from '../constant';
+import { withStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
@@ -16,6 +14,12 @@ const useStyles = makeStyles({
         height: 180,
     },
 });
+
+const PrimaryTextTypography = withStyles({
+    root: {
+        color: color.primary
+    }
+})(Typography);
 
 const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100rem', height = '100rem' }) => {
     const classes = useStyles();
@@ -27,9 +31,9 @@ const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100
                     <br />
                     <img width={width} height={height} src={logo} />
                     <CardContent>
-                        <Typography gutterBottom variant="h6" component="h3">
+                        <PrimaryTextTypography variant="h6" component="h3">
                             {label}
-                        </Typography>
+                        </PrimaryTextTypography>
                     </CardContent>
                 </CardActionArea>
             </Card>

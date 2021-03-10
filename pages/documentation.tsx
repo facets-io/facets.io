@@ -37,13 +37,6 @@ const MainDiv = styled.div`
 
 export default function DocumentationPage() {
 
-    const media = useMedia();
-    const isMobileView = isMobile(media);
-
-    const menu = !isMobileView ? <div>
-        <TOC />
-    </div> : null;
-
     return (
         <AppProvider>
             <div className={styles.container}>
@@ -59,7 +52,7 @@ export default function DocumentationPage() {
                     <br />
                     <br />
                 </ContentContainer>
-                <ContentContainer color={color.secondaryGray}>
+                <ContentContainer isFooter color={color.secondaryGray}>
                     <Footer />
                 </ContentContainer>
             </div>
