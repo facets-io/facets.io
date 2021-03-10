@@ -10,14 +10,15 @@ import { withStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles({
     root: {
-        width: 200,
+        width: 150,
         height: 180,
     },
 });
 
 const PrimaryTextTypography = withStyles({
     root: {
-        color: color.primary
+        color: color.primary,
+        fontWeight: 'bold'
     }
 })(Typography);
 
@@ -31,7 +32,7 @@ const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100
                     <br />
                     <img width={width} height={height} src={logo} />
                     <CardContent>
-                        <PrimaryTextTypography variant="h6" component="h3">
+                        <PrimaryTextTypography>
                             {label}
                         </PrimaryTextTypography>
                     </CardContent>
