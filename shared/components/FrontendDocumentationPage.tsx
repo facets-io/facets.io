@@ -36,7 +36,7 @@ const MainDiv = styled.div`
     }
 `;
 
-export default function DocumentationPage() {
+export default function FrontendDocumentationPage() {
 
     const media = useMedia();
     const isMobileView = isMobile(media);

@@ -1,2 +1,6 @@
 @import "./fonts/roboto.css";
 @import "./fonts/manrope.css";
+
+span {
+  font-family: "Manrope";
+}

@@ -12,6 +12,7 @@ import styles from "../styles/Home.module.css";
 import FacetLabel from "../shared/components/FacetLabel";
 import useMedia from '../shared/hooks/useMedia'
 import TopBorder from '../shared/components/TopBorder'
+import DocumentationSelection from '../shared/components/DocumentationSelection'
 
 const TableDiv = styled.div`
      display: grid;
@@ -51,17 +52,7 @@ export default function DocumentationPage() {
                     <Navbar activePage={pages.Documentation} />
                 </ContentContainer>
                 <ContentContainer color={color.white} paddingTop={"6.5rem"}>
-                    <MainDiv >
-                        <TableDiv>
-                            {menu}
-                            <div>
-                                <FacetLabel color={color.black} fontSize={"39px"} fontWeight={700} text="Documentation" />
-                                <br />
-                                <br />
-                                <Documentation />
-                            </div>
-                        </TableDiv>
-                    </MainDiv>
+                    <DocumentationSelection />
                     <br />
                     <br />
                 </ContentContainer>

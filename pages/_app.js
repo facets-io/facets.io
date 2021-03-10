@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import FacetHead from './FacetHead'
 import '../styles/globals.css'
 
 const GlobalStyle = createGlobalStyle`
@@ -18,6 +19,7 @@ const theme = {
 function MyApp({ Component, pageProps }) {
   return <>
     <GlobalStyle />
+    <FacetHead />
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
     </ThemeProvider>

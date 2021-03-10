@@ -4,17 +4,24 @@ import StackSelectCard from './StackSelectCard'
 
 const Grid = styled.div`
     display: grid;
-    grid-template-columns: 45% 45%;
+    justify-content: center;
+    text-align: center;
     gap: 5%;
 `
 
 const DocumentationSelection = () => {
     return <>
         <Grid>
-            <div>
+            <div style={{
+                gridColumn: '1 / 2',
+                gridRow: '1'
+            }}>
                 <StackSelectCard logo='../../images/js_logo.png' label="JavaScript" />
             </div>
-            <div>
+            <div style={{
+                gridColumn: '2 / 2',
+                gridRow: '1'
+            }}>
                 <StackSelectCard logo='../../images/java_logo.png' label="Java" />
             </div>
         </Grid>
