@@ -7,11 +7,11 @@ import AppProvider from '../../shared/components/AppProvider'
 import { pages } from '../../shared/components/AppContext'
 import Footer from '../../shared/components/Footer'
 import { color, isMobile } from '../../shared/constant'
-import styles from "../styles/Home.module.css";
+import styles from "../../styles/Home.module.css";
 import FacetLabel from "../../shared/components/FacetLabel";
 import useMedia from '../../shared/hooks/useMedia'
 import TopBorder from '../../shared/components/TopBorder'
-import FacetHead from '../../pages/FacetHead'
+import FacetHead from '../FacetHead'
 
 const TableDiv = styled.div`
      display: grid;
@@ -33,7 +33,7 @@ const MainDiv = styled.div`
     }
 `;
 
-export default function FrontendDocumentationPage() {
+const FrontendDocumentationPage = () => {
 
     const media = useMedia();
     const isMobileView = isMobile(media);
@@ -72,3 +72,5 @@ export default function FrontendDocumentationPage() {
         </AppProvider>
     )
 }
+
+export default FrontendDocumentationPage;

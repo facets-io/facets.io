@@ -12,7 +12,7 @@ import styles from "../styles/Home.module.css";
 import FacetLabel from "../shared/components/FacetLabel";
 import useMedia from '../shared/hooks/useMedia'
 import TopBorder from '../shared/components/TopBorder'
-import FrontendDocumentationPage from '../shared/components/FrontendDocumentationPage'
+import FrontendDocumentationPage from './documentation/javascript'
 import DocumentationSelection from '../shared/components/DocumentationSelection'
 
 const TableDiv = styled.div`

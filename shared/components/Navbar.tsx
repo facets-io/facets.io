@@ -75,7 +75,6 @@ export default function Navbar({ activePage = '' }) {
     const media = useMedia();
     const isViewMobile = isMobileLg(media);
     const [anchorEl, setAnchorEl] = useState(null);
-    const router = useRouter();
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);

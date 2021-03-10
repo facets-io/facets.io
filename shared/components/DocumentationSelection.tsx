@@ -9,15 +9,22 @@ const Grid = styled.div`
     gap: 5%;
 `
 
+const CenteredDiv = styled.div`
+    text-align: center;
+`
+
 const DocumentationSelection = () => {
     return <>
-        <h1>Facet Documentation</h1>
+        <CenteredDiv>
+            <h1>Facet Documentation</h1>
+        </CenteredDiv>
+        <br />
         <Grid>
             <div style={{
                 gridColumn: '1 / 2',
                 gridRow: '1'
             }}>
-                <StackSelectCard logo='../../images/js_logo.png' label="JavaScript" />
+                <StackSelectCard linkUrl='/documentation/javascript' logo='../../images/js_logo.png' label="JavaScript" />
             </div>
             <div style={{
                 gridColumn: '2 / 2',
