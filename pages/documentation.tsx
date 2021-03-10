@@ -27,7 +27,7 @@ export default function DocumentationPage() {
                 <ContentContainer isNavBar>
                     <Navbar activePage={pages.Documentation} />
                 </ContentContainer>
-                <div style={{ paddingBottom: '25rem' }}>
+                <div style={{ paddingBottom: '22rem' }}>
                     <ContentContainer color={color.white} paddingTop={"6.5rem"}>
                         <MainDiv >
                             <DocumentationSelection />

@@ -10,8 +10,7 @@ import FacetLink from './FacetLink';
 
 const CodeBlock = () => {
     const codeString = `<Head>
-    <script 
-        src="https://api.facet.run/js?id={ID}">
+    <script src="https://api.facet.run/js?id={ID}">
     </script>
     <title>...</title>
 </Head>`;
