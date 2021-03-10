@@ -12,6 +12,7 @@ import styles from "../styles/Home.module.css";
 import FacetLabel from "../shared/components/FacetLabel";
 import useMedia from '../shared/hooks/useMedia'
 import TopBorder from '../shared/components/TopBorder'
+import FrontendDocumentationPage from '../shared/components/FrontendDocumentationPage'
 import DocumentationSelection from '../shared/components/DocumentationSelection'
 
 const TableDiv = styled.div`
@@ -52,7 +53,9 @@ export default function DocumentationPage() {
                     <Navbar activePage={pages.Documentation} />
                 </ContentContainer>
                 <ContentContainer color={color.white} paddingTop={"6.5rem"}>
-                    <DocumentationSelection />
+                    <MainDiv >
+                        <DocumentationSelection />
+                    </MainDiv>
                     <br />
                     <br />
                 </ContentContainer>

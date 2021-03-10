@@ -1,6 +1,3 @@
-
-
-
 import Documentation from '../../shared/components/Documentation'
 import ContentContainer from '../../shared/components/ContentContainer'
 import Navbar from '../../shared/components/Navbar'
@@ -58,7 +55,7 @@ export default function FrontendDocumentationPage() {
                         <TableDiv>
                             {menu}
                             <div>
-                                <FacetLabel color={color.black} fontSize={"39px"} fontWeight={700} text="Documentation" />
+                                <FacetLabel color={color.black} fontSize={"40px"} fontWeight={700} text="Documentation" />
                                 <br />
                                 <br />
                                 <Documentation />

@@ -11,6 +11,7 @@ const Grid = styled.div`
 
 const DocumentationSelection = () => {
     return <>
+        <h1>Facet Documentation</h1>
         <Grid>
             <div style={{
                 gridColumn: '1 / 2',
@@ -22,7 +23,7 @@ const DocumentationSelection = () => {
                 gridColumn: '2 / 2',
                 gridRow: '1'
             }}>
-                <StackSelectCard logo='../../images/java_logo.png' label="Java" />
+                <StackSelectCard width="80rem" logo='../../images/java_logo.png' label="Java" />
             </div>
         </Grid>
     </>
