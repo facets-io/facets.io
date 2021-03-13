@@ -8,6 +8,9 @@ import FacetDeclaration from './Documentation/FacetDeclaration';
 import Preview from './Documentation/Preview';
 import Integration from './Documentation/Integration';
 import InstallChromeStore from './Documentation/InstallChromeStore';
+import JavaIntro from './javaIntro';
+import JavaInstall from './JavaInstall';
+import JavaIntegration from './JavaIntegration';
 
 const StyledDiv = styled.div`
     color: ${color.black};
@@ -25,20 +28,11 @@ const Documentation = () => {
     return (
         <StyledDiv>
             <div>
-                <Java />
+                <JavaIntro />
                 {Space}
-                <DownloadAndInstall />
-                <InstallChromeStore />
+                <JavaInstall />
                 {Space}
-                <AddDomain />
-                {Space}
-                <FacetDeclaration />
-                {Space}
-                <Preview />
-                {Space}
-                <Integration />
-                {Space}
-                <FAQ />
+                <JavaIntegration />
             </div>
         </StyledDiv >
     )

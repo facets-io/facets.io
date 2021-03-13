@@ -52,7 +52,7 @@ const Java = () => {
                 <TableDiv>
                     {menu}
                     <div>
-                        <FacetLabel color={color.black} fontSize={"40px"} fontWeight={700} text="Documentation" />
+                        <FacetLabel color={color.black} fontSize={"40px"} fontWeight={700} text="Java" />
                         <br />
                         <br />
                         <BackendDocumentation />
