@@ -57,6 +57,14 @@ const snackbar = {
     }
 };
 
+const backendDocumentationIds = {
+    introduction: 'Introduction',
+    install: 'Install',
+    Configure: 'Configure',
+    Verify: 'Verify',
+    Apply: 'Apply'
+}
+
 const documentationIds = {
     download: 'facet-download',
     install: 'install',
@@ -121,6 +129,6 @@ const isMobileLg = (threshHoldValue) => {
 }
 
 export {
-    color, fontSize, allFacets, mountainWalkColors, documentationIds, links,
+    color, fontSize, allFacets, mountainWalkColors, documentationIds, links, backendDocumentationIds,
     snackbar, documentationText, responsiveThresholds, isMobile, isMobileLg
 };

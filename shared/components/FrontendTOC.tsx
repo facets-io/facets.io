@@ -27,7 +27,7 @@ const scrollTo = (id) => {
     }
 }
 
-export default function TOC() {
+export default function FrontendTOC() {
     const [activePage, setActivePage] = useState(documentationIds.facetTitle);
 
     // TODO abstract this
