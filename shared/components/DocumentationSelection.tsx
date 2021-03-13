@@ -30,7 +30,7 @@ const DocumentationSelection = () => {
                 gridColumn: '2 / 2',
                 gridRow: '1'
             }}>
-                <StackSelectCard width="80rem" logo='../../images/java_logo.png' label="Java" />
+                <StackSelectCard linkUrl='/documentation/java' width="80rem" logo='../../images/java_logo.png' label="Java" />
             </div>
         </Grid>
     </>

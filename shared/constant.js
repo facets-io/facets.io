@@ -60,9 +60,9 @@ const snackbar = {
 const backendDocumentationIds = {
     introduction: 'Introduction',
     install: 'Install',
-    Configure: 'Configure',
-    Verify: 'Verify',
-    Apply: 'Apply'
+    configure: 'Configure',
+    verify: 'Verify',
+    apply: 'Apply'
 }
 
 const documentationIds = {

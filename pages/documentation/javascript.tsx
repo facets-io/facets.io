@@ -2,7 +2,7 @@ import Documentation from '../../shared/components/Documentation'
 import ContentContainer from '../../shared/components/ContentContainer'
 import Navbar from '../../shared/components/Navbar'
 import styled from 'styled-components'
-import BackendTOC from '../../shared/components/BackendTOC'
+import FrontendTOC from '../../shared/components/FrontendTOC'
 import AppProvider from '../../shared/components/AppProvider'
 import { pages } from '../../shared/components/AppContext'
 import Footer from '../../shared/components/Footer'
@@ -39,7 +39,7 @@ const FrontendDocumentationPage = () => {
     const isMobileView = isMobile(media);
 
     const menu = !isMobileView ? <div>
-        <BackendTOC />
+        <FrontendTOC />
     </div> : null;
 
     return (
