@@ -1,6 +1,5 @@
 
 import { backendDocumentationIds } from "../constant"
-import FacetH1 from "./FacetH1"
 import FacetParagraph from "./FacetParagraph"
 
 const JavaIntro = () => {
