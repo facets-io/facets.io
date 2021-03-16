@@ -28,16 +28,16 @@ const scrollTo = (id) => {
 }
 
 export default function BackendTOC() {
-    const [activePage, setActivePage] = useState(documentationIds.facetTitle);
+    const [activePage, setActivePage] = useState(backendDocumentationIds.introduction);
 
     // TODO abstract this
     const listenScrollEvent = e => {
         if (window.scrollY < document.getElementById(backendDocumentationIds.introduction)?.offsetTop) {
             setActivePage(backendDocumentationIds.introduction);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.introduction)?.offsetTop && window.scrollY < document.getElementById(documentationIds.install)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(backendDocumentationIds.introduction)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.install)?.offsetTop) {
             setActivePage(backendDocumentationIds.install);
         } else if (window.scrollY > document.getElementById(backendDocumentationIds.install)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.verify)?.offsetTop) {
-            setActivePage(documentationIds.facetDeclaration);
+            setActivePage(backendDocumentationIds.verify);
         }
     }
 

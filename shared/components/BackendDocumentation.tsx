@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { color } from '../constant';
-import JavaIntro from './javaIntro';
 import JavaInstall from './JavaInstall';
+import JavaIntro from './JavaIntro';
 import JavaVerify from './JavaVerify';
 
 const StyledDiv = styled.div`
