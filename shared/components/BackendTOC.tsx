@@ -27,7 +27,7 @@ const scrollTo = (id) => {
     }
 }
 
-export default function FrontendTOC() {
+export default function BackendTOC() {
     const [activePage, setActivePage] = useState(documentationIds.facetTitle);
 
     // TODO abstract this
@@ -36,12 +36,8 @@ export default function FrontendTOC() {
             setActivePage(backendDocumentationIds.introduction);
         } else if (window.scrollY > document.getElementById(backendDocumentationIds.introduction)?.offsetTop && window.scrollY < document.getElementById(documentationIds.install)?.offsetTop) {
             setActivePage(backendDocumentationIds.install);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.install)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.configure)?.offsetTop) {
-            setActivePage(documentationIds.addDomainToWorkspace);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.configure)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.verify)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(backendDocumentationIds.install)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.verify)?.offsetTop) {
             setActivePage(documentationIds.facetDeclaration);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.verify)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.apply)?.offsetTop) {
-            setActivePage(documentationIds.preview);
         }
     }
 
@@ -59,9 +55,7 @@ export default function FrontendTOC() {
         <MainDiv>
             {TocItem(backendDocumentationIds.introduction, backendDocumentationIds.introduction)}
             {TocItem(backendDocumentationIds.install, backendDocumentationIds.install)}
-            {TocItem(backendDocumentationIds.configure, backendDocumentationIds.configure)}
             {TocItem(backendDocumentationIds.verify, backendDocumentationIds.verify)}
-            {TocItem(backendDocumentationIds.apply, backendDocumentationIds.apply)}
         </MainDiv>
     );
 }

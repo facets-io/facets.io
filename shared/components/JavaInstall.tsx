@@ -2,6 +2,7 @@ import React from 'react'
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { backendDocumentationIds } from '../constant';
+import FacetH1 from './FacetH1';
 
 const CodeBlock = () => {
     const codeString = `<dependency>
@@ -18,7 +19,8 @@ const CodeBlock = () => {
 };
 
 const JavaInstall = () => {
-    return <div id={backendDocumentationIds.install}>
+    return <div>
+        <FacetH1 id={backendDocumentationIds.install}>Install</FacetH1>
         Facet captures data by using an SDK within your application’s runtime.
         <CodeBlock />
     </div>

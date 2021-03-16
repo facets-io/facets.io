@@ -12,8 +12,6 @@ const StyledDiv = styled.div`
 
 const Space = <>
     < br />
-    < br />
-    < br />
 </>
 
 const Documentation = () => {
