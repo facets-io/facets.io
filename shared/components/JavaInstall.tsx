@@ -21,7 +21,8 @@ const CodeBlock = () => {
 const JavaInstall = () => {
     return <div>
         <FacetH1 id={backendDocumentationIds.install}>Install</FacetH1>
-        Facet captures data by using an SDK within your application’s runtime.
+        Facet captures data by using an SDK within your application’s runtime. Facet-agent can be found in the {' '}
+        <a target='_blank' href='https://search.maven.org/artifact/run.facet.agent.java/facet-agent/0.0.1/jar'>sonatype distribution.</a>
         <CodeBlock />
     </div>
 }
