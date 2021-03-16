@@ -1,4 +1,4 @@
-import { color } from "../constant";
+import { color, links } from "../constant";
 import FacetLabel from "./FacetLabel";
 import StayUpdated from "./Subscribe";
 import Link from 'next/link'
@@ -19,9 +19,9 @@ export default function Footer() {
         </div>
         <br />
         <div>
-          <Link href="https://github.com/facets-io/">
+          <Link href={links.github}>
             <StyledImg
-              onAuxClick={() => { window.open("https://github.com/facets-io/", "_blank") }}
+              onAuxClick={() => { window.open(links.github, "_blank") }}
               src="/gitHub.svg" height="24.71" />
           </Link>
           <Link

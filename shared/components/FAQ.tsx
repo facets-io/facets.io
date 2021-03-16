@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { color, documentationIds } from '../constant'
+import { color, documentationIds, links } from '../constant'
 
 
 import React from 'react';
@@ -8,9 +8,6 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import { Divider } from "@material-ui/core";
-
 
 const StyledDiv = styled.div`
     background-color: white;
@@ -114,7 +111,7 @@ export default function FAQ() {
                             <li>Personalized Dashboard</li>
                             <li>OAuth 2.0 and Single Sign-On (SSO)</li>
                         </ol>
-                        You can also find what we are currently working on through our <a href='https://github.com/facets-io'>GitHub page</a>. 
+                        You can also find what we are currently working on through our <a href={links.github}>GitHub page</a>.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
@@ -123,7 +120,6 @@ export default function FAQ() {
                     expandIcon={<img src="/toc_expand.svg" />}
                     aria-controls="panel3a-content"
                     id="panel3a-header"
-
                 >
                     <Typography className={classes.heading}>Can I declare facets in my backend?</Typography>
                 </AccordionSummary>
@@ -198,7 +194,7 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Currently, the facet extension is <a href='https://github.com/facets-io/'></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems as they become more mature.
+                        Currently, the facet extension is <a href={links.github}></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems as they become more mature.
                     </Typography>
                 </AccordionDetails>
             </Accordion>

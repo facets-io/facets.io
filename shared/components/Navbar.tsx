@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
-import { color, isMobileLg } from '../constant';
+import { color, isMobileLg, links } from '../constant';
 import Link from 'next/link'
 import FacetLabel from './FacetLabel';
 import { pages } from './AppContext'
@@ -156,7 +156,7 @@ export default function Navbar({ activePage = '' }) {
                             </StyledA>
                         </MenuItem>
                     </Link>
-                    <a href="https://github.com/facets-io" target="_blank" style={{
+                    <a href={links.github} target="_blank" style={{
                         textDecoration: 'none'
                     }}>
                         <MenuItem onClick={handleClose}>
@@ -203,7 +203,7 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </StyledA>
                     </Link>
-                    <a href="https://github.com/facets-io" style={{
+                    <a href={links.github} style={{
                         textDecoration: 'none'
                     }} target="_blank">
                         <div style={{ cursor: 'pointer' }}>

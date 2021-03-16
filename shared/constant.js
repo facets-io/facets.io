@@ -108,6 +108,10 @@ const responsiveThresholds = {
     upperTH: '(min-width: 1024px)',
 }
 
+const links = {
+    github: 'https://github.com/facet-tech'
+}
+
 const isMobile = (threshHoldValue = responsiveThresholds.sm) => {
     return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm;
 }
@@ -117,6 +121,6 @@ const isMobileLg = (threshHoldValue) => {
 }
 
 export {
-    color, fontSize, allFacets, mountainWalkColors, documentationIds,
+    color, fontSize, allFacets, mountainWalkColors, documentationIds, links,
     snackbar, documentationText, responsiveThresholds, isMobile, isMobileLg
 };
