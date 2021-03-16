@@ -19,18 +19,13 @@ export default function Footer() {
         </div>
         <br />
         <div>
-          <Link href={links.github}>
-            <StyledImg
-              onAuxClick={() => { window.open(links.github, "_blank") }}
-              src="/gitHub.svg" height="24.71" />
-          </Link>
-          <Link
-            href="https://twitter.com/runFacet/">
-            <StyledImg
-              style={{ marginLeft: '.5rem' }}
-              onAuxClick={() => { window.open("https://twitter.com/runFacet/", "_blank") }}
-              src="/twitter.svg" height="24.71" />
-          </Link>
+          <StyledImg
+            onClick={() => { window.open(links.github, "_blank") }}
+            src="/gitHub.svg" height="24.71" />
+          <StyledImg
+            style={{ marginLeft: '.5rem' }}
+            onClick={() => { window.open("https://twitter.com/runFacet/", "_blank") }}
+            src="/twitter.svg" height="24.71" />
         </div>
         <br />
         <div>
