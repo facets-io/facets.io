@@ -5,7 +5,8 @@ const pages = {
     Pricing: 'Pricing',
     Documentation: 'Documentation',
     Blog: 'Blog',
-    Contact: 'Contact'
+    Contact: 'Contact',
+    Dashboard: 'Dashboard'
 }
 
 const AppContext = React.createContext({});

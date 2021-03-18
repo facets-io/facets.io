@@ -9,7 +9,6 @@ import useMedia from '../hooks/useMedia';
 import FacetIconButton from './FacetIconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { useRouter } from 'next/router';
 
 const LogoDiv = styled.div`
     display: grid;
@@ -17,7 +16,7 @@ const LogoDiv = styled.div`
     cursor: pointer;
     align-items: center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1300px) {
         display: grid;
         grid-gap: 2%;
         grid-template-columns: 2rem;
@@ -54,7 +53,7 @@ const OuterDiv = styled.div`
     grid-template-columns: 85%; 
     justify-content: center;
 
-    @media (max-width: 1024px) {
+    @media (max-width: 1300px) {
         display: grid;
         grid-gap: 5%;
         grid-template-columns: 50% 15% 10%;
@@ -75,7 +74,6 @@ export default function Navbar({ activePage = '' }) {
     const media = useMedia();
     const isViewMobile = isMobileLg(media);
     const [anchorEl, setAnchorEl] = useState(null);
-    const router = useRouter();
 
     const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
@@ -147,15 +145,20 @@ export default function Navbar({ activePage = '' }) {
                             </LabelContainer>
                         </MenuItem>
                     </Link>
-                    <Link href="https://medium.com/runfacet" passHref>
-                        <MenuItem>
-                            <StyledA target="_blank" rel="noreferrer">
-                                <LabelContainer>
-                                    <NavLabel text={pages.Blog} />
-                                </LabelContainer>
-                            </StyledA>
-                        </MenuItem>
-                    </Link>
+                    <MenuItem>
+                        <StyledA href="https://medium.com/runfacet" target="_blank" rel="noreferrer">
+                            <LabelContainer>
+                                <NavLabel text={pages.Blog} />
+                            </LabelContainer>
+                        </StyledA>
+                    </MenuItem>
+                    <MenuItem>
+                        <StyledA href="https://app.facet.run" target="_blank" rel="noreferrer">
+                            <LabelContainer>
+                                <NavLabel text={pages.Dashboard} />
+                            </LabelContainer>
+                        </StyledA>
+                    </MenuItem>
                     <a href={links.github} target="_blank" style={{
                         textDecoration: 'none'
                     }}>
@@ -200,6 +203,13 @@ export default function Navbar({ activePage = '' }) {
                         <StyledA target="_blank" rel="noreferrer">
                             <LabelContainer>
                                 <NavLabel text={pages.Blog} />
+                            </LabelContainer>
+                        </StyledA>
+                    </Link>
+                    <Link href="https://app.facet.run" passHref>
+                        <StyledA target="_blank" rel="noreferrer">
+                            <LabelContainer>
+                                <NavLabel text={'Dashboard'} />
                             </LabelContainer>
                         </StyledA>
                     </Link>

@@ -104,8 +104,8 @@ const responsiveThresholds = {
     xs: '(max-width: 320px)',
     sm: '(max-width: 720px)',
     md: '(max-width: 1024px)',
-    xxLarge: '(min-width: 1564px)',
-    upperTH: '(min-width: 1024px)',
+    lg: '(max-width: 1300px)',
+    xxLarge: '(min-width: 1300px)',
 }
 
 const links = {
@@ -117,7 +117,8 @@ const isMobile = (threshHoldValue = responsiveThresholds.sm) => {
 }
 
 const isMobileLg = (threshHoldValue) => {
-    return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm || threshHoldValue === responsiveThresholds.md;
+    return threshHoldValue === responsiveThresholds.xs || threshHoldValue === responsiveThresholds.sm ||
+        threshHoldValue === responsiveThresholds.md || threshHoldValue === responsiveThresholds.lg;
 }
 
 export {
