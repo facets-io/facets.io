@@ -6,28 +6,22 @@ import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import Link from 'next/link';
 import { color } from '../constant';
-import { withStyles } from "@material-ui/core/styles";
+import styled from 'styled-components';
 
-const useStyles = makeStyles({
-    root: {
-        width: 150,
-        height: 180,
-    },
-});
+const StyledCard = styled(Card)`
+    width: 150px;
+    height: 180px;
+`;
 
-const PrimaryTextTypography = withStyles({
-    root: {
-        color: color.primary,
-        fontWeight: 'bold'
-    }
-})(Typography);
+const PrimaryTextTypography = styled(Typography)`
+    color: ${color.primary};
+    fontWeight: 'bold';
+`;
 
 const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100rem', height = '100rem' }) => {
-    const classes = useStyles();
-
     return < >
         <Link href={linkUrl}>
-            <Card className={classes.root}>
+            <StyledCard>
                 <CardActionArea>
                     <br />
                     <img width={width} height={height} src={logo} />
@@ -37,7 +31,7 @@ const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100
                         </PrimaryTextTypography>
                     </CardContent>
                 </CardActionArea>
-            </Card>
+            </StyledCard>
         </Link>
     </>
 }
