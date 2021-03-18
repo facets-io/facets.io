@@ -10,7 +10,7 @@ const StyledImg = styled.img`
 
 export default function Footer() {
   return (
-    <div>
+    <footer>
       <br />
       <StayUpdated />
       <div style={{ textAlign: 'center', backgroundColor: color.secondaryGray }}>
@@ -35,6 +35,6 @@ export default function Footer() {
         </div>
         <br />
       </div>
-    </div>
+    </footer>
   )
 }

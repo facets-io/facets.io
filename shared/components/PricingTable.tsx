@@ -7,7 +7,6 @@ import AppContext from './AppContext'
 import FacetDivider from './FacetDivider'
 import FacetInputFullHeight from './FacetInputFullHeight'
 import NumberFormat from 'react-number-format';
-import { Link, TextField } from '@material-ui/core'
 
 const MainDiv = styled.div`
     display: grid;

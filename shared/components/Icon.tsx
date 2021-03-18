@@ -1,26 +1,8 @@
-import { Icon, IconButton, makeStyles } from '@material-ui/core'
+import { Icon, makeStyles } from '@material-ui/core'
 import React, { useEffect } from 'react'
 import * as eva from "eva-icons"
 import { color } from '../constant'
 import styled from 'styled-components'
-
-const useStyles = makeStyles({
-    iconButton: {
-        padding: '.25rem',
-        display: 'grid',
-        textAlign: 'center',
-        // @ts-ignore
-        width: props => props.width ? props.width : '',
-    },
-    i: {
-        display: 'grid',
-        // @ts-ignore
-        fill: props => props.isSelected ? color.electricB : '',
-        "&:hover": {
-            fill: color.white
-        }
-    }
-});
 
 const CustomIcon = styled(Icon)`
     padding: .25rem;

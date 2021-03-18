@@ -1,7 +1,5 @@
 import styled from 'styled-components';
-import { color, documentationIds, links } from '../constant'
-
-
+import { documentationIds, links } from '../constant'
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
@@ -125,12 +123,10 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography className={classes.body}>
-                        Not yet. Our team is developing solutions to offer backend system support. Stay tuned!
+                        Yes you can! We just shipped our first pilot version targeting Java. You can find it <a href='../java'>here</a>. We are working on adding support for more languages.
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-
-
             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg" />}
@@ -198,6 +194,6 @@ export default function FAQ() {
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-        </StyledDiv>
+        </StyledDiv >
     )
 }
