@@ -20,10 +20,10 @@ export default function ContactPage() {
                 <ContentContainer isNavBar>
                     <Navbar activePage={pages.Contact} />
                 </ContentContainer>
-                <ContentContainer color={color.white} paddingTop={"9rem"}>
+                <ContentContainer color={color.white} paddingTop="9rem" paddingBottom="22rem">
                     <ContactGrid />
                 </ContentContainer>
-                <ContentContainer color={color.secondaryGray}>
+                <ContentContainer isFooter color={color.secondaryGray}>
                     <Footer />
                 </ContentContainer>
             </div>
