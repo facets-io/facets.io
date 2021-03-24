@@ -21,7 +21,7 @@ const JavaVerify = () => {
         Create a <i>facet.yml</i> file in your project directory. The file contains your <i>workspaceId</i>, your project's name and your environment.
         You can retrieve your workspaceId by login in into the dashboard.
         <YMLCode />
-        Navigate into the <a href='https://app.facet.run' target='_blank'>dashboard</a>. Right after you login, select "Applications" -> "My-Application". You should be able to see
+        Navigate into the <a href='https://app.facet.run' target='_blank'>dashboard</a>. Right after you login, select "Applications" -&gt; "My-Application". You should be able to see
         all the live methods and endpoints, alongside with a checkbox allowing their enablement and disablement.
         <div style={{ textAlign: 'center' }}>
             <figure>
