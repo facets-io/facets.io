@@ -4,7 +4,7 @@ import { atomDark } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 import { backendDocumentationIds } from '../constant';
 import FacetH1 from './FacetH1';
 
-const CodeBlock = () => {
+const MVNCodeBlock = () => {
     const codeString = `<dependency>
     <groupId>run.facet</groupId>
     <artifactId>facet</artifactId>
@@ -23,7 +23,8 @@ const JavaInstall = () => {
         <FacetH1 id={backendDocumentationIds.install}>Install</FacetH1>
         Facet captures data by using an SDK within your application’s runtime. Facet-agent can be found in the {' '}
         <a target='_blank' href='https://search.maven.org/artifact/run.facet.agent.java/facet-agent/0.0.1/jar'>sonatype distribution.</a>
-        <CodeBlock />
+        <MVNCodeBlock />
+        
     </div>
 }
 
