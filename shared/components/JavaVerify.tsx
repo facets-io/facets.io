@@ -25,7 +25,7 @@ const JavaVerify = () => {
         all the live methods and endpoints, alongside with a checkbox allowing their enablement and disablement.
         <div style={{ textAlign: 'center' }}>
             <figure>
-                <img width='100%' src='../../images/backend_dashboard.png' />
+                <img width='100%' src='../../images/backend_dashboard.jpg' />
                 <figcaption><i>Managing facets in the dashboard</i></figcaption>
             </figure>
         </div>
