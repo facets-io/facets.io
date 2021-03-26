@@ -1,6 +1,7 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 import FacetHead from './FacetHead'
 import '../styles/globals.css'
+import 'react-image-lightbox/style.css';
 import * as Sentry from "@sentry/react"
 import { Integrations } from "@sentry/tracing"
 
