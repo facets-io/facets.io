@@ -8,13 +8,13 @@ const StyledImg = styled.img`
     cursor: zoom-in;
 `
 
-const FacetLightboxImage = ({ width = '100%', src, captionText }) => {
+const FacetLightboxImage = ({ width = '100%', src, captionText = undefined }) => {
     const [open, setOpen] = useState(false);
 
     return <>
         <figure>
             <StyledImg onClick={() => { setOpen(true) }} width={width} src={src} />
-            <figcaption><i>{captionText}</i></figcaption>
+            {captionText ? <figcaption><i>{captionText}</i></figcaption> : null}
         </figure>
         {open ? <Lightbox
             mainSrc={src}
