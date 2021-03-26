@@ -2,6 +2,7 @@ import { color, documentationIds } from "../../constant"
 import FacetH1 from "../FacetH1"
 import Icon from "../Icon"
 import FacetParagraph from "../FacetParagraph"
+import FacetLightboxImage from "../FacetLightboxImage"
 
 
 const facetDeclaration = () => {
@@ -48,15 +49,12 @@ const facetDeclaration = () => {
                 fill={color.grayA}
                 name="save-outline"
                 title="Settings" />) on the top navigation bar of the extension.
-    <br />
+            <br />
             <br />
             <br />
             <br />
             <div style={{ textAlign: 'center' }}>
-                <figure>
-                    <img width='100%' src='../../images/declare_facet_docs.png' />
-                    <figcaption><i>Using the facet extension</i></figcaption>
-                </figure>
+                <FacetLightboxImage src='../../images/declare_facet_docs.png' captionText='Using the facet extension' />
             </div>
         </FacetParagraph>
     </>

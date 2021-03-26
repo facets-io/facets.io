@@ -6,6 +6,7 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
+import FacetLightboxImage from './FacetLightboxImage';
 
 const StyledDiv = styled.div`
     background-color: white;
@@ -67,10 +68,7 @@ export default function FAQ() {
                     <Typography className={classes.body}>
                         A facet is a set elements that construe a feature. For instance, a login form could be considered a facet, with the elements being email, password and the login button.
                     <div style={{ textAlign: 'center' }}>
-                            <figure>
-                                <img width='100%' src='../../images/authentication_facet_example.png' />
-                                <figcaption>Facet declaration</figcaption>
-                            </figure>
+                            <FacetLightboxImage captionText='Facet declaration' src='../../images/authentication_facet_example.png' />
                         </div>
                     </Typography>
                 </AccordionDetails>
@@ -156,14 +154,10 @@ export default function FAQ() {
                     <Typography className={classes.body}>
                         Yes! By default, facets are declared with a global scope. You can change their visibility to non-global, which means that their rules will be applied to the current domain (pathname). Click on the desired facet {'->'} select the "more options button", and click on the "global" checkbox.
                         <br />
-                        <figure>
-                            <img width='100%' src='../../images/global_facet_declaration.png' />
-                            <figcaption>Global facet declaration</figcaption>
-                        </figure>
+                        <FacetLightboxImage src='../../images/global_facet_declaration.png' captionText='Global facet declaration' />
                     </Typography>
                 </AccordionDetails>
             </Accordion>
-
             <Accordion className={classes.shadow}>
                 <AccordionSummary
                     expandIcon={<img src="/toc_expand.svg" />}

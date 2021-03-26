@@ -2,6 +2,7 @@ import FacetH1 from "../FacetH1"
 import FacetParagraph from "../FacetParagraph"
 import { documentationIds } from "../../constant"
 import FacetBlockQuote from '../FacetBlockQuote';
+import FacetLightboxImage from "../FacetLightboxImage";
 
 export default () => {
     return <div>
@@ -16,10 +17,7 @@ export default () => {
             <br />
             <br />
             <div style={{ textAlign: 'center' }}>
-                <figure>
-                    <img width='75%' src='../../images/download_extension.png' />
-                    <figcaption><i>Installing facet extension in Chrome</i></figcaption>
-                </figure>
+                <FacetLightboxImage width='75%' src='../../images/download_extension.png' captionText='Installing facet extension in Chrome' />
             </div>
             <br />
             <FacetBlockQuote>
