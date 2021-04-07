@@ -104,9 +104,9 @@ export default function Navbar({ activePage = '' }) {
             </div>
             <div style={{ justifySelf: 'end' }}>
                 <FacetButton
-                    onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en"); }}
+                    onClick={() => { window.open("https://app.facet.run"); }}
                     colorButtonStyle={primaryBtnColor}
-                    text="Download"
+                    text="Sign in"
                 />
             </div>
             <div style={{ justifySelf: 'center' }}>
@@ -211,9 +211,9 @@ export default function Navbar({ activePage = '' }) {
                     </a>
                     <div style={{ justifySelf: 'end' }}>
                         <FacetButton
-                            onClick={() => { window.open("https://chrome.google.com/webstore/detail/facet/hpkpjkdhgldjhcopdkmljdgceeojoglh?hl=en") }}
+                            onClick={() => { window.open("https://app.facet.run") }}
                             colorButtonStyle={primaryBtnColor}
-                            text="Download"
+                            text="Sign in"
                         />
                     </div>
                 </RightDiv>
