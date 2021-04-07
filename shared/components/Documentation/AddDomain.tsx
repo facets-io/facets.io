@@ -1,6 +1,7 @@
 import { documentationIds } from "../../constant"
 import FacetH1 from "../FacetH1"
 import FacetImage from "../FacetImage"
+import FacetLightboxImage from "../FacetLightboxImage"
 import FacetParagraph from "../FacetParagraph"
 
 const AddDomain = () => {
@@ -14,10 +15,7 @@ const AddDomain = () => {
             <br />
             <br />
             <div style={{ textAlign: 'center' }}>
-                <figure>
-                    <img width='75%' src='../../add_to_workspace.png' />
-                    <figcaption><i>Adding domain to the workspace</i></figcaption>
-                </figure>
+                <FacetLightboxImage width='75%' src='../../add_to_workspace.png' captionText='Adding domain to the workspace' />
             </div>
         </FacetParagraph>
     </>
