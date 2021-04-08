@@ -62,7 +62,8 @@ const backendDocumentationIds = {
     install: 'Install',
     configure: 'Configure',
     verify: 'Verify',
-    apply: 'Apply'
+    apply: 'Apply',
+    settings: 'Settings'
 }
 
 const documentationIds = {
