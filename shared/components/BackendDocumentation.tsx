@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { color } from '../constant';
 import JavaInstall from './JavaInstall';
 import JavaIntro from './JavaIntro';
+import JavaSettings from './JavaSettings';
 import JavaVerify from './JavaVerify';
 
 const StyledDiv = styled.div`
@@ -23,6 +24,8 @@ const Documentation = () => {
                 <JavaInstall />
                 {Space}
                 <JavaVerify />
+                {Space}
+                <JavaSettings />
             </div>
         </StyledDiv >
     )
