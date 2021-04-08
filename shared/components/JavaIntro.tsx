@@ -31,7 +31,7 @@ const JavaIntro = () => {
             The Facet Java SDK can be used with the Spring Framework. Facet's Java-Agent allows <b>enabling</b> and <b>disabling</b> methods and endpoints in your application.
             When a method is disabled, a default value is returned, which is usually the minimum value of the class. This is how values are mapped:
             <MapCodeBlock />
-            On this page; get up and running with Facet's SDK, so that it will automatically switch methods and endpoints to enable/disable.
+            On this page, you will get up and running with the Facet's SDK, and be able to automatically switch methods and endpoints to enable/disable through the dashboard.
         </FacetParagraph>
     </div>
 }
