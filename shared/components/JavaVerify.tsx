@@ -11,8 +11,8 @@ const YMLCode = () => {
     const facetYmlString = `workspaceId: WORKSPACE~ID
 name: My-Application
 environment: dev
-apiKey: API_KEY
-`
+apiKey: API_KEY`
+
     return (
         <SyntaxHighlighter showLineNumbers language="language-markup" style={atomDark}>
             {facetYmlString}
