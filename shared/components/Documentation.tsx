@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { color } from '../constant';
-import FAQ from './FAQ';
 import Introduction from './Documentation/Introduction';
 import AddDomain from './Documentation/AddDomain';
 import FacetDeclaration from './Documentation/FacetDeclaration';
@@ -35,8 +34,6 @@ const Documentation = () => {
                 <Preview />
                 {Space}
                 <Integration />
-                {Space}
-                <FAQ />
             </div>
         </StyledDiv >
     )

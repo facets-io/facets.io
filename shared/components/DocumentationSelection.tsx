@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import FAQ from './FAQ'
 import StackSelectCard from './StackSelectCard'
 
 const Grid = styled.div`
@@ -33,6 +34,9 @@ const DocumentationSelection = () => {
                 <StackSelectCard linkUrl='/documentation/java' width="80rem" logo='../../images/java_logo.png' label="Java" />
             </div>
         </Grid>
+        <div>
+            <FAQ />
+        </div>
     </>
 }
 

@@ -44,8 +44,6 @@ export default function FrontendTOC() {
             setActivePage(documentationIds.preview);
         } else if (window.scrollY > document.getElementById(documentationIds.preview)?.offsetTop && window.scrollY < document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop) {
             setActivePage(documentationIds.oneLineCodeIntegration);
-        } else if (window.scrollY > document.getElementById(documentationIds.oneLineCodeIntegration)?.offsetTop && window.scrollY < document.getElementById(documentationIds.faq)?.offsetTop) {
-            setActivePage(documentationIds.faq);
         }
     }
 
@@ -67,7 +65,6 @@ export default function FrontendTOC() {
             {TocItem(documentationIds.facetDeclaration, documentationText.facetDeclaration)}
             {TocItem(documentationIds.preview, documentationText.preview)}
             {TocItem(documentationIds.oneLineCodeIntegration, documentationText.oneLineCodeIntegration)}
-            {TocItem(documentationIds.faq, documentationText.faq)}
         </MainDiv>
     );
 }
