@@ -4,6 +4,7 @@ import JavaInstall from './JavaInstall';
 import JavaIntro from './JavaIntro';
 import JavaSettings from './JavaSettings';
 import JavaVerify from './JavaVerify';
+import JavaVideo from './JavaVideo';
 
 const StyledDiv = styled.div`
     color: ${color.black};
@@ -26,6 +27,8 @@ const Documentation = () => {
                 <JavaVerify />
                 {Space}
                 <JavaSettings />
+                {Space}
+                <JavaVideo />
             </div>
         </StyledDiv >
     )
