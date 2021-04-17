@@ -6,11 +6,14 @@ import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
-import FacetLightboxImage from './FacetLightboxImage';
 
 const StyledDiv = styled.div`
     background-color: white;
-    // max-width: 30rem;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: 70%;
+    align-content: center;
 `
 
 const useStyles = makeStyles((theme) => ({
@@ -81,7 +84,7 @@ export default function FAQ() {
                     <Typography className={classes.heading}>What is a facet?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className={classes.body}>
+                    <Typography>
                         A facet is a set elements that construe a feature. For instance, a login form could be considered a facet, with the elements being email, password and the login button.
                         In terms of backend applications, a facet is any method that's declared within the codebase.
                     </Typography>
@@ -97,7 +100,7 @@ export default function FAQ() {
                     <Typography className={classes.heading}>What is your roadmap?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className={classes.body}>
+                    <Typography>
                         Some of our scheduled features are the following:
                         <ol>
                             <li>Ability to schedule a rollout</li>
@@ -120,7 +123,7 @@ export default function FAQ() {
                     <Typography className={classes.heading}>Is facet secure?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className={classes.body}>
+                    <Typography>
                         At facet, security is at the center of our priorities. We have integrated with multiple vendors who champion DevSecOps, including <a href='https://snyk.io/'>Snyk</a> and {''}
                         <a href='https://github.com/dependabot'>Github</a>, to ensure secure codebases. We are also working on getting CCPA, GDPR, HIPAA, FERPA, PCI, SOC 2 and other data privacy regulations.                    </Typography>
                 </AccordionDetails>
@@ -135,7 +138,7 @@ export default function FAQ() {
                     <Typography className={classes.heading}>Is facet open source?</Typography>
                 </AccordionSummary>
                 <AccordionDetails>
-                    <Typography className={classes.body}>
+                    <Typography>
                         Currently, the <a href="https://github.com/facet-tech/facet-extension">facet-extension</a> and the <a href='https://github.com/facet-tech/agent-java'>facet-java-agent</a> are <a href={links.github}></a>open source. We support open source initiatives as well as the community support that comes with it, and we plan to open source more of our systems as they become more mature.
                     </Typography>
                 </AccordionDetails>
