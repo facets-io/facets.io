@@ -10,25 +10,35 @@ import styled from 'styled-components';
 
 const StyledCard = styled(Card)`
     width: 150px;
-    height: 180px;
+    height: 200px;
 `;
 
 const PrimaryTextTypography = styled(Typography)`
     color: ${color.primary};
-    fontWeight: 'bold';
+    font-weight: 'bold';
 `;
 
-const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100rem', height = '100rem' }) => {
+const SubLabelTypography = styled(Typography)`
+    color: ${color.lightGray};
+    margin-bottom: .5rem;
+    font-size: .8rem!important;
+`
+
+const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100rem', height = '100rem', subLabel = undefined }) => {
     return < >
         <Link href={linkUrl}>
             <StyledCard>
-                <CardActionArea>
+                <CardActionArea disabled={subLabel}>
                     <br />
                     <img width={width} height={height} src={logo} />
                     <CardContent>
                         <PrimaryTextTypography>
                             {label}
                         </PrimaryTextTypography>
+                        <SubLabelTypography>
+                            {subLabel}
+                            <br />
+                        </SubLabelTypography>
                     </CardContent>
                 </CardActionArea>
             </StyledCard>
