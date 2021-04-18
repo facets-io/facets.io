@@ -12,8 +12,12 @@ const StyledDiv = styled.div`
     display: grid;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 70%;
+    grid-template-columns: fit-content(60%);
     align-content: center;
+
+    @media (max-width: 1024px) {
+        grid-template-columns: fit-content(80%);
+    }
 `
 
 const useStyles = makeStyles((theme) => ({
@@ -41,7 +45,7 @@ export default function FAQ() {
     const classes = useStyles();
     return (
         <StyledDiv>
-            <h2 id={documentationIds.faq} style={{ fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600 }}>FAQ</h2>
+            <h2 id={documentationIds.faq} style={{ textAlign: 'center', fontFamily: "Helvetica", fontSize: "27px", fontWeight: 600 }}>FAQ</h2>
 
             <Accordion className={classes.shadow}>
                 <AccordionSummary
