@@ -7,7 +7,14 @@ const Grid = styled.div`
     display: grid;
     justify-content: center;
     text-align: center;
+    align-items: center;
+    align-content: center;
     gap: 5%;
+    grid-template-columns: fit-content(60%) fit-content(60%) fit-content(60%);
+
+    @media (max-width: 550px) {
+        grid-template-columns: 40% 40%;
+    }
 `
 
 const CenteredDiv = styled.div`
@@ -22,18 +29,25 @@ const DocumentationSelection = () => {
         <br />
         <Grid>
             <div style={{
-                gridColumn: '1 / 2',
-                gridRow: '1'
+                display: 'grid',
+                justifyContent: 'center'
+            }}>
+                <StackSelectCard linkUrl='/documentation/java' width="80rem" logo='../../images/java_logo.png' label="Java" />
+            </div>
+            <div style={{
+                display: 'grid',
+                justifyContent: 'center'
             }}>
                 <StackSelectCard linkUrl='/documentation/javascript' logo='../../images/js_logo.png' label="JavaScript" />
             </div>
             <div style={{
-                gridColumn: '2 / 2',
-                gridRow: '1'
+                display: 'grid',
+                justifyContent: 'center'
             }}>
-                <StackSelectCard linkUrl='/documentation/java' width="80rem" logo='../../images/java_logo.png' label="Java" />
+                <StackSelectCard width="150rem" logo='../../images/react.png' subLabel="(coming soon!)" label="React" />
             </div>
         </Grid>
+        <br />
         <div>
             <FAQ />
         </div>
