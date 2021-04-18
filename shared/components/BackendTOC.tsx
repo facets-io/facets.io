@@ -40,6 +40,8 @@ export default function BackendTOC() {
             setActivePage(backendDocumentationIds.verify);
         } else if (window.scrollY > document.getElementById(backendDocumentationIds.verify)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.settings)?.offsetTop) {
             setActivePage(backendDocumentationIds.settings);
+        } else if (window.scrollY > document.getElementById(backendDocumentationIds.settings)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.demo)?.offsetTop) {
+            setActivePage(backendDocumentationIds.demo);
         }
     }
 
@@ -59,6 +61,7 @@ export default function BackendTOC() {
             {TocItem(backendDocumentationIds.install, backendDocumentationIds.install)}
             {TocItem(backendDocumentationIds.verify, backendDocumentationIds.verify)}
             {TocItem(backendDocumentationIds.settings, backendDocumentationIds.settings)}
+            {TocItem(backendDocumentationIds.demo, backendDocumentationIds.demo)}
         </MainDiv>
     );
 }
