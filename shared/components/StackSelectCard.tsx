@@ -21,6 +21,7 @@ const PrimaryTextTypography = styled(Typography)`
 const SubLabelTypography = styled(Typography)`
     color: ${color.lightGray};
     margin-bottom: .5rem;
+    font-size: .8rem!important;
 `
 
 const StackSelectCard = ({ logo, label, linkUrl = '/documentation', width = '100rem', height = '100rem', subLabel = undefined }) => {

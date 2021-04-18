@@ -44,7 +44,7 @@ const DocumentationSelection = () => {
                 display: 'grid',
                 justifyContent: 'center'
             }}>
-                <StackSelectCard width="150rem" logo='../../images/react.png' subLabel="(coming soon!)" label="React" />
+                <StackSelectCard width="150rem" logo='../../images/react.png' subLabel="coming soon" label="React" />
             </div>
         </Grid>
         <br />
