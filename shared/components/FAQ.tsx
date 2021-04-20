@@ -58,7 +58,13 @@ export default function FAQ() {
                 </AccordionSummary>
                 <AccordionDetails>
                     <Typography>
-                        Facet abstracts the feature management process that is commonly achieved by using feature flags. At facet, we believe that engineers shouldn't spend their time maintaining manual configurations. We enable engineers to focus on building their product, while we build the feature management abstractions to support them throughout the journey.
+                        Facet enables engineers to toggle (enable & disable) endpoints in production and other user-defined environments. At facet, we believe that engineers shouldn't spend their time maintaining manual configurations and re-deploying their applications everytime an critical-error occurs. We enable engineers to focus on building their product, while we build the endpoint management abstractions to support them throughout the journey.
+                        Some common usecases of Facet include:
+                        <ul>
+                            <li>Testing new features that may be not 100% reliable.</li>
+                            <li>Measuring application reliability.</li>
+                            <li><a href='https://en.wikipedia.org/wiki/Chaos_engineering#:~:text=Chaos%20engineering%20is%20the%20discipline,withstand%20turbulent%20and%20unexpected%20conditions.' target='_blank'>Chaos Engineering</a> on the application layer.</li>
+                        </ul>
                     </Typography>
                 </AccordionDetails>
             </Accordion>

@@ -9,8 +9,6 @@ import TitleParagraphImage from './TitleParagraphImage';
 
 const MainDiv = styled.div`
     display: grid;
-    grid-gap: 5%;
-    grid-template-columns: 85%;
     justify-content: center;
     text-align: initial;
 `;
@@ -61,16 +59,18 @@ const Centered = styled.div`
 export default function Navbar() {
     return (
         <div>
-            <MainDiv>
-                <Centered>
-                    <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Rollout Features Without Code" />
-                </Centered>
-            </MainDiv>
-            <TitleParagraphImage element={{
+            <TitleParagraphImage hasMarginTop={false} element={{
                 title: null,
                 paragraph: <div>
+                    <MainDiv>
+                        <Centered>
+                            <FacetLabel color={color.black} fontSize={"42px"} fontWeight={700} text="Toggle Endpoints Without Code" />
+                            <br />
+                        </Centered>
+                    </MainDiv>
                     <div>
-                        <FacetParagraph text="Facet offers a codeless solution for managing features. With Facet, Engineering and Product teams work together to deliver software faster and safer." />
+                        <br />
+                        <FacetParagraph text="Facet offers a codeless solution for managing application endpoints. With Facet, teams work together to deliver and test software faster and safer." />
                         <BulletPoints>
                             <div />
                             <div>
@@ -84,13 +84,19 @@ export default function Navbar() {
                             <div>
                                 <br />
                                 <Checkmark><StyledImage src="./checkmark4.svg" />
-                                    <FacetParagraph text="Instantly toggle features in production" />
+                                    <FacetParagraph text="Instantly toggle features in production or any other environment" />
                                 </Checkmark>
                             </div>
                             <div>
                                 <br />
                                 <Checkmark><StyledImage src="./checkmark4.svg" />
-                                    <FacetParagraph text="Manage features without using engineering resources" />
+                                    <FacetParagraph text="Manage endpoints & methods without using engineering resources" />
+                                </Checkmark>
+                            </div>
+                            <div>
+                                <br />
+                                <Checkmark><StyledImage src="./checkmark4.svg" />
+                                    <FacetParagraph text="Utilize analytics for every critical component of your infrastructure" />
                                 </Checkmark>
                             </div>
                         </BulletPoints>
@@ -98,7 +104,7 @@ export default function Navbar() {
                     </div>
                 </div>,
                 image: <div>
-                    <JsonAnimation animationData={mock_site} />
+                    <img width="100%" src='./images/web2.png' />
                 </div>,
                 extraElement:
                     <ButtonDiv >

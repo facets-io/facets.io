@@ -53,7 +53,7 @@ const UserInput = () => {
             </div>
             <div>
                 <TwitterCard name="牧野陽" aHref='https://twitter.com/makinoalany/status/1367565099561414658' info="@makinoalany · March 4, 2021" imgSrc='/images/@makinoalany.jpeg' >
-                    <StyledP lang="en" dir="ltr">I have to say <a href="https://twitter.com/RunFacet?ref_src=twsrc%5Etfw" target="_blank">@RunFacet</a> impressed me a lot. It could be a game changer as feature flag is always one of the pain point for software development!</StyledP>
+                    <StyledP lang="en" dir="ltr">I have to say <a href="https://twitter.com/RunFacet?ref_src=twsrc%5Etfw" target="_blank">@RunFacet</a> impressed me a lot. It could be a game changer as CI/CD is always one of the pain point for software development!</StyledP>
                 </TwitterCard>
             </div>
         </Grid>

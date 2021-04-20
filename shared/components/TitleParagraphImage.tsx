@@ -8,7 +8,7 @@ const InnerDiv = styled.div`
     grid-template-columns: 40% 40%;
     text-align: initial;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: ${props => props.marginTop};
 
     @media (max-width: 720px) {
         display: grid;
@@ -18,11 +18,11 @@ const InnerDiv = styled.div`
     }
 `;
 
-const TitleParagraphImage = ({ element, isReverse = false }) => {
+const TitleParagraphImage = ({ element, isReverse = false, hasMarginTop = true }) => {
     const media = useMedia();
     const isViewMobile = isMobile(media);
 
-    const result = isViewMobile ? <InnerDiv>
+    const result = isViewMobile ? <InnerDiv hasMarginTop>
         <div>
             {element.title}
             <br />
@@ -54,16 +54,16 @@ const TitleParagraphImage = ({ element, isReverse = false }) => {
             {element.image}
         </div>
     </InnerDiv> : <InnerDiv>
-                <div>
-                    <br />
-                    {element.image}
-                </div>
-                <div>
-                    {element.title}
-                    <br />
-                    {element.paragraph}
-                </div>
-            </InnerDiv>
+        <div>
+            <br />
+            {element.image}
+        </div>
+        <div>
+            {element.title}
+            <br />
+            {element.paragraph}
+        </div>
+    </InnerDiv>
     return result;
 }
 

@@ -33,7 +33,7 @@ export default function VideoInformation() {
                 margin: '0 auto',
                 padding: '1rem'
             }}>
-                <StyledVideo poster="./video/video_placeholder.jpg" src="./video/Facet_Demo.mov" controls />
+                <StyledVideo poster="./video/video_placeholder.jpg" src="./video/java.mp4" controls />
             </div>
             <br />
         </MainDiv >
