@@ -104,7 +104,7 @@ export default function Navbar() {
                     </div>
                 </div>,
                 image: <div>
-                    <img width="100%" src='./images/web2.png' />
+                    <img width="100%" src='./images/Endpoints-web.svg' />
                 </div>,
                 extraElement:
                     <ButtonDiv >
