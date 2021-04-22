@@ -36,11 +36,11 @@ export default function BackendTOC() {
             setActivePage(backendDocumentationIds.introduction);
         } else if (window.scrollY > document.getElementById(backendDocumentationIds.introduction)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.install)?.offsetTop) {
             setActivePage(backendDocumentationIds.install);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.install)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.verify)?.offsetTop) {
-            setActivePage(backendDocumentationIds.verify);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.verify)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.settings)?.offsetTop) {
-            setActivePage(backendDocumentationIds.settings);
-        } else if (window.scrollY > document.getElementById(backendDocumentationIds.settings)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.demo)?.offsetTop) {
+        } else if (window.scrollY > document.getElementById(backendDocumentationIds.install)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.troubleshooting)?.offsetTop) {
+            setActivePage(backendDocumentationIds.troubleshooting);
+        } else if (window.scrollY > document.getElementById(backendDocumentationIds.troubleshooting)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.usageCases)?.offsetTop) {
+            setActivePage(backendDocumentationIds.usageCases);
+        } else if (window.scrollY > document.getElementById(backendDocumentationIds.usageCases)?.offsetTop && window.scrollY < document.getElementById(backendDocumentationIds.demo)?.offsetTop) {
             setActivePage(backendDocumentationIds.demo);
         }
     }
@@ -59,8 +59,8 @@ export default function BackendTOC() {
         <MainDiv>
             {TocItem(backendDocumentationIds.introduction, backendDocumentationIds.introduction)}
             {TocItem(backendDocumentationIds.install, backendDocumentationIds.install)}
-            {TocItem(backendDocumentationIds.verify, backendDocumentationIds.verify)}
-            {TocItem(backendDocumentationIds.settings, backendDocumentationIds.settings)}
+            {TocItem(backendDocumentationIds.troubleshooting, backendDocumentationIds.troubleshooting)}
+            {TocItem(backendDocumentationIds.usageCases, backendDocumentationIds.usageCases)}
             {TocItem(backendDocumentationIds.demo, backendDocumentationIds.demo)}
         </MainDiv>
     );

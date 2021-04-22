@@ -61,6 +61,8 @@ const backendDocumentationIds = {
     introduction: 'Introduction',
     install: 'Install',
     configure: 'Configure',
+    troubleshooting: 'Troubleshooting',
+    usageCases: 'Usecases',
     verify: 'Verify',
     apply: 'Apply',
     settings: 'Settings',
