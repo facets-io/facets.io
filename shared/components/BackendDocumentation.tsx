@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 import { color } from '../constant';
+import JavaDownload from './JavaDownload';
 import JavaInstall from './JavaInstall';
 import JavaIntro from './JavaIntro';
-import JavaSettings from './JavaSettings';
-import JavaVerify from './JavaVerify';
 import JavaVideo from './JavaVideo';
+import TroubleshootingJava from './TroubleshootingJava';
+import UsageCasesJava from './UsageCasesJava';
 
 const StyledDiv = styled.div`
     color: ${color.black};
@@ -22,11 +23,13 @@ const Documentation = () => {
             <div>
                 <JavaIntro />
                 {Space}
+                <JavaDownload />
+                {Space}
                 <JavaInstall />
                 {Space}
-                <JavaVerify />
+                <TroubleshootingJava />
                 {Space}
-                <JavaSettings />
+                <UsageCasesJava />
                 {Space}
                 <JavaVideo />
             </div>
@@ -34,4 +37,4 @@ const Documentation = () => {
     )
 }
 
-export default Documentation;
+export default Documentation

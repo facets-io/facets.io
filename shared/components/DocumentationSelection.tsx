@@ -10,7 +10,7 @@ const Grid = styled.div`
     align-items: center;
     align-content: center;
     gap: 5%;
-    grid-template-columns: fit-content(60%) fit-content(60%) fit-content(60%);
+    grid-template-columns: fit-content(60%) fit-content(60%);
 
     @media (max-width: 550px) {
         grid-template-columns: 40% 40%;
@@ -32,20 +32,21 @@ const DocumentationSelection = () => {
                 display: 'grid',
                 justifyContent: 'center'
             }}>
-                <StackSelectCard linkUrl='/documentation/java' width="80rem" logo='../../images/java_logo.png' label="Java" />
+                <StackSelectCard linkUrl='/documentation/java' width="80rem" logo='/images/java.svg' label="Java" />
             </div>
             <div style={{
+                display: 'grid',
+                justifyContent: 'center'
+            }}>
+                <StackSelectCard width="80rem" logo='/images/nodejs.png' subLabel="coming soon" label="NodeJS" />
+            </div>
+            {/* <div style={{
                 display: 'grid',
                 justifyContent: 'center'
             }}>
                 <StackSelectCard linkUrl='/documentation/javascript' logo='../../images/js_logo.png' label="JavaScript" />
-            </div>
-            <div style={{
-                display: 'grid',
-                justifyContent: 'center'
-            }}>
-                <StackSelectCard width="150rem" logo='../../images/react.png' subLabel="coming soon" label="React" />
-            </div>
+            </div> */}
+
         </Grid>
         <br />
         <div>

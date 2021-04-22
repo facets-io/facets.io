@@ -1,5 +1,5 @@
 
-import { backendDocumentationIds } from "../constant"
+import { backendDocumentationIds, color } from "../constant"
 import FacetH1 from "./FacetH1";
 import FacetParagraph from "./FacetParagraph"
 import SyntaxHighlighter from 'react-syntax-highlighter';
@@ -27,11 +27,10 @@ const MapCodeBlock = () => {
 const JavaIntro = () => {
     return <div>
         <FacetH1 id={backendDocumentationIds.introduction}>Introduction</FacetH1>
-        <FacetParagraph>
-            The Facet Java SDK can be used with the Spring Framework. Facet's Java-Agent allows <b>enabling</b> and <b>disabling</b> methods and endpoints in your application.
-            When a method is disabled, a default value is returned, which is usually the minimum value of the class. This is how values are mapped:
-            <MapCodeBlock />
-            On this page, you will get up and running with the Facet's SDK, and be able to automatically switch methods and endpoints to enable/disable through the dashboard.
+        <FacetParagraph color={color.grayA}>
+            The Facet Java Agent uses bytecode instrumentation to dynamically enable and disable methods at runtime within your application.
+            This is achieved by transferring control back to the caller of the method via injected return statements.
+            After integration you can toggle methods and endpoints in realtime without modifying or restarting you application.
         </FacetParagraph>
     </div>
 }
