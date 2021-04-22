@@ -115,6 +115,7 @@ export default function Secondary() {
             <div>
                 <StyledFacetLabel isMobile={isViewMobile} style={{ marginTop: '2rem' }} text='Unrivaled Endpoint Management' />
             </div>
+            <br />
             <TitleParagraphImage element={tpiElements[0]} />
             <br />
             <br />
