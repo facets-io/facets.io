@@ -68,9 +68,10 @@ export default function Navbar() {
                             <br />
                         </Centered>
                     </MainDiv>
+                    <br />
                     <div>
                         <br />
-                        <FacetParagraph text="Facet offers a codeless solution for managing application endpoints. With Facet, teams work together to deliver and test software faster and safer." />
+                        <FacetParagraph text="Facet offers a codeless solution for managing application endpoints." />
                         <BulletPoints>
                             <div />
                             <div>
