@@ -88,12 +88,12 @@ const tpiElements = [
     {
         title: <div>
             <b>
-                <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Deploy" />
+                <FacetLabel color={color.black} fontSize={"27px"} fontWeight={700} text="Preview" />
             </b>
         </div>,
         paragraph: <div>
             <FacetParagraph >
-                Toggle endpoints with a single click. Our platform allows every member of your team to toggle features <b>without engaging developer resources</b>.
+                Preview changes with a single click. Our platform allows every member of your team to toggle features <b>without engaging developer resources</b>.
                 This way, your team delivers software faster and saves on precious developers' time. Our platform gives your team ultimate control over your software delivery process.
         </FacetParagraph>
         </div>,
