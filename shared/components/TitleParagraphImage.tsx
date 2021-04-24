@@ -22,7 +22,7 @@ const TitleParagraphImage = ({ element, isReverse = false }) => {
     const media = useMedia();
     const isViewMobile = isMobile(media);
 
-    const result = isViewMobile ? <InnerDiv hasMarginTop>
+    const result = isViewMobile ? <InnerDiv>
         <div>
             {element.title}
             <br />

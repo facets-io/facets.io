@@ -59,7 +59,7 @@ const Centered = styled.div`
 export default function Navbar() {
     return (
         <div>
-            <TitleParagraphImage hasMarginTop={false} element={{
+            <TitleParagraphImage element={{
                 title: null,
                 paragraph: <div>
                     <MainDiv>
