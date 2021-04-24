@@ -81,8 +81,13 @@ const tpiElements = [
                 Facets are dynamic sets of elements making up features. Declare, name, and organize unlimited facets within seconds using the java-agent. Continually optimize the facet workspace according to your rollout schedule.
         </FacetParagraph>
         </div>,
-        image: <div>
-            <img style={{ boxShadow: `0px 0px 100px -40px ${color.black}`, width: '100%' }} src="./declare_facet.svg" />
+        image: <div style={{
+            textAlign: 'center'
+        }}>
+            <img style={{
+                width: '75%',
+                height: '14rem'
+            }} src="./toggle_any_method.svg" />
         </div>
     },
     {

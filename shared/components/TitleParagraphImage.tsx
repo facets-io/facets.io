@@ -18,7 +18,7 @@ const InnerDiv = styled.div`
     }
 `;
 
-const TitleParagraphImage = ({ element, isReverse = false, hasMarginTop = true }) => {
+const TitleParagraphImage = ({ element, isReverse = false }) => {
     const media = useMedia();
     const isViewMobile = isMobile(media);
 
