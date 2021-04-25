@@ -28,9 +28,7 @@ const JavaIntro = () => {
     return <div>
         <FacetH1 id={backendDocumentationIds.introduction}>Introduction</FacetH1>
         <FacetParagraph color={color.grayA}>
-            The Facet Java Agent uses bytecode instrumentation to dynamically enable and disable methods at runtime within your application.
-            This is achieved by transferring control back to the caller of the method via injected return statements.
-            After integration you can toggle methods and endpoints in realtime without modifying or restarting you application.
+        The Facet Java Agent uses bytecode instrumentation to dynamically enable and disable methods at runtime within your application. This is achieved by transferring control back to the caller of the method via injected return statements. After integration, you can toggle methods and endpoints in realtime without modifying or restarting you application.
         </FacetParagraph>
     </div>
 }

@@ -8,7 +8,7 @@ const UsageCasesJava = () => {
         We are in the early stages of product development and can envision several use cases for this type of solution.
         <ol>
             <li>
-                Endpoint toggles - disable or reroute endpoints on the fly for beta features or when application and performance issues arise.
+                Endpoint management - disable or reroute endpoints on the fly for beta features or when application and performance issues arise.
             </li>
             <li>
                 Chaos engineering - automated chaos engineering testing framework.
@@ -23,8 +23,7 @@ const UsageCasesJava = () => {
                 Low code feature flags - low code alternative to traditional feature flag toggles.
             </li>
         </ol>
-
-        We would love to hear any feedback (positive and negative) or other use case ideas. The future direction of facet will be directly impacted by YOUR feedback!
+        We would love to hear your feedback!
         <br />
         <FacetH1>Feedback and Support</FacetH1>
 
