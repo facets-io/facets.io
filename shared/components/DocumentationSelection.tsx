@@ -40,12 +40,12 @@ const DocumentationSelection = () => {
             }}>
                 <StackSelectCard width="80rem" logo='/images/nodejs.png' subLabel="coming soon" label="NodeJS" />
             </div>
-            {/* <div style={{
+            <div style={{
                 display: 'grid',
                 justifyContent: 'center'
             }}>
                 <StackSelectCard linkUrl='/documentation/javascript' logo='../../images/js_logo.png' label="JavaScript" />
-            </div> */}
+            </div>
 
         </Grid>
         <br />
